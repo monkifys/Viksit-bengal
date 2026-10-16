@@ -1,0 +1,239 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  RESEARCHER
+  PUBLIC
+}
+
+enum PromiseStatus {
+  NOT_STARTED
+  ANNOUNCED
+  LEGALLY_INITIATED
+  FUNDED
+  UNDER_IMPLEMENTATION
+  PARTIALLY_DELIVERED
+  DELIVERED
+  DELAYED
+  REVERSED
+  DISPUTED
+  NOT_VERIFIABLE
+}
+
+enum Confidence {
+  A
+  B
+  C
+  D
+}
+
+enum SourceType {
+  GAZETTE
+  GOVERNMENT_ORDER
+  BUDGET
+  AUDIT
+  STATISTICAL_RELEASE
+  NEWSPAPER
+  INSTITUTIONAL_REPORT
+  POLITICAL_STATEMENT
+  USER_SUBMITTED
+}
+
+enum SourceTier {
+  TIER_1
+  TIER_2
+  TIER_3
+}
+
+enum ReviewStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+enum Scenario {
+  CONSERVATIVE
+  BASE_CASE
+  AMBITIOUS
+}
+
+
+model User {
+  id String @id @default(uuid())
+  email String @unique
+  name String
+  password String?
+  role Role @default(PUBLIC)
+  googleId String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Category {
+  id String @id @default(uuid())
+  code String @unique
+  titleEn String
+  titleBn String
+  subtitleEn String?
+  subtitleBn String?
+  icon String?
+  sortOrder Int @default(0)
+  promises Promise[]
+}
+
+model Promise {
+  id String @id @default(uuid())
+  code String @unique
+  categoryId String
+  category Category @relation(fields: [categoryId], references: [id])
+  titleEn String
+  titleBn String
+  descriptionEn String?
+  descriptionBn String?
+  highlightEn String?
+  highlightBn String?
+  originalText String?
+  commitmentDate DateTime?
+  deadlineDate DateTime?
+  responsibleLevel String?
+  responsibleDepartment String?
+  status PromiseStatus @default(NOT_STARTED)
+  confidence Confidence @default(C)
+  isKeyPromise Boolean @default(false)
+  keyPromiseNumber Int?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  districts PromiseDistrict[]
+  updates PromiseUpdate[]
+  history StatusHistory[]
+}
+
+model District {
+  id String @id @default(uuid())
+  code String @unique
+  nameEn String
+  nameBn String
+  population Int?
+  area Float?
+  promises PromiseDistrict[]
+  indicatorValues IndicatorValue[]
+  updates Update[]
+}
+
+model PromiseDistrict {
+  promiseId String
+  districtId String
+  promise Promise @relation(fields: [promiseId], references: [id])
+  district District @relation(fields: [districtId], references: [id])
+  @@id([promiseId, districtId])
+}
+
+model Indicator {
+  id String @id @default(uuid())
+  code String @unique
+  pillar String?
+  nameEn String
+  nameBn String
+  unit String
+  source String?
+  frequency String?
+  values IndicatorValue[]
+}
+
+model IndicatorValue {
+  id String @id @default(uuid())
+  indicatorId String
+  indicator Indicator @relation(fields: [indicatorId], references: [id])
+  value Float
+  date DateTime
+  districtId String?
+  district District? @relation(fields: [districtId], references: [id])
+  source String?
+  confidence Confidence?
+}
+
+model EvidenceItem {
+  id String @id @default(uuid())
+  sourceUrl String?
+  title String
+  publisher String?
+  publishedAt DateTime?
+  sourceType SourceType
+  sourceTier SourceTier
+  extractedText String?
+  language String?
+  checksum String?
+  createdAt DateTime @default(now())
+  statusHistories StatusHistory[]
+}
+
+model Update {
+  id String @id @default(uuid())
+  titleEn String
+  titleBn String
+  summaryEn String?
+  summaryBn String?
+  eventType String?
+  eventDate DateTime?
+  districtId String?
+  district District? @relation(fields: [districtId], references: [id])
+  confidence Confidence?
+  reviewStatus ReviewStatus @default(PENDING)
+  createdById String?
+  approvedById String?
+  approvedAt DateTime?
+  createdAt DateTime @default(now())
+  promises PromiseUpdate[]
+}
+
+model PromiseUpdate {
+  promiseId String
+  updateId String
+  promise Promise @relation(fields: [promiseId], references: [id])
+  update Update @relation(fields: [updateId], references: [id])
+  @@id([promiseId, updateId])
+}
+
+model StatusHistory {
+  id String @id @default(uuid())
+  promiseId String
+  promise Promise @relation(fields: [promiseId], references: [id])
+  oldStatus PromiseStatus?
+  newStatus PromiseStatus
+  changedById String
+  reason String?
+  evidenceItemId String?
+  evidenceItem EvidenceItem? @relation(fields: [evidenceItemId], references: [id])
+  createdAt DateTime @default(now())
+}
+
+model GsdpTarget {
+  id String @id @default(uuid())
+  baseYear Int
+  baseGdpInr Decimal
+  targetYear Int
+  targetGdpUsd Decimal
+  scenario Scenario
+  growthRate Decimal
+  exchangeRate Decimal
+  notes String?
+}
+
+model GovernmentPeriod {
+  id String @id @default(uuid())
+  chiefMinister String
+  partyName String
+  oathDate DateTime
+  termEndDate DateTime?
+  seatsWon Int
+  totalSeats Int
+  governor String
+  oathVenue String?
+}

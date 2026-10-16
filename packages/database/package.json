@@ -1,0 +1,26 @@
+{
+  "name": "@viksit/database",
+  "version": "0.0.0",
+  "main": "./index.js",
+  "types": "./index.ts",
+  "scripts": {
+    "db:push": "prisma db push",
+    "db:seed": "prisma db seed",
+    "db:generate": "prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "@types/bcryptjs": "^2.4.6",
+    "bcryptjs": "^3.0.3",
+    "embedded-postgres": "^18.4.0-beta.17"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "prisma": "^5.22.0",
+    "tsx": "latest",
+    "typescript": "^5.0.0"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  }
+}

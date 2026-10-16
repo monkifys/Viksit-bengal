@@ -1,0 +1,120 @@
+{
+  "HomePage": {
+    "title": "বিকশিত বাংলা ড্যাশবোর্ড",
+    "subtitle": "$১ ট্রিলিয়ন অর্থনীতির স্বপ্ন ২০৩০",
+    "targetCardTitle": "জিএসডিপি বৃদ্ধির দৃশ্যপট",
+    "targetCardDescription": "২০৩০ সালের মধ্যে ১ ট্রিলিয়ন ডলার জিএসডিপির লক্ষ্যমাত্রা অর্জনে প্রবৃদ্ধি বিশ্লেষণ",
+    "baselineScenario": "ভিত্তিরেখা দৃশ্যপট (৮.২% সিএজিআর)",
+    "ambitiousScenario": "উচ্চাকাঙ্ক্ষী লক্ষ্য (১২.৫% সিএজিআর)",
+    "currentGsdp": "বর্তমান জিএসডিপি ($২১০ বিলিয়ন)",
+    "targetGsdp": "লক্ষ্যমাত্রা জিএসডিপি ($১,০০০ বিলিয়ন)",
+    "requiredCagr": "প্রয়োজনীয় চক্রবৃদ্ধি প্রবৃদ্ধি (সিএজিআর)",
+    "targetCountdown": "লক্ষ্যমাত্রার সময়সীমা",
+    "yearsRemaining": "২০৩০ সালের বাকি বছর",
+    "viewDetails": "সম্পূর্ণ অর্থনৈতিক বিবরণ দেখুন"
+  },
+  "Navigation": {
+    "brand": "বিকশিত বাংলা",
+    "home": "সারসংক্ষেপ",
+    "promises": "প্রতিশ্রুতি",
+    "districts": "জেলাসমূহ",
+    "indicators": "অর্থনৈতিক সূচক",
+    "admin": "সিএমএস পোর্টাল",
+    "login": "লগ ইন",
+    "logout": "লগ আউট",
+    "skipToContent": "মূল বিষয়বস্তুতে যান",
+    "language": "ভাষা",
+    "selectLanguage": "ভাষা নির্বাচন করুন"
+  },
+  "StatsBand": {
+    "title": "মূল অগ্রগতির সূচক",
+    "totalPromises": "মোট ট্র্যাক করা প্রতিশ্রুতি",
+    "completedPromises": "বাস্তবায়িত / পূরণকৃত",
+    "inProgressPromises": "চলমান প্রক্রিয়াধীন",
+    "districtsCovered": "আওতাভুক্ত জেলাসমূহ",
+    "overallProgress": "লক্ষ্যমাত্রা অগ্রগতি"
+  },
+  "DistrictMap": {
+    "title": "জেলা কর্মক্ষমতা ও প্রতিশ্রুতি",
+    "subtitle": "পশ্চিমবঙ্গের ২৩টি জেলার ভৌগোলিক ট্র্যাকিং ও অগ্রগতি",
+    "selectDistrict": "জেলা নির্বাচন করুন",
+    "searchDistrict": "জেলা খুঁজুন...",
+    "population": "জনসংখ্যা",
+    "gsdpShare": "জিএসডিপি অবদান",
+    "promisesCount": "সক্রিয় প্রতিশ্রুতি",
+    "viewDistrictDetails": "জেলার বিবরণ দেখুন",
+    "tableFallbackTitle": "সারণী ভিত্তিক জেলার তথ্য",
+    "tableFallbackDescription": "স্ক্রিন রিডার ও কীবোর্ড নেভিগেশনের জন্য প্রবেশযোগ্য ডেটা টেবিল",
+    "districtName": "জেলার নাম",
+    "districtCode": "কোড"
+  },
+  "PromiseExplorer": {
+    "title": "নীতিগত প্রতিশ্রুতি ও অঙ্গীকার",
+    "subtitle": "সরকারি প্রতিশ্রুতি ও বাস্তবায়ন মাইলফলকের স্বচ্ছ পর্যবেক্ষণ",
+    "searchPlaceholder": "কীওয়ার্ড, বিভাগ বা জেলা অনুযায়ী প্রতিশ্রুতি খুঁজুন...",
+    "allCategories": "সকল বিভাগ",
+    "allStatuses": "সকল স্থিতি",
+    "allDistricts": "সকল জেলা",
+    "noPromises": "কোনো প্রতিশ্রুতি পাওয়া যায়নি",
+    "status": "স্থিতি",
+    "category": "বিভাগ",
+    "statusNotStarted": "শুরু হয়নি",
+    "statusInProgress": "চলমান",
+    "statusCompleted": "সম্পন্ন",
+    "statusStalled": "স্থগিত",
+    "statusBroken": "ভঙ্গ",
+    "viewTimeline": "টাইমলাইন ও প্রমাণ দেখুন"
+  },
+  "PromiseTimeline": {
+    "title": "বাস্তবায়ন সময়রেখা ও প্রমাণের পথ",
+    "evidenceCount": "যাচাইকৃত প্রমাণের সংখ্যা",
+    "lastUpdated": "সর্বশেষ আপডেট",
+    "source": "অফিসিয়াল উৎস",
+    "evidenceType": "ধরণ",
+    "verifiedBy": "যাচাইকারী",
+    "externalLink": "উৎস নথি দেখুন"
+  },
+  "EconomicOverview": {
+    "title": "সামষ্টিক অর্থনৈতিক সূচক",
+    "subtitle": "পশ্চিমবঙ্গের অর্থনীতি পরিচালনাকারী মূল উন্নয়ন সূচকসমূহ",
+    "gsdpGrowth": "জিএসডিপি বৃদ্ধির হার",
+    "perCapita": "মাথাপিছু আয়",
+    "fdi": "প্রত্যক্ষ বিদেশি বিনিয়োগ",
+    "employment": "কর্মসংস্থানে অংশগ্রহণ",
+    "manufacturing": "শিল্প উৎপাদন",
+    "services": "সেবা খাত",
+    "agriculture": "কৃষি ও সংশ্লিষ্ট খাত"
+  },
+  "Admin": {
+    "title": "গবেষক ও অ্যাডমিন পোর্টাল",
+    "subtitle": "প্রমাণ পর্যালোচনা, প্রতিশ্রুতির মাইলফলক এবং ডেটা যাচাইকরণ",
+    "managePromises": "প্রতিশ্রুতি পরিচালনা",
+    "uploadEvidence": "প্রমাণ আপলোড করুন",
+    "reviewQueue": "যাচাইকরণ সারি",
+    "formTitle": "জমা দেওয়ার ফর্ম",
+    "submit": "পর্যালোচনার জন্য জমা দিন",
+    "approve": "অনুমোদন করুন",
+    "reject": "প্রত্যাখ্যান করুন",
+    "statusUpdated": "স্থিতি সফলভাবে আপডেট হয়েছে"
+  },
+  "Accessibility": {
+    "skipLink": "মূল বিষয়বস্তুতে যান",
+    "landmarkHeader": "হেডার ব্যানার",
+    "landmarkMain": "মূল বিষয়বস্তু",
+    "landmarkFooter": "ফুটার তথ্য",
+    "languageToggle": "ইংরেজিতে পরিবর্তন করুন",
+    "screenReaderHint": "কীবোর্ড ফোকাস সক্রিয় করতে এন্টার চাপুন"
+  },
+  "Common": {
+    "loading": "লোড হচ্ছে...",
+    "error": "একটি ত্রুটি ঘটেছে। অনুগ্রহ করে আবার চেষ্টা করুন।",
+    "retry": "পুনরায় চেষ্টা করুন",
+    "back": "ফিরে যান",
+    "close": "বন্ধ করুন",
+    "save": "সংরক্ষণ করুন",
+    "cancel": "বাতিল",
+    "filter": "ফিল্টার",
+    "clear": "পরিষ্কার",
+    "more": "আরও জানুন"
+  }
+}

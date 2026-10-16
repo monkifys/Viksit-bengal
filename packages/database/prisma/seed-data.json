@@ -1,0 +1,1906 @@
+{
+  "governmentPeriod": {
+    "chiefMinister": "Suvendu Adhikari",
+    "partyName": "Bharatiya Janata Party",
+    "oathDate": "2026-05-09",
+    "termEndDate": "2031-05-09",
+    "seatsWon": 207,
+    "totalSeats": 294,
+    "governor": "RN Ravi",
+    "oathVenue": "Brigade Parade Ground, Kolkata"
+  },
+  "gsdpTargets": [
+    {
+      "scenario": "conservative",
+      "baseYear": 2024,
+      "baseGdpInrLakhCrore": 18.5,
+      "targetYear": 2033,
+      "targetGdpUsdBillion": 750,
+      "assumedGrowthRate": 10.5,
+      "assumedExchangeRate": 88,
+      "notes": "Lower nominal growth, adverse exchange-rate movement"
+    },
+    {
+      "scenario": "base_case",
+      "baseYear": 2024,
+      "baseGdpInrLakhCrore": 18.5,
+      "targetYear": 2033,
+      "targetGdpUsdBillion": 1000,
+      "assumedGrowthRate": 13,
+      "assumedExchangeRate": 85,
+      "notes": "Official/consensus growth assumptions with stable exchange rate"
+    },
+    {
+      "scenario": "ambitious",
+      "baseYear": 2024,
+      "baseGdpInrLakhCrore": 18.5,
+      "targetYear": 2033,
+      "targetGdpUsdBillion": 1250,
+      "assumedGrowthRate": 15.5,
+      "assumedExchangeRate": 82,
+      "notes": "Higher investment, productivity and export growth scenario"
+    }
+  ],
+  "categories": [
+    {
+      "code": "national-security",
+      "icon": "🛡",
+      "titleEn": "National Security",
+      "titleBn": "জাতীয় নিরাপত্তা",
+      "subtitleEn": "Border fencing · Infiltration crackdown",
+      "subtitleBn": "সীমান্ত বেড়া · অনুপ্রবেশ দমন",
+      "sortOrder": 1
+    },
+    {
+      "code": "governance",
+      "icon": "🏛",
+      "titleEn": "Governance & Rule of Law",
+      "titleBn": "শাসন ও আইনের শাসন",
+      "subtitleEn": "White Paper · DA arrears · Anti-corruption · UCC · Recruitment",
+      "subtitleBn": "শ্বেতপত্র · ডিএ বকেয়া · দুর্নীতি দমন · ইউসিসি · নিয়োগ",
+      "sortOrder": 2
+    },
+    {
+      "code": "women",
+      "icon": "👩",
+      "titleEn": "Women's Safety & Empowerment",
+      "titleBn": "নারী সুরক্ষা ও ক্ষমতায়ন",
+      "subtitleEn": "Nari Surokkha Dorkar · ₹3,000/month · 33% reservation · Free HPV",
+      "subtitleBn": "নারী সুরক্ষা দরকার · ₹৩,০০০/মাস · ৩৩% সংরক্ষণ · বিনামূল্যে HPV",
+      "sortOrder": 3
+    },
+    {
+      "code": "youth",
+      "icon": "🎓",
+      "titleEn": "Youth & Employment",
+      "titleBn": "যুব ও কর্মসংস্থান",
+      "subtitleEn": "Yuboder Ujjwol Bhobishyot — 1 crore jobs · Startup credit · Sports University · AVGC Labs",
+      "subtitleBn": "যুবদের উজ্জ্বল ভবিষ্যৎ — ১ কোটি চাকরি · স্টার্টআপ ক্রেডিট · ক্রীড়া বিশ্ববিদ্যালয়",
+      "sortOrder": 4
+    },
+    {
+      "code": "economy",
+      "icon": "🏭",
+      "titleEn": "Economy & Industry",
+      "titleBn": "অর্থনীতি ও শিল্প",
+      "subtitleEn": "Arthanitir Unnoti — Singur industrial park · Haldia port · MSME · Jute · Steel · Coastal zones",
+      "subtitleBn": "অর্থনীতির উন্নতি — সিঙ্গুর শিল্প পার্ক · হলদিয়া বন্দর · MSME · পাট · ইস্পাত",
+      "sortOrder": 5
+    },
+    {
+      "code": "tea",
+      "icon": "🍵",
+      "titleEn": "Tea Industry",
+      "titleBn": "চা শিল্প",
+      "subtitleEn": "Darjeeling Tea · Replantation · GI enforcement · Tea tourism · Small growers",
+      "subtitleBn": "দার্জিলিং চা · পুনর্রোপণ · জিআই প্রয়োগ · চা পর্যটন · ক্ষুদ্র চাষি",
+      "sortOrder": 6
+    },
+    {
+      "code": "farmers",
+      "icon": "🌾",
+      "titleEn": "Farmers & Rural Economy",
+      "titleBn": "কৃষক ও গ্রামীণ অর্থনীতি",
+      "subtitleEn": "Krishoker Unnoyon — ₹9,000 PM Kisan · MSP ₹3,100 · Cold storage · Dairy · GI products",
+      "subtitleBn": "কৃষকের উন্নয়ন — ₹৯,০০০ পিএম কিষাণ · MSP ₹৩,১০০ · শীতাতপ ভাণ্ডার · দুগ্ধ",
+      "sortOrder": 7
+    },
+    {
+      "code": "fishery",
+      "icon": "🐟",
+      "titleEn": "Fishery & Blue Economy",
+      "titleBn": "মৎস্য ও নীল অর্থনীতি",
+      "subtitleEn": "PM Matsya Sampada · Deep-sea fishing · Marine biotech · Coastal women's livelihood",
+      "subtitleBn": "পিএম মৎস্য সম্পদ · গভীর সমুদ্র মাছ ধরা · সামুদ্রিক বায়োটেক",
+      "sortOrder": 8
+    },
+    {
+      "code": "health",
+      "icon": "🏥",
+      "titleEn": "Health",
+      "titleBn": "স্বাস্থ্য",
+      "subtitleEn": "Suswastho — Ayushman Bharat · AIIMS North Bengal · Cancer hospital · 24-hr healthcare",
+      "subtitleBn": "সুস্বাস্থ্য — আয়ুষ্মান ভারত · এইমস উত্তরবঙ্গ · ক্যান্সার হাসপাতাল",
+      "sortOrder": 9
+    },
+    {
+      "code": "education",
+      "icon": "📚",
+      "titleEn": "Education",
+      "titleBn": "শিক্ষা",
+      "subtitleEn": "Sushikkha — NEP · Government school transformation · IIT · IIM · Atal Tinkering Labs",
+      "subtitleBn": "সুশিক্ষা — জাতীয় শিক্ষানীতি · সরকারি বিদ্যালয় রূপান্তর · আইআইটি · আইআইএম",
+      "sortOrder": 10
+    },
+    {
+      "code": "culture",
+      "icon": "🎭",
+      "titleEn": "Culture & Heritage",
+      "titleBn": "সংস্কৃতি ও ঐতিহ্য",
+      "subtitleEn": "Hrito Gourab — Vande Mataram Museum · Shaktipeeth · Kurmali & Rajbongshi languages · Tagore legacy",
+      "subtitleBn": "হৃত গৌরব — বন্দে মাতরম জাদুঘর · শক্তিপীঠ · কুরমালি ও রাজবংশী ভাষা",
+      "sortOrder": 11
+    },
+    {
+      "code": "inclusive",
+      "icon": "⚖",
+      "titleEn": "Inclusive Development",
+      "titleBn": "অন্তর্ভুক্তিমূলক উন্নয়ন",
+      "subtitleEn": "Sokoler Somman — SC/ST/OBC · Tea tribes · Hindu refugees · Hill regions · Gig workers · Solar energy",
+      "subtitleBn": "সকলের সম্মান — তপশিলি জাতি/উপজাতি/ওবিসি · চা জনজাতি · শরণার্থী",
+      "sortOrder": 12
+    },
+    {
+      "code": "infrastructure",
+      "icon": "🏗",
+      "titleEn": "Infrastructure & Development",
+      "titleBn": "পরিকাঠামো ও উন্নয়ন",
+      "subtitleEn": "Porikathamogoto Unnoyon — Tajpur port · Metro · National Highway · 61 railway projects · North Bengal",
+      "subtitleBn": "পরিকাঠামোগত উন্নয়ন — তাজপুর বন্দর · মেট্রো · জাতীয় সড়ক · ৬১ রেল প্রকল্প",
+      "sortOrder": 13
+    },
+    {
+      "code": "tourism",
+      "icon": "🗺",
+      "titleEn": "Tourism",
+      "titleBn": "পর্যটন",
+      "subtitleEn": "Porjoton Shilpe — Darjeeling · Sundarbans · Dooars · Digha · Kolkata UNESCO heritage",
+      "subtitleBn": "পর্যটন শিল্পে — দার্জিলিং · সুন্দরবন · ডুয়ার্স · দীঘা · কলকাতা ইউনেস্কো",
+      "sortOrder": 14
+    },
+    {
+      "code": "environment",
+      "icon": "🌿",
+      "titleEn": "Environment",
+      "titleBn": "পরিবেশ",
+      "subtitleEn": "Poribeshke Rokkha — Royal Bengal Tiger · Mangrove forests · MISTI",
+      "subtitleBn": "পরিবেশকে রক্ষা — রয়্যাল বেঙ্গল টাইগার · ম্যানগ্রোভ বন · মিস্টি",
+      "sortOrder": 15
+    }
+  ],
+  "keyPromises": [
+    {
+      "number": 1,
+      "linkedCategory": "national-security",
+      "linkedPromiseNum": 1
+    },
+    {
+      "number": 2,
+      "linkedCategory": "governance",
+      "linkedPromiseNum": 1
+    },
+    {
+      "number": 3,
+      "linkedCategory": "governance",
+      "linkedPromiseNum": 5
+    },
+    {
+      "number": 4,
+      "linkedCategory": "governance",
+      "linkedPromiseNum": 2
+    },
+    {
+      "number": 5,
+      "linkedCategory": "youth",
+      "linkedPromiseNum": 1
+    },
+    {
+      "number": 6,
+      "linkedCategory": "women",
+      "linkedPromiseNum": 6
+    },
+    {
+      "number": 7,
+      "linkedCategory": "women",
+      "linkedPromiseNum": 1
+    },
+    {
+      "number": 8,
+      "linkedCategory": "farmers",
+      "linkedPromiseNum": 2
+    },
+    {
+      "number": 9,
+      "linkedCategory": "fishery",
+      "linkedPromiseNum": 2
+    },
+    {
+      "number": 10,
+      "linkedCategory": "governance",
+      "linkedPromiseNum": 4
+    },
+    {
+      "number": 11,
+      "linkedCategory": "tea",
+      "linkedPromiseNum": 1
+    },
+    {
+      "number": 12,
+      "linkedCategory": "culture",
+      "linkedPromiseNum": 8
+    },
+    {
+      "number": 13,
+      "linkedCategory": "health",
+      "linkedPromiseNum": 1
+    },
+    {
+      "number": 14,
+      "linkedCategory": "culture",
+      "linkedPromiseNum": 2
+    },
+    {
+      "number": 15,
+      "linkedCategory": "governance",
+      "linkedPromiseNum": 10
+    }
+  ],
+  "promises": [
+    {
+      "code": "INFRA-01",
+      "category": "infrastructure",
+      "number": "01",
+      "titleEn": "Kolkata-Siliguri High-Speed Logistics Corridor",
+      "titleBn": "কলকাতা-শিলিগুড়ি দ্রুতগতির লজিস্টিক করিডোর",
+      "descriptionEn": "Construction of 6-lane express economic highway connecting southern and northern Bengal.",
+      "descriptionBn": "উত্তর ও দক্ষিণ বাংলাকে সংযোগকারী ৬ লেনের দ্রুত অর্থনৈতিক করিডোর নির্মাণ।",
+      "status": "UNDER_IMPLEMENTATION",
+      "confidence": "A",
+      "isKeyPromise": true,
+      "keyPromiseNumber": 1
+    },
+    {
+      "category": "national-security",
+      "number": 1,
+      "titleEn": "Zero-tolerance policy towards infiltration",
+      "titleBn": "অনুপ্রবেশের প্রতি শূন্য-সহিষ্ণুতা নীতি",
+      "descriptionEn": "Implement the \"Detect, Delete and Deport\" model and take strict measures to prevent illegal infiltration and address silent demographic invasion.",
+      "descriptionBn": "\"সনাক্ত, মুছে ফেলা এবং বহিষ্কার\" মডেল বাস্তবায়ন এবং অবৈধ অনুপ্রবেশ রোধে কঠোর ব্যবস্থা নেওয়া।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "national-security",
+      "number": 2,
+      "titleEn": "Land allocation for border fencing within 45 days",
+      "titleBn": "৪৫ দিনের মধ্যে সীমান্ত বেড়ার জন্য জমি বরাদ্দ",
+      "descriptionEn": "Land allocation for fencing along the India-Bangladesh border within 45 days of forming the government — to crack down on infiltration.",
+      "descriptionBn": "সরকার গঠনের ৪৫ দিনের মধ্যে ভারত-বাংলাদেশ সীমান্ত বরাবর বেড়া দেওয়ার জন্য জমি বরাদ্দ।",
+      "deadlineDate": "2026-06-23",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "governance",
+      "number": 1,
+      "titleEn": "White Paper on TMC corruption",
+      "titleBn": "টিএমসি দুর্নীতির উপর শ্বেতপত্র",
+      "descriptionEn": "Release a comprehensive White Paper detailing 15 years of corruption, administrative opacity, financial mismanagement, and breakdown of law and order under TMC. Identify and bring culprits to justice.",
+      "descriptionBn": "টিএমসির অধীনে ১৫ বছরের দুর্নীতি, প্রশাসনিক অস্বচ্ছতা, আর্থিক অব্যবস্থাপনা এবং আইনশৃঙ্খলা ভাঙনের বিস্তারিত শ্বেতপত্র প্রকাশ।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "governance",
+      "number": 2,
+      "titleEn": "Clear DA arrears and implement 7th Pay Commission",
+      "titleBn": "ডিএ বকেয়া নিষ্পত্তি ও সপ্তম বেতন কমিশন বাস্তবায়ন",
+      "descriptionEn": "Clear all Dearness Allowance (DA) arrears and ensure the implementation of 7th Pay Commission for state government employees and pensioners within 45 days of assuming charge.",
+      "descriptionBn": "রাজ্য সরকারি কর্মচারী ও পেনশনভোগীদের জন্য দায়িত্ব গ্রহণের ৪৫ দিনের মধ্যে সমস্ত মহার্ঘ ভাতা (ডিএ) বকেয়া নিষ্পত্তি ও সপ্তম বেতন কমিশন বাস্তবায়ন।",
+      "deadlineDate": "2026-06-23",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "governance",
+      "number": 3,
+      "titleEn": "Crackdown on cattle smuggling",
+      "titleBn": "গরু পাচার দমন",
+      "descriptionEn": "Ensure total crackdown on cattle smuggling.",
+      "descriptionBn": "গরু পাচারের উপর সম্পূর্ণ দমন নিশ্চিত করা।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "governance",
+      "number": 4,
+      "titleEn": "Implement Uniform Civil Code (UCC)",
+      "titleBn": "অভিন্ন নাগরিক বিধি (ইউসিসি) বাস্তবায়ন",
+      "descriptionEn": "Bring in legislation to implement Uniform Civil Code (UCC).",
+      "descriptionBn": "অভিন্ন নাগরিক বিধি (ইউসিসি) বাস্তবায়নে আইন প্রণয়ন।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "governance",
+      "number": 5,
+      "titleEn": "End mafia rule in West Bengal",
+      "titleBn": "পশ্চিমবঙ্গে মাফিয়া শাসনের অবসান",
+      "descriptionEn": "Put an end to mafia rule in West Bengal — specifically targeting the illegal trade of coal, sand, stone, and heinous crimes of women and child trafficking.",
+      "descriptionBn": "পশ্চিমবঙ্গে মাফিয়া শাসনের অবসান — বিশেষত কয়লা, বালি, পাথরের অবৈধ ব্যবসা এবং নারী ও শিশু পাচারের জঘন্য অপরাধ দমন।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "governance",
+      "number": 6,
+      "titleEn": "Fill all state department vacancies by Dec 2026",
+      "titleBn": "ডিসেম্বর ২০২৬-এর মধ্যে সমস্ত রাজ্য বিভাগের শূন্যপদ পূরণ",
+      "descriptionEn": "Fill all vacancies across various state departments through transparent, merit-based recruitment drives by December 2026.",
+      "descriptionBn": "ডিসেম্বর ২০২৬-এর মধ্যে স্বচ্ছ, মেধা-ভিত্তিক নিয়োগ অভিযানের মাধ্যমে বিভিন্ন রাজ্য বিভাগের সমস্ত শূন্যপদ পূরণ।",
+      "deadlineDate": "2026-12-31",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "governance",
+      "number": 7,
+      "titleEn": "Implement all blocked Central schemes",
+      "titleBn": "সমস্ত অবরুদ্ধ কেন্দ্রীয় প্রকল্প বাস্তবায়ন",
+      "descriptionEn": "Implement all Central government schemes blocked by TMC, including PM Vishwakarma Yojana, PM KUSUM, PM Ujjwala 3.0, and Khelo India.",
+      "descriptionBn": "টিএমসি দ্বারা অবরুদ্ধ সমস্ত কেন্দ্রীয় সরকারি প্রকল্প বাস্তবায়ন, যার মধ্যে পিএম বিশ্বকর্মা যোজনা, পিএম কুসুম, পিএম উজ্জ্বলা ৩.০ এবং খেলো ইন্ডিয়া।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "governance",
+      "number": 8,
+      "titleEn": "Restore the rule of law",
+      "titleBn": "আইনের শাসন পুনরুদ্ধার",
+      "descriptionEn": "Restore the rule of law and restore the public's trust in state institutions.",
+      "descriptionBn": "আইনের শাসন পুনরুদ্ধার এবং রাষ্ট্রীয় প্রতিষ্ঠানের প্রতি জনগণের আস্থা পুনরুদ্ধার।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "governance",
+      "number": 9,
+      "titleEn": "Vision document for Greater Kolkata",
+      "titleBn": "বৃহত্তর কলকাতার জন্য দৃষ্টিপত্র",
+      "descriptionEn": "Release a comprehensive vision document for Greater Kolkata ahead of municipal corporation elections — addressing decongestion, sewage management, land encroachment, illegal construction, and tourism promotion.",
+      "descriptionBn": "পৌরসভা নির্বাচনের আগে বৃহত্তর কলকাতার জন্য একটি ব্যাপক দৃষ্টিপত্র প্রকাশ — যানজট নিরসন, পয়ঃনিষ্কাশন, ভূমি দখল, অবৈধ নির্মাণ এবং পর্যটন প্রচার।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "governance",
+      "number": 10,
+      "titleEn": "Freedom of religious practices law",
+      "titleBn": "ধর্মীয় অনুশীলনের স্বাধীনতার আইন",
+      "descriptionEn": "Enact a law ensuring freedom of religious practices.",
+      "descriptionBn": "ধর্মীয় অনুশীলনের স্বাধীনতা নিশ্চিত করার জন্য আইন প্রণয়ন।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "women",
+      "number": 1,
+      "titleEn": "₹3,000 monthly financial assistance to women",
+      "titleBn": "মহিলাদের জন্য মাসিক ₹৩,০০০ আর্থিক সহায়তা",
+      "descriptionEn": "Provide monthly financial assistance of ₹3,000 to women to ensure their economic independence.",
+      "descriptionBn": "মহিলাদের অর্থনৈতিক স্বাধীনতা নিশ্চিত করতে মাসিক ₹৩,০০০ আর্থিক সহায়তা প্রদান।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "women",
+      "number": 2,
+      "titleEn": "75 lakh women as Lakhpati Didi",
+      "titleBn": "৭৫ লক্ষ মহিলাকে লখপতি দিদি হিসাবে ক্ষমতায়ন",
+      "descriptionEn": "Empower 75 lakh women as Lakhpati Didi.",
+      "descriptionBn": "৭৫ লক্ষ মহিলাকে লখপতি দিদি হিসাবে ক্ষমতায়ন।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "women",
+      "number": 3,
+      "titleEn": "Women's police station in every sub-division",
+      "titleBn": "প্রতিটি মহকুমায় মহিলা থানা",
+      "descriptionEn": "Establish at least one women's police station in every sub-division and a Nari Sohayata Desk in every police station.",
+      "descriptionBn": "প্রতিটি মহকুমায় অন্তত একটি মহিলা থানা এবং প্রতিটি থানায় নারী সহায়তা ডেস্ক স্থাপন।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "women",
+      "number": 4,
+      "titleEn": "Zero-tolerance for crimes against women",
+      "titleBn": "নারীর বিরুদ্ধে অপরাধে শূন্য সহিষ্ণুতা",
+      "descriptionEn": "Ensure women's safety and dignity in busy city areas, educational institutions, hostels and public places — implementing zero-tolerance for crimes against women.",
+      "descriptionBn": "ব্যস্ত শহর এলাকা, শিক্ষা প্রতিষ্ঠান, হোস্টেল এবং সর্বসাধারণের স্থানে নারীর নিরাপত্তা ও মর্যাদা নিশ্চিত করা।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "women",
+      "number": 5,
+      "titleEn": "₹21,000 and nutritional kits for pregnant women",
+      "titleBn": "গর্ভবতী মহিলাদের জন্য ₹২১,০০০ ও পুষ্টি কিট",
+      "descriptionEn": "Provide monetary assistance of ₹21,000 and 6 Nutritional kits to pregnant women from financially marginalised families.",
+      "descriptionBn": "আর্থিকভাবে প্রান্তিক পরিবারের গর্ভবতী মহিলাদের ₹২১,০০০ এবং ৬টি পুষ্টি কিট প্রদান।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "women",
+      "number": 6,
+      "titleEn": "Durga Surokha Squads",
+      "titleBn": "দুর্গা সুরক্ষা স্কোয়াড",
+      "descriptionEn": "Establish women-only Durga Surokha Squads — women officers patrol teams for busy city areas and public places.",
+      "descriptionBn": "শুধুমাত্র মহিলা অফিসারদের নিয়ে দুর্গা সুরক্ষা স্কোয়াড গঠন — ব্যস্ত শহর এলাকা ও সর্বসাধারণের স্থানে টহল দল।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "women",
+      "number": 7,
+      "titleEn": "Two all-women battalions in State Reserve Police",
+      "titleBn": "রাজ্য সংরক্ষিত পুলিশে দুটি সর্ব-মহিলা ব্যাটালিয়ন",
+      "descriptionEn": "Establish two all-women battalions in the State Reserve Police Force — named after Matangini Hazra and Rani Shiromani.",
+      "descriptionBn": "রাজ্য সংরক্ষিত পুলিশ বাহিনীতে দুটি সর্ব-মহিলা ব্যাটালিয়ন গঠন — মাতঙ্গিনী হাজরা এবং রাণী শিরোমণির নামে।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "women",
+      "number": 8,
+      "titleEn": "33% reservation for women in state jobs",
+      "titleBn": "রাজ্য সরকারি চাকরিতে মহিলাদের জন্য ৩৩% সংরক্ষণ",
+      "descriptionEn": "Provide 33% reservation for women in all state government jobs, including the police forces.",
+      "descriptionBn": "পুলিশ বাহিনী সহ সমস্ত রাজ্য সরকারি চাকরিতে মহিলাদের জন্য ৩৩% সংরক্ষণ প্রদান।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "women",
+      "number": 9,
+      "titleEn": "Industrial policy prioritising women workers",
+      "titleBn": "নারী শ্রমিকদের অগ্রাধিকার দেওয়া শিল্পনীতি",
+      "descriptionEn": "Industrial Policy to give priority to women workers by incentivising private players.",
+      "descriptionBn": "বেসরকারি খাতকে উৎসাহিত করে নারী শ্রমিকদের অগ্রাধিকার দেওয়ার জন্য শিল্পনীতি।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "women",
+      "number": 10,
+      "titleEn": "Free transportation for women in state buses",
+      "titleBn": "রাজ্য পরিচালিত বাসে মহিলাদের বিনামূল্যে পরিবহন",
+      "descriptionEn": "Provide free transportation for women in all state-run buses.",
+      "descriptionBn": "সমস্ত রাজ্য পরিচালিত বাসে মহিলাদের জন্য বিনামূল্যে পরিবহন প্রদান।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "women",
+      "number": 11,
+      "titleEn": "Working women's hostel in every district",
+      "titleBn": "প্রতিটি জেলায় কর্মজীবী মহিলা হোস্টেল",
+      "descriptionEn": "Establish a working women's hostel in every district to support the female workforce.",
+      "descriptionBn": "নারী কর্মশক্তিকে সহায়তা করতে প্রতিটি জেলায় কর্মজীবী মহিলা হোস্টেল স্থাপন।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "women",
+      "number": 12,
+      "titleEn": "Revised honorarium for Anganwadi, ASHA workers",
+      "titleBn": "অঙ্গনওয়াড়ি, আশা কর্মীদের সংশোধিত সম্মানী",
+      "descriptionEn": "Revise the monthly honorarium of Anganwadi, Prani Mitra and ASHA workers to provide fair and dignified compensation.",
+      "descriptionBn": "অঙ্গনওয়াড়ি, প্রাণী মিত্র এবং আশা কর্মীদের মাসিক সম্মানী সংশোধন করে ন্যায্য ও মর্যাদাপূর্ণ ক্ষতিপূরণ প্রদান।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "women",
+      "number": 13,
+      "titleEn": "Prevent child marriages",
+      "titleBn": "বাল্যবিবাহ রোধ",
+      "descriptionEn": "Implement active measures to prevent child marriages and safeguard the future of young girls.",
+      "descriptionBn": "বাল্যবিবাহ রোধে সক্রিয় পদক্ষেপ বাস্তবায়ন এবং কিশোরীদের ভবিষ্যৎ সুরক্ষিত করা।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "women",
+      "number": 14,
+      "titleEn": "₹50,000 for girls entering graduation",
+      "titleBn": "স্নাতক কোর্সে ভর্তির সময় মেয়েদের জন্য ₹৫০,০০০",
+      "descriptionEn": "Provide ₹50,000 to girls at the time of admission into graduation courses to support women in higher education.",
+      "descriptionBn": "উচ্চশিক্ষায় মহিলাদের সহায়তা করতে স্নাতক কোর্সে ভর্তির সময় মেয়েদের ₹৫০,০০০ প্রদান।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "women",
+      "number": 15,
+      "titleEn": "Free HPV vaccination",
+      "titleBn": "বিনামূল্যে HPV টিকাকরণ",
+      "descriptionEn": "Provide free HPV vaccination to all girls and women below the age of 40.",
+      "descriptionBn": "৪০ বছরের নীচে সমস্ত মেয়ে ও মহিলাদের বিনামূল্যে HPV টিকাকরণ প্রদান।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "women",
+      "number": 16,
+      "titleEn": "Free breast cancer screening",
+      "titleBn": "বিনামূল্যে স্তন ক্যান্সার স্ক্রিনিং",
+      "descriptionEn": "Provide free breast cancer screening for women above the age of 40 from marginalised and economically weaker sections — ensuring early detection and timely treatment.",
+      "descriptionBn": "প্রান্তিক ও অর্থনৈতিকভাবে দুর্বল শ্রেণীর ৪০ বছরের উপরে মহিলাদের বিনামূল্যে স্তন ক্যান্সার স্ক্রিনিং প্রদান।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "women",
+      "number": 17,
+      "titleEn": "Reopen cases of atrocities against women",
+      "titleBn": "নারীর উপর অত্যাচারের মামলা পুনরায় খোলা",
+      "descriptionEn": "Reopen all cases of atrocities against women where justice has been denied — provide adequate and immediate ex gratia compensation and legal aid.",
+      "descriptionBn": "যেসব মামলায় নারীদের ন্যায়বিচার অস্বীকৃত হয়েছে সেগুলো পুনরায় খোলা — পর্যাপ্ত ও তাৎক্ষণিক অনুগ্রহমূলক ক্ষতিপূরণ ও আইনি সহায়তা প্রদান।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "youth",
+      "number": 1,
+      "titleEn": "1 crore new jobs over 5 years",
+      "titleBn": "৫ বছরে ১ কোটি নতুন চাকরি",
+      "descriptionEn": "Provide 1 crore new jobs and self-employment opportunities over the next five years to prevent migration and brain drain.",
+      "descriptionBn": "পাঁচ বছরে ১ কোটি নতুন চাকরি ও স্ব-কর্মসংস্থানের সুযোগ সৃষ্টি।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "youth",
+      "number": 2,
+      "titleEn": "₹3,000 monthly allowance for unemployed youth",
+      "titleBn": "বেকার যুবকদের মাসিক ₹৩,০০০ ভাতা",
+      "descriptionEn": "Provide a monthly allowance of ₹3,000 to unemployed youth to support them during their job search.",
+      "descriptionBn": "বেকার যুবকদের চাকরি খোঁজার সময় সহায়তা করতে মাসিক ₹৩,০০০ ভাতা প্রদান।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "youth",
+      "number": 3,
+      "titleEn": "Age relaxation of up to 5 years for exam candidates",
+      "titleBn": "পরীক্ষা প্রার্থীদের জন্য ৫ বছর পর্যন্ত বয়স শিথিল",
+      "descriptionEn": "Provide age relaxation of up to 5 years and ensure opportunities for candidates who suffered due to repeated paper leaks and exam cancellations since 2015.",
+      "descriptionBn": "২০১৫ সাল থেকে বারবার পেপার ফাঁস ও পরীক্ষা বাতিলের কারণে ক্ষতিগ্রস্ত প্রার্থীদের জন্য ৫ বছর পর্যন্ত বয়স শিথিল।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "youth",
+      "number": 4,
+      "titleEn": "Restore abolished permanent vacancies",
+      "titleBn": "বিলুপ্ত স্থায়ী পদ পুনরুদ্ধার",
+      "descriptionEn": "Restore the abolished permanent vacancies and fill them within the stipulated timeline in a transparent manner.",
+      "descriptionBn": "বিলুপ্ত স্থায়ী পদ পুনরুদ্ধার এবং স্বচ্ছ পদ্ধতিতে নির্ধারিত সময়সীমার মধ্যে পূরণ।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "youth",
+      "number": 5,
+      "titleEn": "Banglar Udyam Credit Card Scheme",
+      "titleBn": "বাংলার উদ্যম ক্রেডিট কার্ড স্কিম",
+      "descriptionEn": "Launch Banglar Udyam Credit Card Scheme — 5 lakh youth will receive financial support of up to ₹10 lakh each (₹5 lakh grant + ₹5 lakh interest-free loan) to encourage entrepreneurship.",
+      "descriptionBn": "বাংলার উদ্যম ক্রেডিট কার্ড স্কিম চালু — ৫ লক্ষ যুবক প্রত্যেকে ₹১০ লক্ষ পর্যন্ত আর্থিক সহায়তা পাবেন।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "youth",
+      "number": 6,
+      "titleEn": "Sports University",
+      "titleBn": "ক্রীড়া বিশ্ববিদ্যালয়",
+      "descriptionEn": "Establish a Sports University in the state to promote athletic excellence and professional sports training.",
+      "descriptionBn": "ক্রীড়া শ্রেষ্ঠত্ব ও পেশাদার ক্রীড়া প্রশিক্ষণ প্রচারে রাজ্যে একটি ক্রীড়া বিশ্ববিদ্যালয় স্থাপন।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "youth",
+      "number": 7,
+      "titleEn": "AVGC Content Creator Labs for 1 lakh youth",
+      "titleBn": "১ লক্ষ যুবকের জন্য AVGC কন্টেন্ট ক্রিয়েটর ল্যাব",
+      "descriptionEn": "Establish AVGC Content Creator Labs to train more than 1,00,000 youth over the next five years in Animation, Visual Effects, Gaming, and Comics (AVGC) — boosting Bengal's Orange Economy.",
+      "descriptionBn": "পাঁচ বছরে ১ লক্ষেরও বেশি যুবককে অ্যানিমেশন, ভিজ্যুয়াল ইফেক্টস, গেমিং এবং কমিকসে (AVGC) প্রশিক্ষণের জন্য ল্যাব স্থাপন।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "youth",
+      "number": 8,
+      "titleEn": "₹15,000 for competitive exam preparation",
+      "titleBn": "প্রতিযোগিতামূলক পরীক্ষার প্রস্তুতিতে ₹১৫,০০০",
+      "descriptionEn": "Provide a one-time financial assistance of ₹15,000 for students preparing for competitive exams.",
+      "descriptionBn": "প্রতিযোগিতামূলক পরীক্ষার প্রস্তুতিরত ছাত্রদের জন্য এককালীন ₹১৫,০০০ আর্থিক সহায়তা প্রদান।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "economy",
+      "number": 1,
+      "titleEn": "Single-window clearance and ease of doing business",
+      "titleBn": "একক জানালা ছাড়পত্র ও ব্যবসা সহজীকরণ",
+      "descriptionEn": "Create an investment-friendly business environment — ensuring 'ease of doing business' and eliminating syndicate culture through a single-window clearance system.",
+      "descriptionBn": "বিনিয়োগ-বান্ধব ব্যবসায়িক পরিবেশ তৈরি — একক জানালা ছাড়পত্র ব্যবস্থার মাধ্যমে সিন্ডিকেট সংস্কৃতি দূরীকরণ।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "economy",
+      "number": 2,
+      "titleEn": "Industrial park in Singur + 4 industrial zones",
+      "titleBn": "সিঙ্গুরে শিল্প পার্ক + ৪টি শিল্প অঞ্চল",
+      "descriptionEn": "Develop an industrial park in Singur and establish four major industrial zones across the state to generate employment.",
+      "descriptionBn": "সিঙ্গুরে একটি শিল্প পার্ক এবং রাজ্য জুড়ে চারটি প্রধান শিল্প অঞ্চল স্থাপন।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "economy",
+      "number": 3,
+      "titleEn": "Haldia port-led development",
+      "titleBn": "হলদিয়া বন্দর-নেতৃত্বাধীন উন্নয়ন",
+      "descriptionEn": "Make Haldia a massive center for port-led development and the blue economy.",
+      "descriptionBn": "হলদিয়াকে বন্দর-নেতৃত্বাধীন উন্নয়ন ও নীল অর্থনীতির বিশাল কেন্দ্র করা।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "economy",
+      "number": 4,
+      "titleEn": "MSME credit and technology support",
+      "titleBn": "MSME ঋণ ও প্রযুক্তি সহায়তা",
+      "descriptionEn": "Ensure adequate credit and technology support for the MSME sector of West Bengal.",
+      "descriptionBn": "পশ্চিমবঙ্গের MSME খাতের জন্য পর্যাপ্ত ঋণ ও প্রযুক্তি সহায়তা নিশ্চিত করা।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "economy",
+      "number": 5,
+      "titleEn": "Ashok Nagar Oil Field development",
+      "titleBn": "অশোকনগর তেলক্ষেত্র উন্নয়ন",
+      "descriptionEn": "Ensure full and sustainable utilisation of natural resources, including the expedited development of the Ashok Nagar Oil Field.",
+      "descriptionBn": "অশোকনগর তেলক্ষেত্রের দ্রুত উন্নয়ন সহ প্রাকৃতিক সম্পদের সম্পূর্ণ ও টেকসই ব্যবহার নিশ্চিত করা।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "economy",
+      "number": 6,
+      "titleEn": "Tea industry revival and modernisation",
+      "titleBn": "চা শিল্পের পুনরুজ্জীবন ও আধুনিকীকরণ",
+      "descriptionEn": "Implement targeted revival and modernisation plans for the struggling tea industry.",
+      "descriptionBn": "সংকটে থাকা চা শিল্পের জন্য লক্ষ্যবদ্ধ পুনরুজ্জীবন ও আধুনিকীকরণ পরিকল্পনা বাস্তবায়ন।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "economy",
+      "number": 7,
+      "titleEn": "Jute industry revival",
+      "titleBn": "পাট শিল্পের পুনরুজ্জীবন",
+      "descriptionEn": "Revive and strengthen West Bengal's iconic jute industry — modernising ageing mills, supporting farmers, promoting eco-friendly jute products, and reopening closed jute mills.",
+      "descriptionBn": "পশ্চিমবঙ্গের ঐতিহ্যবাহী পাট শিল্পের পুনরুজ্জীবন ও শক্তিশালীকরণ।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "economy",
+      "number": 8,
+      "titleEn": "Defence manufacturing and logistics hubs",
+      "titleBn": "প্রতিরক্ষা উৎপাদন ও লজিস্টিক হাব",
+      "descriptionEn": "Invest in defence manufacturing and establish modern logistics hubs to integrate West Bengal into the global supply chain.",
+      "descriptionBn": "প্রতিরক্ষা উৎপাদনে বিনিয়োগ এবং বিশ্ব সরবরাহ শৃঙ্খলে পশ্চিমবঙ্গকে সংযুক্ত করতে আধুনিক লজিস্টিক হাব স্থাপন।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "economy",
+      "number": 9,
+      "titleEn": "Modern steel plants",
+      "titleBn": "আধুনিক ইস্পাত কারখানা",
+      "descriptionEn": "Develop modern steel plants to capitalise on the region's mineral wealth and industrial potential.",
+      "descriptionBn": "অঞ্চলের খনিজ সম্পদ ও শিল্প সম্ভাবনাকে কাজে লাগাতে আধুনিক ইস্পাত কারখানা গড়ে তোলা।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "economy",
+      "number": 10,
+      "titleEn": "Coastal economic zones",
+      "titleBn": "উপকূলীয় অর্থনৈতিক অঞ্চল",
+      "descriptionEn": "Establish coastal economic zones focused on fisheries, aquaculture and seafood processing industries.",
+      "descriptionBn": "মৎস্য, জলজ চাষ এবং সামুদ্রিক খাদ্য প্রক্রিয়াকরণ শিল্পের উপর দৃষ্টি নিবদ্ধ করে উপকূলীয় অর্থনৈতিক অঞ্চল স্থাপন।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "economy",
+      "number": 11,
+      "titleEn": "₹1 lakh for microfinance loan defaulters",
+      "titleBn": "ক্ষুদ্রঋণ খেলাপিদের জন্য ₹১ লক্ষ",
+      "descriptionEn": "Provide financial assistance of ₹1 lakh to those unable to pay the instalment of loans taken from microfinance companies.",
+      "descriptionBn": "ক্ষুদ্রঋণ কোম্পানি থেকে নেওয়া ঋণের কিস্তি দিতে অক্ষমদের ₹১ লক্ষ আর্থিক সহায়তা প্রদান।",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "tea",
+      "number": 1,
+      "titleEn": "Rejuvenate old tea gardens",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "with replantation programs and high-yield, climate-resilient tea varieties.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "tea",
+      "number": 2,
+      "titleEn": "organic and sustainable tea cultivation",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Promote organic and sustainable tea cultivation to increase global demand and premium pricing.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "tea",
+      "number": 3,
+      "titleEn": "subsidies for mechanization, irrigation, and modern processing units",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Provide subsidies for mechanization, irrigation, and modern processing units .",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "tea",
+      "number": 4,
+      "titleEn": "Darjeeling tea with strict GI enforcement",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Strengthen the global brand of Darjeeling tea with strict GI enforcement and anti-counterfeiting measures.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "tea",
+      "number": 5,
+      "titleEn": "\"Darjeeling Tea\" export strategy",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Develop a unified \"Darjeeling Tea\" export strategy with international marketing campaigns.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "tea",
+      "number": 6,
+      "titleEn": "tea export hubs",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Set up tea export hubs with streamlined logistics, packaging, and certification facilities.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "tea",
+      "number": 7,
+      "titleEn": "tea tourism",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Encourage tea tourism by developing heritage tea estates into eco-tourism destinations.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "tea",
+      "number": 8,
+      "titleEn": "Support small tea growers",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "with mini-processing units and direct market access.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "tea",
+      "number": 9,
+      "titleEn": "tea research and innovation centers",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Set up tea research and innovation centers focusing on climate change adaptation and productivity.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "farmers",
+      "number": 1,
+      "titleEn": "financial assistance of ₹9,000 to all farmers",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Provide financial assistance of ₹9,000 to all farmers across West Bengal under Pradhan Mantri Kisan Samman Nidhi, while continuing all existing grant assistance.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "farmers",
+      "number": 2,
+      "titleEn": "Expand Minimum Support Price benefits",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "and ensure steady subsidised supply of agricultural inputs. Increase MSP for rice to ₹3,100.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "farmers",
+      "number": 3,
+      "titleEn": "black-marketing of fertilizers",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Eliminate the black-marketing of fertilizers through strict enforcement - facilitate fertilizer distribution through cooperatives directly to farmers. Provide subsidies on fuel and electricity for irrigation pumps.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "farmers",
+      "number": 4,
+      "titleEn": "farmers receive four times the market price, double the solatium, and job opportunities",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Ensure that if agricultural land is acquired for development, farmers receive four times the market price, double the solatium, and job opportunities resulting from industry.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "farmers",
+      "number": 5,
+      "titleEn": "permanent flood control systems",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Implement permanent flood control systems and improve drainage to protect the rural economy from recurring natural disasters.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "farmers",
+      "number": 6,
+      "titleEn": "district-level packaging and export facilitation centres",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Establish district-level packaging and export facilitation centres to help potato farmers get better prices. Promote value-added potato products like chips and processed foods.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "farmers",
+      "number": 7,
+      "titleEn": "Promote mango cultivation",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "train farmers in modern techniques, establish cold storage facilities and processing hubs for mango-based products, expand export channels.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "farmers",
+      "number": 8,
+      "titleEn": "irrigation facilities for the farmers of Jangal Mahal",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Ensure better irrigation facilities for the farmers of Jangal Mahal .",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "farmers",
+      "number": 9,
+      "titleEn": "Build cold storage facilities in every block",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "to keep the farmers' produce - including fruits, vegetables, dairy and fisheries - safe.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "farmers",
+      "number": 10,
+      "titleEn": "Strengthen cooperative systems in fisheries",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "and animal husbandry to boost rural livelihoods and production.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "farmers",
+      "number": 11,
+      "titleEn": "indigenous cattle breeds through the Rashtriya Gokul Mission",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Promote indigenous cattle breeds through the Rashtriya Gokul Mission .",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "farmers",
+      "number": 12,
+      "titleEn": "dairy industry in West Bengal",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Give a strong push to the dairy industry in West Bengal through greater investment, modern infrastructure, and better market access for farmers.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "farmers",
+      "number": 13,
+      "titleEn": "Bengal's iconic sweets as a global cultural and culinary brand",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Promote Bengal's iconic sweets as a global cultural and culinary brand - ensuring wider national and international market access.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "farmers",
+      "number": 14,
+      "titleEn": "Geographical Indication (GI) status for Bandel Cheese",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Secure Geographical Indication (GI) status for Bandel Cheese to preserve its unique heritage and enhance market value.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "farmers",
+      "number": 15,
+      "titleEn": "GI recognition for Gangarampur Kheer Doi and Nabadwip Laal Doi",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Ensure GI recognition for Gangarampur Kheer Doi and Nabadwip Laal Doi .",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "fishery",
+      "number": 1,
+      "titleEn": "stranglehold of TMC's illegal control",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Free West Bengal's water bodies from the stranglehold of TMC's illegal control .",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "fishery",
+      "number": 2,
+      "titleEn": "Pradhan Mantri Matsya Sampada Yojana",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Register all fishermen under the Pradhan Mantri Matsya Sampada Yojana - provide modern technology, financial assistance, pension, insurance, and social security schemes.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "fishery",
+      "number": 3,
+      "titleEn": "modern fish landing centers, cold storage chains, and processing hubs",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Develop modern fish landing centers, cold storage chains, and processing hubs to reduce post-harvest losses and increase fishermen's income.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "fishery",
+      "number": 4,
+      "titleEn": "deep-sea fishing with subsidised boats",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Promote deep-sea fishing with subsidised boats , GPS systems and safety equipment.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "fishery",
+      "number": 5,
+      "titleEn": "brackish water aquaculture and inland fisheries",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Expand brackish water aquaculture and inland fisheries using scientific methods to increase productivity.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "fishery",
+      "number": 6,
+      "titleEn": "marine biotechnology research parks and innovation hubs",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Set up marine biotechnology research parks and innovation hubs in coastal districts.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "fishery",
+      "number": 7,
+      "titleEn": "algae farming, biofuels, pharmaceuticals, and nutraceuticals",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Promote research in algae farming, biofuels, pharmaceuticals, and nutraceuticals from marine resources.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "fishery",
+      "number": 8,
+      "titleEn": "high-yield, disease-resistant fish and shrimp varieties",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Partner with universities and private players to develop high-yield, disease-resistant fish and shrimp varieties .",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "fishery",
+      "number": 9,
+      "titleEn": "marine biotech, aquaculture technology, and ocean-based solutions",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Support startups working in marine biotech, aquaculture technology, and ocean-based solutions .",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "fishery",
+      "number": 10,
+      "titleEn": "skill development centres",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Establish skill development centres to train youth in marine sciences, aquaculture, and biotech applications.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "fishery",
+      "number": 11,
+      "titleEn": "Empower and train women of coastal communities",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "to make and export shell-based decorative items and jewellery - providing financial support, market access, and skill development.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "fishery",
+      "number": 12,
+      "titleEn": "strong export networks and global partnerships",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Build strong export networks and global partnerships to boost seafood and marine-based product exports.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "health",
+      "number": 1,
+      "titleEn": "Ayushman Bharat scheme",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Implement the Ayushman Bharat scheme - free medical coverage of up to ₹5 lakh for every citizen. Ensure all existing benefits and facilities remain fully operational and uninterrupted.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "health",
+      "number": 2,
+      "titleEn": "AIIMS in North Bengal",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Build an AIIMS in North Bengal to ensure access to advanced medical facilities without the need to travel to Kolkata.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "health",
+      "number": 3,
+      "titleEn": "All India Institute of AYUSH",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Establish an All India Institute of AYUSH on the lines of AIIMS.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "health",
+      "number": 4,
+      "titleEn": "24-hour healthcare services at all health facilities",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Ensure 24-hour healthcare services at all health facilities - recruit specialised doctors and nurses for every department.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "health",
+      "number": 5,
+      "titleEn": "cancer hospital in North Bengal",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Establish one cancer hospital in North Bengal .",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "health",
+      "number": 6,
+      "titleEn": "modernized state government hospitals for Sundarbans and Jangal Mahal",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Establish modernized state government hospitals for Sundarbans and Jangal Mahal .",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "education",
+      "number": 1,
+      "titleEn": "National Education Policy (NEP)",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Implement the National Education Policy (NEP) in letter and spirit - ensure total transparency in teacher recruitment.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "education",
+      "number": 2,
+      "titleEn": "Transform government schools into centres of excellence",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "fix teacher-student ratio (1 teacher per 50 students). Equip every school with state-of-the-art labs, libraries and playgrounds.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "education",
+      "number": 3,
+      "titleEn": "Mid-Day Meals and school uniforms",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Significantly upgrade the quality of Mid-Day Meals and school uniforms for all students - provide funds alongside PM-POSHAN allocation for nutrition-rich food and high-quality school kits.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "education",
+      "number": 4,
+      "titleEn": "Swami Vivekananda Merit Scholarship scheme",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Provide financial assistance to meritorious students through the Swami Vivekananda Merit Scholarship scheme .",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "education",
+      "number": 5,
+      "titleEn": "Atal Tinkering Labs in government secondary schools",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Establish Atal Tinkering Labs in government secondary schools to promote STEM skills, coding and data mining.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "education",
+      "number": 6,
+      "titleEn": "Raise government schools to match the standards of private schools",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": ".",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "education",
+      "number": 7,
+      "titleEn": "basic minimum pay for all contractual teachers",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Ensure a basic minimum pay for all contractual teachers - including SSK, MSK, Higher Secondary school para-teachers, and state-aided college teachers and non-teaching staff.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "education",
+      "number": 8,
+      "titleEn": "IIT and an IIM in North Bengal",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Establish an IIT and an IIM in North Bengal to provide world-class technical and management education within the region.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "culture",
+      "number": 1,
+      "titleEn": "right to freely practice their religion",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Ensure that every individual has the right to freely practice their religion without any restrictions.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "culture",
+      "number": 2,
+      "titleEn": "Vande Mataram Museum",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Build a dedicated Vande Mataram Museum highlighting its creation, historical significance, and journey over time.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "culture",
+      "number": 3,
+      "titleEn": "Shaktipeeth circuit",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Build a Shaktipeeth circuit to connect all the Shaktipeeths.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "culture",
+      "number": 4,
+      "titleEn": "Chaitanya Mahaprabhu Spiritual Circuit",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Build the ' Chaitanya Mahaprabhu Spiritual Circuit ' to honour the Bhakti Movement.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "culture",
+      "number": 5,
+      "titleEn": "Gangasagar Mela, Mahesher Rath, Baruni Mela and Bandna Festival",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Transform Gangasagar Mela, Mahesher Rath, Baruni Mela and Bandna Festival into an international spiritual and cultural festival - pursue inclusion in UNESCO's Intangible Cultural Heritage list.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "culture",
+      "number": 6,
+      "titleEn": "Gaudiya Math, Bharat Sevashram Sangha and ISKCON",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Undertake comprehensive development of areas surrounding Gaudiya Math, Bharat Sevashram Sangha and ISKCON - improving roads, sanitation, lighting, security, pilgrim amenities and tourism infrastructure.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "culture",
+      "number": 7,
+      "titleEn": "legacy of Rabindranath Tagore",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Promote the legacy of Rabindranath Tagore - strengthen arts, literature, and cultural education, establish Tagore-inspired cultural centers, scholarships for young artists, and initiatives to preserve and propagate his works.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "culture",
+      "number": 8,
+      "titleEn": "include Kurmali and Rajbongshi languages in the Eighth Schedule",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Work with the Central Government to include Kurmali and Rajbongshi languages in the Eighth Schedule of the Indian Constitution.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "culture",
+      "number": 9,
+      "titleEn": "Thakur Panchanan Barma",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Prioritise the cultural legacy of regional icons by honouring the history and contributions of figures like Thakur Panchanan Barma .",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "culture",
+      "number": 10,
+      "titleEn": "\"One District, One Product\" initiative",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Promote each district's unique specialties under the \"One District, One Product\" initiative - including Murshidabad silk, Nadia Taant, Uttar Dinajpur Shola Shilpo - supporting local artisans and boosting regional industries.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "culture",
+      "number": 11,
+      "titleEn": "Showcase each district's folk arts",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "on national and international platforms - promoting cultural heritage and supporting local artists.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "culture",
+      "number": 12,
+      "titleEn": "theatre groups to ₹1 lakh",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Raise the annual grant for theatre groups to ₹1 lakh . Establish theatre practice centers in cities, towns and villages, alongside renovation and infrastructure upgrades of existing auditoriums.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "inclusive",
+      "number": 1,
+      "titleEn": "laws against \"love jihad\" and \"land jihad\"",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Enact strict laws against \"love jihad\" and \"land jihad\" to protect the social and territorial integrity of the state.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "inclusive",
+      "number": 2,
+      "titleEn": "Double financial assistance",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "for widows, senior citizens, and persons with disabilities.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "inclusive",
+      "number": 3,
+      "titleEn": "Pradhan Mantri Awas Yojana",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Ensure transparent and free, fair implementation of Pradhan Mantri Awas Yojana and full implementation of Viksit Bharat - Guarantee for Rozgar and Ajeevika Mission.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "inclusive",
+      "number": 4,
+      "titleEn": "permanent political solution for the hill regions",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Bring a permanent political solution for the hill regions that respects local aspirations and operates within constitutional frameworks.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "inclusive",
+      "number": 5,
+      "titleEn": "Tribal University in Jhargram",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Establish a dedicated Tribal University in Jhargram to enhance educational access for indigenous communities.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "inclusive",
+      "number": 6,
+      "titleEn": "equitable development and fair representation for SCs, STs and OBC communities",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Ensure equitable development and fair representation for SCs, STs and OBC communities .",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "inclusive",
+      "number": 7,
+      "titleEn": "holistic development of tea tribes",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Prioritise the holistic development of tea tribes - ensure minimum wages and healthcare. Establish a dedicated tea workers' development board to oversee health security, modern housing, and social welfare benefits.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "inclusive",
+      "number": 8,
+      "titleEn": "land ownership to tea garden workers",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Provide land ownership to tea garden workers .",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "inclusive",
+      "number": 9,
+      "titleEn": "social security and comprehensive protection for all workers in the unorganised sector",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Ensure a standard of living, social security and comprehensive protection for all workers in the unorganised sector .",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "inclusive",
+      "number": 10,
+      "titleEn": "welfare board for gig and platform workers",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Constitute a welfare board for gig and platform workers - implement specific welfare measures and social safety nets to ensure financial stability and professional dignity.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "inclusive",
+      "number": 11,
+      "titleEn": "citizenship to all Hindu refugees and ensure their proper rehabilitation",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Provide citizenship to all Hindu refugees and ensure their proper rehabilitation .",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "inclusive",
+      "number": 12,
+      "titleEn": "bring bills to zero by promoting solar rooftop panels",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Rationalise electricity bills and bring bills to zero by promoting solar rooftop panels under the PM Surya Ghar Mufta Bijli Yojana.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "infrastructure",
+      "number": 1,
+      "titleEn": "modern deep-sea ports in Tajpur and Kulpi",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Build modern deep-sea ports in Tajpur and Kulpi to revitalise the state's maritime trade and promote exports.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "infrastructure",
+      "number": 2,
+      "titleEn": "Construct bridges over major rivers",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "ensure structural integrity and maintenance of the Farakka Bridge. Work towards preventing riverbank erosion.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "infrastructure",
+      "number": 3,
+      "titleEn": "National Highway connecting the Sundarbans directly to Darjeeling",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Build a National Highway connecting the Sundarbans directly to Darjeeling to link the state's North and South.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "infrastructure",
+      "number": 4,
+      "titleEn": "Complete all stalled Kolkata Metro projects",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": ".",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "infrastructure",
+      "number": 5,
+      "titleEn": "completion of 61 stalled railway projects",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Resolve all pending land-related hurdles to expedite the completion of 61 stalled railway projects in West Bengal.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "infrastructure",
+      "number": 6,
+      "titleEn": "Purulia, Malda and Balurghat airports",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Operationalise the Purulia, Malda and Balurghat airports under the UDAN Scheme for better regional air connectivity.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "infrastructure",
+      "number": 7,
+      "titleEn": "four new cities",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Develop four new cities and focus on the holistic development of North Bengal to end years of regional neglect.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "infrastructure",
+      "number": 8,
+      "titleEn": "protecting wetlands from illegal encroachments",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Ensure ecological balance by protecting wetlands from illegal encroachments and conserving forests.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "infrastructure",
+      "number": 9,
+      "titleEn": "soil erosion and floods in the Sundarbans",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Take steps to prevent soil erosion and floods in the Sundarbans and establish cyclone shelters to safeguard the local population.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "infrastructure",
+      "number": 10,
+      "titleEn": "folding bridges in Haldia and Nandigram",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Construct folding bridges in Haldia and Nandigram .",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "tourism",
+      "number": 1,
+      "titleEn": "Darjeeling as a premier eco-adventure and heritage tourism hub",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Develop Darjeeling as a premier eco-adventure and heritage tourism hub .",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "tourism",
+      "number": 2,
+      "titleEn": "coastal regions like Digha and Mandarmani",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Develop West Bengal's coastal regions like Digha and Mandarmani with eco-friendly beaches, marine tourism and seafood-based enterprises - strive to earn Blue Flag certification for beaches.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "tourism",
+      "number": 3,
+      "titleEn": "Dooars as a center for forest, wildlife and tribal tourism",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Promote the Dooars as a center for forest, wildlife and tribal tourism - creating jobs in eco-resorts, guided tours and cultural experiences.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "tourism",
+      "number": 4,
+      "titleEn": "Sundarbans into a truly sustainable wildlife and mangrove tourism destination",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Develop the Sundarbans into a truly sustainable wildlife and mangrove tourism destination - generate livelihoods while preserving biodiversity.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "tourism",
+      "number": 5,
+      "titleEn": "West Bengal as a global tea tourism hub",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Establish West Bengal as a global tea tourism hub with estate stays, workshops and festivals.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "tourism",
+      "number": 6,
+      "titleEn": "Kolkata's heritage, cultural and riverfront tourism",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Develop Kolkata's heritage, cultural and riverfront tourism and work to secure the UNESCO World Heritage Living City tag.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "environment",
+      "number": 1,
+      "titleEn": "conservation and protection of the Royal Bengal Tiger",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Work for the conservation and protection of the Royal Bengal Tiger and its habitat.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    },
+    {
+      "category": "environment",
+      "number": 2,
+      "titleEn": "West Bengal's mangrove forests under MISTI",
+      "titleBn": "বাংলা অনুবাদ",
+      "descriptionEn": "Protect and restore West Bengal's mangrove forests under MISTI - creating thriving ecosystems, sustainable livelihoods, and eco-tourism hubs for future generations.",
+      "descriptionBn": "বাংলা বর্ণনা",
+      "status": "not_started",
+      "confidence": "D"
+    }
+  ],
+  "districts": [
+    {
+      "code": "APD",
+      "nameEn": "Alipurduar",
+      "nameBn": "আলিপুরদুয়ার",
+      "population": 1500000,
+      "area": 3383
+    },
+    {
+      "code": "BNK",
+      "nameEn": "Bankura",
+      "nameBn": "বাঁকুড়া",
+      "population": 3600000,
+      "area": 6882
+    },
+    {
+      "code": "BIR",
+      "nameEn": "Birbhum",
+      "nameBn": "বীরভূম",
+      "population": 3500000,
+      "area": 4545
+    },
+    {
+      "code": "COB",
+      "nameEn": "Cooch Behar",
+      "nameBn": "কোচবিহার",
+      "population": 2800000,
+      "area": 3387
+    },
+    {
+      "code": "DDN",
+      "nameEn": "Dakshin Dinajpur",
+      "nameBn": "দক্ষিণ দিনাজপুর",
+      "population": 1700000,
+      "area": 2219
+    },
+    {
+      "code": "DAR",
+      "nameEn": "Darjeeling",
+      "nameBn": "দার্জিলিং",
+      "population": 1600000,
+      "area": 2092.5
+    },
+    {
+      "code": "HOG",
+      "nameEn": "Hooghly",
+      "nameBn": "হুগলি",
+      "population": 5500000,
+      "area": 3149
+    },
+    {
+      "code": "HOW",
+      "nameEn": "Howrah",
+      "nameBn": "হাওড়া",
+      "population": 4850000,
+      "area": 1467
+    },
+    {
+      "code": "JAL",
+      "nameEn": "Jalpaiguri",
+      "nameBn": "জলপাইগুড়ি",
+      "population": 2400000,
+      "area": 3386.1
+    },
+    {
+      "code": "JHR",
+      "nameEn": "Jhargram",
+      "nameBn": "ঝাড়গ্রাম",
+      "population": 1137000,
+      "area": 3037.6
+    },
+    {
+      "code": "KAL",
+      "nameEn": "Kalimpong",
+      "nameBn": "কালিম্পং",
+      "population": 251000,
+      "area": 1053.6
+    },
+    {
+      "code": "KOL",
+      "nameEn": "Kolkata",
+      "nameBn": "কলকাতা",
+      "population": 4500000,
+      "area": 205
+    },
+    {
+      "code": "MLD",
+      "nameEn": "Malda",
+      "nameBn": "মালদা",
+      "population": 4000000,
+      "area": 3733
+    },
+    {
+      "code": "MSD",
+      "nameEn": "Murshidabad",
+      "nameBn": "মুর্শিদাবাদ",
+      "population": 7100000,
+      "area": 5324
+    },
+    {
+      "code": "NAD",
+      "nameEn": "Nadia",
+      "nameBn": "নদিয়া",
+      "population": 5200000,
+      "area": 3927
+    },
+    {
+      "code": "N24",
+      "nameEn": "North 24 Parganas",
+      "nameBn": "উত্তর ২৪ পরগনা",
+      "population": 10000000,
+      "area": 4094
+    },
+    {
+      "code": "PBD",
+      "nameEn": "Paschim Bardhaman",
+      "nameBn": "পশ্চিম বর্ধমান",
+      "population": 2882000,
+      "area": 1603.1
+    },
+    {
+      "code": "PMD",
+      "nameEn": "Paschim Medinipur",
+      "nameBn": "পশ্চিম মেদিনীপুর",
+      "population": 5913000,
+      "area": 6308
+    },
+    {
+      "code": "EBD",
+      "nameEn": "Purba Bardhaman",
+      "nameBn": "পূর্ব বর্ধমান",
+      "population": 4835000,
+      "area": 5432.6
+    },
+    {
+      "code": "EMD",
+      "nameEn": "Purba Medinipur",
+      "nameBn": "পূর্ব মেদিনীপুর",
+      "population": 5095000,
+      "area": 4736
+    },
+    {
+      "code": "PUR",
+      "nameEn": "Purulia",
+      "nameBn": "পুরুলিয়া",
+      "population": 2930000,
+      "area": 6259
+    },
+    {
+      "code": "S24",
+      "nameEn": "South 24 Parganas",
+      "nameBn": "দক্ষিণ ২৪ পরগনা",
+      "population": 8161000,
+      "area": 9960
+    },
+    {
+      "code": "UDN",
+      "nameEn": "Uttar Dinajpur",
+      "nameBn": "উত্তর দিনাজপুর",
+      "population": 3000000,
+      "area": 3140
+    }
+  ],
+  "users": [
+    {
+      "email": "admin@viksitbengal.gov.in",
+      "password": "Admin@123",
+      "name": "State Administrator",
+      "role": "ADMIN"
+    },
+    {
+      "email": "researcher@viksitbengal.gov.in",
+      "password": "Researcher@123",
+      "name": "Policy Researcher",
+      "role": "RESEARCHER"
+    },
+    {
+      "email": "citizen@viksitbengal.gov.in",
+      "password": "Citizen@123",
+      "name": "Citizen Observer",
+      "role": "PUBLIC"
+    }
+  ],
+  "indicators": [
+    {
+      "code": "GSDP_GROWTH",
+      "nameEn": "GSDP Annual Growth Rate",
+      "nameBn": "রাজ্যের জিএসডিপি বার্ষিক বৃদ্ধির হার",
+      "unit": "%",
+      "pillar": "Economy",
+      "currentValue": 8.4,
+      "targetValue": 12.5,
+      "values": [
+        {
+          "date": "2024-01-01T00:00:00Z",
+          "value": 7.8
+        },
+        {
+          "date": "2025-01-01T00:00:00Z",
+          "value": 8.4
+        }
+      ]
+    },
+    {
+      "code": "TRILLION_USD_PROGRESS",
+      "nameEn": " GSDP Economy Target Milestone",
+      "nameBn": " ট্রিলিয়ন অর্থনীতি রূপান্তর অগ্রগতি",
+      "unit": "Billion USD",
+      "pillar": "Economy",
+      "currentValue": 240,
+      "targetValue": 1000,
+      "values": [
+        {
+          "date": "2026-01-01T00:00:00Z",
+          "value": 230,
+          "scenario": "CONSERVATIVE"
+        },
+        {
+          "date": "2026-01-01T00:00:00Z",
+          "value": 240,
+          "scenario": "BASE_CASE"
+        },
+        {
+          "date": "2026-01-01T00:00:00Z",
+          "value": 260,
+          "scenario": "AMBITIOUS"
+        }
+      ]
+    }
+  ]
+}

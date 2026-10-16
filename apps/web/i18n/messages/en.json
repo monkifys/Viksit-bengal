@@ -1,0 +1,120 @@
+{
+  "HomePage": {
+    "title": "Viksit Bengal Dashboard",
+    "subtitle": "$1 Trillion Economy Vision 2030",
+    "targetCardTitle": "GSDP Growth Scenarios",
+    "targetCardDescription": "Targeting $1T GSDP by 2030 across ambitious and baseline economic trajectories",
+    "baselineScenario": "Baseline Scenario (8.2% CAGR)",
+    "ambitiousScenario": "Ambitious Vision (12.5% CAGR)",
+    "currentGsdp": "Current GSDP ($210B)",
+    "targetGsdp": "Target GSDP ($1,000B)",
+    "requiredCagr": "Required Growth (CAGR)",
+    "targetCountdown": "Target Horizon",
+    "yearsRemaining": "Years Remaining to 2030",
+    "viewDetails": "Explore Full Economic Breakdown"
+  },
+  "Navigation": {
+    "brand": "Viksit Bengal",
+    "home": "Overview",
+    "promises": "Promises",
+    "districts": "Districts",
+    "indicators": "Indicators",
+    "admin": "CMS Portal",
+    "login": "Sign In",
+    "logout": "Sign Out",
+    "skipToContent": "Skip to content",
+    "language": "Language",
+    "selectLanguage": "Select language"
+  },
+  "StatsBand": {
+    "title": "Key Progress Metrics",
+    "totalPromises": "Total Tracked Promises",
+    "completedPromises": "Delivered / Fulfilled",
+    "inProgressPromises": "In Progress",
+    "districtsCovered": "Districts Covered",
+    "overallProgress": "Target Progress"
+  },
+  "DistrictMap": {
+    "title": "District Performance & Commitments",
+    "subtitle": "Interactive geographical tracking across all 23 districts of West Bengal",
+    "selectDistrict": "Select District",
+    "searchDistrict": "Search districts...",
+    "population": "Population",
+    "gsdpShare": "GSDP Contribution",
+    "promisesCount": "Active Promises",
+    "viewDistrictDetails": "View District Details",
+    "tableFallbackTitle": "Tabular District Data",
+    "tableFallbackDescription": "Accessible data table for screen readers and keyboard navigation",
+    "districtName": "District Name",
+    "districtCode": "Code"
+  },
+  "PromiseExplorer": {
+    "title": "Policy Commitments & Promises",
+    "subtitle": "Transparent monitoring of governmental commitments and delivery milestones",
+    "searchPlaceholder": "Search promises by keyword, sector, or district...",
+    "allCategories": "All Categories",
+    "allStatuses": "All Statuses",
+    "allDistricts": "All Districts",
+    "noPromises": "No promises found matching the criteria",
+    "status": "Status",
+    "category": "Category",
+    "statusNotStarted": "Not Started",
+    "statusInProgress": "In Progress",
+    "statusCompleted": "Completed",
+    "statusStalled": "Stalled",
+    "statusBroken": "Broken",
+    "viewTimeline": "View Timeline & Evidence"
+  },
+  "PromiseTimeline": {
+    "title": "Delivery Timeline & Evidence Trail",
+    "evidenceCount": "Verified Evidence Items",
+    "lastUpdated": "Last Status Update",
+    "source": "Official Source",
+    "evidenceType": "Type",
+    "verifiedBy": "Verified By",
+    "externalLink": "View Source Document"
+  },
+  "EconomicOverview": {
+    "title": "Macroeconomic Indicators",
+    "subtitle": "Tracking critical developmental indices driving West Bengal's economy",
+    "gsdpGrowth": "GSDP Growth Rate",
+    "perCapita": "Per Capita Income",
+    "fdi": "FDI & Capital Inflow",
+    "employment": "Workforce Participation",
+    "manufacturing": "Industrial Output",
+    "services": "Services Sector",
+    "agriculture": "Agriculture & Allied"
+  },
+  "Admin": {
+    "title": "Researcher & Admin Portal",
+    "subtitle": "Evidence review, promise milestone logging, and data verification",
+    "managePromises": "Manage Promises",
+    "uploadEvidence": "Upload Evidence Item",
+    "reviewQueue": "Verification Queue",
+    "formTitle": "Submission Form",
+    "submit": "Submit for Review",
+    "approve": "Approve Evidence",
+    "reject": "Reject Evidence",
+    "statusUpdated": "Status updated successfully"
+  },
+  "Accessibility": {
+    "skipLink": "Skip to content",
+    "landmarkHeader": "Header banner",
+    "landmarkMain": "Main content",
+    "landmarkFooter": "Footer information",
+    "languageToggle": "Switch language to Bengali",
+    "screenReaderHint": "Press Enter to activate keyboard focus"
+  },
+  "Common": {
+    "loading": "Loading...",
+    "error": "An error occurred. Please try again.",
+    "retry": "Retry",
+    "back": "Back",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "filter": "Filter",
+    "clear": "Clear",
+    "more": "Learn more"
+  }
+}
