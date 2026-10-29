@@ -156,8 +156,8 @@ function renderMastheadMeta(meta) {
   const container = document.getElementById('masthead-meta');
   if (!container) return;
 
-  const OATH_DATE = parseDate(meta.oathDate);
-  const TERM_END = parseDate(meta.termEndDate || meta.termEnd);
+  const OATH_DATE = parseDate(meta.oathDate || '2026-05-09');
+  const TERM_END = parseDate(meta.termEnd || meta.termEndDate || '2031-05-09T11:00:00+05:30');
   const now = new Date();
   const daysIn = Math.max(1, Math.floor((now - OATH_DATE) / 86400000) + 1);
   const daysLeft = Math.max(0, Math.floor((TERM_END - now) / 86400000));
@@ -201,8 +201,9 @@ function updateTodayDate() {
 function pad(n) { return String(n).padStart(2, '0'); }
 
 function initTimer(meta) {
-  const OATH_DATE = parseDate(meta.oathDate);
-  const TERM_END = parseDate(meta.termEnd);
+  if (!meta) return;
+  const OATH_DATE = parseDate(meta.oathDate || '2026-05-09');
+  const TERM_END = parseDate(meta.termEnd || meta.termEndDate || '2031-05-09T11:00:00+05:30');
 
   function updateTimer() {
     const now = new Date();
@@ -225,6 +226,15 @@ function initTimer(meta) {
 
     // Countdown to TERM_END
     const diff = TERM_END - now;
+    const yEl = document.getElementById('t-years');
+    const moEl = document.getElementById('t-months');
+    const dEl = document.getElementById('t-days');
+    const hEl = document.getElementById('t-hours');
+    const miEl = document.getElementById('t-mins');
+    const sEl = document.getElementById('t-secs');
+
+    if (!yEl && !moEl && !dEl && !hEl && !miEl && !sEl) return;
+
     if (diff > 0) {
       const yrs = Math.floor(diff / (365.25 * 24 * 3600 * 1000));
       const rem1 = diff % (365.25 * 24 * 3600 * 1000);
@@ -236,15 +246,16 @@ function initTimer(meta) {
       const mins = Math.floor((rem3 % (3600 * 1000)) / 60000);
       const secs = Math.floor((rem3 % 60000) / 1000);
 
-      document.getElementById('t-years').textContent = formatNumber(pad(yrs));
-      document.getElementById('t-months').textContent = formatNumber(pad(mths));
-      document.getElementById('t-days').textContent = formatNumber(pad(days));
-      document.getElementById('t-hours').textContent = formatNumber(pad(hrs));
-      document.getElementById('t-mins').textContent = formatNumber(pad(mins));
-      document.getElementById('t-secs').textContent = formatNumber(pad(secs));
+      if (yEl) yEl.textContent = formatNumber(pad(yrs));
+      if (moEl) moEl.textContent = formatNumber(pad(mths));
+      if (dEl) dEl.textContent = formatNumber(pad(days));
+      if (hEl) hEl.textContent = formatNumber(pad(hrs));
+      if (miEl) miEl.textContent = formatNumber(pad(mins));
+      if (sEl) sEl.textContent = formatNumber(pad(secs));
     } else {
-      ['t-years', 't-months', 't-days', 't-hours', 't-mins', 't-secs']
-        .forEach(id => document.getElementById(id).textContent = formatNumber('00'));
+      [yEl, moEl, dEl, hEl, miEl, sEl].forEach(el => {
+        if (el) el.textContent = formatNumber('00');
+      });
     }
   }
 

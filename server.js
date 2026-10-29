@@ -165,7 +165,7 @@ function getDynamicMeta() {
     chiefMinister_bn: settings.chief_minister_bn || 'শুভেন্দু অধিকারী',
     oathDate: settings.oath_date || '2026-05-09',
     oathCeremony: settings.oath_ceremony_text || '9 May 2026, Brigade Parade Ground',
-    oathCeremony_bn: settings.oath_ceremony_text_bn || '৯ মে ২০২৬, ব্রিগেড প্যারেড গ্রাউন্ড',
+    termEnd: settings.term_end_date || '2031-05-09T11:00:00+05:30',
     termEndDate: settings.term_end_date || '2031-05-09',
     termEnds: settings.term_ends_text || 'May 2031',
     termEnds_bn: settings.term_ends_text_bn || 'মে ২০৩১',
