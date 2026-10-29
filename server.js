@@ -181,7 +181,7 @@ function getDynamicMeta() {
   };
 }
 
-const server = http.createServer(async (req, res) => {
+async function handleRequest(req, res) {
   const parsedUrl = url.parse(req.url, true);
   const pathname = parsedUrl.pathname;
   const query = parsedUrl.query;
@@ -767,7 +767,9 @@ const server = http.createServer(async (req, res) => {
     const stream = fs.createReadStream(filePath);
     stream.pipe(res);
   });
-});
+}
+
+const server = http.createServer(handleRequest);
 
 let currentPort = PORT;
 
@@ -800,4 +802,9 @@ if (require.main === module) {
   startServer(currentPort);
 }
 
-module.exports = { server, startServer, SlidingWindowRateLimiter, evidenceRateLimiter };
+module.exports = handleRequest;
+module.exports.server = server;
+module.exports.startServer = startServer;
+module.exports.handleRequest = handleRequest;
+module.exports.SlidingWindowRateLimiter = SlidingWindowRateLimiter;
+module.exports.evidenceRateLimiter = evidenceRateLimiter;

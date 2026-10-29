@@ -8,7 +8,22 @@ const fs = require('fs');
 const path = require('path');
 const auth = require('./auth');
 
-const DB_PATH = path.join(__dirname, 'database.sqlite');
+let DB_PATH = path.join(__dirname, 'database.sqlite');
+
+// On Vercel Serverless environment, /var/task is read-only.
+// Copy database to /tmp if running on Vercel to allow WAL journaling and writes.
+if (process.env.VERCEL) {
+  const tmpDbPath = path.join('/tmp', 'database.sqlite');
+  if (!fs.existsSync(tmpDbPath)) {
+    try {
+      fs.copyFileSync(DB_PATH, tmpDbPath);
+    } catch (err) {
+      console.error('Failed to copy database to /tmp:', err);
+    }
+  }
+  DB_PATH = tmpDbPath;
+}
+
 const db = new DatabaseSync(DB_PATH);
 
 // Enable WAL mode & foreign keys
