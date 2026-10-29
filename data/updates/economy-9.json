@@ -1,0 +1,32 @@
+{
+  "updates": [
+    {
+      "date": "2026-06-08",
+      "note_en": "Reports indicate that the Steel Authority of India Limited (SAIL) is moving forward with a second unit at the Durgapur Steel Plant, with a projected investment of ₹35,000 crore. The expansion aims to significantly increase capacity as part of a broader national modernization drive.",
+      "note_bn": "দুর্গাপুর ইস্পাত কারখানায় ৩৫,০০০ কোটি টাকা ব্যয়ে দ্বিতীয় ইউনিট স্থাপনের কাজ এগিয়ে নিয়ে যাচ্ছে স্টিল অথরিটি অফ ইন্ডিয়া লিমিটেড (SAIL)। জাতীয় স্তরে আধুনিকীকরণের অংশ হিসেবে এই সম্প্রসারণের মাধ্যমে কারখানার উৎপাদন ক্ষমতা উল্লেখযোগ্যভাবে বৃদ্ধির লক্ষ্য নেওয়া হয়েছে।",
+      "sources": [
+        {
+          "name": "The Statesman · June 05, 2026",
+          "url": "https://www.thestatesman.com/india/durgapur-steel-plant-to-get-second-unit-with-likely-investment-of-%E2%82%B935000-crore-1503602235.html"
+        },
+        {
+          "name": "Global Energy Monitor · August 01, 2024",
+          "url": "https://www.gem.wiki/SAIL_Durgapur_steel_plant"
+        },
+        {
+          "name": "The Telegraph · June 15, 2025",
+          "url": "https://www.telegraphindia.com/business/sail-kicks-off-expansion-plans-for-iisco-steel-plant-at-burnpur-prnt/cid/2107884"
+        }
+      ],
+      "additionalNotes": [
+        {
+          "label_en": "Project Context",
+          "label_bn": "প্রকল্পের প্রেক্ষাপট",
+          "text_en": "While highlighted as a recent milestone, this expansion is part of SAIL's long-standing Vision 2030 framework. Planning, land identification, and consultancy for the Durgapur and Burnpur (IISCO) expansions were actively underway well before 2026. This is primarily a Central Government/SAIL execution rather than a state-specific delivery, utilizing existing SAIL-owned land.",
+          "text_bn": "সম্প্রতি এটিকে একটি নতুন সাফল্য হিসেবে তুলে ধরা হলেও, এই সম্প্রসারণটি মূলত SAIL-এর দীর্ঘমেয়াদী 'ভিশন ২০৩০'-এর একটি অংশ। দুর্গাপুর এবং বার্নপুর (IISCO) সম্প্রসারণের পরিকল্পনা, জমি চিহ্নিতকরণ এবং অন্যান্য কাজ ২০২৬ সালের অনেক আগেই শুরু হয়েছিল। এটি মূলত কেন্দ্রীয় সরকার বা SAIL-এর একটি উদ্যোগ এবং এতে SAIL-এর নিজস্ব জমিই ব্যবহৃত হচ্ছে।"
+        }
+      ]
+    }
+  ],
+  "counterEvidence": []
+}

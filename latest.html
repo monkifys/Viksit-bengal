@@ -1,0 +1,2717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Record: Viksit Bengal Development Updates</title>
+    <meta name="description"
+        content="Factual live updates & progress logs of public commitments and development projects in West Bengal. A permanent public record of state administration actions.">
+    <meta name="keywords"
+        content="viksit bengal development updates, west bengal progress tracker, civic development logs, public commitments tracker, wb development tracker">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://tracker.wbupdates.com/latest.html">
+    <link rel="alternate" hreflang="en" href="https://tracker.wbupdates.com/latest.html">
+    <link rel="alternate" hreflang="bn" href="https://tracker.wbupdates.com/bn/latest.html">
+    <link rel="alternate" hreflang="x-default" href="https://tracker.wbupdates.com/latest.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tracker.wbupdates.com/latest.html">
+    <meta property="og:title" content="Public Record — WB Accountability Tracker">
+    <meta property="og:description"
+        content="Chronological archive of every administrative update and policy development tracked by the WB Accountability Tracker.">
+    <meta property="og:image" content="https://tracker.wbupdates.com/og-latest.webp">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Public Record — WB Accountability Tracker">
+    <meta name="twitter:description"
+        content="Chronological archive of every administrative update and policy development tracked by the WB Accountability Tracker.">
+    <meta name="twitter:image" content="https://tracker.wbupdates.com/og-latest.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Bengali:wght@400;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Bengali:wght@400;700&display=swap"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Bengali:wght@400;700&display=swap">
+    </noscript>
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Core Web Vitals Optimization: Preload Critical Assets -->
+    <link rel="preload" href="data/updates.json" as="fetch" crossorigin>
+    <link rel="preload" href="data/initiative_updates.json" as="fetch" crossorigin>
+    <style>
+        body {
+            background: var(--paper);
+        }
+
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-ui);
+            font-size: 11px;
+            color: var(--ink-faint);
+            text-decoration: none;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .back-home:hover {
+            color: var(--saffron);
+            transform: translateX(-4px);
+        }
+
+        .archive-item {
+            cursor: default;
+        }
+
+        .archive-item:hover {
+            transform: none;
+        }
+
+        .item-sources {
+            margin-top: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            border-top: 1px solid var(--rule-light);
+            padding-top: 12px;
+        }
+
+        .archive-source-link {
+            font-family: var(--font-mono);
+            font-size: 9px;
+            font-weight: 500;
+            color: var(--ink-blue);
+            text-decoration: none;
+            background: rgba(0, 71, 171, 0.03);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid rgba(0, 71, 171, 0.12);
+            transition: all 0.15s ease;
+        }
+
+        .archive-source-link:hover {
+            background: rgba(0, 71, 171, 0.08);
+            border-color: var(--ink-blue);
+            color: #002366;
+        }
+
+        /* ── Meta row: category label + Full History link inline ── */
+        .archive-item-meta-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 0;
+        }
+
+        /* ── Full Details page link pill (inline beside category) ── */
+        .details-page-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-family: var(--font-ui);
+            font-size: 9.5px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: 0.04em;
+            color: var(--ink-blue);
+            text-decoration: none;
+            background: rgba(0, 71, 171, 0.04);
+            border: 1px solid rgba(0, 71, 171, 0.18);
+            padding: 3px 10px;
+            border-radius: 20px;
+            transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+            white-space: nowrap;
+        }
+
+        .details-page-link:hover {
+            background: rgba(0, 71, 171, 0.1);
+            border-color: var(--ink-blue);
+            color: #002366;
+            transform: translateX(2px);
+        }
+
+        .load-more-wrap {
+            text-align: center;
+            margin-top: 40px;
+            padding-bottom: 60px;
+        }
+
+        /* ── Search Bar ── */
+        .archive-search-container {
+            width: 100%;
+            max-width: 680px;
+            margin: 0 auto 32px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .search-input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: var(--surface);
+            border: 1px solid var(--rule);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s ease;
+        }
+
+        .search-input-wrapper:focus-within {
+            border-color: var(--ink-blue);
+            box-shadow: 0 0 0 3px rgba(0, 45, 116, 0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 16px;
+            color: var(--ink-faint);
+            pointer-events: none;
+        }
+
+        #archive-search-input {
+            width: 100%;
+            padding: 16px 48px;
+            border: none;
+            background: transparent;
+            font-family: var(--font-ui);
+            font-size: 16px;
+            color: var(--ink);
+            outline: none;
+        }
+
+        #archive-search-input::placeholder {
+            color: var(--ink-faint);
+            opacity: 0.6;
+        }
+
+        #search-clear-btn {
+            position: absolute;
+            right: 12px;
+            background: rgba(0,0,0,0.05);
+            border: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--ink-light);
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        #search-clear-btn:hover {
+            background: rgba(0,0,0,0.1);
+            color: var(--ink);
+        }
+
+        .search-meta-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 0 4px;
+            font-family: var(--font-ui);
+            font-size: 12px;
+        }
+
+        .search-results-count {
+            color: var(--ink-light);
+            font-weight: 500;
+        }
+
+        .search-sort-toggle {
+            display: flex;
+            align-items: center;
+        }
+
+        .sort-btn {
+            background: none;
+            border: none;
+            font-family: inherit;
+            font-size: inherit;
+            color: var(--ink-light);
+            cursor: pointer;
+            padding: 2px 6px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .sort-btn:hover {
+            background: rgba(0,0,0,0.04);
+            color: var(--ink);
+        }
+
+        .sort-btn.active {
+            color: var(--ink-blue);
+            font-weight: 600;
+        }
+
+        mark {
+            background-color: rgba(232, 98, 10, 0.15); /* light saffron */
+            color: var(--ink);
+            border-radius: 2px;
+            padding: 0 2px;
+            font-weight: 500;
+        }
+
+        .load-more-btn {
+            background: var(--surface);
+            border: 1px solid var(--rule);
+            padding: 12px 32px;
+            font-family: var(--font-ui);
+            font-size: 11.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            border-radius: 4px;
+            color: var(--ink-mid);
+        }
+
+        .load-more-btn:hover {
+            background: var(--paper-warm);
+            border-color: var(--saffron);
+            color: var(--saffron-dark);
+        }
+
+        .archive-item-title {
+            color: var(--ink-blue);
+            text-decoration: none;
+        }
+
+        .archive-item-title:hover {
+            text-decoration: underline;
+        }
+
+        .non-manifesto-badge {
+            display: inline-block;
+            background: var(--red-pale);
+            color: var(--red);
+            border: 1px solid rgba(220, 38, 38, 0.15);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 9px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        /* ── Per-update share row ── */
+        .update-share-row {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid var(--rule-light);
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 600px) {
+            .update-share-row {
+                gap: 4px;
+            }
+        }
+
+        .share-label {
+            font-family: var(--font-mono);
+            font-size: 9px;
+            font-weight: 700;
+            color: var(--ink-faint);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-right: 6px;
+            flex-shrink: 0;
+        }
+
+        .share-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: none;
+            background: transparent;
+            transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            padding: 0;
+        }
+
+        .share-btn:hover {
+            transform: scale(1.18);
+        }
+
+        .share-btn.share-wa {
+            color: #128C7E;
+        }
+
+        .share-btn.share-x {
+            color: var(--ink);
+        }
+
+        .share-btn.share-fb {
+            color: #1877F2;
+        }
+
+        .share-btn.share-tg {
+            color: #0088CC;
+        }
+
+        .share-btn.share-reddit {
+            color: #FF4500;
+        }
+
+        .share-btn.share-copy {
+            color: var(--ink-blue);
+        }
+
+        .share-btn.share-copy-done {
+            color: var(--green) !important;
+            transform: scale(1.22) !important;
+        }
+
+        .loading {
+            font-family: var(--font-sans);
+            font-size: 16.5px;
+            color: var(--ink-faint);
+            text-align: center;
+            padding: 60px 0;
+            font-style: italic;
+        }
+
+        /* ── Category filter bar ── */
+        .archive-filter-bar {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--rule-light);
+        }
+
+        .filter-chip {
+            font-family: var(--font-ui);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 5px 13px;
+            border-radius: 20px;
+            border: 1px solid var(--rule);
+            background: var(--surface);
+            color: var(--ink-light);
+            cursor: pointer;
+            transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .filter-chip:hover {
+            border-color: var(--saffron-mid);
+            color: var(--saffron-dark);
+            background: var(--saffron-pale);
+        }
+
+        .filter-chip.active {
+            background: var(--saffron);
+            border-color: var(--saffron);
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(184, 77, 8, 0.22);
+        }
+
+        .filter-chip.active:hover {
+            background: var(--saffron-dark);
+            border-color: var(--saffron-dark);
+            color: #fff;
+        }
+
+        /* ── Meta toggle pills (additive filters) ── */
+        .filter-divider {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 6px 0 2px;
+            color: var(--ink-faint);
+            font-family: var(--font-ui);
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .filter-divider::before, .filter-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--rule-light);
+        }
+        .meta-toggle {
+            font-family: var(--font-ui);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding: 4px 12px 4px 10px;
+            border-radius: 20px;
+            border: 1.5px dashed var(--rule);
+            background: transparent;
+            color: var(--ink-light);
+            cursor: pointer;
+            transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            user-select: none;
+        }
+        .meta-toggle::before {
+            content: '○';
+            font-size: 10px;
+            transition: all 0.15s ease;
+        }
+        .meta-toggle:hover {
+            border-color: var(--ink-mid);
+            border-style: solid;
+            color: var(--ink);
+        }
+        .meta-toggle.active {
+            border-style: solid;
+            border-color: var(--ink-blue);
+            background: rgba(0, 71, 171, 0.06);
+            color: var(--ink-blue);
+            font-weight: 700;
+        }
+        .meta-toggle.active::before {
+            content: '●';
+            color: var(--ink-blue);
+        }
+        .meta-toggle.active:hover {
+            background: rgba(0, 71, 171, 0.12);
+        }
+        /* Setback toggle accent */
+        .meta-toggle[data-meta="setbacks"].active {
+            border-color: var(--red);
+            background: rgba(220, 38, 38, 0.06);
+            color: var(--red);
+        }
+        .meta-toggle[data-meta="setbacks"].active::before {
+            color: var(--red);
+        }
+
+        /* ── Meta Controls Row (Tip on left, Filter on right) ── */
+        .archive-meta-controls-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 8px;
+            margin-bottom: 28px;
+            border-bottom: 1px solid var(--rule-light);
+            padding-bottom: 16px;
+        }
+
+        .archive-tip-col {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .archive-tip-text {
+            font-family: var(--font-ui);
+            font-size: 11.5px;
+            color: var(--saffron-dark);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .archive-filter-col {
+            display: flex;
+            justify-content: flex-end;
+            flex-shrink: 0;
+        }
+
+        #filter-trigger-btn {
+            font-family: var(--font-ui);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 7px 15px;
+            border-radius: 4px;
+            border: 1px solid var(--rule);
+            background: var(--surface);
+            color: var(--ink-mid);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        #filter-trigger-btn:hover {
+            border-color: var(--saffron-mid);
+            color: var(--saffron-dark);
+            background: var(--saffron-pale);
+        }
+
+        #filter-trigger-btn.active-filter {
+            background: var(--saffron) !important;
+            border-color: var(--saffron) !important;
+            color: #fff !important;
+            box-shadow: 0 4px 12px rgba(184, 77, 8, 0.22);
+        }
+
+        #filter-trigger-btn.active-filter:hover {
+            background: var(--saffron-dark) !important;
+            border-color: var(--saffron-dark) !important;
+            color: #fff !important;
+        }
+
+        #filter-arrow {
+            transition: transform 0.2s ease;
+            font-size: 8px;
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .archive-meta-controls-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+                margin-top: 12px;
+                margin-bottom: 24px;
+                padding-bottom: 20px;
+            }
+
+            .archive-tip-col {
+                min-width: 100%;
+            }
+
+            .archive-tip-text {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                width: 100%;
+            }
+
+            .archive-filter-col {
+                width: 100%;
+                justify-content: flex-start;
+            }
+
+            #filter-trigger-btn {
+                width: 100%;
+                justify-content: space-between;
+                padding: 10px 16px;
+                font-size: 11.5px;
+                border-radius: 6px;
+                box-shadow: 0 1px 2px rgba(26, 18, 8, 0.02);
+            }
+        }
+
+        /* ── Spotlight & Context Mode styles ── */
+        .spotlight-wrapper {
+            margin-bottom: 24px;
+            animation: fadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .spotlight-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--saffron-pale);
+            color: var(--saffron-dark);
+            border: 1px solid var(--saffron-mid);
+            font-family: var(--font-ui);
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-bottom: 14px;
+        }
+
+        .spotlight-card-active {
+            border-top: 4px solid var(--saffron) !important;
+            box-shadow: var(--shadow-lg) !important;
+            background: var(--surface) !important;
+            border-radius: var(--radius-md) !important;
+            padding: 24px !important;
+            transition: all 0.3s ease;
+        }
+
+        .spotlight-banner {
+            background: var(--paper-warm);
+            border: 1px solid var(--rule);
+            border-left: 4px solid var(--ink-blue);
+            padding: 20px 24px;
+            border-radius: var(--radius-sm);
+            margin-top: 24px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-sm);
+            animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+        }
+
+        .spotlight-banner-title {
+            font-family: var(--font-display);
+            font-size: 19px;
+            font-weight: 800;
+            color: var(--ink-blue);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .spotlight-banner-text {
+            font-family: var(--font-sans);
+            font-size: 15.5px;
+            line-height: 1.55;
+            color: var(--ink-mid);
+            margin-bottom: 18px;
+        }
+
+        .spotlight-reveal-btn {
+            background: var(--saffron);
+            color: #fff;
+            border: 1px solid var(--saffron-dark);
+            padding: 10px 24px;
+            font-family: var(--font-ui);
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 4px 12px rgba(232, 98, 10, 0.15);
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .spotlight-reveal-btn:hover {
+            background: var(--saffron-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(232, 98, 10, 0.25);
+        }
+
+        .load-newer-wrap {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        .load-newer-btn {
+            background: var(--surface);
+            border: 1px solid var(--rule);
+            padding: 10px 28px;
+            font-family: var(--font-ui);
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            border-radius: 4px;
+            color: var(--ink-mid);
+        }
+
+        .load-newer-btn:hover {
+            background: var(--paper-warm);
+            border-color: var(--saffron);
+            color: var(--saffron-dark);
+        }
+
+        .load-latest-btn {
+            background: var(--paper-warm) !important;
+            border-color: var(--saffron-mid) !important;
+            color: var(--saffron-dark) !important;
+        }
+
+        .load-latest-btn:hover {
+            background: var(--saffron-pale) !important;
+            border-color: var(--saffron) !important;
+        }
+
+        .archive-day-group,
+        .promise-item {
+            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .spotlight-latest-btn {
+            background: var(--paper-warm) !important;
+            border-color: var(--saffron-mid) !important;
+            color: var(--saffron-dark) !important;
+            box-shadow: none !important;
+        }
+
+        .spotlight-latest-btn:hover {
+            background: var(--saffron-pale) !important;
+            border-color: var(--saffron) !important;
+            color: var(--saffron-dark) !important;
+        }
+
+        /* ── Press Watch Section ── */
+        #pw-spotlight-section {
+            display: none; /* hidden by default, shown by JS when fresh items exist */
+            margin-bottom: 36px;
+            animation: fadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .pw-spotlight-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            border-top: 2px solid var(--ink);
+            border-bottom: 1px solid var(--rule-light);
+            padding: 10px 0;
+            margin-bottom: 18px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .pw-spotlight-title-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .pw-spotlight-title {
+            font-family: var(--font-display);
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--ink);
+        }
+
+        .pw-spotlight-beta {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(0, 45, 116, 0.08);
+            color: var(--ink-blue);
+            border: 1px solid rgba(0, 45, 116, 0.2);
+            font-family: var(--font-ui);
+            font-size: 8px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        .pw-spotlight-see-all {
+            font-family: var(--font-ui);
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--ink-blue);
+            text-decoration: none;
+            padding: 5px 13px;
+            border: 1px solid rgba(0, 45, 116, 0.22);
+            border-radius: 4px;
+            background: rgba(0, 45, 116, 0.03);
+            transition: all 0.15s ease;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .pw-spotlight-see-all:hover {
+            background: rgba(0, 45, 116, 0.09);
+            border-color: var(--ink-blue);
+            color: #002366;
+            text-decoration: none;
+        }
+
+        .pw-spotlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+            overflow: hidden;
+            max-height: 2000px; /* large enough to show all cards */
+            transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                        opacity 0.3s ease,
+                        margin-bottom 0.3s ease;
+            opacity: 1;
+            margin-bottom: 0;
+        }
+
+        .pw-spotlight-grid.collapsed {
+            max-height: 0;
+            opacity: 0;
+            margin-bottom: -18px; /* pull up gap from header's margin-bottom */
+        }
+
+        .pw-toggle-chevron {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--surface);
+            border: 1px solid var(--rule-light);
+            color: var(--ink-faint);
+            font-size: 9px;
+            flex-shrink: 0;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                        background 0.15s ease,
+                        color 0.15s ease;
+        }
+
+        .pw-spotlight-header:hover .pw-toggle-chevron {
+            background: var(--paper-warm);
+            color: var(--ink-mid);
+        }
+
+        .pw-toggle-chevron.rotated {
+            transform: rotate(-180deg);
+        }
+
+        @media (max-width: 600px) {
+            .pw-spotlight-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+        }
+
+        .pw-spot-card {
+            background: var(--surface);
+            border: 1px solid var(--rule-light);
+            border-radius: var(--radius-md);
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .pw-spot-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .pw-spot-card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .pw-spot-type-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-family: var(--font-ui);
+            font-size: 9px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 3px 9px;
+            border-radius: 20px;
+            flex-shrink: 0;
+        }
+
+        .pw-spot-type-badge.type-video        { background: rgba(220,38,38,0.07);  color: var(--red);          border: 1px solid rgba(220,38,38,0.2); }
+        .pw-spot-type-badge.type-investigation { background: rgba(0,45,116,0.07);   color: var(--ink-blue);     border: 1px solid rgba(0,45,116,0.2); }
+        .pw-spot-type-badge.type-report       { background: rgba(232,98,10,0.07);   color: var(--saffron-dark); border: 1px solid var(--saffron-mid); }
+        .pw-spot-type-badge.type-analysis     { background: rgba(22,163,74,0.07);   color: var(--green);        border: 1px solid rgba(22,163,74,0.2); }
+        .pw-spot-type-badge.type-interview    { background: rgba(74,48,32,0.07);    color: var(--ink-mid);      border: 1px solid var(--rule); }
+
+        .pw-spot-card-date {
+            font-family: var(--font-mono);
+            font-size: 9px;
+            color: var(--ink-faint);
+            letter-spacing: 0.04em;
+            white-space: nowrap;
+        }
+
+        .pw-spot-card-headline {
+            font-family: var(--font-display);
+            font-size: 17px;
+            font-weight: 800;
+            color: var(--ink);
+            line-height: 1.25;
+            text-decoration: none;
+            display: block;
+            transition: color 0.15s ease;
+        }
+
+        .pw-spot-card-headline:hover {
+            color: var(--ink-blue);
+            text-decoration: none;
+        }
+
+        .pw-spot-card-desc {
+            font-family: var(--font-sans);
+            font-size: 14.5px;
+            line-height: 1.55;
+            color: var(--ink-mid);
+            flex: 1;
+        }
+
+        .pw-spot-card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            padding-top: 10px;
+            border-top: 1px solid var(--rule-light);
+            flex-wrap: wrap;
+        }
+
+        .pw-spot-card-source {
+            font-family: var(--font-ui);
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--ink-faint);
+        }
+
+        .pw-spot-card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-family: var(--font-ui);
+            font-size: 9.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--ink-blue);
+            text-decoration: none;
+            padding: 4px 11px;
+            border: 1px solid rgba(0, 45, 116, 0.22);
+            border-radius: 4px;
+            background: rgba(0, 45, 116, 0.03);
+            transition: all 0.15s ease;
+            white-space: nowrap;
+        }
+
+        .pw-spot-card-link:hover {
+            background: rgba(0, 45, 116, 0.09);
+            border-color: var(--ink-blue);
+            color: #002366;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+  <!-- MASTHEAD BAR -->
+  <header class="masthead">
+    <div class="masthead-bar">
+      <span><span class="live-tag">CIVIC DATA</span> &nbsp; Viksit Bengal Dashboard — বিকশিত বাংলা ড্যাশবোর্ড</span>
+      <div class="masthead-date-lang">
+        <span id="today-date">29 October 2026</span>
+        <a href="bn/latest.html" class="lang-toggle" aria-label="বাংলায় পড়ুন" title="Read in Bengali">বাংলা</a>
+      </div>
+    </div>
+    <div class="masthead-main">
+      <div class="masthead-logo">
+        <img src="wb-map.webp" class="wb-map-icon" alt="West Bengal Map Logo" width="90" height="140">
+      </div>
+      <div class="masthead-text">
+        <h1>Viksit Bengal<br><span>Dashboard</span></h1>
+        <p class="masthead-sub">Tracking Bengal's journey from commitments to outcomes.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- UNIFIED CIVIC NAVIGATION -->
+  <nav class="civic-nav">
+    <div class="civic-nav-inner">
+      <div class="civic-nav-links">
+        <a href="index.html" class="civic-nav-item">🏠 Home</a>
+        <a href="economy.html" class="civic-nav-item">📈 Economy</a>
+        <a href="society.html" class="civic-nav-item">👥 Society</a>
+        <a href="index.html#promises" class="civic-nav-item">📋 Promises</a>
+        <a href="districts.html" class="civic-nav-item">🗺️ Districts</a>
+        <a href="projects.html" class="civic-nav-item">🏗️ Projects</a>
+        <a href="latest.html" class="civic-nav-item active">📰 Updates</a>
+        <a href="methodology.html" class="civic-nav-item">⚖️ Methodology</a>
+      </div>
+      <a href="submit.html" class="civic-nav-btn-submit">✏ Submit Evidence</a>
+    </div>
+  </nav>
+
+  <div class="archive-container">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin:16px 0 24px;">
+      <a href="initiatives.html" class="archive-source-link">Explore Initiative Trackers →</a>
+      <a href="press-watch.html" class="archive-source-link">Press Watch Feed →</a>
+    </div>
+
+        <header class="archive-header">
+            <h1 class="archive-title">Public Record</h1>
+            <p
+                style="font-family: var(--font-sans); font-size: 16.5px; color: var(--ink-faint); font-style: italic; margin-bottom: 8px;">
+                A chronological archive of every administrative update and policy development.
+            </p>
+            <div id="archive-stats-container" style="display: none; justify-content: center; margin-top: 8px; margin-bottom: 24px; width: 100%;">
+            </div>
+
+            <!-- SEARCH COMPONENT -->
+            <div class="archive-search-container" id="archive-search-container" style="display: none;">
+                <div class="search-input-wrapper">
+                    <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <input type="text" id="archive-search-input" placeholder="Search for policies, schemes, or updates..." autocomplete="off">
+                    <button id="search-clear-btn" style="display: none;" aria-label="Clear Search">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
+                </div>
+                <div style="font-family: var(--font-ui); font-size: 11px; color: var(--ink-faint); padding: 0 4px; font-style: italic;">
+                    * Search is currently in Beta and relevance rankings are being actively tuned.
+                </div>
+                <div class="search-meta-row" id="search-meta-row" style="display: none;">
+                    <span class="search-results-count" id="search-results-count"></span>
+                    <div class="search-sort-toggle">
+                        <span style="color: var(--ink-faint); margin-right: 6px;">Sort by:</span>
+                        <button class="sort-btn active" id="sort-relevance-btn">Relevance</button>
+                        <span style="color: var(--rule); margin: 0 4px;">|</span>
+                        <button class="sort-btn" id="sort-date-btn">Date</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="archive-meta-controls-row">
+            <div class="archive-tip-col">
+                <p class="archive-tip-text">
+                    💡 Tip: Click on any update title to view its corresponding manifesto promise page.
+                </p>
+            </div>
+            <div class="archive-filter-col">
+                <button id="filter-trigger-btn">
+                    <span>Filter by Category</span>
+                    <span id="filter-arrow">▼</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="archive-filter-bar" id="archive-filter-bar"
+            style="display:none; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);">
+            <!-- Populated by JS after data loads -->
+        </div>
+
+        <!-- Press Watch Spotlight Section (shown only when fresh items exist within 7 days) -->
+        <section id="pw-spotlight-section" aria-label="Press Watch">
+            <div class="pw-spotlight-header" id="pw-toggle-header" role="button" aria-expanded="true" aria-controls="pw-spotlight-grid" tabindex="0">
+                <div class="pw-spotlight-title-group">
+                    <span class="pw-spotlight-title" id="pw-spotlight-title">Press Watch</span>
+                    <span class="pw-spotlight-beta">Beta</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:10px;">
+                    <a href="press-watch.html" class="pw-spotlight-see-all" id="pw-see-all-link" onclick="event.stopPropagation()">See all &rarr;</a>
+                    <span class="pw-toggle-chevron" id="pw-chevron" aria-hidden="true">&#9660;</span>
+                </div>
+            </div>
+            <div class="pw-spotlight-grid" id="pw-spotlight-grid"></div>
+        </section>
+
+        <div class="archive-timeline" id="archive-timeline">
+            <div class="loading">Loading archive...</div>
+        </div>
+
+        <div class="load-more-wrap" id="load-more-container" style="display:none;">
+            <button class="load-more-btn" id="load-more-btn">Load More Updates</button>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-bottom"
+                style="border-top: none; padding-top: 0; justify-content: center; margin-top: 0;">
+                <span class="last-updated" style="color: rgba(255, 255, 255, 0.45); font-family: var(--font-ui);">WB
+                    ACCOUNTABILITY TRACKER &copy; 2026-2031</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function getText(obj, field, lang = 'en') {
+          const val = obj[`${field}_${lang}`];
+          if (val && val.trim() !== '') return val;
+          const valEn = obj[`${field}_en`];
+          if (valEn && valEn.trim() !== '') return valEn;
+          return obj[field] || '';
+        }
+        window.LANG = document.documentElement.lang || 'en';
+        localStorage.setItem('lang', window.LANG);
+
+        function parseDate(dateStr) {
+          if (dateStr instanceof Date) return dateStr;
+          if (!dateStr) return new Date();
+          const yyyymmdd = dateStr.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+          if (yyyymmdd) {
+            return new Date(parseInt(yyyymmdd[1], 10), parseInt(yyyymmdd[2], 10) - 1, parseInt(yyyymmdd[3], 10));
+          }
+          if (dateStr.includes('T')) {
+            const d = new Date(dateStr);
+            if (!isNaN(d.getTime())) return d;
+          }
+          const dMonthY = dateStr.match(/^(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})$/);
+          if (dMonthY) {
+            const months = {
+              jan: 0, january: 0, feb: 1, february: 1, mar: 2, march: 2, apr: 3, april: 3,
+              may: 4, jun: 5, june: 5, jul: 6, july: 6, aug: 7, august: 7, sep: 8, september: 8,
+              oct: 9, october: 9, nov: 10, november: 10, dec: 11, december: 11
+            };
+            const m = months[dMonthY[2].toLowerCase().substring(0, 3)];
+            if (m !== undefined) {
+              return new Date(parseInt(dMonthY[3], 10), m, parseInt(dMonthY[1], 10));
+            }
+          }
+          const parsed = new Date(dateStr);
+          if (!isNaN(parsed.getTime())) return parsed;
+          return new Date();
+        }
+
+        function formatNumber(num) {
+            if (window.LANG === 'bn') {
+                const digits = {
+                    '0': '০', '1': '১', '2': '২', '3': '৩', '4': '৪',
+                    '5': '৫', '6': '৬', '7': '৭', '8': '৮', '9': '৯'
+                };
+                return String(num).replace(/[0-9]/g, d => digits[d] || d);
+            }
+            return num;
+        }
+
+        function formatDate(dateStr) {
+            const date = parseDate(dateStr);
+            if (window.LANG === 'bn') {
+                return date.toLocaleDateString('bn-IN', {
+                    day: 'numeric', month: 'long', year: 'numeric'
+                });
+            }
+            return date.toLocaleDateString('en-GB', {
+                day: 'numeric', month: 'long', year: 'numeric'
+            });
+        }
+
+        let allUpdates = [];
+        let filteredUpdates = [];
+        let displayedCount = 0;
+        let activeCategory = 'all';
+        const ITEMS_PER_PAGE = 20;
+        let neighborhoodStart = 0;
+        let neighborhoodEnd = 0;
+
+        // Category metadata from meta.json (keyed by id)
+        let categoryMap = {};
+        let infoLookupMap = {}; // Lookup mapping promise/initiative ID to global info text
+        let keywordsLookupMap = {}; // Lookup mapping promise/initiative ID to keywords string
+        let detailsExistsMap = {}; // Lookup: promiseId → true if a /details/<id>.html page exists
+        let activeMetaFilters = new Set(); // Set of active meta-toggles: 'notes-counters', 'setbacks'
+
+        // TF-IDF Search Engine State
+        let searchActive = false;
+        let searchQuery = "";
+        let searchSortBy = 'relevance'; // 'relevance' or 'date'
+        let idfMap = {}; // Map of token -> inverse document frequency
+        let updateSearchTokens = []; // Parallel array storing tokenized text for each update in allUpdates
+        let avgdl = 1; // Average document length for BM25
+
+        async function init() {
+            try {
+                const db = window.DATA_BASE || 'data/';
+                const [updatesRes, initiativesRes, metaRes, promisesRes, initiativesBaseRes] = await Promise.all([
+                    fetch(db + 'updates.json'),
+                    fetch(db + 'initiative_updates.json'),
+                    fetch(db + 'meta.json'),
+                    fetch(db + 'promises.json'),
+                    fetch(db + 'initiatives.json')
+                ]);
+
+                let updates = [];
+                let initiatives = [];
+
+                if (updatesRes.ok) updates = await updatesRes.json();
+                if (initiativesRes.ok) initiatives = await initiativesRes.json();
+                if (metaRes.ok) {
+                    const meta = await metaRes.json();
+                    meta.categories.forEach(c => { categoryMap[c.id] = c; });
+                }
+
+                // Populate global info lookup map + details-page existence map
+                if (promisesRes.ok) {
+                    const promises = await promisesRes.json();
+                    promises.forEach(p => {
+                        const pInfo = getText(p, 'info', window.LANG);
+                        if (pInfo) infoLookupMap[p.id] = pInfo;
+                        
+                        if (p.keywords && Array.isArray(p.keywords)) {
+                            keywordsLookupMap[p.id] = p.keywords.join(' ');
+                        }
+
+                        if (p.status === 'done' || p.status === 'evaded' || p.updateCount >= 4) {
+                            detailsExistsMap[p.id] = true;
+                        }
+                    });
+                }
+                if (initiativesBaseRes.ok) {
+                    const initiativesBase = await initiativesBaseRes.json();
+                    initiativesBase.forEach(i => {
+                        const iInfo = getText(i, 'info', window.LANG);
+                        if (iInfo) infoLookupMap[i.id] = iInfo;
+
+                        if (i.keywords && Array.isArray(i.keywords)) {
+                            keywordsLookupMap[i.id] = i.keywords.join(' ');
+                        }
+                    });
+                }
+
+                // Mark initiatives so we can link them differently
+                initiatives = initiatives.map(i => ({ ...i, isInitiative: true }));
+
+                allUpdates = [...updates, ...initiatives];
+
+                // Sort by date desc
+                allUpdates.sort((a, b) => b.date.localeCompare(a.date));
+
+                // Calculate and render stats badge
+                const totalUpdates = allUpdates.length;
+                const TRACKER_START_DATE = parseDate('2026-05-11T11:00:00+05:30');
+                const activeDays = Math.max(1, Math.floor((new Date() - TRACKER_START_DATE) / 86400000) + 1);
+                const statsContainer = document.getElementById('archive-stats-container');
+                if (statsContainer) {
+                    const labelUpdates = window.LANG === 'bn' ? 'নথিভুক্ত আপডেট' : 'Updates Logged';
+                    const labelDays = window.LANG === 'bn' ? 'সক্রিয় দিন' : 'Active Days';
+                    
+                    statsContainer.innerHTML = `
+                        <div style="display: inline-flex; align-items: center; background: var(--surface); border: 1px solid var(--rule-light); border-radius: 8px; padding: 8px 16px; gap: 20px; box-shadow: var(--shadow-sm);">
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink-light)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                <div style="display: flex; flex-direction: column; text-align: left;">
+                                    <span style="font-family: var(--font-ui); font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-faint); line-height: 1.2;">${labelUpdates}</span>
+                                    <span style="font-family: var(--font-mono); font-size: 14px; font-weight: 500; color: var(--ink); line-height: 1; margin-top: 2px;">${formatNumber(totalUpdates)}</span>
+                                </div>
+                            </div>
+                            <div style="width: 1px; height: 28px; background: var(--rule-light);"></div>
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink-light)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                <div style="display: flex; flex-direction: column; text-align: left;">
+                                    <span style="font-family: var(--font-ui); font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-faint); line-height: 1.2;">${labelDays}</span>
+                                    <span style="font-family: var(--font-mono); font-size: 14px; font-weight: 500; color: var(--ink); line-height: 1; margin-top: 2px;">${formatNumber(activeDays)}</span>
+                                </div>
+                            </div>
+                            <div style="width: 1px; height: 28px; background: var(--rule-light);"></div>
+                            <button id="stats-search-toggle" style="background: none; border: none; cursor: pointer; padding: 4px; display: flex; align-items: center; justify-content: center; color: var(--ink-light); transition: color 0.2s;" title="Search Updates" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--ink-light)'">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                            </button>
+                        </div>
+                    `;
+                    statsContainer.style.display = 'flex';
+                }
+
+                // Pre-assign stable unique slugs for permalink support: promiseId_date[_idx]
+                const _slugCount = {};
+                allUpdates.forEach(u => {
+                    const key = `${u.promiseId}_${u.date}`;
+                    const idx = _slugCount[key] ?? 0;
+                    _slugCount[key] = idx + 1;
+                    u._slug = idx > 0 ? `${key}_${idx}` : key;
+                });
+
+                // Initialize Search Engine after data is populated
+                initSearch();
+
+                renderFilterBar();
+
+                // Load and render the Press Watch spotlight section
+                await renderPressWatchSpotlight();
+
+                // Find if targetSlug is present and its index
+                const _targetSlug = new URLSearchParams(window.location.search).get('u');
+                let _gIdx = -1;
+                let _targetUpdate = null;
+
+                if (_targetSlug) {
+                    const _m = _targetSlug.match(/^(.+?)_(\d{4}-\d{2}-\d{2})(?:_(\d+))?$/);
+                    if (_m) {
+                        const _pId = _m[1], _pDate = _m[2], _pSub = _m[3] ? parseInt(_m[3]) : 0;
+                        let _sub = 0;
+                        for (let i = 0; i < allUpdates.length; i++) {
+                            const u = allUpdates[i];
+                            if (u.promiseId === _pId && u.date === _pDate) {
+                                if (_sub === _pSub) {
+                                    _gIdx = i;
+                                    _targetUpdate = u;
+                                    break;
+                                }
+                                _sub++;
+                            }
+                        }
+                    }
+                }
+
+                if (_targetUpdate) {
+                    // ALWAYS land in Spotlight Mode if a permalink target exists
+                    renderSpotlightCard(_targetUpdate, _gIdx);
+                } else {
+                    // Standard chronological load path
+                    applyFilter('all');
+                }
+
+                document.getElementById('load-more-btn').addEventListener('click', () => {
+                    if (neighborhoodEnd > 0) {
+                        loadOlderUpdates();
+                    } else {
+                        renderNextBatch();
+                    }
+                });
+            } catch (e) {
+                console.error(e);
+                const failText = window.LANG === 'bn' ? 'আর্কাইভ লোড করতে ব্যর্থ হয়েছে।' : 'Failed to load archive.';
+                document.getElementById('archive-timeline').innerHTML = `<div class="loading error-state">${failText}</div>`;
+            }
+        }
+
+        function escapeHtml(value) {
+            return String(value ?? '').replace(/[&<>"']/g, (char) => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;'
+            }[char]));
+        }
+
+        function formatInfoText(text) {
+            if (!text) return '';
+            const escaped = escapeHtml(text);
+            const urlRegex = /(https?:\/\/[^\s]+)/g;
+            const btnText = window.LANG === 'bn' ? '↗ লিঙ্ক খুলুন' : '↗ Open Link';
+            return escaped.replace(urlRegex, (url) => {
+                return `<a href="${url}" target="_blank" rel="nofollow noopener" class="archive-source-link" style="font-family: var(--font-mono); font-size: 10px; margin-left: 2px; padding: 2px 8px; text-transform: uppercase;">${btnText}</a>`;
+            });
+        }
+
+        // --- TF-IDF SEARCH ENGINE ---
+        
+        function tokenize(text) {
+            if (!text) return [];
+            return text.toLowerCase()
+                       .replace(/[^\w\s\u0980-\u09FF]/g, ' ')
+                       .split(/\s+/)
+                       .filter(t => t.length > 2);
+        }
+
+        function levenshtein(a, b) {
+            if (a.length === 0) return b.length;
+            if (b.length === 0) return a.length;
+            if (Math.abs(a.length - b.length) > 2) return 99;
+
+            const matrix = [];
+            for (let i = 0; i <= b.length; i++) {
+                matrix[i] = [i];
+            }
+            for (let j = 0; j <= a.length; j++) {
+                matrix[0][j] = j;
+            }
+            for (let i = 1; i <= b.length; i++) {
+                for (let j = 1; j <= a.length; j++) {
+                    if (b.charAt(i-1) === a.charAt(j-1)) {
+                        matrix[i][j] = matrix[i-1][j-1];
+                    } else {
+                        matrix[i][j] = Math.min(matrix[i-1][j-1] + 1, Math.min(matrix[i][j-1] + 1, matrix[i-1][j] + 1));
+                    }
+                }
+            }
+            return matrix[b.length][a.length];
+        }
+
+        function parseQuery(query) {
+            let exactPhrases = [];
+            let exclusions = [];
+            let normalText = query;
+
+            // Extract exact phrases: "like this"
+            const phraseRegex = /"([^"]+)"/g;
+            let match;
+            while ((match = phraseRegex.exec(query)) !== null) {
+                const phraseTokens = tokenize(match[1]);
+                if (phraseTokens.length > 0) {
+                    exactPhrases.push(' ' + phraseTokens.join(' ') + ' ');
+                }
+            }
+            normalText = normalText.replace(phraseRegex, ' ');
+
+            // Extract exclusions: -word
+            const exclRegex = /-(\S+)/g;
+            while ((match = exclRegex.exec(normalText)) !== null) {
+                const exclTokens = tokenize(match[1]);
+                if (exclTokens.length > 0) {
+                    exclusions.push(...exclTokens);
+                }
+            }
+            normalText = normalText.replace(exclRegex, ' ');
+
+            const normalTokens = tokenize(normalText);
+            return { exactPhrases, exclusions, normalTokens };
+        }
+
+        function initSearch() {
+            const searchContainer = document.getElementById('archive-search-container');
+            const searchInput = document.getElementById('archive-search-input');
+            const clearBtn = document.getElementById('search-clear-btn');
+            const metaRow = document.getElementById('search-meta-row');
+            const sortRelevanceBtn = document.getElementById('sort-relevance-btn');
+            const sortDateBtn = document.getElementById('sort-date-btn');
+            
+            if (!searchContainer || !searchInput) return;
+
+            // 1. Build BM25 Index
+            let docCount = allUpdates.length;
+            let dfMap = {};
+            let totalTokens = 0;
+            
+            updateSearchTokens = allUpdates.map(u => {
+                const uTitle = getText(u, 'title', window.LANG);
+                const uDesc = getText(u, 'note', window.LANG);
+                const pTitle = infoLookupMap[u.promiseId] ? infoLookupMap[u.promiseId] : '';
+                const pKeywords = keywordsLookupMap[u.promiseId] ? keywordsLookupMap[u.promiseId] : '';
+                
+                // Weight title higher by duplicating tokens
+                const textBlock = `${pKeywords} ${pTitle} ${pTitle} ${uTitle} ${uTitle} ${uDesc}`;
+                const tokens = tokenize(textBlock);
+                const docLength = tokens.length;
+                totalTokens += docLength;
+                const searchString = ' ' + tokens.join(' ') + ' ';
+                
+                let tf = {};
+                tokens.forEach(t => tf[t] = (tf[t] || 0) + 1);
+                
+                let uniqueTokens = Object.keys(tf);
+                uniqueTokens.forEach(t => dfMap[t] = (dfMap[t] || 0) + 1);
+                
+                return { tf, uniqueTokens, docLength, searchString, originalTitle: uTitle, originalDesc: uDesc, originalPromiseTitle: pTitle };
+            });
+            
+            avgdl = docCount > 0 ? totalTokens / docCount : 1;
+
+            // Calculate BM25 IDF
+            Object.keys(dfMap).forEach(t => {
+                idfMap[t] = Math.max(0.1, Math.log(1 + (docCount - dfMap[t] + 0.5) / (dfMap[t] + 0.5)));
+            });
+
+            // Toggle Search Bar visibility
+            const toggleBtn = document.getElementById('stats-search-toggle');
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', () => {
+                    const isHidden = searchContainer.style.display === 'none' || !searchContainer.style.display;
+                    searchContainer.style.display = isHidden ? 'flex' : 'none';
+                    if (isHidden) {
+                        searchInput.focus();
+                    } else if (searchActive) {
+                        // Clear search if closing
+                        searchInput.value = '';
+                        clearBtn.style.display = 'none';
+                        handleSearch('');
+                    }
+                });
+            }
+
+            let debounceTimer;
+            searchInput.addEventListener('input', (e) => {
+                clearTimeout(debounceTimer);
+                debounceTimer = setTimeout(() => {
+                    handleSearch(e.target.value);
+                }, 150);
+                clearBtn.style.display = e.target.value.trim() ? 'flex' : 'none';
+            });
+
+            clearBtn.addEventListener('click', () => {
+                searchInput.value = '';
+                clearBtn.style.display = 'none';
+                handleSearch('');
+            });
+
+            sortRelevanceBtn.addEventListener('click', () => {
+                if (searchSortBy !== 'relevance') {
+                    searchSortBy = 'relevance';
+                    sortRelevanceBtn.classList.add('active');
+                    sortDateBtn.classList.remove('active');
+                    if (searchActive) renderSearchResults();
+                }
+            });
+
+            sortDateBtn.addEventListener('click', () => {
+                if (searchSortBy !== 'date') {
+                    searchSortBy = 'date';
+                    sortDateBtn.classList.add('active');
+                    sortRelevanceBtn.classList.remove('active');
+                    if (searchActive) renderSearchResults();
+                }
+            });
+        }
+
+        function handleSearch(query) {
+            const rawQuery = query;
+            query = query.trim();
+            const metaRow = document.getElementById('search-meta-row');
+            const tipCol = document.querySelector('.archive-tip-col');
+            
+            if (!query) {
+                searchActive = false;
+                searchQuery = "";
+                metaRow.style.display = 'none';
+                if (tipCol) tipCol.style.display = 'block';
+                applyFilter(activeCategory); // Reset to active filter
+                return;
+            }
+
+            searchActive = true;
+            searchQuery = query;
+            const parsedQuery = parseQuery(query);
+            metaRow.style.display = 'flex';
+            if (tipCol) tipCol.style.display = 'none';
+
+            if (parsedQuery.normalTokens.length === 0 && parsedQuery.exactPhrases.length === 0) return;
+
+            const endsWithSpace = /\\s$/.test(rawQuery);
+
+            // BM25 Constants
+            const k1 = 1.2;
+            const b = 0.75;
+
+            let scoredUpdates = [];
+            allUpdates.forEach((u, i) => {
+                const docTokens = updateSearchTokens[i];
+                let score = 0;
+                let matchedTokens = new Set();
+                
+                // Exclusions
+                if (parsedQuery.exclusions.length > 0) {
+                    let hasExclusion = parsedQuery.exclusions.some(ext => docTokens.uniqueTokens.includes(ext));
+                    if (hasExclusion) return;
+                }
+
+                // Exact Phrases
+                if (parsedQuery.exactPhrases.length > 0) {
+                    let missingPhrase = parsedQuery.exactPhrases.some(phrase => !docTokens.searchString.includes(phrase));
+                    if (missingPhrase) return; // Must have ALL exact phrases
+                    score += 500 * parsedQuery.exactPhrases.length;
+                }
+
+                parsedQuery.normalTokens.forEach((qt, idx) => {
+                    const isLastToken = idx === parsedQuery.normalTokens.length - 1;
+                    const allowPrefixMatch = !(isLastToken && endsWithSpace);
+
+                    docTokens.uniqueTokens.forEach(t => {
+                        let matchMultiplier = 0;
+                        if (t === qt) {
+                            matchMultiplier = 100;
+                        } else if (allowPrefixMatch && t.startsWith(qt)) {
+                            let diff = t.length - qt.length;
+                            if (diff <= 2) {
+                                matchMultiplier = 30; // High score for plurals/stems
+                            } else {
+                                matchMultiplier = Math.max(0, 4 - Math.floor(diff / 2)); 
+                            }
+                        } else if (qt.length >= 4) {
+                            let maxDist = qt.length >= 7 ? 2 : 1;
+                            if (Math.abs(t.length - qt.length) <= maxDist) {
+                                if (levenshtein(t, qt) <= maxDist) {
+                                    matchMultiplier = 15; // Typo match
+                                }
+                            }
+                        }
+                        
+                        if (matchMultiplier > 0) {
+                            // Calculate BM25 TF component
+                            const tfVal = docTokens.tf[t];
+                            const bm25Tf = (tfVal * (k1 + 1)) / (tfVal + k1 * (1 - b + b * (docTokens.docLength / avgdl)));
+                            score += (bm25Tf * (idfMap[t] || 1)) * matchMultiplier;
+                            matchedTokens.add(qt);
+                        }
+                    });
+                });
+
+                if (score > 0 || parsedQuery.exactPhrases.length > 0) {
+                    // Flat bonus: give 500 points for every unique query word found in the document.
+                    // This guarantees that matching more words always yields a higher base score.
+                    score += matchedTokens.size * 500;
+
+                    // Boost for matching ALL query words
+                    if (parsedQuery.normalTokens.length > 1 && matchedTokens.size === parsedQuery.normalTokens.length) {
+                        score += 2000; // Flat boost for matching ALL words
+                    }
+                    
+                    // Exact multi-word phrase match boost
+                    if (parsedQuery.normalTokens.length > 1) {
+                        const joinedQuery = ' ' + parsedQuery.normalTokens.join(' ') + ' ';
+                        if (docTokens.searchString.includes(joinedQuery)) {
+                            score += 5000; // Massive boost for exact phrase match
+                        }
+                    }
+
+                    // Recency Bias: exponential decay curve to heavily favor very recent updates
+                    const updateDate = new Date(u.date);
+                    const now = new Date();
+                    const daysOld = Math.max(0, (now - updateDate) / (1000 * 60 * 60 * 24));
+                    
+                    // Drops off faster:
+                    // 0 days (brand new): 1.5x boost
+                    // 30 days (month old): ~1.36x boost
+                    // 365 days (year old): ~0.66x penalty
+                    const recencyMultiplier = 0.5 + (1.0 * Math.exp(-0.005 * daysOld));
+                    score *= recencyMultiplier;
+
+                    scoredUpdates.push({ update: u, score: score, index: i });
+                }
+            });
+
+            filteredSearchUpdates = scoredUpdates;
+            renderSearchResults();
+        }
+
+        function applyMetaFilters(list) {
+            if (activeMetaFilters.size === 0) return list;
+            return list.filter(item => {
+                const u = item.update || item;
+                const hasNotes = u.additionalNotes && u.additionalNotes.length > 0;
+                const hasCounters = u.counterEvidence && u.counterEvidence.length > 0;
+                const isSetback = u.type === 'setback';
+                
+                if (activeMetaFilters.has('notes') && hasNotes) return true;
+                if (activeMetaFilters.has('counters') && hasCounters) return true;
+                if (activeMetaFilters.has('setbacks') && isSetback) return true;
+                return false;
+            });
+        }
+
+        function renderSearchResults() {
+            let results = filteredSearchUpdates;
+            if (activeCategory !== 'all') {
+                if (activeCategory === 'non-manifesto') {
+                    results = results.filter(item => !item.update.promiseId);
+                } else {
+                    results = results.filter(item => {
+                        const cats = Array.isArray(item.update.category) ? item.update.category : [item.update.category];
+                        return cats.includes(activeCategory);
+                    });
+                }
+            }
+
+            // Apply additive meta-filters
+            results = applyMetaFilters(results);
+
+            if (searchSortBy === 'relevance') {
+                results.sort((a, b) => {
+                    if (b.score !== a.score) return b.score - a.score;
+                    return b.update.date.localeCompare(a.update.date);
+                });
+            } else {
+                results.sort((a, b) => b.update.date.localeCompare(a.update.date));
+            }
+
+            const countEl = document.getElementById('search-results-count');
+            if (countEl) {
+                countEl.innerHTML = `Found <strong style="color:var(--ink);">${results.length}</strong> updates matching "${escapeHtml(searchQuery)}"`;
+            }
+
+            filteredUpdates = results.map(item => item.update);
+            displayedCount = 0;
+            const container = document.getElementById('archive-timeline');
+            container.innerHTML = '';
+            
+            renderNextBatch();
+        }
+
+        function highlightText(text, query) {
+            if (!text || !query || !searchActive) return text;
+            const tokens = tokenize(query);
+            if (tokens.length === 0) return text;
+            
+            let highlighted = text;
+            tokens.forEach(token => {
+                const regex = new RegExp(`(^|[^\\p{L}\\p{N}_])(${token})`, 'giu');
+                highlighted = highlighted.replace(regex, '$1<mark>$2</mark>');
+            });
+            return highlighted;
+        }
+
+        // --- END TF-IDF SEARCH ENGINE ---
+
+        function updateFilterTriggerUI() {
+            const triggerBtn = document.getElementById('filter-trigger-btn');
+            const arrow = document.getElementById('filter-arrow');
+            const bar = document.getElementById('archive-filter-bar');
+            if (!triggerBtn) return;
+
+            const isOpen = bar && (bar.style.display === 'flex');
+            const isFilterActive = activeCategory !== 'all' || activeMetaFilters.size > 0;
+
+            triggerBtn.classList.remove('active-filter');
+
+            if (isFilterActive) {
+                triggerBtn.classList.add('active-filter');
+                let labelText = window.LANG === 'bn' ? 'বিভাগ অনুযায়ী ফিল্টার করুন' : 'Filter by Category';
+                if (activeCategory === 'non-manifesto') {
+                    labelText = window.LANG === 'bn' ? 'ফিল্টার: ম্যানিফেস্টো বহির্ভূত' : 'Filter: Non-Manifesto';
+                } else if (categoryMap[activeCategory]) {
+                    const catTitle = getText(categoryMap[activeCategory], 'title', window.LANG);
+                    const prefix = window.LANG === 'bn' ? 'ফিল্টার: ' : 'Filter: ';
+                    labelText = `${prefix}${categoryMap[activeCategory].icon} ${catTitle}`;
+                }
+                // Append meta-filter hints
+                const metaBits = [];
+                if (activeMetaFilters.has('notes')) metaBits.push(window.LANG === 'bn' ? '+নোট' : '+Notes');
+                if (activeMetaFilters.has('counters')) metaBits.push(window.LANG === 'bn' ? '+পাল্টা-প্রমাণ' : '+Counters');
+                if (activeMetaFilters.has('setbacks')) metaBits.push(window.LANG === 'bn' ? '+অবনতি' : '+Setbacks');
+                if (metaBits.length) labelText += ' ' + metaBits.join(' ');
+                triggerBtn.querySelector('span').textContent = labelText;
+
+                triggerBtn.style.borderColor = '';
+                triggerBtn.style.color = '';
+                triggerBtn.style.background = '';
+            } else {
+                triggerBtn.querySelector('span').textContent = window.LANG === 'bn' ? 'বিভাগ অনুযায়ী ফিল্টার করুন' : 'Filter by Category';
+                if (isOpen) {
+                    triggerBtn.style.borderColor = 'var(--saffron)';
+                    triggerBtn.style.color = 'var(--saffron-dark)';
+                    triggerBtn.style.background = 'var(--saffron-pale)';
+                } else {
+                    triggerBtn.style.borderColor = '';
+                    triggerBtn.style.color = '';
+                    triggerBtn.style.background = '';
+                }
+            }
+
+            if (arrow) {
+                arrow.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+                arrow.style.color = isFilterActive ? '#fff' : (isOpen ? 'var(--saffron-dark)' : '');
+            }
+        }
+
+        function renderFilterBar() {
+            const bar = document.getElementById('archive-filter-bar');
+            if (!bar) return;
+
+            // Only show categories that actually appear in the loaded data
+            const usedCats = new Set(allUpdates.map(u => u.category));
+            const orderedCats = Object.values(categoryMap).filter(c => usedCats.has(c.id));
+
+            const allLabel = window.LANG === 'bn' ? 'সব' : 'All';
+            const nonManifestoLabel = window.LANG === 'bn' ? '📢 ম্যানিফেস্টো বহির্ভূত' : '📢 Non-Manifesto';
+            const dividerLabel = window.LANG === 'bn' ? 'অতিরিক্ত ফিল্টার' : 'Also show only';
+            const notesLabel = window.LANG === 'bn' ? '📌 নোট' : '📌 Notes';
+            const countersLabel = window.LANG === 'bn' ? '🛑 পাল্টা-প্রমাণ' : '🛑 Counters';
+            const setbacksLabel = window.LANG === 'bn' ? '⚠️ অবনতি' : '⚠️ Setbacks';
+
+            bar.innerHTML = [
+                `<button class="filter-chip active" data-cat="all">${allLabel}</button>`,
+                ...orderedCats.map(c =>
+                    `<button class="filter-chip" data-cat="${escapeHtml(c.id)}">${escapeHtml(c.icon)} ${escapeHtml(getText(c, 'title', window.LANG).split(' ')[0])}</button>`
+                ),
+                `<button class="filter-chip" data-cat="non-manifesto">${nonManifestoLabel}</button>`,
+                `<div class="filter-divider">${dividerLabel}</div>`,
+                `<button class="meta-toggle" data-meta="notes">${notesLabel}</button>`,
+                `<button class="meta-toggle" data-meta="counters">${countersLabel}</button>`,
+                `<button class="meta-toggle" data-meta="setbacks">${setbacksLabel}</button>`
+            ].join('');
+
+            // Toggle filter bar display on trigger button click
+            const triggerBtn = document.getElementById('filter-trigger-btn');
+            if (triggerBtn) {
+                triggerBtn.addEventListener('click', () => {
+                    const isHidden = bar.style.display === 'none' || !bar.style.display;
+                    bar.style.display = isHidden ? 'flex' : 'none';
+                    updateFilterTriggerUI();
+                });
+            }
+
+            // Handle category chips (single-select)
+            bar.addEventListener('click', e => {
+                const catBtn = e.target.closest('.filter-chip');
+                if (catBtn) {
+                    bar.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
+                    catBtn.classList.add('active');
+                    applyFilter(catBtn.dataset.cat);
+                    bar.style.display = 'none';
+                    updateFilterTriggerUI();
+                    return;
+                }
+
+                const metaBtn = e.target.closest('.meta-toggle');
+                if (metaBtn) {
+                    const key = metaBtn.dataset.meta;
+                    if (activeMetaFilters.has(key)) {
+                        activeMetaFilters.delete(key);
+                        metaBtn.classList.remove('active');
+                    } else {
+                        activeMetaFilters.add(key);
+                        metaBtn.classList.add('active');
+                    }
+                    // Re-apply without closing dropdown so user can toggle multiple
+                    applyFilter(activeCategory);
+                    updateFilterTriggerUI();
+                }
+            });
+        }
+
+        function applyFilter(cat) {
+            activeCategory = cat;
+            if (searchActive) {
+                renderSearchResults();
+                updateFilterTriggerUI();
+                return;
+            }
+
+            let base;
+            if (cat === 'all') {
+                base = allUpdates;
+            } else if (cat === 'non-manifesto') {
+                base = allUpdates.filter(u => u.isInitiative);
+            } else {
+                base = allUpdates.filter(u => {
+                    const cats = Array.isArray(u.category) ? u.category : [u.category];
+                    return cats.includes(cat);
+                });
+            }
+
+            filteredUpdates = applyMetaFilters(base);
+            displayedCount = 0;
+            document.getElementById('archive-timeline').innerHTML = '';
+            renderNextBatch();
+            updateFilterTriggerUI();
+        }
+
+
+        function splitIntoSentences(text) {
+            const sentences = [];
+            let currentSentence = '';
+            const abbrevs = new Set([
+                'no', 'mr', 'mrs', 'ms', 'dr', 'prof', 'sr', 'jr', 'vs', 'etc', 'eg', 'ie',
+                'rs', 'govt', 'dept', 'co', 'ltd', 'inc', 'corp', 'st', 'jan', 'feb', 'mar',
+                'apr', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec', 'approx', 'vol',
+                'pp', 'ed', 'gen', 'col', 'sen', 'rep', 'gov', 'ca', 'intl', 'sec', 'art',
+                'dir', 'dist', 'hq', 'dgp', 'sp', 'dm', 'sdm', 'bdo', 'sdo', 'wcd', 'wb',
+                'goa', 'hon', 'pb', 'hr', 'up', 'mp', 'ap', 'tel'
+            ]);
+
+            let inBold = false;
+            let i = 0;
+            while (i < text.length) {
+                if (text.startsWith('**', i)) {
+                    inBold = !inBold;
+                    currentSentence += '**';
+                    i += 2;
+                    continue;
+                }
+
+                const char = text[i];
+                currentSentence += char;
+
+                if (!inBold && (char === '.' || char === '?' || char === '!' || char === '।')) {
+                    const isLast = (i === text.length - 1);
+                    const isFollowedBySpace = !isLast && /\s/.test(text[i + 1]);
+
+                    if (isLast || isFollowedBySpace) {
+                        let isSentenceEnd = true;
+
+                        if (char === '.') {
+                            let j = i - 1;
+                            let word = '';
+                            while (j >= 0 && /[a-zA-Z0-9.\-]/.test(text[j])) {
+                                word = text[j] + word;
+                                j--;
+                            }
+                            const cleanedWord = word.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+                            if (abbrevs.has(cleanedWord)) {
+                                isSentenceEnd = false;
+                            }
+                            if (cleanedWord.length === 1 && /[a-zA-Z]/.test(cleanedWord)) {
+                                isSentenceEnd = false;
+                            }
+                        }
+
+                        if (isSentenceEnd) {
+                            i++;
+                            while (i < text.length && /["')\]\s]/.test(text[i])) {
+                                currentSentence += text[i];
+                                i++;
+                            }
+                            sentences.push(currentSentence.trim());
+                            currentSentence = '';
+                            continue;
+                        }
+                    }
+                }
+                i++;
+            }
+            if (currentSentence.trim()) {
+                sentences.push(currentSentence.trim());
+            }
+            return sentences;
+        }
+
+        function chunkParagraphs(text, maxLen = 360) {
+            if (!text) return [];
+            const rawParagraphs = String(text).split(/\n\s*\n/);
+            const finalParagraphs = [];
+
+            for (const rawP of rawParagraphs) {
+                const trimmed = rawP.trim();
+                if (!trimmed) continue;
+
+                if (trimmed.length <= maxLen) {
+                    finalParagraphs.push(trimmed);
+                    continue;
+                }
+
+                const sentences = splitIntoSentences(trimmed);
+                let currentGroup = [];
+                let currentLen = 0;
+
+                for (const sentence of sentences) {
+                    if (currentLen > 0 && currentLen + sentence.length > maxLen) {
+                        finalParagraphs.push(currentGroup.join(' '));
+                        currentGroup = [sentence];
+                        currentLen = sentence.length;
+                    } else {
+                        currentGroup.push(sentence);
+                        currentLen += (currentLen > 0 ? 1 : 0) + sentence.length;
+                    }
+                }
+                if (currentGroup.length > 0) {
+                    finalParagraphs.push(currentGroup.join(' '));
+                }
+            }
+            return finalParagraphs;
+        }
+
+        function formatMultiParagraph(text) {
+            if (!text) return '';
+            const paras = chunkParagraphs(String(text), 360);
+            return paras
+                .map(p => `<p>${escapeHtml(p).replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')}</p>`)
+                .join('');
+        }
+
+        function renderNextBatch(count = ITEMS_PER_PAGE) {
+            const timeline = document.getElementById('archive-timeline');
+            if (displayedCount === 0) timeline.innerHTML = '';
+
+            const nextBatch = filteredUpdates.slice(displayedCount, displayedCount + count);
+            const isRelevanceSort = (searchActive && searchSortBy === 'relevance');
+
+            // Group by date for the new batch
+            const groupKeys = [];
+            const groups = {};
+            nextBatch.forEach((u, i) => {
+                const key = isRelevanceSort ? `${u.date}_${displayedCount + i}` : u.date;
+                if (!groups[key]) {
+                    groups[key] = [];
+                    groupKeys.push(key);
+                }
+                groups[key].push(u);
+            });
+
+            if (!isRelevanceSort) {
+                groupKeys.sort((a, b) => b.localeCompare(a));
+            }
+
+            groupKeys.forEach(key => {
+                const date = isRelevanceSort ? key.split('_')[0] : key;
+                const formattedDate = formatDate(date);
+
+                // Check if date label already exists in timeline
+                let dayGroup = isRelevanceSort ? null : document.querySelector(`[data-date="${date}"]`);
+                if (!dayGroup) {
+                    const groupDiv = document.createElement('div');
+                    groupDiv.className = 'archive-day-group';
+                    if (!isRelevanceSort) groupDiv.setAttribute('data-date', date);
+                    const relevanceBadge = isRelevanceSort ? (window.LANG === 'bn' ? ' <span style="color:var(--ink-faint); font-weight:normal; font-size:12px; margin-left:8px; text-transform:none;">(প্রাসঙ্গিক)</span>' : ' <span style="color:var(--ink-faint); font-weight:normal; font-size:12px; margin-left:8px; text-transform:none;">(Relevant Match)</span>') : '';
+                    groupDiv.innerHTML = `<span class="archive-date-label">${formattedDate}${relevanceBadge}</span><div class="items-container"></div>`;
+                    timeline.appendChild(groupDiv);
+                    dayGroup = groupDiv;
+                }
+
+                const container = dayGroup.querySelector('.items-container');
+                groups[key].forEach(u => {
+                    const item = document.createElement('div');
+                    item.className = 'archive-item';
+                    item.id = `u-${u._slug}`;
+                    const linkHref = u.isInitiative ? `initiatives.html#${u.promiseId}` : `index.html#${u.promiseId}`;
+                    
+                    let tag = '';
+                    if (u.isInitiative) {
+                        const nonManifestoText = window.LANG === 'bn' ? 'ম্যানিফেস্টো বহির্ভূত উদ্যোগ' : 'Non-Manifesto Initiative';
+                        tag += `<span class="non-manifesto-badge" style="margin-bottom:8px; display:inline-block">${nonManifestoText}</span> `;
+                    }
+                    if (u.type === 'setback') {
+                        const setbackText = window.LANG === 'bn' ? '⚠️ অবনতি' : '⚠️ Setback';
+                        tag += `<span class="non-manifesto-badge" style="background: var(--red-pale); color: var(--red); border-color: rgba(220,38,38,0.2); margin-bottom:8px; display:inline-block">${setbackText}</span> `;
+                    }
+                    if (tag) tag += '<br>';
+                    
+                    let escapedTitle = escapeHtml(getText(u, 'title', window.LANG));
+                    escapedTitle = highlightText(escapedTitle, searchQuery);
+                    
+                    const escapedCategory = escapeHtml(categoryMap[u.category] ? getText(categoryMap[u.category], 'title', window.LANG) : u.category.replace('-', ' '));
+
+                    let nestedHtml = '';
+                    if (Array.isArray(u.counterEvidence) && u.counterEvidence.length) {
+                        u.counterEvidence.forEach(c => {
+                            const cSources = Array.isArray(c.sources) ? c.sources : [];
+                            const cLabelLocal = getText(c, 'label', window.LANG) || (window.LANG === 'bn' ? 'বিতর্কিত' : 'Debatable');
+                            const counterEvidenceHeader = window.LANG === 'bn' ? '🛑 পাল্টা প্রমাণ: ' : '🛑 Counter Evidence: ';
+                            nestedHtml += `
+                            <div class="counter-block" style="margin-top: 14px; border-left: 3px solid #ef4444; padding-left: 12px; background: rgba(239, 68, 68, 0.02); padding-top: 8px; padding-bottom: 8px; border-radius: 0 4px 4px 0;">
+                                <span class="counter-label" style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #b91c1c; text-transform: uppercase; display: flex; align-items: center; gap: 4px;">${counterEvidenceHeader}${escapeHtml(cLabelLocal)}</span>
+                                <div class="archive-item-note" style="margin-top: 6px; font-size: 14px; line-height: 1.5; color: var(--ink-mid);">${formatMultiParagraph(getText(c, 'text', window.LANG))}</div>
+                                ${cSources.length ? `
+                                    <div class="item-sources" style="margin-top: 8px; border-top: none; padding-top: 0;">
+                                        ${cSources.map(s => `<a href="${s.url}" target="_blank" rel="nofollow noopener" class="archive-source-link">↗ ${s.name}</a>`).join('')}
+                                    </div>
+                                ` : ''}
+                            </div>
+                        `;
+                        });
+                    }
+                    if (Array.isArray(u.additionalNotes) && u.additionalNotes.length) {
+                        u.additionalNotes.forEach(n => {
+                            const nSources = Array.isArray(n.sources) ? n.sources : [];
+                            const nLabelLocal = getText(n, 'label', window.LANG) || (window.LANG === 'bn' ? 'অতিরিক্ত মন্তব্য' : 'Additional Note');
+                            const noteHeader = window.LANG === 'bn' ? '📌 মন্তব্য: ' : '📌 Note: ';
+                            nestedHtml += `
+                            <div class="note-block" style="margin-top: 14px; border-left: 3px solid var(--saffron-mid); padding-left: 12px; background: rgba(232, 98, 10, 0.02); padding-top: 8px; padding-bottom: 8px; border-radius: 0 4px 4px 0;">
+                                <span class="note-label" style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--saffron-dark); text-transform: uppercase; display: flex; align-items: center; gap: 4px;">${noteHeader}${escapeHtml(nLabelLocal)}</span>
+                                <div class="archive-item-note" style="margin-top: 6px; font-size: 14px; line-height: 1.5; color: var(--ink-mid);">${formatMultiParagraph(getText(n, 'text', window.LANG))}</div>
+                                ${nSources.length ? `
+                                    <div class="item-sources" style="margin-top: 8px; border-top: none; padding-top: 0;">
+                                        ${nSources.map(s => `<a href="${s.url}" target="_blank" rel="nofollow noopener" class="archive-source-link">↗ ${s.name}</a>`).join('')}
+                                    </div>
+                                ` : ''}
+                            </div>
+                        `;
+                        });
+                    }
+
+                    let infoHtml = '';
+                    const parentInfo = infoLookupMap[u.promiseId];
+                    if (parentInfo) {
+                        infoHtml = `
+                          <div class="promise-info-block" style="margin-top: 12px; border-left: 3px solid var(--ink-blue); padding-left: 12px; background: rgba(0, 71, 171, 0.02); padding-top: 8px; padding-bottom: 8px; border-radius: 0 4px 4px 0; font-family: var(--font-sans); font-size: 14.5px; line-height: 1.5; color: var(--ink-mid); margin-bottom: 12px;">
+                            ℹ️ ${formatInfoText(getText(u, 'info', window.LANG) || parentInfo)}
+                          </div>
+                        `;
+                    }
+
+                    item.innerHTML = `
+                    ${tag}
+                    <div class="archive-item-meta-row">
+                        <span class="archive-item-meta">${escapedCategory}</span>
+                        ${buildDetailsLink(u)}
+                    </div>
+                    <a href="${linkHref}" class="archive-item-title">${escapedTitle}</a>
+                    <div class="archive-item-note">${highlightText(formatMultiParagraph(getText(u, 'note', window.LANG)), searchQuery)}</div>
+                    ${infoHtml}
+                    ${nestedHtml}
+                    ${u.sources ? `
+                        <div class="item-sources">
+                            ${u.sources.map(s => `<a href="${escapeHtml(s.url)}" target="_blank" rel="nofollow noopener" class="archive-source-link">↗ ${escapeHtml(s.name)}</a>`).join('')}
+                        </div>
+                    ` : ''}
+                    ${buildShareRow(u._slug, getText(u, 'title', window.LANG))}
+                `;
+                    container.appendChild(item);
+                });
+            });
+
+            displayedCount += nextBatch.length;
+
+            const loadMoreContainer = document.getElementById('load-more-container');
+            if (displayedCount < filteredUpdates.length) {
+                loadMoreContainer.style.display = 'block';
+            } else {
+                loadMoreContainer.style.display = 'none';
+            }
+        }
+
+        // ── Permalink: scroll to and highlight a specific update card ──
+        function scrollToUpdateCard(slug) {
+            const el = document.getElementById(`u-${slug}`);
+            if (!el) return;
+            const elementPosition = el.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = elementPosition - 24; // 24px safety margin for elegant top spacing
+
+            // If the target is extremely far down, jump instantly ('auto') to prevent long scroll lockups/lag
+            const isFar = Math.abs(window.pageYOffset - offsetPosition) > 3000;
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: isFar ? 'auto' : 'smooth'
+            });
+            el.style.outline = '2px solid var(--saffron)';
+            el.style.outlineOffset = '4px';
+            setTimeout(() => {
+                el.style.transition = 'outline 1.5s ease, outline-offset 1.5s ease';
+                el.style.outline = '2px solid transparent';
+                setTimeout(() => { el.style.outline = ''; el.style.outlineOffset = ''; el.style.transition = ''; }, 1500);
+            }, 2500);
+        }
+
+        // ── Copy link to clipboard with visual feedback ──
+        function copyUpdateLink(url, btn) {
+            const orig = btn.innerHTML;
+            const icoCheck = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+            function onCopied() {
+                btn.innerHTML = icoCheck;
+                btn.classList.add('share-copy-done');
+                setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('share-copy-done'); }, 2000);
+            }
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(url).then(onCopied).catch(() => fallbackCopy(url, onCopied));
+            } else { fallbackCopy(url, onCopied); }
+        }
+
+        function fallbackCopy(url, onCopied) {
+            const ta = document.createElement('textarea');
+            ta.value = url; ta.style.position = 'fixed'; ta.style.opacity = '0';
+            document.body.appendChild(ta); ta.select();
+            try { document.execCommand('copy'); onCopied(); } catch (e) { }
+            document.body.removeChild(ta);
+        }
+
+        // ── Full Promise History link (only for manifesto promises with a details page) ──
+        function buildDetailsLink(u) {
+            if (u.isInitiative || !detailsExistsMap[u.promiseId]) return '';
+            const href = `details/${u.promiseId}.html`;
+            const linkText = window.LANG === 'bn' ? 'সম্পর্কিত আপডেট ও সম্পূর্ণ ইতিহাস দেখুন →' : 'Check related updates &amp; Full History →';
+            const linkTitle = window.LANG === 'bn' ? 'এই প্রতিশ্রুতির জন্য সমস্ত ট্র্যাকিং আপডেট দেখুন' : 'See all tracked updates for this promise';
+            return `<a href="${href}" class="details-page-link" title="${linkTitle}">${linkText}</a>`;
+        }
+
+        // ── Build the compact share row HTML for a given update ──
+        function buildShareRow(slug, title) {
+            const shareUrl = 'https://tracker.wbupdates.com/latest?u=' + encodeURIComponent(slug);
+            const shareText = title + ' — WB Accountability Tracker';
+            const waText = '*' + title + '* \n\n WB Accountability Tracker \n ' + shareUrl;
+
+            const shareLabel = window.LANG === 'bn' ? 'এই আপডেটটি শেয়ার করুন' : 'Share this update';
+            const titleWA = window.LANG === 'bn' ? 'WhatsApp-এ শেয়ার করুন' : 'Share on WhatsApp';
+            const titleX = window.LANG === 'bn' ? 'X (Twitter)-এ শেয়ার করুন' : 'Share on X (Twitter)';
+            const titleFB = window.LANG === 'bn' ? 'Facebook-এ শেয়ার করুন' : 'Share on Facebook';
+            const titleTG = window.LANG === 'bn' ? 'Telegram-এ শেয়ার করুন' : 'Share on Telegram';
+            const titleRD = window.LANG === 'bn' ? 'Reddit-এ শেয়ার করুন' : 'Share on Reddit';
+            const titleCopy = window.LANG === 'bn' ? 'সরাসরি লিঙ্ক কপি করুন' : 'Copy direct link';
+
+            const wa = 'https://wa.me/?text=' + encodeURIComponent(waText);
+            const x = 'https://x.com/share?url=' + encodeURIComponent(shareUrl) + '&text=' + encodeURIComponent(shareText);
+            const fb = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(shareUrl);
+            const tg = 'https://t.me/share/url?url=' + encodeURIComponent(shareUrl) + '&text=' + encodeURIComponent(shareText);
+            const rd = 'https://www.reddit.com/submit?url=' + encodeURIComponent(shareUrl) + '&title=' + encodeURIComponent(shareText);
+
+            const icoWA = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/><' + '/svg>';
+            const icoX = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.26 5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/><' + '/svg>';
+            const icoFB = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/><' + '/svg>';
+            const icoTG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/><' + '/svg>';
+            const icoReddit = '<svg viewBox="-269 361 72 72" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><g><path d="m-233 433c-19.9 0-36-16.1-36-36s16.1-36 36-36 36 16.1 36 36-16.1 36-36 36z" fill="#ff4500"/><path d="m-224.8 404.5c-2.1 0-3.7-1.7-3.7-3.7 0-2.1 1.7-3.8 3.7-3.8s3.7 1.7 3.7 3.8c.1 2-1.6 3.7-3.7 3.7m.7 6.2c-2.6 2.6-7.5 2.8-8.9 2.8s-6.3-.2-8.9-2.8c-.4-.4-.4-1 0-1.4s1-.4 1.4 0c1.6 1.6 5.1 2.2 7.5 2.2 2.5 0 5.9-.6 7.5-2.2.4-.4 1-.4 1.4 0s.4 1 0 1.4m-20.9-9.9c0-2.1 1.7-3.8 3.8-3.8s3.7 1.7 3.7 3.8-1.7 3.7-3.7 3.7c-2.1 0-3.8-1.7-3.8-3.7m36-3.8c0-2.9-2.4-5.3-5.3-5.3-1.4 0-2.7.6-3.6 1.5-3.6-2.6-8.5-4.3-14-4.5l2.4-11.3 7.8 1.7c.1 2 1.7 3.6 3.7 3.6 2.1 0 3.7-1.7 3.7-3.7 0-2.1-1.7-3.7-3.7-3.7-1.5 0-2.7.9-3.3 2.1l-8.7-1.9c-.2-.1-.5 0-.7.1s-.4.3-.4.6l-2.6 12.3v.2c-5.6.1-10.6 1.8-14.3 4.4-.9-.9-2.2-1.5-3.6-1.5-2.9 0-5.3 2.4-5.3 5.3 0 2.1 1.3 4 3.1 4.8-.1.5-.1 1.1-.1 1.6 0 8.1 9.4 14.6 21 14.6s21-6.5 21-14.6c0-.5 0-1.1-.1-1.6 1.7-.7 3-2.6 3-4.7" fill="#fff"/></g></svg>';
+            const icoLink = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/><' + '/svg>';
+
+            return '<div class="update-share-row">'
+                + '<span class="share-label">' + shareLabel + '</span>'
+                + '<a href="' + wa + '" target="_blank" rel="nofollow noopener" class="share-btn share-wa" title="' + titleWA + '">' + icoWA + '</a>'
+                + '<a href="' + x + '" target="_blank" rel="nofollow noopener" class="share-btn share-x"  title="' + titleX + '">' + icoX + '</a>'
+                + '<a href="' + fb + '" target="_blank" rel="nofollow noopener" class="share-btn share-fb" title="' + titleFB + '">' + icoFB + '</a>'
+                + '<a href="' + tg + '" target="_blank" rel="nofollow noopener" class="share-btn share-tg" title="' + titleTG + '">' + icoTG + '</a>'
+                + '<a href="' + rd + '" target="_blank" rel="nofollow noopener" class="share-btn share-reddit" title="' + titleRD + '">' + icoReddit + '</a>'
+                + '<button class="share-btn share-copy" onclick="copyUpdateLink(\'' + shareUrl + '\', this)" title="' + titleCopy + '">' + icoLink + '</button>'
+                + '</div>';
+        }
+
+        // ── Spotlight & Context Mode script helpers ──
+        function renderSpotlightCard(u, globalIndex) {
+            const timeline = document.getElementById('archive-timeline');
+            timeline.innerHTML = '';
+
+            const formattedDate = formatDate(u.date);
+
+            const linkHref = u.isInitiative ? `initiatives.html#${u.promiseId}` : `index.html#${u.promiseId}`;
+            let tag = '';
+            if (u.isInitiative) {
+                const nonManifestoText = window.LANG === 'bn' ? 'ম্যানিফেস্টো বহির্ভূত উদ্যোগ' : 'Non-Manifesto Initiative';
+                tag += `<span class="non-manifesto-badge" style="margin-bottom:8px; display:inline-block">${nonManifestoText}</span> `;
+            }
+            if (u.type === 'setback') {
+                const setbackText = window.LANG === 'bn' ? '⚠️ অবনতি' : '⚠️ Setback';
+                tag += `<span class="non-manifesto-badge" style="background: var(--red-pale); color: var(--red); border-color: rgba(220,38,38,0.2); margin-bottom:8px; display:inline-block">${setbackText}</span> `;
+            }
+            if (tag) tag += '<br>';
+            
+            const escapedTitle = escapeHtml(getText(u, 'title', window.LANG));
+            const escapedCategory = escapeHtml(categoryMap[u.category] ? getText(categoryMap[u.category], 'title', window.LANG) : u.category.replace('-', ' '));
+
+            let nestedHtml = '';
+            if (Array.isArray(u.counterEvidence) && u.counterEvidence.length) {
+                u.counterEvidence.forEach(c => {
+                    const cSources = Array.isArray(c.sources) ? c.sources : [];
+                    const cLabelLocal = getText(c, 'label', window.LANG) || (window.LANG === 'bn' ? 'বিতর্কিত' : 'Debatable');
+                    const counterEvidenceHeader = window.LANG === 'bn' ? '🛑 পাল্টা প্রমাণ: ' : '🛑 Counter Evidence: ';
+                    nestedHtml += `
+                    <div class="counter-block" style="margin-top: 14px; border-left: 3px solid #ef4444; padding-left: 12px; background: rgba(239, 68, 68, 0.02); padding-top: 8px; padding-bottom: 8px; border-radius: 0 4px 4px 0;">
+                        <span class="counter-label" style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #b91c1c; text-transform: uppercase; display: flex; align-items: center; gap: 4px;">${counterEvidenceHeader}${escapeHtml(cLabelLocal)}</span>
+                        <div class="archive-item-note" style="margin-top: 6px; font-size: 14px; line-height: 1.5; color: var(--ink-mid);">${formatMultiParagraph(getText(c, 'text', window.LANG))}</div>
+                        ${cSources.length ? `
+                            <div class="item-sources" style="margin-top: 8px; border-top: none; padding-top: 0;">
+                                ${cSources.map(s => `<a href="${s.url}" target="_blank" rel="nofollow noopener" class="archive-source-link">↗ ${s.name}</a>`).join('')}
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+                });
+            }
+            if (Array.isArray(u.additionalNotes) && u.additionalNotes.length) {
+                u.additionalNotes.forEach(n => {
+                    const nSources = Array.isArray(n.sources) ? n.sources : [];
+                    const nLabelLocal = getText(n, 'label', window.LANG) || (window.LANG === 'bn' ? 'অতিরিক্ত মন্তব্য' : 'Additional Note');
+                    const noteHeader = window.LANG === 'bn' ? '📌 মন্তব্য: ' : '📌 Note: ';
+                    nestedHtml += `
+                    <div class="note-block" style="margin-top: 14px; border-left: 3px solid var(--saffron-mid); padding-left: 12px; background: rgba(232, 98, 10, 0.02); padding-top: 8px; padding-bottom: 8px; border-radius: 0 4px 4px 0;">
+                        <span class="note-label" style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--saffron-dark); text-transform: uppercase; display: flex; align-items: center; gap: 4px;">${noteHeader}${escapeHtml(nLabelLocal)}</span>
+                        <div class="archive-item-note" style="margin-top: 6px; font-size: 14px; line-height: 1.5; color: var(--ink-mid);">${formatMultiParagraph(getText(n, 'text', window.LANG))}</div>
+                        ${nSources.length ? `
+                            <div class="item-sources" style="margin-top: 8px; border-top: none; padding-top: 0;">
+                                ${nSources.map(s => `<a href="${s.url}" target="_blank" rel="nofollow noopener" class="archive-source-link">↗ ${s.name}</a>`).join('')}
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+                });
+            }
+
+            let infoHtml = '';
+            const parentInfo = infoLookupMap[u.promiseId];
+            if (parentInfo) {
+                infoHtml = `
+                  <div class="promise-info-block" style="margin-top: 12px; border-left: 3px solid var(--ink-blue); padding-left: 12px; background: rgba(0, 71, 171, 0.02); padding-top: 8px; padding-bottom: 8px; border-radius: 0 4px 4px 0; font-family: var(--font-sans); font-size: 14.5px; line-height: 1.5; color: var(--ink-mid); margin-bottom: 12px;">
+                    ℹ️ ${formatInfoText(getText(u, 'info', window.LANG) || parentInfo)}
+                  </div>
+                `;
+            }
+
+            const sharedUpdateBadge = window.LANG === 'bn' ? '📍 শেয়ার করা আপডেট' : '📍 Shared Update';
+            const bannerTitle = window.LANG === 'bn' ? 'টাইমলাইন প্রসঙ্গ' : 'Timeline Context';
+            const bannerText = window.LANG === 'bn' 
+                ? `এই আপডেটটি <strong>${formattedDate}</strong> তারিখে প্রকাশিত হয়েছে। এই তারিখের কাছাকাছি সময়ে ঘটে যাওয়া অন্যান্য সরকারি সিদ্ধান্ত, ঘটনা এবং ট্র্যাকিং আপডেট দেখতে, নিচের বোতামে ক্লিক করে কালানুক্রমিক টাইমলাইনে সেগুলি উন্মোচন করুন।`
+                : `This update was published on <strong>${formattedDate}</strong>. To see other political decisions, events, and tracking updates that happened around this date, click below to reveal them in the chronological timeline.`;
+            const revealBtnText = window.LANG === 'bn' ? 'টাইমলাইন প্রসঙ্গের মধ্যে উন্মোচন করুন &nbsp;↓' : 'Reveal inside Timeline Context &nbsp;↓';
+            const latestBtnText = window.LANG === 'bn' ? '🚀 Go to Latest Updates' : '🚀 Go to Latest Updates';
+
+            const wrapper = document.createElement('div');
+            wrapper.className = 'spotlight-wrapper';
+            wrapper.innerHTML = `
+                <div class="spotlight-badge">${sharedUpdateBadge}</div>
+                <div class="archive-day-group">
+                    <span class="archive-date-label">${formattedDate}</span>
+                    <div class="items-container">
+                        <div class="archive-item spotlight-card-active" id="u-${u._slug}">
+                            ${tag}
+                            <div class="archive-item-meta-row">
+                                <span class="archive-item-meta">${escapedCategory}</span>
+                                ${buildDetailsLink(u)}
+                            </div>
+                            <a href="${linkHref}" class="archive-item-title">${escapedTitle}</a>
+                            <div class="archive-item-note">${formatMultiParagraph(getText(u, 'note', window.LANG))}</div>
+                            ${infoHtml}
+                            ${nestedHtml}
+                            ${u.sources ? `
+                                <div class="item-sources">
+                                    ${u.sources.map(s => `<a href="${escapeHtml(s.url)}" target="_blank" rel="nofollow noopener" class="archive-source-link">↗ ${escapeHtml(s.name)}</a>`).join('')}
+                                </div>
+                            ` : ''}
+                            ${buildShareRow(u._slug, getText(u, 'title', window.LANG))}
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="spotlight-banner">
+                    <span class="spotlight-banner-title">${bannerTitle}</span>
+                    <p class="spotlight-banner-text">${bannerText}</p>
+                    <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px;">
+                        <button class="spotlight-reveal-btn" onclick="revealChronologicalContext(${globalIndex}, '${u._slug}')">
+                            ${revealBtnText}
+                        </button>
+                        <button class="spotlight-reveal-btn spotlight-latest-btn" onclick="jumpToLatestUpdates()">
+                            ${latestBtnText}
+                        </button>
+                    </div>
+                </div>
+            `;
+            timeline.appendChild(wrapper);
+
+            // Hide headers, tip/filter controls, Load More, and Press Watch in Spotlight Mode
+            document.querySelector('.archive-header').style.display = 'none';
+            document.querySelector('.archive-meta-controls-row').style.display = 'none';
+            document.getElementById('filter-trigger-btn').style.display = 'none';
+            document.getElementById('archive-filter-bar').style.display = 'none';
+            document.getElementById('load-more-container').style.display = 'none';
+            const _pwSection = document.getElementById('pw-spotlight-section');
+            if (_pwSection) _pwSection.style.display = 'none';
+        }
+
+        function revealChronologicalContext(globalIndex, slug) {
+            // Restore header and tip controls, but hide the filter-by-category part in Neighborhood Mode
+            document.querySelector('.archive-header').style.display = '';
+            document.querySelector('.archive-meta-controls-row').style.display = '';
+            document.getElementById('filter-trigger-btn').style.display = 'none';
+            document.getElementById('archive-filter-bar').style.display = 'none';
+
+            // Clean query parameters from URL silently to restore standard page address
+            try {
+                window.history.replaceState({}, document.title, window.location.pathname);
+            } catch (e) {
+                console.error('Failed to clean URL parameters', e);
+            }
+
+            // Set sliced Neighborhood bounds (10 cards above, target, 5 cards below)
+            neighborhoodStart = Math.max(0, globalIndex - 10);
+            neighborhoodEnd = Math.min(allUpdates.length, globalIndex + 6);
+
+            // Render isolated neighborhood
+            renderNeighborhood(neighborhoodStart, neighborhoodEnd);
+
+            // Smoothly/instantly scroll to card in context
+            setTimeout(() => {
+                scrollToUpdateCard(slug);
+            }, 100);
+        }
+
+        function renderNeighborhood(start, end) {
+            const timeline = document.getElementById('archive-timeline');
+            timeline.innerHTML = '';
+
+            const jumpLatestText = window.LANG === 'bn' ? '🚀 সাম্প্রতিক আপডেটগুলিতে ফিরে যান' : '🚀 Jump to Latest Updates';
+            const loadNewerText = window.LANG === 'bn' ? '▲ আরও নতুন আপডেট লোড করুন' : '▲ Load Newer Updates';
+
+            // 1. Show or hide top "Load Newer" button wrap
+            if (start > 0) {
+                const newerWrap = document.createElement('div');
+                newerWrap.className = 'load-newer-wrap';
+                newerWrap.innerHTML = `
+                    <button class="load-newer-btn load-latest-btn" onclick="jumpToLatestUpdates()">${jumpLatestText}</button>
+                    <button class="load-newer-btn" onclick="loadNewerUpdates()">${loadNewerText}</button>
+                `;
+                timeline.appendChild(newerWrap);
+            }
+
+            // 2. Render cards inside bounds
+            const sliceBatch = allUpdates.slice(start, end);
+            const groups = sliceBatch.reduce((acc, u) => {
+                if (!acc[u.date]) acc[u.date] = [];
+                acc[u.date].push(u);
+                return acc;
+            }, {});
+
+            Object.keys(groups).sort((a, b) => b.localeCompare(a)).forEach(date => {
+                const formattedDate = formatDate(date);
+
+                const groupDiv = document.createElement('div');
+                groupDiv.className = 'archive-day-group';
+                groupDiv.setAttribute('data-date', date);
+                groupDiv.innerHTML = `<span class="archive-date-label">${formattedDate}</span><div class="items-container"></div>`;
+                timeline.appendChild(groupDiv);
+
+                const container = groupDiv.querySelector('.items-container');
+                groups[date].forEach(u => {
+                    const item = document.createElement('div');
+                    item.className = 'archive-item';
+                    item.id = `u-${u._slug}`;
+                    const linkHref = u.isInitiative ? `initiatives.html#${u.promiseId}` : `index.html#${u.promiseId}`;
+                    
+                    let tag = '';
+                    if (u.isInitiative) {
+                        const nonManifestoText = window.LANG === 'bn' ? 'ম্যানিফেস্টো বহির্ভূত উদ্যোগ' : 'Non-Manifesto Initiative';
+                        tag += `<span class="non-manifesto-badge" style="margin-bottom:8px; display:inline-block">${nonManifestoText}</span> `;
+                    }
+                    if (u.type === 'setback') {
+                        const setbackText = window.LANG === 'bn' ? '⚠️ অবনতি' : '⚠️ Setback';
+                        tag += `<span class="non-manifesto-badge" style="background: var(--red-pale); color: var(--red); border-color: rgba(220,38,38,0.2); margin-bottom:8px; display:inline-block">${setbackText}</span> `;
+                    }
+                    if (tag) tag += '<br>';
+                    
+                    const escapedTitle = escapeHtml(getText(u, 'title', window.LANG));
+                    const escapedCategory = escapeHtml(categoryMap[u.category] ? getText(categoryMap[u.category], 'title', window.LANG) : u.category.replace('-', ' '));
+
+                    let nestedHtml = '';
+                    if (Array.isArray(u.counterEvidence) && u.counterEvidence.length) {
+                        u.counterEvidence.forEach(c => {
+                            const cSources = Array.isArray(c.sources) ? c.sources : [];
+                            const cLabelLocal = getText(c, 'label', window.LANG) || (window.LANG === 'bn' ? 'বিতর্কিত' : 'Debatable');
+                            const counterEvidenceHeader = window.LANG === 'bn' ? '🛑 পাল্টা প্রমাণ: ' : '🛑 Counter Evidence: ';
+                            nestedHtml += `
+                            <div class="counter-block" style="margin-top: 14px; border-left: 3px solid #ef4444; padding-left: 12px; background: rgba(239, 68, 68, 0.02); padding-top: 8px; padding-bottom: 8px; border-radius: 0 4px 4px 0;">
+                                <span class="counter-label" style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #b91c1c; text-transform: uppercase; display: flex; align-items: center; gap: 4px;">${counterEvidenceHeader}${escapeHtml(cLabelLocal)}</span>
+                                <div class="archive-item-note" style="margin-top: 6px; font-size: 14px; line-height: 1.5; color: var(--ink-mid);">${formatMultiParagraph(getText(c, 'text', window.LANG))}</div>
+                                ${cSources.length ? `
+                                    <div class="item-sources" style="margin-top: 8px; border-top: none; padding-top: 0;">
+                                        ${cSources.map(s => `<a href="${s.url}" target="_blank" rel="nofollow noopener" class="archive-source-link">↗ ${s.name}</a>`).join('')}
+                                    </div>
+                                ` : ''}
+                            </div>
+                        `;
+                        });
+                    }
+                    if (Array.isArray(u.additionalNotes) && u.additionalNotes.length) {
+                        u.additionalNotes.forEach(n => {
+                            const nSources = Array.isArray(n.sources) ? n.sources : [];
+                            const nLabelLocal = getText(n, 'label', window.LANG) || (window.LANG === 'bn' ? 'অতিরিক্ত মন্তব্য' : 'Additional Note');
+                            const noteHeader = window.LANG === 'bn' ? '📌 মন্তব্য: ' : '📌 Note: ';
+                            nestedHtml += `
+                            <div class="note-block" style="margin-top: 14px; border-left: 3px solid var(--saffron-mid); padding-left: 12px; background: rgba(232, 98, 10, 0.02); padding-top: 8px; padding-bottom: 8px; border-radius: 0 4px 4px 0;">
+                                <span class="note-label" style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--saffron-dark); text-transform: uppercase; display: flex; align-items: center; gap: 4px;">${noteHeader}${escapeHtml(nLabelLocal)}</span>
+                                <div class="archive-item-note" style="margin-top: 6px; font-size: 14px; line-height: 1.5; color: var(--ink-mid);">${formatMultiParagraph(getText(n, 'text', window.LANG))}</div>
+                                ${nSources.length ? `
+                                    <div class="item-sources" style="margin-top: 8px; border-top: none; padding-top: 0;">
+                                        ${nSources.map(s => `<a href="${s.url}" target="_blank" rel="nofollow noopener" class="archive-source-link">↗ ${s.name}</a>`).join('')}
+                                    </div>
+                                ` : ''}
+                            </div>
+                        `;
+                        });
+                    }
+
+                    let infoHtml = '';
+                    const parentInfo = infoLookupMap[u.promiseId];
+                    if (parentInfo) {
+                        infoHtml = `
+                          <div class="promise-info-block" style="margin-top: 12px; border-left: 3px solid var(--ink-blue); padding-left: 12px; background: rgba(0, 71, 171, 0.02); padding-top: 8px; padding-bottom: 8px; border-radius: 0 4px 4px 0; font-family: var(--font-sans); font-size: 14.5px; line-height: 1.5; color: var(--ink-mid); margin-bottom: 12px;">
+                            ℹ️ ${formatInfoText(getText(u, 'info', window.LANG) || parentInfo)}
+                          </div>
+                        `;
+                    }
+
+                    item.innerHTML = `
+                        ${tag}
+                        <div class="archive-item-meta-row">
+                            <span class="archive-item-meta">${escapedCategory}</span>
+                            ${buildDetailsLink(u)}
+                        </div>
+                        <a href="${linkHref}" class="archive-item-title">${escapedTitle}</a>
+                        <div class="archive-item-note">${formatMultiParagraph(getText(u, 'note', window.LANG))}</div>
+                        ${infoHtml}
+                        ${nestedHtml}
+                        ${u.sources ? `
+                            <div class="item-sources">
+                                ${u.sources.map(s => `<a href="${escapeHtml(s.url)}" target="_blank" rel="nofollow noopener" class="archive-source-link">↗ ${escapeHtml(s.name)}</a>`).join('')}
+                            </div>
+                        ` : ''}
+                        ${buildShareRow(u._slug, getText(u, 'title', window.LANG))}
+                    `;
+                    container.appendChild(item);
+                });
+            });
+
+            // 3. Show or hide bottom "Load Older" container
+            const loadMoreContainer = document.getElementById('load-more-container');
+            if (end < allUpdates.length) {
+                loadMoreContainer.style.display = 'block';
+            } else {
+                loadMoreContainer.style.display = 'none';
+            }
+        }
+
+        function loadNewerUpdates() {
+            // Anchor scroll element check to prevent visual screen jumps (Jank)
+            const timeline = document.getElementById('archive-timeline');
+
+            // Capture the first card before we re-render
+            const firstCard = timeline.querySelector('.archive-item');
+            if (!firstCard) return;
+            const targetId = firstCard.id;
+            const rectBefore = firstCard.getBoundingClientRect().top;
+
+            // Load standard batch size of 20 items at a time
+            neighborhoodStart = Math.max(0, neighborhoodStart - 20);
+
+            // Re-render neighborhood
+            renderNeighborhood(neighborhoodStart, neighborhoodEnd);
+
+            // Find the new instance of the previously first card to restore viewport position
+            const newCard = document.getElementById(targetId);
+            if (newCard) {
+                const rectAfter = newCard.getBoundingClientRect().top;
+                const diff = rectAfter - rectBefore;
+
+                // Temporarily override global smooth scrolling to lock the view instantly and silently
+                const originalScrollBehavior = document.documentElement.style.scrollBehavior;
+                document.documentElement.style.scrollBehavior = 'auto';
+
+                window.scrollBy(0, diff);
+
+                // Restore smooth scroll immediately
+                document.documentElement.style.scrollBehavior = originalScrollBehavior;
+            }
+        }
+
+        function loadOlderUpdates() {
+            // Load next 20 items downwards
+            neighborhoodEnd = Math.min(allUpdates.length, neighborhoodEnd + 20);
+            renderNeighborhood(neighborhoodStart, neighborhoodEnd);
+        }
+
+        function jumpToLatestUpdates() {
+            // Clean query parameters from URL silently to restore standard page address
+            try {
+                window.history.replaceState({}, document.title, window.location.pathname);
+            } catch (e) {
+                console.error('Failed to clean URL parameters', e);
+            }
+
+            document.querySelector('.archive-header').style.display = '';
+            document.querySelector('.archive-meta-controls-row').style.display = '';
+            document.getElementById('filter-trigger-btn').style.display = '';
+            neighborhoodStart = 0;
+            neighborhoodEnd = 0;
+            applyFilter('all');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // ── Press Watch: fetch and render fresh items (within WINDOW_DAYS) ──
+        const PW_WINDOW_DAYS = 3;
+        const PW_TYPE_META = {
+            'video':         { label_en: 'Video',         label_bn: 'ভিডিও',         icon: '🎬', cls: 'type-video' },
+            'investigation': { label_en: 'Investigation', label_bn: 'অনুসন্ধান',      icon: '🔍', cls: 'type-investigation' },
+            'report':        { label_en: 'Report',        label_bn: 'রিপোর্ট',        icon: '📰', cls: 'type-report' },
+            'analysis':      { label_en: 'Analysis',      label_bn: 'বিশ্লেষণ',       icon: '📊', cls: 'type-analysis' },
+            'interview':     { label_en: 'Interview',     label_bn: 'সাক্ষাৎকার',     icon: '🎙️', cls: 'type-interview' },
+        };
+
+        function getPwText(obj, field) {
+            const langVal = obj[`${field}_${window.LANG}`];
+            if (langVal && langVal.trim()) return langVal;
+            const enVal = obj[`${field}_en`];
+            if (enVal && enVal.trim()) return enVal;
+            return obj[field] || '';
+        }
+
+        function buildPwSpotCard(item) {
+            const t = PW_TYPE_META[item.type] || PW_TYPE_META['report'];
+            const typeLabel = window.LANG === 'bn' ? t.label_bn : t.label_en;
+            const headline = escapeHtml(getPwText(item, 'headline'));
+            const desc = getPwText(item, 'description');
+            const source = escapeHtml(item.source || '');
+            const isVideo = item.type === 'video';
+            const linkLabel = window.LANG === 'bn' 
+                ? (isVideo ? 'দেখুন ↗' : 'পড়ুন ↗')
+                : (isVideo ? 'Watch ↗' : 'Read ↗');
+            const dateStr = formatDate(item.date);
+
+            return `
+            <article class="pw-spot-card">
+                <div class="pw-spot-card-top">
+                    <span class="pw-spot-type-badge ${t.cls}">${t.icon} ${escapeHtml(typeLabel)}</span>
+                    <span class="pw-spot-card-date">${escapeHtml(dateStr)}</span>
+                </div>
+                <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer" class="pw-spot-card-headline">${headline}</a>
+                ${desc ? `<p class="pw-spot-card-desc">${escapeHtml(desc)}</p>` : ''}
+                <div class="pw-spot-card-footer">
+                    <span class="pw-spot-card-source">${source}</span>
+                    <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer" class="pw-spot-card-link">${escapeHtml(linkLabel)}</a>
+                </div>
+            </article>
+            `;
+        }
+
+        async function renderPressWatchSpotlight() {
+            try {
+                const db = window.DATA_BASE || 'data/';
+                const res = await fetch(db + 'press-watch.json');
+                if (!res.ok) return;
+                const allItems = await res.json();
+
+                const now = new Date();
+                const cutoff = new Date(now.getFullYear(), now.getMonth(), now.getDate() - PW_WINDOW_DAYS);
+
+                const freshItems = allItems
+                    .filter(item => {
+                        const targetDate = item.added_date || item.date;
+                        const m = targetDate.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+                        if (!m) return false;
+                        const d = new Date(+m[1], +m[2]-1, +m[3]);
+                        return d >= cutoff;
+                    })
+                    .sort((a, b) => b.date.localeCompare(a.date));
+
+                if (!freshItems.length) return; // section stays hidden
+
+                const section = document.getElementById('pw-spotlight-section');
+                const grid = document.getElementById('pw-spotlight-grid');
+                const titleEl = document.getElementById('pw-spotlight-title');
+                const seeAllLink = document.getElementById('pw-see-all-link');
+
+                // Localize static text
+                if (titleEl) titleEl.textContent = window.LANG === 'bn' ? 'প্রেস ওয়াচ' : 'Press Watch';
+                if (seeAllLink) {
+                    seeAllLink.textContent = window.LANG === 'bn' ? 'সব দেখুন →' : 'See all →';
+                    seeAllLink.href = window.LANG === 'bn' ? 'press-watch.html' : 'press-watch.html';
+                }
+
+                grid.innerHTML = freshItems.map(buildPwSpotCard).join('');
+                section.style.display = 'block';
+
+                // ── Collapsible toggle ──
+                const header = document.getElementById('pw-toggle-header');
+                const chevron = document.getElementById('pw-chevron');
+                let _pwOpen = true;
+
+                function togglePw(e) {
+                    _pwOpen = !_pwOpen;
+                    if (_pwOpen) {
+                        grid.classList.remove('collapsed');
+                        chevron.classList.remove('rotated');
+                        header.setAttribute('aria-expanded', 'true');
+                    } else {
+                        grid.classList.add('collapsed');
+                        chevron.classList.add('rotated');
+                        header.setAttribute('aria-expanded', 'false');
+                    }
+                }
+
+                if (header) {
+                    header.addEventListener('click', togglePw);
+                    header.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); togglePw(); } });
+                }
+            } catch (e) {
+                // Silently fail — Press Watch is non-critical
+            }
+        }
+
+        init();
+
+    </script>
+    <script src="js/share.js" defer></script>
+
+</body>
+
+</html>

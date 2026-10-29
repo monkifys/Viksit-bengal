@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Economy & $1T Target Calculator — Viksit Bengal Dashboard</title>
+  <meta name="description" content="West Bengal economic indicators, GSDP growth, per-capita income, capex, and interactive $1 Trillion economic target trajectory calculator.">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Crimson+Pro:wght@400;600;700&family=Outfit:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Noto+Sans+Bengali:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- MASTHEAD BAR -->
+  <header class="masthead">
+    <div class="masthead-bar">
+      <span><span class="live-tag">CIVIC DATA</span> &nbsp; Viksit Bengal Dashboard — বিকশিত বাংলা ড্যাশবোর্ড</span>
+      <div class="masthead-date-lang">
+        <span id="today-date">29 October 2026</span>
+        <a href="bn/economy.html" class="lang-toggle" aria-label="বাংলায় পড়ুন" title="Read in Bengali">বাংলা</a>
+      </div>
+    </div>
+    <div class="masthead-main">
+      <div class="masthead-logo">
+        <img src="wb-map.webp" class="wb-map-icon" alt="West Bengal Map Logo" width="90" height="140">
+      </div>
+      <div class="masthead-text">
+        <h1>Viksit Bengal<br><span>Dashboard</span></h1>
+        <p class="masthead-sub">Tracking Bengal's journey from commitments to outcomes.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- UNIFIED CIVIC NAVIGATION -->
+  <nav class="civic-nav">
+    <div class="civic-nav-inner">
+      <div class="civic-nav-links">
+        <a href="index.html" class="civic-nav-item">🏠 Home</a>
+        <a href="economy.html" class="civic-nav-item active">📈 Economy</a>
+        <a href="society.html" class="civic-nav-item">👥 Society</a>
+        <a href="index.html#promises" class="civic-nav-item">📋 Promises</a>
+        <a href="districts.html" class="civic-nav-item">🗺️ Districts</a>
+        <a href="projects.html" class="civic-nav-item">🏗️ Projects</a>
+        <a href="latest.html" class="civic-nav-item">📰 Updates</a>
+        <a href="methodology.html" class="civic-nav-item">⚖️ Methodology</a>
+      </div>
+      <a href="submit.html" class="civic-nav-btn-submit">✏ Submit Evidence</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header-band">
+    <div class="page-header-inner">
+      <h1 class="page-header-title">West Bengal Economic Dashboard</h1>
+      <p class="page-header-subtitle">
+        Official macroeconomic indicators, fiscal trends, and interactive trajectory modeling towards the US$1 Trillion state economy target.
+      </p>
+    </div>
+  </section>
+
+  <!-- $1 TRILLION ECONOMIC TARGET CALCULATOR -->
+  <main class="main-content">
+    <section class="calc-container" id="calculator">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:16px;">
+        <div>
+          <span class="indicator-category-tag">Macro Modeling Engine</span>
+          <h2 class="calc-title" style="margin-top:8px;">US$ 1 Trillion Economy Target Calculator (by 2033)</h2>
+          <p class="calc-subtitle">
+            Simulate required growth rates and annual trajectory to expand West Bengal from its current GSDP base to US$ 1,000 Billion.
+          </p>
+        </div>
+        <div style="text-align:right;">
+          <span class="conf-badge conf-grade-a">Official Baseline: MOSPI 2023-24</span>
+        </div>
+      </div>
+
+      <!-- INPUT CONTROLS -->
+      <div class="calc-inputs-grid">
+        <div class="calc-field">
+          <label for="calc-baseline">Baseline GSDP (Billion USD)</label>
+          <input type="number" id="calc-baseline" class="calc-input" value="207" min="50" max="500" step="1">
+          <small style="color:var(--ink-faint); font-size:11px;">Approx ₹17.19 L Cr at ₹83/$</small>
+        </div>
+        <div class="calc-field">
+          <label for="calc-target">Target GSDP (Billion USD)</label>
+          <input type="number" id="calc-target" class="calc-input" value="1000" min="500" max="2500" step="50">
+          <small style="color:var(--ink-faint); font-size:11px;">1 Trillion USD = ₹83.5 L Cr</small>
+        </div>
+        <div class="calc-field">
+          <label for="calc-start-yr">Base Year</label>
+          <input type="number" id="calc-start-yr" class="calc-input" value="2024" min="2020" max="2026">
+        </div>
+        <div class="calc-field">
+          <label for="calc-target-yr">Target Year</label>
+          <input type="number" id="calc-target-yr" class="calc-input" value="2033" min="2028" max="2040">
+        </div>
+      </div>
+
+      <!-- SCENARIOS GRID -->
+      <h3 style="font-family:var(--font-display); font-size:20px; font-weight:800; margin-bottom:14px;">Growth Scenarios Comparison</h3>
+      <div class="calc-scenarios-grid" id="scenarios-container">
+        <!-- Rendered by calculator.js -->
+      </div>
+
+      <!-- METHODOLOGY EXPLANATION -->
+      <div class="calc-methodology-note">
+        <strong>Mathematical Formula & Assumptions:</strong><br>
+        Required CAGR = <code>(Target / Baseline) ^ (1 / Number of Years) - 1</code>.<br>
+        • Baseline is grounded on the official MOSPI GSDP estimate of ₹17.19 Lakh Crore (~US$ 207 Billion) for 2023-24.<br>
+        • Figures assume an average exchange rate of ₹83.5 per US Dollar and nominal prices.<br>
+        • <em>Note:</em> The US$ 1 Trillion benchmark is tracked here as an aspirational civic-economic target rather than an officially gazetted government statute.
+      </div>
+    </section>
+
+    <!-- VERIFIED ECONOMIC INDICATORS GRID -->
+    <section style="max-width:1300px; margin:40px auto 0; padding:0 16px;">
+      <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:16px;">
+        <h2 style="font-family:var(--font-display); font-size:26px; font-weight:900; color:var(--ink);">
+          📊 Official Economic Indicators
+        </h2>
+        <span style="font-size:14px; color:var(--ink-light);">Source: RBI &amp; MOSPI State Accounts</span>
+      </div>
+
+      <div class="indicators-grid" id="indicators-list">
+        <div style="text-align:center; padding:40px; color:var(--ink-light); grid-column:1/-1;">
+          Loading verified economic metrics from database...
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" style="margin-top:60px;">
+    <div class="footer-inner">
+      <div class="footer-disclaimer">
+        <strong>Viksit Bengal Dashboard — বিকশিত বাংলা ড্যাশবোর্ড</strong><br>
+        Evidence-based civic development platform tracking public commitments, economic indicators, and infrastructure projects across West Bengal.
+        Data independently compiled from Reserve Bank of India, MOSPI, and West Bengal State Budgets.
+      </div>
+      <div class="footer-bottom">
+        <a href="economy.html" style="color:var(--saffron);">English</a> | <a href="bn/economy.html" style="color:var(--saffron);">বাংলা</a> | <a href="methodology.html" style="color:var(--ink-light);">Methodology &amp; Standards</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/calculator.js"></script>
+  <script>
+    // Live Calculator Binding
+    function updateCalculatorUI() {
+      const baseline = parseFloat(document.getElementById('calc-baseline').value) || 207;
+      const target = parseFloat(document.getElementById('calc-target').value) || 1000;
+      const startYr = parseInt(document.getElementById('calc-start-yr').value, 10) || 2024;
+      const targetYr = parseInt(document.getElementById('calc-target-yr').value, 10) || 2033;
+
+      const model = calculateScenarios(baseline, target, startYr, targetYr);
+      const container = document.getElementById('scenarios-container');
+
+      container.innerHTML = `
+        <div class="scenario-card conservative">
+          <div class="scenario-name">1. Conservative Growth</div>
+          <div class="scenario-cagr">${model.scenarios.conservative.cagr}% <span style="font-size:14px; color:var(--ink-light); font-weight:normal;">CAGR</span></div>
+          <div class="scenario-result-val">2033 Outcome: $${model.scenarios.conservative.projected2033Usd} Billion</div>
+          <div style="font-size:12px; color:var(--ink-faint); margin-bottom:8px;">Approx ₹${model.scenarios.conservative.projected2033InrLakhCr} Lakh Crore</div>
+          <p class="scenario-note">${model.scenarios.conservative.notes}</p>
+        </div>
+
+        <div class="scenario-card base">
+          <div class="scenario-name">2. Accelerated Industrial Base</div>
+          <div class="scenario-cagr">${model.scenarios.base.cagr}% <span style="font-size:14px; color:var(--ink-light); font-weight:normal;">CAGR</span></div>
+          <div class="scenario-result-val">2033 Outcome: $${model.scenarios.base.projected2033Usd} Billion</div>
+          <div style="font-size:12px; color:var(--ink-faint); margin-bottom:8px;">Approx ₹${model.scenarios.base.projected2033InrLakhCr} Lakh Crore</div>
+          <p class="scenario-note">${model.scenarios.base.notes}</p>
+        </div>
+
+        <div class="scenario-card ambitious">
+          <div class="scenario-name">3. Required $1T Trajectory</div>
+          <div class="scenario-cagr" style="color:var(--green);">${model.scenarios.ambitious.cagr}% <span style="font-size:14px; color:var(--ink-light); font-weight:normal;">CAGR</span></div>
+          <div class="scenario-result-val">2033 Outcome: $${model.scenarios.ambitious.projected2033Usd} Billion</div>
+          <div style="font-size:12px; color:var(--ink-faint); margin-bottom:8px;">Approx ₹${model.scenarios.ambitious.projected2033InrLakhCr} Lakh Crore</div>
+          <p class="scenario-note">${model.scenarios.ambitious.notes}</p>
+        </div>
+      `;
+    }
+
+    ['calc-baseline', 'calc-target', 'calc-start-yr', 'calc-target-yr'].forEach(id => {
+      document.getElementById(id).addEventListener('input', updateCalculatorUI);
+    });
+    updateCalculatorUI();
+
+    function renderSparklineSVG(observations, unit) {
+      if (!observations || observations.length < 2) return '';
+      const sorted = [...observations].sort((a,b) => a.period_year - b.period_year);
+      const vals = sorted.map(o => o.value);
+      const min = Math.min(...vals);
+      const max = Math.max(...vals);
+      const range = (max - min) || 1;
+      const w = 320;
+      const h = 60;
+      const padX = 16;
+      const padY = 12;
+      const innerW = w - padX * 2;
+      const innerH = h - padY * 2;
+
+      const points = sorted.map((o, i) => {
+        const x = padX + (i / (sorted.length - 1)) * innerW;
+        const y = h - padY - ((o.value - min) / range) * innerH;
+        return { x: Number(x.toFixed(1)), y: Number(y.toFixed(1)), val: o.value, yr: o.period_year };
+      });
+
+      const polylinePoints = points.map(p => `${p.x},${p.y}`).join(' ');
+      const areaPoints = `${points[0].x},${h} ` + polylinePoints + ` ${points[points.length-1].x},${h}`;
+
+      const circles = points.map(p => `
+        <circle cx="${p.x}" cy="${p.y}" r="3.5" fill="var(--saffron)" stroke="#fff" stroke-width="1.5">
+          <title>${p.yr}: ${p.val.toLocaleString()} ${unit || ''}</title>
+        </circle>
+        <text x="${p.x}" y="${h - 2}" font-size="8" font-family="var(--font-mono)" fill="var(--ink-faint)" text-anchor="middle">${p.yr}</text>
+      `).join('');
+
+      return `
+        <div class="indicator-chart-wrap" style="margin:12px 0 10px; background:rgba(0,0,0,0.02); border:1px solid var(--rule-light); border-radius:6px; padding:8px 10px;">
+          <div style="display:flex; justify-content:space-between; font-size:10px; font-family:var(--font-mono); color:var(--ink-faint); margin-bottom:4px;">
+            <span>📈 Trend (${sorted[0].period_year}–${sorted[sorted.length-1].period_year})</span>
+            <span>Min: ${min.toLocaleString()} | Max: ${max.toLocaleString()} ${unit || ''}</span>
+          </div>
+          <svg viewBox="0 0 ${w} ${h}" class="indicator-chart" style="width:100%; height:60px; overflow:visible;" aria-label="Trend chart">
+            <polygon points="${areaPoints}" fill="rgba(184, 77, 8, 0.12)"/>
+            <polyline fill="none" stroke="var(--saffron)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="${polylinePoints}"/>
+            ${circles}
+          </svg>
+        </div>
+      `;
+    }
+
+    // Fetch and render indicators
+    fetch('/api/indicators?pillar=economy')
+      .then(res => res.json())
+      .then(indicators => {
+        const list = document.getElementById('indicators-list');
+        if (!indicators || indicators.length === 0) {
+          list.innerHTML = '<p style="text-align:center; padding:30px;">No economic indicators found.</p>';
+          return;
+        }
+
+        list.innerHTML = indicators.map(ind => {
+          const latest = ind.latestObservation;
+          const obsRows = (ind.observations || []).slice(-4).map(o => `
+            <tr>
+              <td><strong>${o.period_year}</strong></td>
+              <td style="text-align:right;">${o.value.toLocaleString()} ${ind.unit}</td>
+              <td style="text-align:right;"><span class="conf-badge conf-grade-${(o.confidence_grade || 'a').toLowerCase()}">Grade ${o.confidence_grade || 'A'}</span></td>
+            </tr>
+          `).join('');
+
+          return `
+            <div class="indicator-card">
+              <div>
+                <div class="indicator-meta-top">
+                  <span class="indicator-category-tag">${ind.category.replace('_', ' ')}</span>
+                  <span class="conf-badge conf-grade-a">Verified</span>
+                </div>
+                <h3 class="indicator-name">${ind.name_en}</h3>
+                <div class="indicator-figure-wrap">
+                  <span class="indicator-value">${latest ? latest.value.toLocaleString() : '—'}</span>
+                  <span class="indicator-unit">${ind.unit}</span>
+                  ${latest ? `<span class="indicator-period">(${latest.period_year})</span>` : ''}
+                </div>
+                <p style="font-size:13px; color:var(--ink-light); line-height:1.4;">${ind.description_en || ''}</p>
+                ${renderSparklineSVG(ind.observations, ind.unit)}
+                <div class="indicator-history-mini">
+                  <div style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px;">Historical Observations</div>
+                  <table class="history-mini-table">
+                    ${obsRows || '<tr><td>No historical points</td></tr>'}
+                  </table>
+                </div>
+              </div>
+              <div class="indicator-source">
+                Source: ${ind.source_url ? `<a href="${ind.source_url}" target="_blank" rel="noopener">${ind.source_name} ↗</a>` : ind.source_name}
+              </div>
+            </div>
+          `;
+        }).join('');
+      })
+      .catch(err => {
+        console.error('Failed to load indicators:', err);
+        document.getElementById('indicators-list').innerHTML = '<p style="color:var(--red); padding:30px; text-align:center;">Failed to load economic indicators.</p>';
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+  <script>window.DATA_BASE = "../data/";</script>
+  <meta name="google" content="notranslate">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viksit Bengal Dashboard — বিকশিত বাংলা ড্যাশবোর্ড</title>
+  <meta name="description"
+    content="বিকশিত বাংলা ড্যাশবোর্ড: অঙ্গীকার থেকে অর্জনের পথে বাংলার অগ্রযাত্রার তথ্যভিত্তিক ট্র্যাকিং। অর্থনৈতিক সূচক, সামাজিক উন্নয়ন, পরিকাঠামো প্রকল্প এবং প্রতিশ্রুতির স্বচ্ছ নাগরিক ড্যাশবোর্ড।">
+  <meta name="keywords"
+    content="viksit bengal dashboard, বিকশিত বাংলা ড্যাশবোর্ড, west bengal economic tracker, wb civic tracker, west bengal gsdp, tajpur port, kolkata metro, 23 districts west bengal">
+  <meta name="author" content="বিকশিত বাংলা নাগরিক তথ্য উদ্যোগ">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#E8620A">
+  <link rel="canonical" href="https://tracker.wbupdates.com/">
+  <link rel="alternate" hreflang="en" href="https://tracker.wbupdates.com/">
+  <link rel="alternate" hreflang="bn" href="https://tracker.wbupdates.com/bn/">
+  <link rel="alternate" hreflang="x-default" href="https://tracker.wbupdates.com/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tracker.wbupdates.com/">
+  <meta property="og:site_name" content="Viksit Bengal Dashboard — বিকশিত বাংলা ড্যাশবোর্ড">
+  <meta property="og:title" content="Viksit Bengal Dashboard — বিকশিত বাংলা ড্যাশবোর্ড">
+  <meta property="og:description"
+    content="অঙ্গীকার থেকে অর্জনের পথে বাংলার অগ্রযাত্রার তথ্যভিত্তিক ট্র্যাকিং। অর্থনৈতিক প্রবৃদ্ধি, সামাজিক সূচক, ২৩টি জেলা এবং সার্বিক উন্নয়ন।">
+  <meta property="og:image" content="https://tracker.wbupdates.com/og-preview-bn.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://tracker.wbupdates.com/">
+  <meta name="twitter:title" content="WB Accountability Tracker - Checking BJP Sarkar Promises">
+  <meta name="twitter:description"
+    content="পশ্চিমবঙ্গের সাধারণ মানুষের কাছে BJP-র শুভেন্দু অধিকারী সরকারের প্রতিটি প্রতিশ্রুতির একটি নিরপেক্ষ ট্র্যাকিং।">
+  <meta name="twitter:image" content="https://tracker.wbupdates.com/og-preview-bn.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Bengali:wght@400;700&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Bengali:wght@400;700&display=swap"
+    media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Bengali:wght@400;700&display=swap">
+  </noscript>
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preload" href="../css/style.css" as="style">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Core Web Vitals Optimization: Preload Critical Above-The-Fold Assets -->
+  <link rel="preload" href="../wb-map.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preload" href="../data/promises.json" as="fetch" crossorigin>
+  <link rel="preload" href="../data/meta.json" as="fetch" crossorigin>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "WB Accountability Tracker",
+    "alternateName": ["WB Accountability Tracker", "BJP Sarkar Promises", "West Bengal Promise Tracker"],
+    "url": "https://tracker.wbupdates.com/",
+    "description": "পশ্চিমবঙ্গের সাধারণ মানুষের কাছে ২০২৬-২০৩১ মেয়াদের প্রতিশ্রুতির একটি নিরপেক্ষ ট্র্যাকিং।",
+    "inLanguage": "en-IN"
+  }
+  </script>
+</head>
+
+<body>
+  <!-- MASTHEAD -->
+  <header class="masthead">
+    <div class="masthead-bar">
+      <span><span class="live-tag">নাগরিক তথ্য</span> &nbsp; বিকশিত বাংলা ড্যাশবোর্ড — Viksit Bengal Dashboard &nbsp;|&nbsp; ২০২৬–২০৩১</span>
+      <div class="masthead-date-lang"><span id="today-date">Loading...</span><a href="../" class="lang-toggle"
+          id="lang-toggle-btn" aria-label="Read in English" title="Read in English">EN</a></div>
+    </div>
+    <div class="masthead-main">
+      <div class="masthead-logo">
+        <img src="../wb-map.webp" class="wb-map-icon" alt="পশ্চিমবঙ্গের মানচিত্র"
+          width="90" height="140" fetchpriority="high" decoding="async">
+      </div>
+      <div class="masthead-text">
+        <h1>বিকশিত বাংলা<br><span>ড্যাশবোর্ড</span></h1>
+        <p class="masthead-sub" id="site-subtitle">প্রতিশ্রুতি থেকে ফলাফলে পৌঁছানোর পথে বাংলার যাত্রা নিরীক্ষণ।</p>
+        <div class="masthead-meta" id="masthead-meta">
+          <div class="meta-item">
+            <span class="meta-label">মুখ্যমন্ত্রী</span>
+            <span class="meta-value">Suvendu Adhikari</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">শপথ গ্রহণ</span>
+            <span class="meta-value">9 May 2026, Brigade Parade Ground</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">মেয়াদ শেষ</span>
+            <span class="meta-value">May 2031</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">কত দিন ক্ষমতায়</span>
+            <span class="meta-value" id="days-in-office">—</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">কত দিন বাকি</span>
+            <span class="meta-value" id="days-remaining">—</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- UNIFIED CIVIC NAVIGATION -->
+  <nav class="civic-nav">
+    <div class="civic-nav-inner">
+      <div class="civic-nav-links">
+        <a href="index.html" class="civic-nav-item active">🏠 নীড়পাতা</a>
+        <a href="economy.html" class="civic-nav-item">📈 অর্থনীতি</a>
+        <a href="society.html" class="civic-nav-item">👥 সমাজ</a>
+        <a href="#promises" class="civic-nav-item">📋 প্রতিশ্রুতি</a>
+        <a href="districts.html" class="civic-nav-item">🗺️ জেলা পরিক্রমা</a>
+        <a href="projects.html" class="civic-nav-item">🏗️ প্রকল্পসমূহ</a>
+        <a href="latest.html" class="civic-nav-item">📰 সাম্প্রতিক তথ্য</a>
+        <a href="methodology.html" class="civic-nav-item">⚖️ পদ্ধতি ও মানদণ্ড</a>
+      </div>
+      <a href="submit.html" class="civic-nav-btn-submit">✏ তথ্য জমা দিন</a>
+    </div>
+  </nav>
+
+  <!-- CIVIC PILLARS OVERVIEW -->
+  <section class="civic-pillars-grid">
+    <div class="civic-pillar-card">
+      <div>
+        <div class="civic-pillar-head">
+          <div class="civic-pillar-icon">📈</div>
+          <div>
+            <div class="civic-pillar-title">অর্থনৈতিক লক্ষ্যমাত্রা</div>
+            <div style="font-size:12px; color:var(--ink-faint);">১ ট্রিলিয়ন ডলার অর্থনীতি</div>
+          </div>
+        </div>
+        <div class="civic-pillar-val">₹১৭.১৯ L কোটি</div>
+        <p class="civic-pillar-desc">বর্তমান জিএসডিপি ভিত্তি ও ৭.২% প্রকৃত প্রবৃদ্ধি। ২০৩৩ সালে ১ ট্রিলিয়ন ডলারে পৌঁছাতে বার্ষিক ~১৬.৮% প্রবৃদ্ধি প্রয়োজন।</p>
+      </div>
+      <a href="economy.html" class="civic-pillar-link">লক্ষ্যমাত্রা ক্যালকুলেটর দেখুন →</a>
+    </div>
+
+    <div class="civic-pillar-card">
+      <div>
+        <div class="civic-pillar-head">
+          <div class="civic-pillar-icon">👥</div>
+          <div>
+            <div class="civic-pillar-title">সামাজিক অগ্রগতি</div>
+            <div style="font-size:12px; color:var(--ink-faint);">মানবসম্পদ বিকাশ</div>
+          </div>
+        </div>
+        <div class="civic-pillar-val">৮১.৫%</div>
+        <p class="civic-pillar-desc">রাজ্যব্যাপী আনুমানিক সাক্ষরতার হার, শিশুমৃত্যু হার হাজারে ১৯ এবং গ্রামীণ নলযুক্ত পানীয় জল সংযোগ ৪৭.৮%।</p>
+      </div>
+      <a href="society.html" class="civic-pillar-link">সামাজিক ড্যাশবোর্ড দেখুন →</a>
+    </div>
+
+    <div class="civic-pillar-card">
+      <div>
+        <div class="civic-pillar-head">
+          <div class="civic-pillar-icon">🏗️</div>
+          <div>
+            <div class="civic-pillar-title">মেগা প্রকল্পসমূহ</div>
+            <div style="font-size:12px; color:var(--ink-faint);">পরিকাঠামো রেজিস্ট্রি</div>
+          </div>
+        </div>
+        <div class="civic-pillar-val">₹৮৯,০০০+ কোটি</div>
+        <p class="civic-pillar-desc">তাজপুর গভীর সমুদ্র বন্দর, নদীগর্ভ মেট্রো, মালবাহী ফ্রেইট করিডোর ও দেউচা পাচামি খনি প্রকল্প পর্যবেক্ষণ।</p>
+      </div>
+      <a href="projects.html" class="civic-pillar-link">প্রকল্পের খতিয়ান দেখুন →</a>
+    </div>
+
+    <div class="civic-pillar-card">
+      <div>
+        <div class="civic-pillar-head">
+          <div class="civic-pillar-icon">🗺️</div>
+          <div>
+            <div class="civic-pillar-title">২৩ জেলা সমীক্ষা</div>
+            <div style="font-size:12px; color:var(--ink-faint);">বিকেন্দ্রীভূত উন্নয়ন</div>
+          </div>
+        </div>
+        <div class="civic-pillar-val">২৩ জেলা</div>
+        <p class="civic-pillar-desc">প্রেসিডেন্সি, বর্ধমান, মেদিনীপুর, মালদা ও জলপাইগুড়ি বিভাগের জেলাভিত্তিক অগ্রগতি পর্যালোচনা।</p>
+      </div>
+      <a href="districts.html" class="civic-pillar-link">জেলা পরিক্রমা দেখুন →</a>
+    </div>
+  </section>
+
+
+  <!-- COUNTDOWN TIMER -->
+  <div class="timer-section">
+    <div class="timer-context-label">২০২৬–২০৩১ উন্নয়ন পরিকল্পনা চক্রের বাকি সময়</div>
+    <div class="timer-blocks">
+      <div class="timer-block">
+        <span class="timer-num" id="t-years">—</span>
+        <span class="timer-lbl">বছর</span>
+      </div>
+      <span class="timer-sep">:</span>
+      <div class="timer-block">
+        <span class="timer-num" id="t-months">—</span>
+        <span class="timer-lbl">মাস</span>
+      </div>
+      <span class="timer-sep">:</span>
+      <div class="timer-block">
+        <span class="timer-num" id="t-days">—</span>
+        <span class="timer-lbl">দিন</span>
+      </div>
+      <span class="timer-sep">:</span>
+      <div class="timer-block">
+        <span class="timer-num" id="t-hours">—</span>
+        <span class="timer-lbl">ঘণ্টা</span>
+      </div>
+      <span class="timer-sep">:</span>
+      <div class="timer-block">
+        <span class="timer-num" id="t-mins">—</span>
+        <span class="timer-lbl">মিনিট</span>
+      </div>
+      <span class="timer-sep">:</span>
+      <div class="timer-block">
+        <span class="timer-num" id="t-secs">—</span>
+        <span class="timer-lbl">সেকেন্ড</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaimer-band" id="site-disclaimer">
+    <strong>দাবিত্যাগ:</strong> এটি কোনও সরকারি বা রাজনৈতিক ওয়েবসাইট নয়। এটি পশ্চিমবঙ্গের সাধারণ মানুষের দ্বারা পরিচালিত
+    একটি স্বাধীন পাবলিক নোটপ্যাড।
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-band">
+    <div class="stats-inner">
+      <div class="stat-card" data-filter="all">
+        <span class="stat-num total-c" id="stat-total">—</span>
+        <span class="stat-label">মোট প্রতিশ্রুতি</span>
+      </div>
+      <div class="stat-card" data-filter="done">
+        <span class="stat-num done-c" id="stat-done">—</span>
+        <span class="stat-label">পূরণ হয়েছে ✓</span>
+      </div>
+      <div class="stat-card" data-filter="inprogress">
+        <span class="stat-num inprogress-c" id="stat-inprogress">—</span>
+        <span class="stat-label">কাজ চলছে ◑</span>
+      </div>
+      <div class="stat-card" data-filter="evaded">
+        <span class="stat-num evaded-c" id="stat-evaded">—</span>
+        <span class="stat-label">এড়ানো হয়েছে ✗</span>
+      </div>
+      <div class="stat-card" data-filter="pending">
+        <span class="stat-num pending-c" id="stat-pending">—</span>
+        <span class="stat-label">বাকি আছে ○</span>
+      </div>
+      <div class="stat-card stat-card-pct">
+        <span class="stat-num saffron-c" id="stat-pct">0%</span>
+        <span class="stat-label">পূরণের হার</span>
+      </div>
+    </div>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-track">
+        <div class="progress-bar-done bg-done-c" id="bar-done" style="width:0%"></div>
+        <div class="progress-bar-inprog bg-inprogress-c" id="bar-inprog" style="width:0%"></div>
+        <div class="progress-bar-evaded bg-evaded-c" id="bar-evaded" style="width:0%"></div>
+      </div>
+      <div class="progress-legend">
+        <span><span class="legend-dot bg-done-c"></span>পূরণ হয়েছে</span>
+        <span><span class="legend-dot bg-inprogress-c"></span>কাজ চলছে</span>
+        <span><span class="legend-dot bg-evaded-c"></span>এড়ানো হয়েছে</span>
+        <span><span class="legend-dot bg-pending-c"></span>বাকি আছে</span>
+      </div>
+      <div class="stats-sub-note" id="stats-sub-note"></div>
+    </div>
+  </div>
+
+  <!-- DISPATCH + HOW-TO-READ (just below promise counters) -->
+  <div class="pre-nav-content">
+
+    <!-- সাম্প্রতিক আপডেট Ticker -->
+    <section class="live-dispatch-section" id="dispatch-section">
+      <div class="dispatch-card">
+        <div class="dispatch-header">
+          <div class="dispatch-label">সাম্প্রতিক আপডেট</div>
+          <div class="dispatch-controls">
+            <button class="dispatch-btn" id="dispatch-prev" title="Previous">←</button>
+            <button class="dispatch-btn" id="dispatch-next" title="Next">→</button>
+          </div>
+        </div>
+        <div class="dispatch-content" id="dispatch-ticker">
+          <!-- Populated by JS -->
+          <div class="loading">Initializing live feed...</div>
+        </div>
+        <div class="dispatch-footer">
+          <a href="latest.html" class="view-all-updates">সমস্ত আপডেট দেখুন →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Read -->
+    <div class="how-to-read">
+      <div id="tracker-guide-static">
+        <strong>এই ট্র্যাকারটি কীভাবে পড়বেন</strong>
+        প্রতিটি প্রতিশ্রুতি BJP-র নির্বাচনী ইশতেহার (<em>ভরসার শপথ</em>) থেকে হুবহু নেওয়া হয়েছে। ৫ বছরের মেয়াদে
+        (২০২৬-২০৩১) বিভিন্ন ঘটনা ও পদক্ষেপের ভিত্তিতে প্রতিশ্রুতির অগ্রগতি আপডেট করা হবে। এটি একটি নিরপেক্ষ পাবলিক
+        রেকর্ড।
+        <div class="legend-inline">
+          <span class="badge badge-done">✓ পূরণ হয়েছে</span><span class="how-to-def">— সরকারি গেজেট / বিল / প্রকল্প
+            বাস্তবায়িত</span>
+          <span class="badge badge-progress">◑ কাজ চলছে</span><span class="how-to-def">— উৎস সূত্রসহ সরকারি ঘোষণা</span>
+          <span class="badge badge-evaded">✗ এড়ানো হয়েছে</span><span class="how-to-def">— কাঠামোগতভাবে বাতিল বা এড়ানো
+            হয়েছে</span>
+          <span class="badge badge-pending">○ বাকি আছে</span><span class="how-to-def">— এখনও কোনও পদক্ষেপ নেওয়া
+            হয়নি</span>
+        </div>
+      </div>
+      <div id="active-filters-banner" class="active-filters-banner" style="display:none;"></div>
+      <div class="result-summary" id="result-summary" aria-live="polite" style="display:none;"></div>
+    </div>
+
+  </div><!-- /.pre-nav-content -->
+
+  <!-- NAVIGATION -->
+  <nav class="cat-nav">
+    <div class="cat-nav-desktop" id="desktop-nav">
+      <!-- Populated by JS -->
+    </div>
+    <!-- Mobile: dropdown -->
+    <div class="cat-nav-mobile">
+      <button class="nav-trigger" id="nav-trigger" aria-expanded="false">
+        <span>📋 বিভাগে যান</span>
+        <span class="nav-trigger-arrow">▾</span>
+      </button>
+      <div class="nav-dropdown" id="nav-dropdown">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </nav>
+
+  <!-- মূল প্রতিশ্রুতি (full-width, outside main) -->
+  <section class="key-promises-section" id="key-15">
+    <div class="key-promises-inner">
+      <h2 class="kp-title">⭐ বিজেপির ১৫টি মূল প্রতিশ্রুতি — The Headline Commitments</h2>
+      <div class="kp-grid" id="key-promises-grid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMISE SEARCH -->
+  <section class="promise-search-section" id="promise-search-section">
+    <div class="promise-search-inner">
+      <label for="promise-search-input" class="promise-search-label">
+        🔍 প্রতিশ্রুতি খুঁজুন
+      </label>
+      <div class="promise-search-wrap">
+        <input
+          type="search"
+          id="promise-search-input"
+          class="promise-search-input"
+          placeholder="যেমন: tram, oil, women, DA, UCC…"
+          autocomplete="off"
+          spellcheck="false"
+          aria-label="প্রতিশ্রুতি খুঁজুন"
+        >
+        <button class="promise-search-clear" id="promise-search-clear" aria-label="মুছুন" title="মুছুন" style="display:none">✕</button>
+      </div>
+      <p class="promise-search-notice">ℹ️ অনুসন্ধান শুধুমাত্র ইংরেজি অক্ষরে কাজ করে — ফলাফল বাংলায় দেখাবে।</p>
+      <div class="promise-search-suggestions" id="promise-search-suggestions" style="display:none"></div>
+      <p class="promise-search-hint" id="promise-search-hint" style="display:none"></p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content" id="promises">
+
+    <!-- Categories container -->
+    <div id="categories-container">
+      <div class="loading">Loading promises...</div>
+    </div>
+
+    <!-- সর্বশেষ আপডেট Link -->
+    <div class="other-initiatives-link-wrap">
+      <p class="other-initiatives-text">
+        এই ট্র্যাকারের সমস্ত আপডেটের কালানুক্রমিক রেকর্ড দেখতে চান?
+        <a href="latest.html" class="other-initiatives-link">সমস্ত আপডেটের পাবলিক রেকর্ড দেখুন →</a>
+      </p>
+    </div>
+
+    <!-- অন্যান্য উদ্যোগ Link -->
+    <div class="other-initiatives-link-wrap">
+      <p class="other-initiatives-text">
+        নির্বাচনী ইশতেহারে উল্লেখ না থাকা সরকারি পদক্ষেপগুলি খুঁজছেন?
+        <a href="initiatives.html" class="other-initiatives-link">অন্যান্য উদ্যোগ ও আপডেট দেখুন →</a>
+      </p>
+    </div>
+
+  </main>
+
+  <!-- ===== FLOATING BUTTONS ===== -->
+  <div class="fab-container">
+    <div class="fab-row">
+      <a class="fab-help" href="help.html" title="Help Portal — Support Bridge">
+        🤝
+      </a>
+      <button class="fab-home" id="fab-home" title="Back to Top">
+        🏠
+      </button>
+    </div>
+    <a class="fab-submit" href="https://tally.so/r/ja5B74" target="_blank" rel="nofollow noopener">
+      ✏ Submit An Update
+    </a>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <div class="footer-disclaimer">
+        <span class="footer-nonpolitical">🗒️ এটি কোনও রাজনৈতিক ওয়েবসাইট নয়।</span>
+        এটি পশ্চিমবঙ্গের সাধারণ মানুষের দ্বারা পরিচালিত একটি পাবলিক নোটপ্যাড — যাতে আমাদের দেওয়া প্রতিশ্রুতিগুলি আমরা
+        ভুলে না যাই।
+        কোনও রাজনৈতিক দলের সাথে আমাদের কোনও সম্পর্ক নেই। আমরা মতামত নয়, কেবল তথ্য যাচাই করি।<br />
+        যোগাযোগ: <a href="mailto:contact@wbupdates.com">contact@wbupdates.com</a>
+        <div class="footer-links-wrap" style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 14px;">
+          <a class="footer-faq-link" href="faq.html" style="margin-top: 0;">❓ সচরাচর জিজ্ঞাস্য প্রশ্নগুলি (FAQ) পড়ুন →</a>
+          <a class="footer-faq-link" href="mailto:contact@wbupdates.com" style="margin-top: 0;">✉️ যোগাযোগ করুন →</a>
+        </div>
+      </div>
+
+      <div class="footer-content-grid">
+        <div class="footer-goodfaith">
+          <h3 class="footer-section-title">সদিচ্ছার বার্তা</h3>
+          <p>
+            এই ট্র্যাকারটি সম্পূর্ণ সদিচ্ছা নিয়ে তৈরি করা হয়েছে — আমরা বিশ্বাস করি যে নির্বাচিত সরকারের জনগণকে দেওয়া
+            প্রতিশ্রুতিগুলি পূরণ করা উচিত এবং আমরা চাই পশ্চিমবঙ্গের সাধারণ মানুষের স্বার্থে এই BJP সরকার প্রতিশ্রুতিগুলি
+            বাস্তবায়নে সফল হোক। আমরা এখানে সরকারের ব্যর্থতা প্রমাণ করতে বসিনি।
+          </p>
+          <p style="margin-top:12px">
+            আমরা সাধারণ নাগরিক, কোনও সাংবাদিক নই। আমাদের পক্ষে মাঠের সব খবর তাৎক্ষণিকভাবে পাওয়া বা আপডেট করা সম্ভব নাও
+            হতে পারে। <strong>সেই কারণেই আমাদের আপনার সাহায্য প্রয়োজন।</strong> যদি আপনি জানেন যে কোনও কাজ করা হয়েছে,
+            শুরু করা হয়েছে বা বাতিল করা হয়েছে — দয়া করে আমাদের জানান।
+          </p>
+          <a class="footer-submit-link" href="https://tally.so/r/ja5B74" target="_blank" rel="nofollow noopener">
+            ✏ তথ্য বা সংশোধনী জমা দিন →
+          </a>
+        </div>
+
+        <div class="footer-opensource">
+          <h3 class="footer-section-title">আপনার নিজস্ব সংস্করণ হোস্ট করুন</h3>
+          <p>
+            যে কেউ এই ট্র্যাকারটি ক্লোন করে তাদের নিজস্ব সংস্করণ তৈরি করতে পারেন — তাদের নিজস্ব জেলা, নির্বাচনী এলাকা বা
+            অন্য কোনও প্রতিশ্রুতির তালিকা পর্যবেক্ষণ করার জন্য। এই ওয়েবসাইটের সম্পূর্ণ সোর্স কোড বিনামূল্যে উপলব্ধ।
+          </p>
+          <p style="margin-top: 10px; font-style: italic; opacity: 0.7; font-size: 14px;">
+            দ্রষ্টব্য: সাইটের প্রথম সংস্করণ (v1)-এর মূল সোর্স কোডটি নীচে লিঙ্ক করা আছে; চলমান পরিস্থিতির ওপর ভিত্তি করে
+            প্ল্যাটফর্মের সোর্স কোডের ভবিষ্যৎ আপডেটগুলিও ধীরে ধীরে শেয়ার করা হতে পারে।
+          </p>
+          <a class="footer-code-link" href="https://pastebin.com/raw/56SxjWNb" target="_blank" rel="nofollow noopener"
+            id="source-link">
+            &lt;/&gt; সম্পূর্ণ সোর্স কোড দেখুন →
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-methodology">
+        <h3 class="footer-section-title">পদ্ধতি ও মানদণ্ড</h3>
+        <div class="footer-rules">
+          <div class="footer-rule">
+            <span class="rule-num">০১</span>
+            <div>
+              <strong>প্রতিশ্রুতির উৎস</strong><br>
+              ২০২৬ সালের বিধানসভা নির্বাচনের আগে প্রকাশিত BJP-র অফিশিয়াল পশ্চিমবঙ্গ ইশতেহার, <em>ভরসার শপথ</em> থেকে
+              সমস্ত প্রতিশ্রুতি হুবহু সংগ্রহ করা হয়েছে।
+              <br><a href="https://www.bjp.org/files/election-manifesto-documents/Bhoroshar-Shopoth-EN-WB.pdf"
+                target="_blank" rel="nofollow noopener">📄 অফিশিয়াল ইশতেহারটি পড়ুন (ইংরেজি) →</a>
+              <br><a href="https://www.bjp.org/files/inline-documents/Bhorosha-Shopath-Bangla.pdf"
+                target="_blank" rel="nofollow noopener">📄 অফিশিয়াল ইশতেহারটি পড়ুন (বাংলা) →</a>
+            </div>
+          </div>
+          <div class="footer-rule">
+            <span class="rule-num">০২</span>
+            <div>
+              <strong>বাস্তবায়নের উৎসক্রম (হায়ারার্কি)</strong><br>
+              আমরা একটি কঠোর উৎসক্রম অনুসরণ করি: (১) সরকারি গেজেট বিজ্ঞপ্তি বা সরকারি নির্দেশনামা (GO) — যা সর্বোচ্চ
+              মানদণ্ড। (২) রাজ্য সরকারের প্রেস রিলিজ বা ক্যাবিনেটের অফিশিয়াল সিদ্ধান্ত। (৩) PTI / ANI-এর মতো নিউজ
+              এজেন্সির প্রতিবেদন যা Business Standard, The Hindu, Indian Express, বা Hindustan Times-এর মতো শীর্ষস্থানীয়
+              সংবাদমাধ্যমে প্রকাশিত হয়েছে। কোনও রাজনৈতিক নেতার বক্তব্য বা সোশ্যাল মিডিয়া পোস্ট তথ্যসূত্র হিসেবে গণ্য করা
+              হবে না। যদিও আমরা কঠোরভাবে এই উৎসক্রম মেনে চলার চেষ্টা করি, তবুও পরিস্থিতির ওপর নির্ভর করে অন্যান্য
+              যাচাইযোগ্য উৎস (যেমন পোর্টাল পরিসংখ্যান বা অফিশিয়াল আর্কাইভ) ব্যবহার করা হতে পারে — তবে সেক্ষেত্রে প্রতিটি
+              তথ্যের সরাসরি লিঙ্ক দেওয়া বাধ্যতামূলক।
+            </div>
+          </div>
+          <div class="footer-rule">
+            <span class="rule-num">০৩</span>
+            <div>
+              <strong>অগ্রগতি কীভাবে পরিমাপ করা হয় ("কাজ চলছে")</strong><br>
+              যখন কোনও নির্ভরযোগ্য সংবাদ প্রতিবেদন, ক্যাবিনেটের বিবৃতি বা অফিশিয়াল ঘোষণা নিশ্চিত করে যে সরকার কোনও
+              প্রতিশ্রুতি বাস্তবায়নের প্রক্রিয়া শুরু করেছে, তখন সেটিকে "কাজ চলছে" হিসেবে চিহ্নিত করা হয় এবং তার সোর্স
+              লিঙ্ক যুক্ত করা হয়। এর জন্য কোনও আনুষ্ঠানিক গেজেট বা টেন্ডার বাধ্যতামূলক নয়।
+            </div>
+          </div>
+          <div class="footer-rule">
+            <span class="rule-num">০৪</span>
+            <div>
+              <strong>"এড়ানো হয়েছে" বলতে কী বোঝায়</strong><br>
+              যখন সরকার এমন কোনও পদক্ষেপ নেয় যার ফলে প্রতিশ্রুতি পূরণ করা কাঠামোগতভাবে অসম্ভব হয়ে পড়ে (যেমন, কোনও বন্ধ
+              শিল্প পুনরুজ্জীবনের প্রতিশ্রুতি দিয়েও সেটিকে বেসরকারি করে দেওয়া বা প্রতিশ্রুতি দেওয়া কোনও প্রকল্প বাতিল
+              করা), তখন সেটিকে "এড়ানো হয়েছে" হিসেবে চিহ্নিত করা হয়। "বাকি আছে" মানে কাজটি করার সুযোগ এখনও রয়েছে, কিন্তু
+              "এড়ানো হয়েছে" মানে সেই দরজা বন্ধ হয়ে গেছে।
+            </div>
+          </div>
+          <div class="footer-rule">
+            <span class="rule-num">০৫</span>
+            <div>
+              <strong>প্রতিশ্রুতি পূরণ কীভাবে চিহ্নিত করা হয় ("পূরণ হয়েছে")</strong><br>
+              "পূরণ হয়েছে" হিসেবে চিহ্নিত করার জন্য একটি আনুষ্ঠানিক নথি (গেজেট বিজ্ঞপ্তি, পাস হওয়া বিল, অফিশিয়াল অর্ডার)
+              অথবা নির্ভরযোগ্য সংবাদমাধ্যম দ্বারা মাঠ পর্যায়ে উপভোক্তাদের কাছে সুবিধা পৌঁছানোর খবর প্রমাণিত হতে হবে।
+            </div>
+          </div>
+          <div class="footer-rule">
+            <span class="rule-num">০৬</span>
+            <div>
+              <strong>মেয়াদ ট্র্যাকিং</strong><br>
+              শপথ গ্রহণ অনুষ্ঠান: ৯ মে ২০২৬। সমস্ত প্রতিশ্রুতি ২০৩১ সালের মে মাস পর্যন্ত পুরো ৫ বছরের মেয়াদের জন্য
+              ট্র্যাক করা হবে।
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="last-updated" id="last-updated-footer">—</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <noscript>
+    <div class="noscript-warning">ডেটা ফাইলগুলি লোড করার জন্য এই ট্র্যাকারের জাভাস্ক্রিপ্ট (JavaScript) প্রয়োজন। দয়া করে
+      জাভাস্ক্রিপ্ট চালু করুন, অথবা অফলাইনে দেখার জন্য সিঙ্গেল-ফাইল v1 কপিটি ব্যবহার করুন।</div>
+  </noscript>
+  <script src="../js/fuse.min.js" defer></script>
+  <script src="../js/app.js" defer></script>
+  <script src="../js/share.js" defer></script>
+
+</body>
+
+</html>

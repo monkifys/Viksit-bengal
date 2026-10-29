@@ -1,31 +1,24 @@
 # Dependencies
 node_modules/
-.pnp
-.pnp.js
 
-# Build outputs
-.next/
-dist/
-out/
-build/
-.turbo/
+# Environment variables and secrets
+.env
+*.env
+serviceAccountKey.json
+*.pem
+*.key
 
-# Database & Runtime
-.pgdata/
-*.log
+# SQLite transient WAL files & backups
+database.sqlite-wal
+database.sqlite-shm
+backups/
+
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+*.log
 
-# Environment files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Editor & OS files
+# OS generated files
 .DS_Store
-*.pem
-.vscode/
-.idea/
+Thumbs.db

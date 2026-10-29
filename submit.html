@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Evidence & Updates — Viksit Bengal Dashboard</title>
+  <meta name="description" content="Submit public evidence, gazette notifications, government orders, or news reports to verify West Bengal commitments and infrastructure progress.">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Crimson+Pro:wght@400;600;700&family=Outfit:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Noto+Sans+Bengali:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- MASTHEAD BAR -->
+  <header class="masthead">
+    <div class="masthead-bar">
+      <span><span class="live-tag">CITIZEN PORTAL</span> &nbsp; Viksit Bengal Dashboard — বিকশিত বাংলা ড্যাশবোর্ড</span>
+      <div class="masthead-date-lang">
+        <span id="today-date">29 October 2026</span>
+        <a href="bn/submit.html" class="lang-toggle" aria-label="বাংলায় পড়ুন" title="Read in Bengali">বাংলা</a>
+      </div>
+    </div>
+    <div class="masthead-main">
+      <div class="masthead-logo">
+        <img src="wb-map.webp" class="wb-map-icon" alt="West Bengal Map Logo" width="90" height="140">
+      </div>
+      <div class="masthead-text">
+        <h1>Viksit Bengal<br><span>Dashboard</span></h1>
+        <p class="masthead-sub">Tracking Bengal's journey from commitments to outcomes.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- UNIFIED CIVIC NAVIGATION -->
+  <nav class="civic-nav">
+    <div class="civic-nav-inner">
+      <div class="civic-nav-links">
+        <a href="index.html" class="civic-nav-item">🏠 Home</a>
+        <a href="economy.html" class="civic-nav-item">📈 Economy</a>
+        <a href="society.html" class="civic-nav-item">👥 Society</a>
+        <a href="index.html#promises" class="civic-nav-item">📋 Promises</a>
+        <a href="districts.html" class="civic-nav-item">🗺️ Districts</a>
+        <a href="projects.html" class="civic-nav-item">🏗️ Projects</a>
+        <a href="latest.html" class="civic-nav-item">📰 Updates</a>
+        <a href="methodology.html" class="civic-nav-item">⚖️ Methodology</a>
+      </div>
+      <a href="submit.html" class="civic-nav-btn-submit" style="background:var(--saffron-dark);">✏ Submit Evidence</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header-band">
+    <div class="page-header-inner">
+      <h1 class="page-header-title">Public Evidence &amp; Information Bridge</h1>
+      <p class="page-header-subtitle">
+        Help us maintain factual integrity. Submit verified primary documentation, gazettes, cabinet decisions, or investigative reports for research review.
+      </p>
+    </div>
+  </section>
+
+  <!-- SUBMISSION FORM -->
+  <main class="main-content">
+    <div class="form-card">
+      <h2 style="font-family:var(--font-display); font-size:24px; font-weight:900; margin-bottom:8px; color:var(--ink);">
+        Submit Ground Evidence or Correction
+      </h2>
+      <p style="font-size:14px; color:var(--ink-light); margin-bottom:24px;">
+        Every submission is independently reviewed by researchers against primary official sources before public publication.
+      </p>
+
+      <form id="evidence-form" onsubmit="handleEvidenceSubmit(event)">
+        
+        <div class="form-group">
+          <label for="sub-target-type">What does this evidence relate to? *</label>
+          <select id="sub-target-type" class="form-control-select" onchange="handleTargetTypeChange()" required>
+            <option value="promise">A Tracked Manifesto Promise</option>
+            <option value="project">A Major Development Project</option>
+            <option value="indicator">An Economic or Social Indicator</option>
+            <option value="general">General Administrative Order / Policy Action</option>
+          </select>
+        </div>
+
+        <div class="form-group" id="target-id-group">
+          <label for="sub-target-id">Select Specific Promise or Project</label>
+          <select id="sub-target-id" class="form-control-select">
+            <option value="">Loading list...</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="sub-source-url">Source URL (Link to Gazette / Official Portal / News Wire) *</label>
+          <input type="url" id="sub-source-url" class="form-control-input" placeholder="https://..." required>
+          <div class="form-hint">Links must point directly to primary documentation or reputable national/state media reporting.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="sub-title">Document Title or Article Headline *</label>
+          <input type="text" id="sub-title" class="form-control-input" placeholder="e.g. Cabinet Approves ₹4,700 Cr Drainage Project for Howrah" required>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+          <div class="form-group">
+            <label for="sub-event-date">Date of Event / Notification</label>
+            <input type="date" id="sub-event-date" class="form-control-input">
+          </div>
+          <div class="form-group">
+            <label for="sub-district">Relevant District (If Localized)</label>
+            <select id="sub-district" class="form-control-select">
+              <option value="">Statewide / Multiple Districts</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="sub-explanation">Explanation &amp; Summary of Grounds *</label>
+          <textarea id="sub-explanation" class="form-control-textarea" rows="4" placeholder="Describe how this document initiates, advances, or delays the target commitment..." required></textarea>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+          <div class="form-group">
+            <label for="sub-name">Your Name (Optional)</label>
+            <input type="text" id="sub-name" class="form-control-input" placeholder="e.g. Subir Mukherjee">
+          </div>
+          <div class="form-group">
+            <label for="sub-email">Your Email (Optional, for clarifications)</label>
+            <input type="email" id="sub-email" class="form-control-input" placeholder="name@domain.com">
+          </div>
+        </div>
+
+        <div id="submit-alert" style="display:none; padding:14px; border-radius:6px; margin-bottom:20px; font-size:14px;"></div>
+
+        <button type="submit" id="submit-btn" class="form-submit-btn" style="width:100%;">
+          Submit Evidence for Review →
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" style="margin-top:60px;">
+    <div class="footer-inner">
+      <div class="footer-disclaimer">
+        <strong>Viksit Bengal Dashboard — বিকশিত বাংলা ড্যাশবোর্ড</strong><br>
+        This portal operates strictly on verified, non-partisan facts. We do not accept political polemics, unverified social media assertions, or unsourced claims.
+      </div>
+      <div class="footer-bottom">
+        <a href="submit.html" style="color:var(--saffron);">English</a> | <a href="bn/submit.html" style="color:var(--saffron);">বাংলা</a> | <a href="methodology.html" style="color:var(--ink-light);">Methodology &amp; Standards</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let promisesList = [];
+    let projectsList = [];
+
+    // Prepopulate dropdowns
+    fetch('/api/promises')
+      .then(r => r.json())
+      .then(data => {
+        promisesList = data;
+        populateTargetOptions();
+      });
+
+    fetch('/api/projects')
+      .then(r => r.json())
+      .then(data => {
+        projectsList = data;
+      });
+
+    fetch('/api/districts')
+      .then(r => r.json())
+      .then(districts => {
+        const select = document.getElementById('sub-district');
+        districts.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d.id;
+          opt.textContent = `${d.name_en} (${d.name_bn})`;
+          select.appendChild(opt);
+        });
+      });
+
+    function handleTargetTypeChange() {
+      populateTargetOptions();
+    }
+
+    function populateTargetOptions() {
+      const type = document.getElementById('sub-target-type').value;
+      const targetGroup = document.getElementById('target-id-group');
+      const targetSelect = document.getElementById('sub-target-id');
+      targetSelect.innerHTML = '';
+
+      if (type === 'promise') {
+        targetGroup.style.display = 'block';
+        const defaultOpt = document.createElement('option');
+        defaultOpt.value = '';
+        defaultOpt.textContent = '-- Select Manifesto Promise --';
+        targetSelect.appendChild(defaultOpt);
+
+        promisesList.slice(0, 100).forEach(p => {
+          const opt = document.createElement('option');
+          opt.value = p.id;
+          opt.textContent = `#${p.number || p.id} [${p.category}] ${p.text_en.substring(0, 75)}...`;
+          targetSelect.appendChild(opt);
+        });
+      } else if (type === 'project') {
+        targetGroup.style.display = 'block';
+        const defaultOpt = document.createElement('option');
+        defaultOpt.value = '';
+        defaultOpt.textContent = '-- Select Infrastructure Project --';
+        targetSelect.appendChild(defaultOpt);
+
+        projectsList.forEach(p => {
+          const opt = document.createElement('option');
+          opt.value = p.id;
+          opt.textContent = `${p.name_en} (${p.sector})`;
+          targetSelect.appendChild(opt);
+        });
+      } else {
+        targetGroup.style.display = 'none';
+      }
+    }
+
+    async function handleEvidenceSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      const alert = document.getElementById('submit-alert');
+      btn.disabled = true;
+      btn.textContent = 'Submitting to Review Queue...';
+      alert.style.display = 'none';
+
+      const payload = {
+        target_type: document.getElementById('sub-target-type').value,
+        target_id: document.getElementById('sub-target-id').value || null,
+        source_url: document.getElementById('sub-source-url').value,
+        title: document.getElementById('sub-title').value,
+        event_date: document.getElementById('sub-event-date').value || null,
+        district_id: document.getElementById('sub-district').value || null,
+        explanation: document.getElementById('sub-explanation').value,
+        submitter_name: document.getElementById('sub-name').value || 'Anonymous Citizen',
+        submitter_email: document.getElementById('sub-email').value || ''
+      };
+
+      try {
+        const res = await fetch('/api/evidence/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+
+        if (res.ok && data.success) {
+          alert.style.display = 'block';
+          alert.style.background = 'var(--green-pale)';
+          alert.style.color = 'var(--green)';
+          alert.style.border = '1px solid var(--green)';
+          alert.innerHTML = `<strong>Success!</strong> ${data.message} <br><small>Reference ID: <code>${data.submissionId}</code></small>`;
+          document.getElementById('evidence-form').reset();
+        } else {
+          throw new Error(data.error || 'Submission failed');
+        }
+      } catch (err) {
+        alert.style.display = 'block';
+        alert.style.background = 'var(--red-pale)';
+        alert.style.color = 'var(--red)';
+        alert.style.border = '1px solid var(--red)';
+        alert.textContent = 'Error: ' + err.message;
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Submit Evidence for Review →';
+      }
+    }
+  </script>
+</body>
+</html>

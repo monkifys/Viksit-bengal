@@ -1,0 +1,53 @@
+{
+  "updates": [
+    {
+      "promiseId": "economy-5",
+      "date": "2026-08-29",
+      "category": "economy",
+      "sources": [
+        {
+          "url": "https://timesofindia.indiatimes.com/city/kolkata/ongc-starts-commercial-crude-production-at-ashoknagar-field-sends-1200l-to-refinery/amp_articleshow/133599624.cms",
+          "name": "Times of India · August 29, 2026"
+        },
+        {
+          "url": "https://www.telegraphindia.com/west-bengal/commercial-crude-oil-production-resumes-at-ongcs-baigachhi-field-in-north-24-parganas-prnt/cid/2177298",
+          "name": "The Telegraph · August 29, 2026"
+        }
+      ],
+      "title_en": "ONGC Commences Commercial Crude Oil Production at Ashoknagar Field; Dispatches First Consignment to Haldia Refinery",
+      "title_bn": "অশোকনগরে ওএনজিসি-র বাণিজ্যিক অপরিশোধিত তেল উত্তোলন শুরু; হলদিয়া শোধনাগারে গেল প্রথম ১,২০০ লিটার তেল",
+      "note_en": "ONGC has officially commenced commercial crude oil extraction at its Baigachhi field in Ashoknagar (North 24 Parganas), dispatching the first commercial consignment of approximately 1,200 litres of crude oil by tanker to the IOC Haldia Refinery.\n\nCurrent output stands at around 20 cubic metres (~100 barrels) per day during this initial phase, with ONGC planning to drill up to six additional wells to ramp up long-term commercial output from the Bengal Basin.",
+      "note_bn": "উত্তর ২৪ পরগনার অশোকনগরের বাইগাছি তৈলক্ষেত্রে আনুষ্ঠানিকভাবে বাণিজ্যিক অপরিশোধিত তেল (ক্রুড অয়েল) উত্তোলন শুরু করেছে ওএনজিসি (ONGC)। প্রথম দফায় প্রায় ১,২০০ লিটার অপরিশোধিত তেলের একটি ট্যাংকার ইন্ডিয়ান অয়েলের হলদিয়া তেল শোধনাগারে পাঠানো হয়েছে।\n\nবর্তমানে এই ক্ষেত্র থেকে দৈনিক প্রায় ২০ ঘনমিটার (প্রায় ১০০ ব্যারেল) তেল উত্তোলিত হচ্ছে এবং বেঙ্গল বেসিনের বাণিজ্যিক সক্ষমতা আরও বৃদ্ধি করতে ওএনজিসি ভবিষ্যতে আরও ৬টি নতুন কূপ খননের পরিকল্পনা গ্রহণ করেছে।"
+    },
+    {
+      "promiseId": "economy-5",
+      "date": "2026-06-18",
+      "category": "economy",
+      "sources": [
+        {
+          "url": "https://www.anandabazar.com/west-bengal/24-parganas/work-is-progressing-at-the-ongc-project-site-in-ashokenagar-dgtld/cid/1693976",
+          "name": "Anandabazar Patrika · June 18, 2026"
+        }
+      ],
+      "additionalNotes": [
+        {
+          "sources": [
+            {
+              "url": "https://energy.economictimes.indiatimes.com/news/oil-and-gas/production-at-ashoknagar-oil-field-in-west-bengal-set-to-begin-soon-as-ongc-collaborates-with-state-government/125981559",
+              "name": "Economic Times · PTI · December 15, 2025"
+            }
+          ],
+          "label_en": "ONGC Investment & Basin Valuation",
+          "label_bn": "ওএনজিসি-র বিনিয়োগ ও বেসিন মূল্যায়ন",
+          "text_en": "Union Minister Hardeep Singh Puri announced in December 2025 that ONGC has invested over ₹1,000 crore in the Ashoknagar oil field since its 2018 discovery. He noted that commercial production had been delayed due to lease, royalty, and stamp duty disputes between ONGC and the earlier state government, which were resolved under new 2025 federal regulations.",
+          "text_bn": "২০২৫ সালের ডিসেম্বরে কেন্দ্রীয় মন্ত্রী হরদীপ সিং পুরী জানান যে, ২০১৮ সালে আবিষ্কারের পর থেকে অশোকনগর তৈলখনিতে ওএনজিসি প্রায় ১,০০০ কোটি টাকা বিনিয়োগ করেছে। তিনি উল্লেখ করেন যে, ওএনজিসি এবং পূর্ববর্তী রাজ্য সরকারের মধ্যে লিজ চুক্তি, রয়্যালটি ও স্ট্যাম্প ডিউটি সংক্রান্ত বিরোধের কারণে বাণিজ্যিক উৎপাদন এতদিন থমকে ছিল, যা ২০২৫ সালের নতুন কেন্দ্রীয় বিধির অধীনে সমাধান করা হয়েছে।"
+        }
+      ],
+      "title_en": "Preparatory Work Resumes at Ashoknagar Oil Field Project Site",
+      "title_bn": "অশোকনগর তৈলখনি প্রকল্পে গতি ফিরল, শুরু প্রস্তুতিমূলক কাজ",
+      "note_en": "Preparatory work at the Baigachi ONGC project site in Ashoknagar has resumed with advanced machinery after years of delays. Officials confirmed that land-related complexities have been resolved through talks between the Centre and the State, paving the way for commercial oil and gas extraction once final clearances are obtained.",
+      "note_bn": "দীর্ঘদিনের অনিশ্চয়তা কাটিয়ে অশোকনগরের বাইগাছি ওএনজিসি (ONGC) প্রকল্প এলাকায় অত্যাধুনিক যন্ত্রপাতি নিয়ে পুনরায় প্রস্তুতিমূলক কাজ শুরু হয়েছে। কেন্দ্র ও রাজ্য সরকারের মধ্যে আলোচনার মাধ্যমে জমি সংক্রান্ত আইনি জটিলতা নিষ্পত্তি করা গেছে এবং প্রয়োজনীয় প্রশাসনিক ছাড়পত্র পেলেই এখানে বাণিজ্যিকভাবে তেল ও প্রাকৃতিক গ্যাস উত্তোলন শুরু হবে বলে ওএনজিসি সূত্রে জানানো হয়েছে।"
+    }
+  ],
+  "counterEvidence": []
+}

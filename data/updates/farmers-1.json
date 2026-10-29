@@ -1,0 +1,65 @@
+{
+  "updates": [
+    {
+      "note_en": "During the state budget presentation for the 2026-27 financial year, the Finance Minister announced that eligible farmers will receive an additional annual dole of ₹3,000 from the state government, over and above the ₹6,000 provided by the PM-Kisan scheme. This ensures a total direct financial benefit of ₹9,000 transferred to the accounts of around 72 lakh eligible farmers in Bengal.",
+      "note_bn": "২০২৬-২৭ অর্থবছরের রাজ্য বাজেট পেশের সময়, অর্থমন্ত্রী ঘোষণা করেছেন যে যোগ্য কৃষকরা পিএম-কিষাণ প্রকল্পের অধীনে প্রদত্ত ৬,০০০ টাকার পাশাপাশি রাজ্য সরকারের কাছ থেকে অতিরিক্ত ৩,০০০ টাকা বার্ষিক সহায়তা পাবেন। এর ফলে বাংলার প্রায় ৭২ লক্ষ যোগ্য কৃষকের ব্যাঙ্ক অ্যাকাউন্টে মোট ৯,০০০ টাকার সরাসরি আর্থিক সুবিধা হস্তান্তরিত হবে।",
+      "sources": [
+        {
+          "url": "https://www.telegraphindia.com/west-bengal/sops-rain-on-agriculture-sector-finance-minister-announces-yearly-aid-to-farmers-and-incentives-for-two-major-crops-of-bengal-prnt/cid/2166775",
+          "name": "The Telegraph · June 23, 2026"
+        }
+      ]
+    },
+    {
+      "note_en": "West Bengal Agriculture Minister Dudhkumar Mondal announced on June 11, 2026, that the newly formed BJP government will review the beneficiary lists of the state's 'Krishak Bandhu' farmer welfare scheme to identify irregularities and weed out ineligible or non-existent recipients. Genuine beneficiaries of the state's crop assistance programme will be integrated with the Central government's Pradhan Mantri Kisan Samman Nidhi (PM-Kisan) and Pradhan Mantri Fasal Bima Yojana.\n\nThe government confirmed that the Krishak Bandhu scheme will be phased out and discontinued once the transition to PM-Kisan is complete, aiming to relieve the state of an annual financial burden of ₹8,000 crore.",
+      "note_bn": "পশ্চিমবঙ্গের নবনিযুক্ত কৃষিমন্ত্রী দুধকুমার মণ্ডল ১১ জুন, ২০২৬ তারিখে ঘোষণা করেছেন যে নতুন বিজেপি সরকার অনিয়ম দূর করতে এবং অযোগ্য বা ভুয়ো প্রাপকদের বাদ দিতে রাজ্যের 'কৃষক বন্ধু' কৃষক কল্যাণ প্রকল্পের সুবিধাভোগীদের তালিকা পর্যালোচনা করবে। রাজ্যের ফসল সহায়তা কর্মসূচির প্রকৃত সুবিধাভোগীদের কেন্দ্রীয় সরকারের প্রধানমন্ত্রী কিষাণ সম্মান নিধি (PM-Kisan) এবং প্রধানমন্ত্রী ফসল বিমা যোজনার সাথে যুক্ত করা হবে।\n\nতবে সরকার নিশ্চিত করেছে যে পিএম-কিষাণে স্থানান্তর সম্পূর্ণ হওয়ার পরে কৃষক বন্ধু প্রকল্পটি পর্যায়ক্রমে বন্ধ করে দেওয়া হবে, যার লক্ষ্য রাজ্যকে বার্ষিক ৮,০০০ কোটি টাকার আর্থিক বোঝা থেকে মুক্তি দেওয়া।",
+      "sources": [
+        {
+          "url": "https://www.telegraphindia.com/west-bengal/bengal-to-introduce-pm-kisan-scheme-phase-out-previous-governments-krishak-bandhu-welfare-programme-prnt/cid/2165145",
+          "name": "The Telegraph · June 12, 2026"
+        },
+        {
+          "url": "https://www.millenniumpost.in/amp/bengal/state-to-review-krishak-bandhu-663888",
+          "name": "Millennium Post · June 11, 2026"
+        },
+        {
+          "url": "https://www.telegraphindia.com/west-bengal/bengal-bjp-government-eyes-rs-25000-crore-savings-by-purging-fake-welfare-beneficiaries-prnt/cid/2162929",
+          "name": "The Telegraph · May 29, 2026"
+        }
+      ],
+      "counterEvidence": [
+        {
+          "label_en": "Debatable",
+          "label_bn": "বিতর্কিত",
+          "text_en": "The decision to phase out the Krishak Bandhu scheme contradicts the manifesto's explicit promise to continue all existing grant assistance alongside implementing the PM-Kisan scheme in West Bengal.",
+          "text_bn": "পশ্চিমবঙ্গ সরকারের কৃষক বন্ধু প্রকল্প বন্ধ করার এই সিদ্ধান্তটি পিএম-কিষাণ বাস্তবায়নের পাশাপাশি বিদ্যমান সমস্ত অনুদান সহায়তা অব্যাহত রাখার নির্বাচনী প্রতিশ্রুতির সরাসরি পরিপন্থী।",
+          "sources": [
+            {
+              "url": "https://www.telegraphindia.com/west-bengal/bengal-to-introduce-pm-kisan-scheme-phase-out-previous-governments-krishak-bandhu-welfare-programme-prnt/cid/2165145",
+              "name": "The Telegraph · June 12, 2026"
+            }
+          ]
+        }
+      ],
+      "additionalNotes": [
+        {
+          "label_en": "TMC Scheme Irregularities",
+          "label_bn": "তৃণমূল জমানার প্রকল্পে অনিয়ম",
+          "text_en": "Agriculture Minister Dudhkumar Mondal flagged widespread irregularities in the previous administration's Krishak Bandhu scheme. While the latest agricultural census shows 72 lakh farmers in Bengal, over 1.14 crore beneficiaries were registered under the scheme. Widespread reports suggest ineligible individuals, including family members of government employees, were receiving the doles, costing the exchequer ₹8,000 crore annually.",
+          "text_bn": "কৃষিমন্ত্রী দুধকুমার মণ্ডল পূর্ববর্তী প্রশাসনের কৃষক বন্ধু প্রকল্পে ব্যাপক অনিয়মের ইঙ্গিত দিয়েছেন। সর্বশেষ কৃষি শুমারি অনুযায়ী বাংলায় ৭২ লক্ষ কৃষক থাকলেও, এই প্রকল্পের অধীনে ১.১৪ কোটিরও বেশি সুবিধাভোগী নিবন্ধিত ছিল। সরকারি কর্মচারীদের পরিবারের সদস্যসহ একাধিক অযোগ্য ব্যক্তি এই আর্থিক সুবিধা পাচ্ছিলেন বলে অভিযোগ উঠেছে, যার জন্য রাজ্যের রাজকোষ থেকে বার্ষিক ৮,০০০ কোটি টাকা ব্যয় হচ্ছিল।",
+          "sources": [
+            {
+              "url": "https://www.millenniumpost.in/amp/bengal/state-to-review-krishak-bandhu-663888",
+              "name": "Millennium Post · June 11, 2026"
+            },
+            {
+              "url": "https://www.telegraphindia.com/west-bengal/bengal-bjp-government-eyes-rs-25000-crore-savings-by-purging-fake-welfare-beneficiaries-prnt/cid/2162929",
+              "name": "The Telegraph · May 29, 2026"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "counterEvidence": []
+}

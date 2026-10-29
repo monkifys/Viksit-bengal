@@ -1,0 +1,125 @@
+[
+  {
+    "id": "proj-metro-green",
+    "name_en": "Kolkata Metro Green Line (Underwater East-West Corridor)",
+    "name_bn": "কলকাতা মেট্রো গ্রিন লাইন (হাওড়া-সল্টলেক নদীগর্ভ করিডোর)",
+    "sector": "metro",
+    "district_id": "kolkata",
+    "authority": "Kolkata Metro Rail Corporation (KMRC)",
+    "cost_cr": 8575.0,
+    "sanctioned_cost_cr": 8575.0,
+    "stage": "completed",
+    "target_date": "2024-03-06",
+    "actual_date": "2024-03-06",
+    "source_url": "https://kmrc.in/",
+    "description_en": "India's first underwater metro route crossing 520 metres beneath the Hooghly river connecting Howrah Railway Station to Sector V.",
+    "description_bn": "ভারতের প্রথম নদীগর্ভ মেট্রো পথ যা হুগলি নদীর তলদেশ দিয়ে ৫২০ মিটার অতিক্রম করে হাওড়া স্টেশন ও সল্টলেক সেক্টর ফাইভকে যুক্ত করেছে।",
+    "milestones": [
+      { "title_en": "Underwater Tunnel Breakthrough", "title_bn": "নদীগর্ভ টানেল নির্মাণ সম্পন্ন", "target_date": "2021-06-15", "status": "completed" },
+      { "title_en": "Howrah Maidan to Esplanade Commercial Run", "title_bn": "হাওড়া ময়দান থেকে এসপ্ল্যানেড বাণিজ্যিক পরিষেবা", "target_date": "2024-03-06", "status": "completed" }
+    ]
+  },
+  {
+    "id": "proj-metro-orange",
+    "name_en": "Kolkata Metro Orange Line (New Garia to NSCBI Airport)",
+    "name_bn": "কলকাতা মেট্রো অরেঞ্জ লাইন (নিউ গড়িয়া থেকে বিমানবন্দর)",
+    "sector": "metro",
+    "district_id": "north-24-parganas",
+    "authority": "Rail Vikas Nigam Limited (RVNL)",
+    "cost_cr": 4690.0,
+    "sanctioned_cost_cr": 4690.0,
+    "stage": "under_construction",
+    "target_date": "2026-12-31",
+    "actual_date": null,
+    "source_url": "https://rvnl.org/",
+    "description_en": "30 km elevated metro viaduct connecting Kavi Subhash station to Netaji Subhash Chandra Bose International Airport via EM Bypass and New Town.",
+    "description_bn": "৩০ কিমি দীর্ঘ উড়াল মেট্রো করিডোর যা কবি সুভাষ স্টেশন থেকে ইএম বাইপাস ও নিউ টাউন হয়ে নেতাজি সুভাষচন্দ্র বসু আন্তর্জাতিক বিমানবন্দর পর্যন্ত যুক্ত করবে।",
+    "milestones": [
+      { "title_en": "Phase 1: Kavi Subhash to Hemanta Mukhopadhyay (Ruby)", "title_bn": "প্রথম ধাপ: কবি সুভাষ থেকে হেমন্ত মুখোপাধ্যায় (রুবি)", "target_date": "2024-03-15", "status": "completed" },
+      { "title_en": "Phase 2: Ruby to Beleghata", "title_bn": "দ্বিতীয় ধাপ: রুবি থেকে বেলেঘাটা", "target_date": "2025-06-30", "status": "in_progress" },
+      { "title_en": "Phase 3: Beleghata to Airport Terminal", "title_bn": "তৃতীয় ধাপ: বেলেঘাটা থেকে বিমানবন্দর", "target_date": "2026-12-31", "status": "pending" }
+    ]
+  },
+  {
+    "id": "proj-tajpur-port",
+    "name_en": "Tajpur Greenfield Deep Sea Port",
+    "name_bn": "তাজপুর গভীর সমুদ্র গ্রিনফিল্ড বন্দর",
+    "sector": "port",
+    "district_id": "purba-medinipur",
+    "authority": "West Bengal Maritime Board & Syama Prasad Mookerjee Port",
+    "cost_cr": 25000.0,
+    "sanctioned_cost_cr": 15000.0,
+    "stage": "sanctioned",
+    "target_date": "2028-10-31",
+    "actual_date": null,
+    "source_url": "https://wbidc.com/",
+    "description_en": "Mega greenfield all-weather deep sea port with 18m draft enabling Cape-size vessels to dock directly in West Bengal.",
+    "description_bn": "১৮ মিটার ড্রাফট বিশিষ্ট মেগা গ্রিনফিল্ড সমুদ্র বন্দর যা আন্তর্জাতিক ক্যাপ-সাইজ মালবাহী জাহাজ ভেড়ানোর সুযোগ দেবে।",
+    "milestones": [
+      { "title_en": "Environmental Clearance Approval", "title_bn": "পরিবেশগত ছাড়পত্র অনুমোদন", "target_date": "2024-11-30", "status": "completed" },
+      { "title_en": "Concessionaire Agreement Finalization", "title_bn": "চুক্তি চূড়ান্তকরণ ও জমি হস্তান্তর", "target_date": "2025-08-31", "status": "in_progress" },
+      { "title_en": "Breakwater Construction Commencement", "title_bn": "ব্রেকওয়াটার নির্মাণ সূচনা", "target_date": "2026-03-31", "status": "pending" }
+    ]
+  },
+  {
+    "id": "proj-deocha-pachami",
+    "name_en": "Deocha Pachami Harinsingha Dewanganj Coal & Industrial Block",
+    "name_bn": "দেউচা পাচামি কয়লা ব্লক ও শিল্পাঞ্চল প্রকল্প",
+    "sector": "energy",
+    "district_id": "birbhum",
+    "authority": "West Bengal Power Development Corporation (WBPDCL)",
+    "cost_cr": 35000.0,
+    "sanctioned_cost_cr": 10000.0,
+    "stage": "under_implementation",
+    "target_date": "2030-05-01",
+    "actual_date": null,
+    "source_url": "https://wbpdcl.co.in/",
+    "description_en": "World's second-largest coal block with estimated reserves of 2.1 billion tonnes, developed with a ₹10,000-crore community rehabilitation and compensation package.",
+    "description_bn": "২১০ কোটি টন মজুত সম্পন্ন বিশ্বের দ্বিতীয় বৃহত্তম কয়লা ব্লক, যা ১০,০০০ কোটি টাকার স্থানীয় পুনর্বাসন প্যাকেজের সাথে বাস্তবায়িত হচ্ছে।",
+    "milestones": [
+      { "title_en": "Relief & Rehabilitation (R&R) Package Rollout", "title_bn": "পুনর্বাসন প্যাকেজ বিতরণ", "target_date": "2023-12-31", "status": "completed" },
+      { "title_en": "Basalt Mining & Overburden Clearance", "title_bn": "ব্যাসল্ট খনন ও প্রস্তুতি", "target_date": "2025-10-15", "status": "in_progress" },
+      { "title_en": "First Coal Seam Extraction", "title_bn": "প্রথম কয়লা উত্তোলন সূচনা", "target_date": "2027-06-30", "status": "pending" }
+    ]
+  },
+  {
+    "id": "proj-dankuni-freight",
+    "name_en": "Dankuni-Sonnagar Eastern Dedicated Freight Corridor (EDFC)",
+    "name_bn": "ডানকুনি-সোনেগর ডেডিকেটেড ফ্রেইট করিডোর",
+    "sector": "transport",
+    "district_id": "hooghly",
+    "authority": "Dedicated Freight Corridor Corporation of India (DFCCIL)",
+    "cost_cr": 13500.0,
+    "sanctioned_cost_cr": 13500.0,
+    "stage": "under_construction",
+    "target_date": "2027-03-31",
+    "actual_date": null,
+    "source_url": "https://dfccil.com/",
+    "description_en": "538 km dedicated electrified heavy-haul freight railway track terminating at Dankuni Multi-Modal Logistics Hub.",
+    "description_bn": "৫৩৮ কিমি দীর্ঘ বৈদ্যুতিক মালবাহী রেল করিডোর যার সমাপ্তি বিন্দু ডানকুনি মাল্টি-মোডাল লজিস্টিক হাব।",
+    "milestones": [
+      { "title_en": "Land Acquisition across Burdwan & Hooghly", "title_bn": "জমি অধিগ্রহণ প্রক্রিয়া", "target_date": "2024-05-30", "status": "completed" },
+      { "title_en": "Earthwork & Bridge Over Hooghly Tributaries", "title_bn": "মাটি ভরাট ও সেতু নির্মাণ", "target_date": "2025-12-31", "status": "in_progress" }
+    ]
+  },
+  {
+    "id": "proj-kalyani-expressway",
+    "name_en": "Kalyani Expressway 4-Laning & Belghoria Link",
+    "name_bn": "কল্যাণী এক্সপ্রেসওয়ে চার-লেন সম্প্রসারণ ও বেলঘরিয়া সংযোগ",
+    "sector": "transport",
+    "district_id": "north-24-parganas",
+    "authority": "West Bengal Highway Development Corporation (WBHDCL)",
+    "cost_cr": 2600.0,
+    "sanctioned_cost_cr": 2600.0,
+    "stage": "under_construction",
+    "target_date": "2025-12-31",
+    "actual_date": null,
+    "source_url": "https://wbhdcl.gov.in/",
+    "description_en": "Upgrading 42 km of Kalyani Expressway into a 4-lane access-controlled arterial corridor connecting AIIMS Kalyani to Kolkata.",
+    "description_bn": "কলকাতাকে এইমস কল্যাণীর সঙ্গে দ্রুত সংযুক্ত করতে ৪২ কিমি কল্যাণী এক্সপ্রেসওয়েকে চার-লেন নিয়ন্ত্রিত করিডোরে রূপান্তর।",
+    "milestones": [
+      { "title_en": "Section 1: Muragacha to Madhyamgram Flyover", "title_bn": "প্রথম অংশ: মুড়াগাছা থেকে মধ্যমগ্রাম উড়ালপুল", "target_date": "2024-02-15", "status": "completed" },
+      { "title_en": "Section 2: Sodepur to Kanchrapara Corridor", "title_bn": "দ্বিতীয় অংশ: সোদপুর থেকে কাঁচরাপাড়া করিডোর", "target_date": "2025-12-31", "status": "in_progress" }
+    ]
+  }
+]

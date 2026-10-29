@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>পরিকাঠামো ও উন্নয়ন প্রকল্প রেজিস্ট্রি — বিকশিত বাংলা ড্যাশবোর্ড</title>
+  <meta name="description" content="পশ্চিমবঙ্গের বৃহৎ পরিকাঠামো, এক্সপ্রেসওয়ে, মেট্রো করিডোর ও গভীর সমুদ্র বন্দর প্রকল্পের নিরপেক্ষ খতিয়ান।">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Crimson+Pro:wght@400;600;700&family=Outfit:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Noto+Sans+Bengali:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body { font-family: 'Noto Sans Bengali', var(--font-sans); }
+    .project-filters-bar { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; justify-content: space-between; max-width: 1300px; margin: 24px auto 0; padding: 0 16px; }
+    .filter-pills-wrap { display: flex; gap: 8px; flex-wrap: wrap; }
+    .filter-pill { background: var(--paper-warm); border: 1px solid var(--rule); padding: 6px 14px; border-radius: 16px; font-size: 13px; font-weight: 600; color: var(--ink-mid); cursor: pointer; transition: all 0.2s; font-family: inherit; }
+    .filter-pill:hover, .filter-pill.active { background: var(--saffron); color: #fff; border-color: var(--saffron); }
+  </style>
+</head>
+<body>
+
+  <!-- MASTHEAD BAR -->
+  <header class="masthead">
+    <div class="masthead-bar">
+      <span><span class="live-tag">নাগরিক তথ্য</span> &nbsp; বিকশিত বাংলা ড্যাশবোর্ড — Viksit Bengal Dashboard</span>
+      <div class="masthead-date-lang">
+        <span id="today-date">২৯ অক্টোবর ২০২৬</span>
+        <a href="../projects.html" class="lang-toggle" aria-label="Read in English" title="ইংরেজি ভাষায় পড়ুন">English</a>
+      </div>
+    </div>
+    <div class="masthead-main">
+      <div class="masthead-logo">
+        <img src="../wb-map.webp" class="wb-map-icon" alt="পশ্চিমবঙ্গের মানচিত্র" width="90" height="140">
+      </div>
+      <div class="masthead-text">
+        <h1>বিকশিত বাংলা<br><span>ড্যাশবোর্ড</span></h1>
+        <p class="masthead-sub">প্রতিশ্রুতি থেকে ফলাফলে পৌঁছানোর পথে বাংলার যাত্রা নিরীক্ষণ।</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- UNIFIED CIVIC NAVIGATION -->
+  <nav class="civic-nav">
+    <div class="civic-nav-inner">
+      <div class="civic-nav-links">
+        <a href="index.html" class="civic-nav-item">🏠 নীড়পাতা</a>
+        <a href="economy.html" class="civic-nav-item">📈 অর্থনীতি</a>
+        <a href="society.html" class="civic-nav-item">👥 সমাজ</a>
+        <a href="index.html#promises" class="civic-nav-item">📋 প্রতিশ্রুতি</a>
+        <a href="districts.html" class="civic-nav-item">🗺️ জেলা পরিক্রমা</a>
+        <a href="projects.html" class="civic-nav-item active">🏗️ প্রকল্পসমূহ</a>
+        <a href="latest.html" class="civic-nav-item">📰 সাম্প্রতিক তথ্য</a>
+        <a href="methodology.html" class="civic-nav-item">⚖️ পদ্ধতি ও মানদণ্ড</a>
+      </div>
+      <a href="submit.html" class="civic-nav-btn-submit">✏ তথ্য জমা দিন</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header-band">
+    <div class="page-header-inner">
+      <h1 class="page-header-title">প্রধান পরিকাঠামো ও উন্নয়ন প্রকল্প রেজিস্ট্রি</h1>
+      <p class="page-header-subtitle">
+        পশ্চিমবঙ্গের মেগা পরিকাঠামো প্রকল্প, সমুদ্র বন্দর, মেট্রো রেল, ফ্রেইট করিডোর ও কয়লাখনির নিরপেক্ষ অগ্রগতির খতিয়ান।
+      </p>
+    </div>
+  </section>
+
+  <!-- FILTERS BAR -->
+  <div class="project-filters-bar">
+    <div class="filter-pills-wrap" id="sector-filters">
+      <button class="filter-pill active" onclick="setSector('all')">সকল ক্ষেত্র</button>
+      <button class="filter-pill" onclick="setSector('metro')">🚇 মেট্রো রেল</button>
+      <button class="filter-pill" onclick="setSector('port')">⚓ বন্দর ও নৌপরিবহন</button>
+      <button class="filter-pill" onclick="setSector('transport')">🛣️ এক্সপ্রেসওয়ে ও রেল</button>
+      <button class="filter-pill" onclick="setSector('energy')">⚡ বিদ্যুৎ ও খনিজ</button>
+    </div>
+    <div style="font-size:13px; color:var(--ink-light);" id="project-count-lbl">
+      সকল প্রকল্প প্রদর্শিত হচ্ছে
+    </div>
+  </div>
+
+  <!-- PROJECTS GRID -->
+  <main class="main-content">
+    <div class="projects-grid" id="projects-container">
+      <div style="text-align:center; padding:40px; color:var(--ink-light); grid-column:1/-1;">
+        প্রকল্প তালিকা লোড হচ্ছে...
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" style="margin-top:60px;">
+    <div class="footer-inner">
+      <div class="footer-disclaimer">
+        <strong>বিকশিত বাংলা ড্যাশবোর্ড — Viksit Bengal Dashboard</strong><br>
+        সরকারি গেজেট বিজ্ঞপ্তি, রেল বিকাশ নিগম, কলকাতা মেট্রো রেল কর্পোরেশন ও টেন্ডার তথ্যের ওপর ভিত্তি করে প্রকল্পসমূহ নথিভুক্ত করা হয়েছে।
+      </div>
+      <div class="footer-bottom">
+        <a href="../projects.html" style="color:var(--saffron);">English</a> | <a href="projects.html" style="color:var(--saffron);">বাংলা</a> | <a href="methodology.html" style="color:var(--ink-light);">পদ্ধতি ও মানদণ্ড</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let allProjects = [];
+    let currentSector = 'all';
+
+    fetch('/api/projects')
+      .then(r => r.json())
+      .then(data => {
+        allProjects = data;
+        renderProjects();
+      })
+      .catch(err => {
+        console.error(err);
+      });
+
+    function setSector(sec) {
+      currentSector = sec;
+      document.querySelectorAll('#sector-filters .filter-pill').forEach(p => p.classList.remove('active'));
+      event.target.classList.add('active');
+      renderProjects();
+    }
+
+    function renderProjects() {
+      const filtered = allProjects.filter(p => currentSector === 'all' || p.sector === currentSector);
+      const container = document.getElementById('projects-container');
+      document.getElementById('project-count-lbl').textContent = `${filtered.length}টি প্রকল্প প্রদর্শিত`;
+
+      if (filtered.length === 0) {
+        container.innerHTML = '<p style="text-align:center; grid-column:1/-1; padding:30px;">এই ক্ষেত্রে কোনো প্রকল্প পাওয়া যায়নি।</p>';
+        return;
+      }
+
+      container.innerHTML = filtered.map(p => {
+        const milestonesHtml = (p.milestones || []).map(m => `
+          <div class="milestone-item">
+            <span class="milestone-dot milestone-${m.status}"></span>
+            <span style="flex-grow:1;">${m.title_bn || m.title_en}</span>
+            <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-faint);">${m.target_date || ''}</span>
+          </div>
+        `).join('');
+
+        return `
+          <div class="project-card">
+            <div>
+              <div class="project-head">
+                <div>
+                  <span class="indicator-category-tag" style="margin-bottom:6px; display:inline-block;">${p.sector}</span>
+                  <h3 class="project-name">${p.name_bn || p.name_en}</h3>
+                </div>
+                <span class="project-stage-badge stage-${p.stage}">${p.stage}</span>
+              </div>
+              <div class="project-cost">
+                ₹${p.cost_cr ? p.cost_cr.toLocaleString('bn-IN') + ' কোটি' : 'ব্যয় অপ্রকাশিত'}
+              </div>
+              <div class="project-authority">
+                <strong>কর্তৃপক্ষ:</strong> ${p.authority || 'রাজ্য সংস্থা'} · <strong>জেলা:</strong> ${p.district_name_bn || 'সমগ্র রাজ্য'}
+              </div>
+              <p style="font-size:14px; color:var(--ink-mid); line-height:1.5;">${p.description_bn || p.description_en || ''}</p>
+              
+              <div class="project-milestones-list">
+                <div style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; font-weight:700;">প্রকল্পের প্রধান ধাপসমূহ</div>
+                ${milestonesHtml || '<div style="color:var(--ink-faint); font-size:12px;">নির্দিষ্ট সময়সূচি প্রক্রিয়াধীন।</div>'}
+              </div>
+            </div>
+
+            <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--rule-light); padding-top:12px; margin-top:8px;">
+              <span style="font-size:12px; color:var(--ink-light);">
+                লক্ষ্যমাত্রা: <strong>${p.target_date || 'অনির্দিষ্ট'}</strong>
+              </span>
+              ${p.source_url ? `<a href="${p.source_url}" target="_blank" rel="noopener" style="font-size:12px; font-weight:700; color:var(--saffron-dark);">সরকারি তথ্যসূত্র ↗</a>` : ''}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+  </script>
+</body>
+</html>

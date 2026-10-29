@@ -1,0 +1,47 @@
+{
+  "seo": {
+    "title": "Bharosa Scheme for Unemployed Youth | WB Tracker",
+    "description": "Track the status of the Bharosa Scheme (Bhorsha Kormosuchi) providing a monthly allowance of up to ₹3,000 to unemployed youth in West Bengal.",
+    "keywords": "bharosa scheme, bhorsha kormosuchi, unemployed youth allowance, bekar bhata, west bengal budget 2026, wb tracker",
+    "ogImage": "https://tracker.wbupdates.com/details/images/youth-2-share.webp"
+  },
+  "updates": [
+    {
+      "sources": [
+        {
+          "url": "https://www.news18.com/cities/kolkata-news/west-bengal-budget-2026-rs-3000-month-educated-unemployed-youth-who-qualifies-10165519.html",
+          "name": "News18 · June 22, 2026"
+        },
+        {
+          "url": "https://indianexpress.com/article/cities/kolkata/west-bengal-budget-2026-live-updates-bjp-government-employment-industry-10751285/",
+          "name": "Indian Express · June 22, 2026"
+        },
+        {
+          "url": "https://www.aajkaal.in/gallery/bharosa-scheme-allowance-west-bengal-jobless-youths-will-get-3000-rupees-bharosa-scheme-allowance-check-eligibility-criteria-501701?slide=9",
+          "name": "Aajkaal · June 22, 2026"
+        }
+      ],
+      "additionalNotes": [
+        {
+          "label_en": "Income Limit Clarification",
+          "label_bn": "পারিবারিক আয়ের সীমা স্পষ্টীকরণ",
+          "text_en": "While the official budget document (page 32, PDF page 33) states the family income eligibility limit is below ₹1 lakh per year, Chief Minister Suvendu Adhikari subsequently clarified that the actual threshold is a monthly family income below ₹1 lakh.",
+          "text_bn": "অফিসিয়াল বাজেট নথিতে (পৃষ্ঠা ৩২, পিডিএফ পৃষ্ঠা ৩৩) বার্ষিক পারিবারিক আয় ১ লক্ষ টাকার কম হওয়ার কথা উল্লেখ থাকলেও, মুখ্যমন্ত্রী শুভেন্দু অধিকারী পরবর্তীতে স্পষ্ট করেছেন যে প্রকৃত যোগ্যতা সীমা হচ্ছে মাসিক পারিবারিক আয় ১ লক্ষ টাকার কম।",
+          "sources": [
+            {
+              "url": "https://finance.wb.gov.in/writereaddata/Budget_Speech/2026_English.pdf",
+              "name": "Govt of West Bengal · Budget Speech 2026-27 · June 22, 2026"
+            },
+            {
+              "url": "https://www.youtube.com/watch?v=gi9TgBWjMpg",
+              "name": "CM Suvendu Adhikari Press Briefing · YouTube · June 22, 2026"
+            }
+          ]
+        }
+      ],
+      "note_en": "In the state budget presented on June 22, 2026, Finance Minister Swapan Dasgupta proposed the launch of 'Bhorsha Kormosuchi' (Bharosa Scheme) starting October 2026 to provide monthly financial assistance to eligible educated unemployed youth. Under this scheme, unemployed graduates will receive a monthly allowance of ₹3,000, while other eligible youth will receive ₹2,000. The scheme applies to youth aged 21–45 from families with a monthly income below ₹1 lakh who are not availing other social benefits.",
+      "note_bn": "২০২৬ সালের ২২ জুন পেশ করা রাজ্য বাজেটে অর্থমন্ত্রী স্বপন দাশগুপ্ত ২০২৬ সালের অক্টোবর থেকে কর্মহীন যুবকদের আর্থিক সহায়তা প্রদানের জন্য 'ভরসা কর্মসূচি' (Bharosa Scheme) চালুর ঘোষণা করেছেন। এই প্রকল্পের অধীনে, মাসিক ১ লক্ষ টাকার কম পারিবারিক আয়ের ২১ থেকে ৪৫ বছর বয়সী এবং অন্য কোনো সামাজিক প্রকল্পের সুবিধা না পাওয়া কর্মহীন স্নাতক যুবকরা প্রতি মাসে ৩,০০০ টাকা এবং অ-স্নাতকরা ২,০০০ টাকা করে ভাতা পাবেন।"
+    }
+  ],
+  "counterEvidence": []
+}

@@ -1,0 +1,144 @@
+{
+  "title_en": "Viksit Bengal Dashboard - Civic Development & Public Commitments Tracker",
+  "title_bn": "বিকশিত বাংলা ড্যাশবোর্ড — নাগরিক উন্নয়ন ও সার্বিক অগ্রগতি ট্র্যাকার",
+  "subtitle_en": "West Bengal's civic development ledger — tracking economic indicators, strategic infrastructure, and public commitments, 2026–2031",
+  "subtitle_bn": "পশ্চিমবঙ্গের নাগরিক উন্নয়ন প্ল্যাটফর্ম — অর্থনৈতিক সূচক, পরিকাঠামো ও প্রতিশ্রুতির তথ্যভিত্তিক ট্র্যাকিং, ২০২৬-২০৩১",
+  "oathDate": "2026-05-09T11:00:00+05:30",
+  "termEnd": "2031-05-09T11:00:00+05:30",
+  "chiefMinister": "Suvendu Adhikari",
+  "oathCeremony": "9 May 2026, Brigade Parade Ground",
+  "seatsWon": "207 / 294",
+  "governor": "RN Ravi",
+  "lastUpdated": "2026-10-05",
+  "canonicalUrl": "https://tracker.wbupdates.com/",
+  "manifestoUrl": "https://www.bjp.org/files/election-manifesto-documents/Bhoroshar-Shopoth-EN-WB.pdf",
+  "submitUrl": "https://tally.so/r/ja5B74",
+  "sourceCodeUrl": "https://pastebin.com/raw/56SxjWNb",
+  "ogImage": "og-preview.webp",
+  "categories": [
+    {
+      "id": "national-security",
+      "icon": "🛡",
+      "title_en": "National Security",
+      "subtitle_en": "Border fencing · Infiltration crackdown",
+      "title_bn": "জাতীয় নিরাপত্তা",
+      "subtitle_bn": "সীমান্তে বেড়া · অনুপ্রবেশ রোধ"
+    },
+    {
+      "id": "governance",
+      "icon": "🏛",
+      "title_en": "Governance & Rule of Law",
+      "subtitle_en": "White Paper · DA arrears · Anti-corruption · UCC · Recruitment",
+      "title_bn": "সুশাসন ও আইনের শাসন",
+      "subtitle_bn": "শ্বেতপত্র · মহার্ঘ ভাতা · দুর্নীতি দমন · অভিন্ন দেওয়ানি বিধি · নিয়োগ"
+    },
+    {
+      "id": "women",
+      "icon": "👩",
+      "title_en": "Women's Safety & Empowerment",
+      "subtitle_en": "Nari Surokkha Dorkar · ₹3,000/month · 33% reservation · Free HPV",
+      "title_bn": "মহিলাদের সুরক্ষা ও ক্ষমতায়ন",
+      "subtitle_bn": "নারী সুরক্ষা দরকার · ৩,০০০ টাকা/মাস · ৩৩% সংরক্ষণ · বিনামূল্যে এইচপিভি টিকা"
+    },
+    {
+      "id": "youth",
+      "icon": "🎓",
+      "title_en": "Youth & Employment",
+      "subtitle_en": "Yuboder Ujjwol Bhobishyot — 1 crore jobs · Startup credit · Sports University · AVGC Labs",
+      "title_bn": "যুব ও কর্মসংস্থান",
+      "subtitle_bn": "যুবদের উজ্জ্বল ভবিষ্যৎ — ১ কোটি চাকরি · স্টার্টআপ ক্রেডিট · ক্রীড়া বিশ্ববিদ্যালয় · এভিজিসি ল্যাব"
+    },
+    {
+      "id": "economy",
+      "icon": "🏭",
+      "title_en": "Economy & Industry",
+      "subtitle_en": "Arthanitir Unnoti — Singur industrial park · Haldia port · MSME · Jute · Steel · Coastal zones",
+      "title_bn": "অর্থনীতি ও শিল্প",
+      "subtitle_bn": "অর্থনীতির উন্নতি — সিঙ্গুর শিল্পতালুক · হলদিয়া বন্দর · এমএসএমই · পাট · ইস্পাত · উপকূলীয় অঞ্চল"
+    },
+    {
+      "id": "tea",
+      "icon": "🍵",
+      "title_en": "Tea Industry",
+      "subtitle_en": "Darjeeling Tea · Replantation · GI enforcement · Tea tourism · Small growers",
+      "title_bn": "চা শিল্প",
+      "subtitle_bn": "দার্জিলিং চা · পুনর্গঠন · জিআই প্রয়োগ · চা পর্যটন · ক্ষুদ্র চাষি"
+    },
+    {
+      "id": "farmers",
+      "icon": "🌾",
+      "title_en": "Farmers & Rural Economy",
+      "subtitle_en": "Krishoker Unnoyon — ₹9,000 PM Kisan · MSP ₹3,100 · Cold storage · Dairy · GI products",
+      "title_bn": "কৃষি ও গ্রামীণ অর্থনীতি",
+      "subtitle_bn": "কৃষকের উন্নয়ন — ৯,০০০ টাকা পিএম কিষাণ · ন্যূনতম সহায়ক মূল্য ৩,১০০ টাকা · হিমঘর · দুগ্ধ · জিআই পণ্য"
+    },
+    {
+      "id": "fishery",
+      "icon": "🐟",
+      "title_en": "Fishery & Blue Economy",
+      "subtitle_en": "PM Matsya Sampada · Deep-sea fishing · Marine biotech · Coastal women's livelihood",
+      "title_bn": "মৎস্যচাষ ও ব্লু ইকোনমি",
+      "subtitle_bn": "পিএম মৎস্য সম্পদ · গভীর সমুদ্রে মাছ ধরা · সামুদ্রিক বায়োটেক · উপকূলীয় মহিলাদের জীবিকা"
+    },
+    {
+      "id": "health",
+      "icon": "🏥",
+      "title_en": "Health",
+      "subtitle_en": "Suswastho — Ayushman Bharat · AIIMS North Bengal · Cancer hospital · 24-hr healthcare",
+      "title_bn": "স্বাস্থ্য পরিষেবা",
+      "subtitle_bn": "সুস্বাস্থ্য — আয়ুষ্মান ভারত · উত্তরবঙ্গে এইমস · ক্যান্সার হাসপাতাল · ২৪ ঘণ্টা স্বাস্থ্য পরিষেবা"
+    },
+    {
+      "id": "education",
+      "icon": "📚",
+      "title_en": "Education",
+      "subtitle_en": "Sushikkha — NEP · Government school transformation · IIT · IIM · Atal Tinkering Labs",
+      "title_bn": "শিক্ষা",
+      "subtitle_bn": "সুশিক্ষা — জাতীয় শিক্ষানীতি · সরকারি বিদ্যালয়ের রূপান্তর · আইআইটি · আইআইএম · অটল টিংকারিং ল্যাব"
+    },
+    {
+      "id": "culture",
+      "icon": "🎭",
+      "title_en": "Culture & Heritage",
+      "subtitle_en": "Hrito Gourab — Vande Mataram Museum · Shaktipeeth · Kurmali & Rajbongshi languages · Tagore legacy",
+      "title_bn": "সংস্কৃতি এবং ঐতিহ্য",
+      "subtitle_bn": "হৃত গৌরব — বন্দে মাতরম্ সংগ্রহশালা · শক্তিপীঠ · কুড়মালি ও রাজবংশী ভাষা · রবি ঠাকুরের ঐতিহ্য"
+    },
+    {
+      "id": "inclusive",
+      "icon": "⚖",
+      "title_en": "Inclusive Development",
+      "subtitle_en": "Sokoler Somman — SC/ST/OBC · Tea tribes · Hindu refugees · Hill regions · Gig workers · Solar energy",
+      "title_bn": "অন্তর্ভুক্তিমূলক উন্নয়ন",
+      "subtitle_bn": "সকলের সম্মান — এসসি/এসটি/ওবিসি · চা জনগোষ্ঠী · হিন্দু শরণার্থী · পাহাড়ি অঞ্চল · গিগ কর্মী · সৌরশক্তি"
+    },
+    {
+      "id": "infrastructure",
+      "icon": "🏗",
+      "title_en": "Infrastructure & Development",
+      "subtitle_en": "Porikathamogoto Unnoyon — Tajpur port · Metro · National Highway · 61 railway projects · North Bengal",
+      "title_bn": "পরিকাঠামো ও উন্নয়ন",
+      "subtitle_bn": "পরিকাঠামোগত উন্নয়ন — তাজপুর বন্দর · মেট্রো · জাতীয় সড়ক · ৬১টি রেল প্রকল্প · উত্তরবঙ্গ"
+    },
+    {
+      "id": "tourism",
+      "icon": "🗺",
+      "title_en": "Tourism",
+      "subtitle_en": "Porjoton Shilpe — Darjeeling · Sundarbans · Dooars · Digha · Kolkata UNESCO heritage",
+      "title_bn": "পর্যটন",
+      "subtitle_bn": "পর্যটন শিল্পে — দার্জিলিং · সুন্দরবন · ডুয়ার্স · দীঘা · কলকাতার ইউনেস্কো হেরিটেজ"
+    },
+    {
+      "id": "environment",
+      "icon": "🌿",
+      "title_en": "Environment",
+      "subtitle_en": "Poribeshke Rokkha — Royal Bengal Tiger · Mangrove forests · MISTI",
+      "title_bn": "পরিবেশ",
+      "subtitle_bn": "পরিবেশকে রক্ষা — রয়েল বেঙ্গল টাইগার · ম্যানগ্রোভ অরণ্য · মিষ্টি প্রকল্প"
+    }
+  ],
+  "chiefMinister_en": "Suvendu Adhikari",
+  "chiefMinister_bn": "শুভেন্দু অধিকারী",
+  "oathCeremony_en": "9 May 2026, Brigade Parade Ground",
+  "oathCeremony_bn": "৯ মে ২০২৬, ব্রিগেড প্যারেড গ্রাউন্ড"
+}

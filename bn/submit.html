@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>তথ্য ও প্রমাণ জমা দিন — বিকশিত বাংলা ড্যাশবোর্ড</title>
+  <meta name="description" content="পশ্চিমবঙ্গের প্রতিশ্রুতি এবং পরিকাঠামো প্রকল্পের অগ্রগতি যাচাই করতে সরকারি বিজ্ঞপ্তি, গেজেট বা নির্ভরযোগ্য সংবাদ প্রমাণ জমা দিন।">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Crimson+Pro:wght@400;600;700&family=Outfit:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Noto+Sans+Bengali:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body { font-family: 'Noto Sans Bengali', var(--font-sans); }
+  </style>
+</head>
+<body>
+
+  <!-- MASTHEAD BAR -->
+  <header class="masthead">
+    <div class="masthead-bar">
+      <span><span class="live-tag">নাগরিক পোর্টাল</span> &nbsp; বিকশিত বাংলা ড্যাশবোর্ড — Viksit Bengal Dashboard</span>
+      <div class="masthead-date-lang">
+        <span id="today-date">২৯ অক্টোবর ২০২৬</span>
+        <a href="../submit.html" class="lang-toggle" aria-label="Read in English" title="ইংরেজি ভাষায় পড়ুন">English</a>
+      </div>
+    </div>
+    <div class="masthead-main">
+      <div class="masthead-logo">
+        <img src="../wb-map.webp" class="wb-map-icon" alt="পশ্চিমবঙ্গের মানচিত্র" width="90" height="140">
+      </div>
+      <div class="masthead-text">
+        <h1>বিকশিত বাংলা<br><span>ড্যাশবোর্ড</span></h1>
+        <p class="masthead-sub">প্রতিশ্রুতি থেকে ফলাফলে পৌঁছানোর পথে বাংলার যাত্রা নিরীক্ষণ।</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- UNIFIED CIVIC NAVIGATION -->
+  <nav class="civic-nav">
+    <div class="civic-nav-inner">
+      <div class="civic-nav-links">
+        <a href="index.html" class="civic-nav-item">🏠 নীড়পাতা</a>
+        <a href="economy.html" class="civic-nav-item">📈 অর্থনীতি</a>
+        <a href="society.html" class="civic-nav-item">👥 সমাজ</a>
+        <a href="index.html#promises" class="civic-nav-item">📋 প্রতিশ্রুতি</a>
+        <a href="districts.html" class="civic-nav-item">🗺️ জেলা পরিক্রমা</a>
+        <a href="projects.html" class="civic-nav-item">🏗️ প্রকল্পসমূহ</a>
+        <a href="latest.html" class="civic-nav-item">📰 সাম্প্রতিক তথ্য</a>
+        <a href="methodology.html" class="civic-nav-item">⚖️ পদ্ধতি ও মানদণ্ড</a>
+      </div>
+      <a href="submit.html" class="civic-nav-btn-submit" style="background:var(--saffron-dark);">✏ তথ্য জমা দিন</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header-band">
+    <div class="page-header-inner">
+      <h1 class="page-header-title">নাগরিক তথ্য ও প্রমাণ পেশের সেতু</h1>
+      <p class="page-header-subtitle">
+        যথাযথ তথ্যপ্রমাণ দিয়ে আমাদের সাহায্য করুন। সরকারি আদেশ, গেজেট বিজ্ঞপ্তি বা সংবাদ প্রতিবেদনের লিঙ্ক জমা দিন গবেষক দলের পর্যালোচনার জন্য।
+      </p>
+    </div>
+  </section>
+
+  <!-- SUBMISSION FORM -->
+  <main class="main-content">
+    <div class="form-card">
+      <h2 style="font-family:var(--font-display); font-size:24px; font-weight:900; margin-bottom:8px; color:var(--ink);">
+        মাঠপর্যায়ের তথ্য বা সংশোধনী জমা দিন
+      </h2>
+      <p style="font-size:14px; color:var(--ink-light); margin-bottom:24px;">
+        প্রতিটি তথ্য স্বাধীন গবেষকদের দ্বারা সরকারি সূত্রের সঙ্গে যাচাইয়ের পর ড্যাশবোর্ডে প্রকাশিত হয়।
+      </p>
+
+      <form id="evidence-form" onsubmit="handleEvidenceSubmit(event)">
+        
+        <div class="form-group">
+          <label for="sub-target-type">এই তথ্যটি কিসের সাথে সম্পর্কিত? *</label>
+          <select id="sub-target-type" class="form-control-select" onchange="handleTargetTypeChange()" required>
+            <option value="promise">একটি নির্দিষ্ট নির্বাচনী প্রতিশ্রুতি</option>
+            <option value="project">একটি বৃহৎ পরিকাঠামো প্রকল্প</option>
+            <option value="indicator">অর্থনৈতিক বা সামাজিক নির্দেশক</option>
+            <option value="general">সাধারণ প্রশাসনিক আদেশ / নীতিগত সিদ্ধান্ত</option>
+          </select>
+        </div>
+
+        <div class="form-group" id="target-id-group">
+          <label for="sub-target-id">নির্দিষ্ট প্রতিশ্রুতি বা প্রকল্প নির্বাচন করুন</label>
+          <select id="sub-target-id" class="form-control-select">
+            <option value="">তালিকা লোড হচ্ছে...</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="sub-source-url">তথ্যের উৎস লিঙ্ক (গেজেট / সরকারি পোর্টাল / সংবাদের লিঙ্ক) *</label>
+          <input type="url" id="sub-source-url" class="form-control-input" placeholder="https://..." required>
+          <div class="form-hint">লিঙ্কটি সরাসরি কোনো সরকারি আদেশ বা নির্ভরযোগ্য সংবাদ সংস্থার হতে হবে।</div>
+        </div>
+
+        <div class="form-group">
+          <label for="sub-title">নথির শিরোনাম বা খবরের শিরোনাম *</label>
+          <input type="text" id="sub-title" class="form-control-input" placeholder="উদাহরণ: হাওড়ার নিকাশি প্রকল্পে ৪,৭০২ কোটি টাকার অনুমোদন" required>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+          <div class="form-group">
+            <label for="sub-event-date">বিজ্ঞপ্তি বা ঘটনার তারিখ</label>
+            <input type="date" id="sub-event-date" class="form-control-input">
+          </div>
+          <div class="form-group">
+            <label for="sub-district">সংশ্লিষ্ট জেলা (প্রযোজ্য ক্ষেত্রে)</label>
+            <select id="sub-district" class="form-control-select">
+              <option value="">সমগ্র রাজ্য / একাধিক জেলা</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="sub-explanation">বিস্তারিত বিবরণ ও তথ্যের তাৎপর্য *</label>
+          <textarea id="sub-explanation" class="form-control-textarea" rows="4" placeholder="এই তথ্যের ফলে প্রতিশ্রুতি বা প্রকল্পের অগ্রগতিতে কী পরিবর্তন হয়েছে তা সংক্ষেপে লিখুন..." required></textarea>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+          <div class="form-group">
+            <label for="sub-name">আপনার নাম (ঐচ্ছিক)</label>
+            <input type="text" id="sub-name" class="form-control-input" placeholder="যেমন: সুবীর মুখোপাধ্যায়">
+          </div>
+          <div class="form-group">
+            <label for="sub-email">আপনার ইমেইল (ঐচ্ছিক, যোগাযোগের জন্য)</label>
+            <input type="email" id="sub-email" class="form-control-input" placeholder="name@domain.com">
+          </div>
+        </div>
+
+        <div id="submit-alert" style="display:none; padding:14px; border-radius:6px; margin-bottom:20px; font-size:14px;"></div>
+
+        <button type="submit" id="submit-btn" class="form-submit-btn" style="width:100%;">
+          পর্যালোচনার জন্য তথ্য জমা দিন →
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" style="margin-top:60px;">
+    <div class="footer-inner">
+      <div class="footer-disclaimer">
+        <strong>বিকশিত বাংলা ড্যাশবোর্ড — Viksit Bengal Dashboard</strong><br>
+        এই প্ল্যাটফর্ম সম্পূর্ণ নিরপেক্ষ এবং প্রমাণনির্ভর। কোনোপ্রকার অসত্য বা রাজনৈতিক বক্তব্য গ্রহণযোগ্য নয়।
+      </div>
+      <div class="footer-bottom">
+        <a href="../submit.html" style="color:var(--saffron);">English</a> | <a href="submit.html" style="color:var(--saffron);">বাংলা</a> | <a href="methodology.html" style="color:var(--ink-light);">পদ্ধতি ও মানদণ্ড</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let promisesList = [];
+    let projectsList = [];
+
+    fetch('/api/promises')
+      .then(r => r.json())
+      .then(data => {
+        promisesList = data;
+        populateTargetOptions();
+      });
+
+    fetch('/api/projects')
+      .then(r => r.json())
+      .then(data => {
+        projectsList = data;
+      });
+
+    fetch('/api/districts')
+      .then(r => r.json())
+      .then(districts => {
+        const select = document.getElementById('sub-district');
+        districts.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d.id;
+          opt.textContent = `${d.name_bn} (${d.name_en})`;
+          select.appendChild(opt);
+        });
+      });
+
+    function handleTargetTypeChange() {
+      populateTargetOptions();
+    }
+
+    function populateTargetOptions() {
+      const type = document.getElementById('sub-target-type').value;
+      const targetGroup = document.getElementById('target-id-group');
+      const targetSelect = document.getElementById('sub-target-id');
+      targetSelect.innerHTML = '';
+
+      if (type === 'promise') {
+        targetGroup.style.display = 'block';
+        const defaultOpt = document.createElement('option');
+        defaultOpt.value = '';
+        defaultOpt.textContent = '-- নির্দিষ্ট প্রতিশ্রুতি নির্বাচন করুন --';
+        targetSelect.appendChild(defaultOpt);
+
+        promisesList.slice(0, 100).forEach(p => {
+          const opt = document.createElement('option');
+          opt.value = p.id;
+          opt.textContent = `#${p.number || p.id} [${p.category}] ${(p.text_bn || p.text_en).substring(0, 75)}...`;
+          targetSelect.appendChild(opt);
+        });
+      } else if (type === 'project') {
+        targetGroup.style.display = 'block';
+        const defaultOpt = document.createElement('option');
+        defaultOpt.value = '';
+        defaultOpt.textContent = '-- পরিকাঠামো প্রকল্প নির্বাচন করুন --';
+        targetSelect.appendChild(defaultOpt);
+
+        projectsList.forEach(p => {
+          const opt = document.createElement('option');
+          opt.value = p.id;
+          opt.textContent = `${p.name_bn || p.name_en} (${p.sector})`;
+          targetSelect.appendChild(opt);
+        });
+      } else {
+        targetGroup.style.display = 'none';
+      }
+    }
+
+    async function handleEvidenceSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      const alert = document.getElementById('submit-alert');
+      btn.disabled = true;
+      btn.textContent = 'তথ্য প্রেরিত হচ্ছে...';
+      alert.style.display = 'none';
+
+      const payload = {
+        target_type: document.getElementById('sub-target-type').value,
+        target_id: document.getElementById('sub-target-id').value || null,
+        source_url: document.getElementById('sub-source-url').value,
+        title: document.getElementById('sub-title').value,
+        event_date: document.getElementById('sub-event-date').value || null,
+        district_id: document.getElementById('sub-district').value || null,
+        explanation: document.getElementById('sub-explanation').value,
+        submitter_name: document.getElementById('sub-name').value || 'নাগরিক',
+        submitter_email: document.getElementById('sub-email').value || ''
+      };
+
+      try {
+        const res = await fetch('/api/evidence/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+
+        if (res.ok && data.success) {
+          alert.style.display = 'block';
+          alert.style.background = 'var(--green-pale)';
+          alert.style.color = 'var(--green)';
+          alert.style.border = '1px solid var(--green)';
+          alert.innerHTML = `<strong>ধন্যবাদ!</strong> আপনার তথ্য পর্যালোচনা সারিতে নথিভুক্ত হয়েছে। <br><small>রেফারেন্স আইডি: <code>${data.submissionId}</code></small>`;
+          document.getElementById('evidence-form').reset();
+        } else {
+          throw new Error(data.error || 'তথ্য গ্রহণ করা যায়নি');
+        }
+      } catch (err) {
+        alert.style.display = 'block';
+        alert.style.background = 'var(--red-pale)';
+        alert.style.color = 'var(--red)';
+        alert.style.border = '1px solid var(--red)';
+        alert.textContent = 'ত্রুটি: ' + err.message;
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'পর্যালোচনার জন্য তথ্য জমা দিন →';
+      }
+    }
+  </script>
+</body>
+</html>

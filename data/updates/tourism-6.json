@@ -1,0 +1,39 @@
+{
+  "seo": {
+    "title": "Kolkata Riverfront & Heritage Tourism Updates | WB Tracker",
+    "description": "Track the development of Kolkata riverfront, Hooghly water metro, and heritage tourism initiatives in West Bengal.",
+    "keywords": "kolkata riverfront, hooghly water metro, unesco living city, heritage tourism, wb tracker"
+  },
+  "updates": [
+    {
+      "date": "2026-09-05",
+      "title_en": "CM Unveils New Tourism Logo & ₹500 Cr Plan; Announces Hooghly Water Metro",
+      "title_bn": "রাজ্যের নতুন পর্যটন লোগো ও ৫০০ কোটি টাকার পরিকল্পনা প্রকাশ; হুগলিতে ওয়াটার মেট্রোর ঘোষণা",
+      "sources": [
+        {
+          "url": "https://www.telegraphindia.com/west-bengal/chief-minister-suvendu-adhikari-unveils-new-tourism-logo-highlights-infrastructure-development-prnt/cid/2178413",
+          "name": "The Telegraph · September 05, 2026"
+        }
+      ],
+      "note_en": "Chief Minister Suvendu Adhikari unveiled a new state tourism logo and tagline ('Where India Feels Different') along with a ₹500 crore budget roadmap for FY 2026–27. Key plans include launching a water metro on the River Hooghly, upgrading state tourist lodges, and procuring cruise vessels for the Sundarbans and Ganga Sagar.\n\nNo formal government order or detailed project report has been notified yet — tracking departmental launch announcements.",
+      "note_bn": "মুখ্যমন্ত্রী শুভেন্দু অধিকারী রাজ্যের নতুন পর্যটন লোগো ও ট্যাগলাইন ('Where India Feels Different') এবং ২০২৬-২৭ অর্থবর্ষের জন্য ৫০০ কোটি টাকার বাজেট রূপরেখা প্রকাশ করেন। এর মধ্যে হুগলি নদীতে ওয়াটার মেট্রো চালু, সরকারি পর্যটন লজগুলির আধুনিকীকরণ এবং সুন্দরবন ও গঙ্গাসাগরে ক্রুজ ভেসেল সংগ্রহের পরিকল্পনা রয়েছে।\n\nএখনও কোনো সরকারি বিজ্ঞপ্তি বা বিস্তারিত ডিপিআর প্রকাশিত হয়নি — বিভাগীয় ঘোষণার অগ্রগতি পর্যবেক্ষণ করা হচ্ছে।",
+      "counterEvidence": [
+        {
+          "label": "Debatable",
+          "label_en": "Debatable",
+          "label_bn": "বিতর্কিত",
+          "text": "The promotional video released during the launch drew sharp backlash for showcasing foreign landmarks like the Eiffel Tower and Egyptian Pyramids while omitting Bengal's own destinations. Tourism Minister Shankar Ghosh attributed the footage to a 'technical glitch' and stated the campaign video was being revised.",
+          "text_en": "The promotional video released during the launch drew sharp backlash for showcasing foreign landmarks like the Eiffel Tower and Egyptian Pyramids while omitting Bengal's own destinations. Tourism Minister Shankar Ghosh attributed the footage to a 'technical glitch' and stated the campaign video was being revised.",
+          "text_bn": "উদ্বোধনী অনুষ্ঠানে প্রদর্শিত প্রচারমূলক ভিডিওতে বাংলার পর্যটনস্থলের পরিবর্তে আইফেল টাওয়ার ও মিশরীয় পিরামিডের মতো বিদেশি স্থাপত্য দেখানোর কারণে তীব্র বিতর্ক তৈরি হয়। পর্যটন মন্ত্রী শঙ্কর ঘোষ একে 'প্রযুক্তিগত ত্রুটি' বলে উল্লেখ করেন এবং প্রচার ভিডিওটি সংশোধন করা হচ্ছে বলে জানান।",
+          "sources": [
+            {
+              "url": "https://www.telegraphindia.com/west-bengal/pyramids-eiffel-tower-bengals-tourism-promo-takes-you-places-and-away-from-state-prnt/cid/2178653",
+              "name": "The Telegraph · September 07, 2026"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "counterEvidence": []
+}

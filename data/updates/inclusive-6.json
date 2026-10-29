@@ -1,0 +1,65 @@
+{
+  "updates": [
+    {
+      "note_en": "Chief Minister Suvendu Adhikari announced a ₹1,200 crore state budget allocation for tribal welfare, pledging a robust development plan for Junglemahal's tribal community. New welfare schemes aligned with central initiatives are scheduled to launch in August 2026, including benefits for tribal women under the Annapurnar Yojana.",
+      "note_bn": "মুখ্যমন্ত্রী শুভেন্দু অধিকারী জঙ্গলমহলের আদিবাসী সম্প্রদায়ের জন্য একটি শক্তিশালী উন্নয়ন পরিকল্পনা রূপায়ণের প্রতিশ্রুতি দিয়ে আদিবাসী কল্যাণে ১,২০০ কোটি টাকার রাষ্ট্রীয় বাজেট বরাদ্দের কথা ঘোষণা করেছেন। আগামী ২০২৬ সালের আগস্ট মাসে কেন্দ্রীয় উদ্যোগের সাথে সামঞ্জস্যপূর্ণ নতুন কল্যাণমূলক প্রকল্প চালু হওয়ার কথা রয়েছে, যার অধীনে অন্নপূর্ণা যোজনার আওতায় আদিবাসী মহিলারাও লাভবান হবেন।",
+      "sources": [
+        {
+          "url": "https://economictimes.indiatimes.com/news/india/suvendu-adhikari-unveils-tribal-welfare-road-map/articleshow/132100482.cms",
+          "name": "Economic Times · July 01, 2026"
+        }
+      ]
+    },
+    {
+      "note_en": "On June 29, 2026, the West Bengal Assembly passed two crucial Bills to recast the state's OBC reservation framework by voice vote. The legislation paves the way to scrap the OBC list prepared during the previous TMC regime, which BJP legislators alleged was biased to appease minority vote banks by including a large number of Muslim communities at the cost of Hindu communities. The amendments restore the structure introduced by the Left Front government, recognizing 66 communities as OBCs and reducing the state service quota from 17% to 7%. The new laws also empower the state government to determine reservation percentages (not exceeding 50% overall) and classify communities based on backwardness.",
+      "note_bn": "২৯ জুন, ২০২৬ তারিখে পশ্চিমবঙ্গ বিধানসভায় ধ্বনিভোটে রাজ্যের ওবিসি (OBC) সংরক্ষণ কাঠামো পুনর্গঠনের জন্য দুটি গুরুত্বপূর্ণ বিল পাস হয়েছে। এই আইন পূর্ববর্তী তৃণমূল কংগ্রেস সরকারের তৈরি ওবিসি তালিকা বাতিলের পথ প্রশস্ত করেছে। বিজেপি বিধায়কদের অভিযোগ, পূর্ববর্তী সরকার সংখ্যালঘু ভোটব্যাঙ্ক তুষ্ট করার জন্য হিন্দু সম্প্রদায়ের মূল্যে বিপুল সংখ্যক মুসলিম সম্প্রদায়কে অন্তর্ভুক্ত করে একটি পক্ষপাতদুষ্ট তালিকা তৈরি করেছিল। নতুন সংশোধনী বামফ্রন্ট সরকারের কাঠামো ফিরিয়ে এনেছে, যেখানে ৬৬টি সম্প্রদায়কে ওবিসি হিসেবে স্বীকৃতি দেওয়া হয়েছে এবং কোটা ১৭% থেকে কমিয়ে ৭% করা হয়েছে। আইনটি রাজ্য সরকারকে সামগ্রিক সংরক্ষণের হার (সর্বোচ্চ ৫০%) নির্ধারণ এবং অনগ্রসরতার ভিত্তিতে সম্প্রদায়গুলিকে শ্রেণিবদ্ধ করার ক্ষমতা দেয়।",
+      "additionalNotes": [
+        {
+          "label_en": "TMC Walkout",
+          "label_bn": "তৃণমূলের ওয়াকআউট",
+          "text_en": "The Bills were passed after a section of Trinamool Congress (TMC) MLAs, led by Ritabrata Banerjee, staged a walkout from the Assembly in protest against the restructuring of the reservation framework.",
+          "text_bn": "সংরক্ষণ কাঠামো পুনর্গঠনের প্রতিবাদে রিতব্রত বন্দ্যোপাধ্যায়ের নেতৃত্বাধীন তৃণমূল কংগ্রেস (TMC) বিধায়কদের একাংশ বিধানসভা থেকে ওয়াকআউট করার পর বিল দুটি পাস হয়।"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://morungexpress.com/west-bengal-assembly-passes-two-crucial-obc-reservation-bills-scraps-tmc-era-list",
+          "name": "Morung Express · IANS · June 29, 2026"
+        },
+        {
+          "url": "https://www.deccanherald.com/amp/story/india/west-bengal/suvendu-govt-in-action-bengal-passes-bill-to-detain-persons-for-12-months-sans-trial-for-anti-social-activities-4056467",
+          "name": "Deccan Herald · June 29, 2026"
+        }
+      ]
+    },
+    {
+      "sources": [
+        {
+          "url": "https://www.newsonair.gov.in/west-bengal-government-notifies-list-of-66-obc-classes-following-calcutta-high-court-order/",
+          "name": "News On AIR · May 20, 2026"
+        },
+        {
+          "url": "https://anagrasarkalyan.gov.in/download/eyJpdiI6ImNvWDBRVHJxei9vcFUxTUNLRURUREE9PSIsInZhbHVlIjoiNXZvaG9ObE4zVEhrS2RlVnh4aTJMVHE1T2RJc3crd1NyTUdidE1JYk1aNFY2QlVNVjdrT053S3dSeFlwcFBCN3ZHRHc5TVZPcDkySmxPeDA1RnExc2NJZjZBajY5NzROcktIVlpycGtGNkU9IiwibWFjIjoiNWJjYTdjMmZmMDVlMWI0NDc3MWE4MDlmMTU4N2FmMGViMjNmNDNlYWMyMTQzZTZmZTM3MTgxNmRlMTlhNjU0YiIsInRhZyI6IiJ9",
+          "name": "Backward Classes Welfare Department · Notification No. 945-BCW/MR-23/2026 · May 18, 2026"
+        }
+      ],
+      "additionalNotes": [
+        {
+          "sources": [
+            {
+              "url": "https://indianexpress.com/article/political-pulse/muslim-groups-excluded-bengal-obc-quota-down-suvendu-mamata-list-10699919/",
+              "name": "Indian Express · May 21, 2026"
+            }
+          ],
+          "label_en": "Criticism",
+          "label_bn": "সমালোচনা",
+          "text_en": "Opposition parties and Muslim groups strongly criticized the decision to scrap the post-2010 OBC sub-categories. They argued that reducing the total OBC quota from 17% to 7% structurally deprives numerous communities of their reservation benefits.",
+          "text_bn": "বিরোধী দল এবং মুসলিম সংগঠনগুলি ২০১০-পরবর্তী ওবিসি (OBC) উপ-বিভাগগুলি বাতিল করার সিদ্ধান্তের তীব্র সমালোচনা করেছে। তারা যুক্তি দিয়েছে যে সামগ্রিক ওবিসি কোটা ১৭% থেকে কমিয়ে ৭% করার ফলে কাঠামোগতভাবে বহু সম্প্রদায় তাদের সংরক্ষণের সুবিধা থেকে বঞ্চিত হবে।"
+        }
+      ],
+      "note_en": "On May 18, 2026, the Backward Classes Welfare Department issued Notification No. 945-BCW/MR-23/2026 implementing the Calcutta High Court's May 2024 order by restricting eligibility to 66 pre-2010 OBC classes under a unified 7% reservation for state services and posts. This officially withdraws the earlier 17% quota structure comprising Category A (10%) and Category B (7%) sub-categories, reverting the state's reservation regime to the pre-2010 framework.",
+      "note_bn": "২০২৬ সালের ১৮ মে, অনগ্রসর শ্রেণী কল্যাণ দপ্তর বিজ্ঞপ্তি নম্বর 945-BCW/MR-23/2026 জারি করেছে। এর মাধ্যমে ২০২৪ সালের মে মাসে দেওয়া কলকাতা হাইকোর্টের রায় কার্যকর করে রাজ্যের চাকুরিতে ভর্তির ক্ষেত্রে ওবিসি (OBC) যোগ্যতা কেবল ২০১০ সালের পূর্বের ৬৬টি ওবিসি শ্রেণীর মধ্যে সীমাবদ্ধ করা হয়েছে এবং ওবিসি সংরক্ষণ ৭% নির্ধারণ করা হয়েছে। এই পদক্ষেপের ফলে ক্যাটাগরি এ (১০%) এবং ক্যাটাগরি বি (৭%) উপ-বিভাগ সম্বলিত পূর্ববর্তী ১৭% কোটা কাঠামো বাতিল হয়ে গেল এবং রাজ্যের সংরক্ষণ ব্যবস্থা আবার ২০১০ সালের আগের কাঠামোয় ফিরে গেল।"
+    }
+  ],
+  "counterEvidence": []
+}

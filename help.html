@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Bridge — WB Civic Navigation Toolkit | Viksit Bengal Dashboard</title>
+    <meta name="description"
+        content="Instantly find the right West Bengal government grievance channel, verified .gov.in portals, emergency helplines, and 1-click AI civic navigation prompts.">
+    <meta name="keywords"
+        content="west bengal government grievance, wb citizen help portal, support bridge west bengal, bangla sahayata kendra bsk, swasthya sathi helpline, banglarbhumi mutation, edistrict wb 2.0">
+    <meta name="author" content="Viksit Bengal Dashboard">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://tracker.wbupdates.com/help.html">
+    <link rel="alternate" hreflang="en" href="https://tracker.wbupdates.com/help.html">
+    <link rel="alternate" hreflang="bn" href="https://tracker.wbupdates.com/bn/help.html">
+    <link rel="alternate" hreflang="x-default" href="https://tracker.wbupdates.com/help.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tracker.wbupdates.com/help.html">
+    <meta property="og:title" content="Support Bridge — WB Civic Navigation Toolkit | Viksit Bengal Dashboard">
+    <meta property="og:description"
+        content="Instantly find the right West Bengal government channel for your problem. Verified .gov.in portals, direct helplines, and 1-click AI civic navigation.">
+    <meta property="og:image" content="https://tracker.wbupdates.com/og-help.webp">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://tracker.wbupdates.com/help.html">
+    <meta name="twitter:title" content="Support Bridge — WB Civic Navigation Toolkit | Viksit Bengal Dashboard">
+    <meta name="twitter:description"
+        content="Instantly find the right West Bengal government channel for your problem. Verified .gov.in portals, direct helplines, and 1-click AI civic navigation.">
+    <meta name="twitter:image" content="https://tracker.wbupdates.com/og-help.webp">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Bengali:wght@400;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Bengali:wght@400;700&display=swap"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Bengali:wght@400;700&display=swap">
+    </noscript>
+
+    <!-- Global Stylesheet -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <style>
+        body {
+            background: var(--paper);
+        }
+
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-ui);
+            font-size: 11px;
+            color: var(--ink-faint);
+            text-decoration: none;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .back-home:hover {
+            color: var(--saffron);
+            transform: translateX(-4px);
+        }
+
+        .lang-toggle-simple {
+            font-family: 'Noto Sans Bengali', var(--font-ui);
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--saffron-dark);
+            text-decoration: none;
+            padding: 3px 12px;
+            border: 1px solid var(--saffron-mid);
+            border-radius: 4px;
+            background: var(--saffron-pale);
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+
+        .lang-toggle-simple:hover {
+            background: var(--saffron);
+            color: #fff;
+            border-color: var(--saffron);
+            text-decoration: none;
+        }
+
+        /* ── Disclaimer Box ── */
+        .disclaimer-box {
+            background: var(--saffron-pale);
+            border: 1px solid var(--saffron-mid);
+            padding: 20px 24px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 40px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .disclaimer-icon {
+            font-size: 24px;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+
+        .disclaimer-text {
+            font-family: var(--font-sans);
+            font-size: 16px;
+            color: var(--saffron-dark);
+            line-height: 1.55;
+        }
+
+        /* ── Section Header ── */
+        .pw-section-header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            border-top: 2px solid var(--ink);
+            border-bottom: 1px solid var(--rule-light);
+            padding: 10px 0;
+            margin-top: 48px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .pw-section-title {
+            font-family: var(--font-display);
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--ink);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pw-section-count {
+            font-family: var(--font-ui);
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--ink-faint);
+        }
+
+        /* ── Category Filter Bar ── */
+        .archive-filter-bar {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        .filter-chip {
+            font-family: var(--font-ui);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid var(--rule);
+            background: var(--surface);
+            color: var(--ink-light);
+            cursor: pointer;
+            transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+            user-select: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .filter-chip:hover {
+            border-color: var(--saffron-mid);
+            color: var(--saffron-dark);
+            background: var(--saffron-pale);
+        }
+
+        .filter-chip.active {
+            background: var(--saffron);
+            border-color: var(--saffron);
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(184, 77, 8, 0.22);
+        }
+
+        /* ── Helplines Grid ── */
+        .helplines-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 14px;
+            margin-bottom: 32px;
+        }
+
+        .helpline-item {
+            background: var(--surface);
+            border: 1px solid var(--rule-light);
+            border-radius: var(--radius-sm);
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+        }
+
+        .helpline-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--rule);
+            text-decoration: none;
+        }
+
+        .hl-badge {
+            font-family: var(--font-ui);
+            font-size: 8.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 2px 6px;
+            border-radius: 2px;
+            background: var(--paper-warm);
+            color: var(--ink-faint);
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .hl-number {
+            font-family: var(--font-mono);
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--ink);
+            letter-spacing: -0.02em;
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .hl-name {
+            font-family: var(--font-ui);
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--ink-mid);
+            line-height: 1.35;
+        }
+
+        .hl-sub {
+            font-family: var(--font-sans);
+            font-size: 12px;
+            color: var(--ink-faint);
+            font-style: italic;
+            margin-top: 2px;
+        }
+
+        /* ── Prompt Studio Container ── */
+        .prompt-card {
+            background: var(--surface);
+            border: 1px solid var(--rule-light);
+            border-radius: var(--radius-md);
+            padding: 26px;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 40px;
+        }
+
+        .prompt-terminal {
+            background: #14110F;
+            border: 1px solid #2B241F;
+            border-radius: var(--radius-sm);
+            padding: 20px;
+            margin: 16px 0 20px 0;
+            color: #E6DFD5;
+        }
+
+        .prompt-terminal-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            font-family: var(--font-mono);
+            font-size: 9.5px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--saffron-mid);
+        }
+
+        .prompt-terminal-body {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            line-height: 1.65;
+            color: #D1C7BA;
+            max-height: 150px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+            padding-right: 6px;
+        }
+
+        .prompt-terminal-body::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .prompt-terminal-body::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+
+        .studio-actions {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        .btn-copy-main {
+            font-family: var(--font-ui);
+            font-size: 11.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            background: var(--saffron);
+            color: #ffffff;
+            border: none;
+            padding: 12px 26px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(232, 98, 10, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .btn-copy-main:hover {
+            background: var(--saffron-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(232, 98, 10, 0.4);
+        }
+
+        .btn-copy-main:active {
+            transform: scale(0.98);
+        }
+
+        /* ── AI Launchers Grid ── */
+        .ai-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin-top: 14px;
+        }
+
+        .ai-item {
+            background: var(--paper);
+            border: 1px solid var(--rule);
+            border-radius: var(--radius-sm);
+            padding: 16px 12px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--ink);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            cursor: pointer;
+        }
+
+        .ai-item:hover {
+            background: var(--surface);
+            border-color: var(--saffron);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            text-decoration: none;
+        }
+
+        .ai-badge {
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            background: var(--saffron);
+            color: #fff;
+            font-family: var(--font-ui);
+            font-size: 7.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 2px 6px;
+            border-radius: 0 var(--radius-sm) 0 4px;
+        }
+
+        .ai-icon {
+            font-size: 22px;
+            margin-bottom: 2px;
+        }
+
+        .ai-title {
+            font-family: var(--font-ui);
+            font-size: 12.5px;
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        .ai-desc {
+            font-family: var(--font-mono);
+            font-size: 9px;
+            color: var(--ink-faint);
+        }
+
+        /* ── Search Input ── */
+        .archive-search-container {
+            width: 100%;
+            margin-bottom: 24px;
+        }
+
+        .search-input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: var(--surface);
+            border: 1px solid var(--rule);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s ease;
+        }
+
+        .search-input-wrapper:focus-within {
+            border-color: var(--saffron);
+            box-shadow: 0 0 0 3px rgba(232, 98, 10, 0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 14px;
+            color: var(--ink-faint);
+            pointer-events: none;
+        }
+
+        #dir-search-input {
+            width: 100%;
+            padding: 12px 16px 12px 42px;
+            border: none;
+            background: transparent;
+            font-family: var(--font-sans);
+            font-size: 16px;
+            color: var(--ink);
+            outline: none;
+        }
+
+        /* ── Directory Cards Grid ── */
+        .directory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+
+        .dir-card {
+            background: var(--surface);
+            border: 1px solid var(--rule-light);
+            border-radius: var(--radius-md);
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 12px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .dir-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--rule);
+        }
+
+        .dir-card.hidden {
+            display: none !important;
+        }
+
+        .dir-card-head {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 8px;
+        }
+
+        .dir-title {
+            font-family: var(--font-ui);
+            font-size: 14.5px;
+            font-weight: 700;
+            color: var(--ink);
+            line-height: 1.25;
+        }
+
+        .dir-sub {
+            font-family: var(--font-sans);
+            font-size: 13px;
+            color: var(--ink-faint);
+            font-style: italic;
+            margin-top: 2px;
+            display: block;
+        }
+
+        .verified-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: var(--green-pale);
+            color: var(--green);
+            border: 1px solid rgba(22, 163, 74, 0.25);
+            font-family: var(--font-mono);
+            font-size: 8.5px;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 2px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .dir-body {
+            font-family: var(--font-sans);
+            font-size: 14.5px;
+            color: var(--ink-mid);
+            line-height: 1.5;
+        }
+
+        .dir-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid var(--rule-light);
+            padding-top: 10px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .archive-source-link {
+            font-family: var(--font-mono);
+            font-size: 9px;
+            font-weight: 500;
+            color: var(--ink-blue);
+            text-decoration: none;
+            background: rgba(0, 71, 171, 0.03);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid rgba(0, 71, 171, 0.12);
+            transition: all 0.15s ease;
+        }
+
+        .archive-source-link:hover {
+            background: rgba(0, 71, 171, 0.08);
+            border-color: var(--ink-blue);
+            color: #002366;
+        }
+
+        .dir-call-link {
+            font-family: var(--font-mono);
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--ink);
+            background: var(--paper-warm);
+            border: 1px solid var(--rule);
+            padding: 3px 8px;
+            border-radius: 3px;
+            text-decoration: none;
+            transition: all 0.15s ease;
+        }
+
+        .dir-call-link:hover {
+            background: var(--saffron-pale);
+            border-color: var(--saffron);
+            color: var(--saffron-dark);
+        }
+
+        /* ── Escalation Cards ── */
+        .pathway-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+
+        .pathway-card {
+            background: var(--surface);
+            border: 1px solid var(--rule-light);
+            border-radius: var(--radius-sm);
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .pathway-step {
+            font-family: var(--font-mono);
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--saffron);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .pathway-title {
+            font-family: var(--font-display);
+            font-size: 17px;
+            font-weight: 800;
+            color: var(--ink);
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .pathway-body {
+            font-family: var(--font-sans);
+            font-size: 15px;
+            color: var(--ink-mid);
+            line-height: 1.6;
+        }
+
+        /* ── Accordion System (FAQ & Legal) ── */
+        .acc-wrap {
+            border: 1px solid var(--rule-light);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            background: var(--surface);
+            margin-bottom: 32px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .acc-item {
+            border-bottom: 1px solid var(--rule-light);
+        }
+
+        .acc-item:last-child {
+            border-bottom: none;
+        }
+
+        .acc-trigger {
+            width: 100%;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            user-select: none;
+            gap: 12px;
+            transition: background 0.15s ease;
+        }
+
+        .acc-trigger:hover {
+            background: var(--paper-warm);
+        }
+
+        .acc-title {
+            font-family: var(--font-sans);
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--ink);
+            line-height: 1.35;
+        }
+
+        .acc-icon {
+            font-size: 14px;
+            color: var(--saffron);
+            font-weight: 700;
+            transition: transform 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .acc-item.open .acc-icon {
+            transform: rotate(45deg);
+        }
+
+        .acc-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.2s ease;
+            padding: 0 20px;
+            background: var(--surface-raised);
+        }
+
+        .acc-item.open .acc-content {
+            max-height: 800px;
+            padding: 0 20px 18px;
+        }
+
+        .acc-text {
+            font-family: var(--font-sans);
+            font-size: 16px;
+            color: var(--ink-mid);
+            line-height: 1.7;
+        }
+
+        .legal-list {
+            padding-left: 1.2rem;
+            margin: 0;
+        }
+
+        .legal-list li {
+            font-family: var(--font-sans);
+            font-size: 14.5px;
+            color: var(--ink-mid);
+            margin-bottom: 8px;
+            line-height: 1.65;
+        }
+
+        .legal-list strong {
+            color: var(--ink);
+        }
+
+        /* ── Toast ── */
+        #toast-notice {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #1A1208;
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 40px;
+            font-family: var(--font-ui);
+            font-size: 12.5px;
+            font-weight: 600;
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 999999;
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            pointer-events: none;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        #toast-notice.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        @media (max-width: 600px) {
+            .directory-grid {
+                grid-template-columns: 1fr;
+            }
+            .helplines-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+  <!-- MASTHEAD BAR -->
+  <header class="masthead">
+    <div class="masthead-bar">
+      <span><span class="live-tag">CIVIC DATA</span> &nbsp; Viksit Bengal Dashboard — বিকশিত বাংলা ড্যাশবোর্ড</span>
+      <div class="masthead-date-lang">
+        <span id="today-date">29 October 2026</span>
+        <a href="bn/help.html" class="lang-toggle" aria-label="বাংলায় পড়ুন" title="Read in Bengali">বাংলা</a>
+      </div>
+    </div>
+    <div class="masthead-main">
+      <div class="masthead-logo">
+        <img src="wb-map.webp" class="wb-map-icon" alt="West Bengal Map Logo" width="90" height="140">
+      </div>
+      <div class="masthead-text">
+        <h1>Viksit Bengal<br><span>Dashboard</span></h1>
+        <p class="masthead-sub">Tracking Bengal's journey from commitments to outcomes.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- UNIFIED CIVIC NAVIGATION -->
+  <nav class="civic-nav">
+    <div class="civic-nav-inner">
+      <div class="civic-nav-links">
+        <a href="index.html" class="civic-nav-item">🏠 Home</a>
+        <a href="economy.html" class="civic-nav-item">📈 Economy</a>
+        <a href="society.html" class="civic-nav-item">👥 Society</a>
+        <a href="index.html#promises" class="civic-nav-item">📋 Promises</a>
+        <a href="districts.html" class="civic-nav-item">🗺️ Districts</a>
+        <a href="projects.html" class="civic-nav-item">🏗️ Projects</a>
+        <a href="latest.html" class="civic-nav-item">📰 Updates</a>
+        <a href="methodology.html" class="civic-nav-item">⚖️ Methodology</a>
+      </div>
+      <a href="submit.html" class="civic-nav-btn-submit">✏ Submit Evidence</a>
+    </div>
+  </nav>
+
+  <div class="archive-container">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin:16px 0 24px;">
+      <a href="index.html" class="archive-source-link">← Back to Dashboard</a>
+      <a href="faq.html" class="archive-source-link">Frequently Asked Questions →</a>
+    </div>
+
+        <!-- HEADER -->
+        <header class="archive-header">
+            <h1 class="archive-title">Support Bridge</h1>
+            <p style="font-family: var(--font-sans); font-size: 16.5px; color: var(--ink-faint); font-style: italic; margin-bottom: 8px;">
+                West Bengal Citizen Grievance & Civic Navigation Toolkit
+            </p>
+        </header>
+
+        <!-- EDITORIAL CIVIC NOTICE -->
+        <div class="disclaimer-box">
+            <span class="disclaimer-icon">🛡️</span>
+            <div class="disclaimer-text">
+                <strong>Civic Advisory & Safety Notice:</strong> This is a 100% independent public tool designed to help citizens find the correct West Bengal government departments and verified <code>.gov.in</code> grievance portals. It is not an official government service and does not resolve complaints directly. Always verify contact numbers on official government portals.
+            </div>
+        </div>
+
+        <!-- SECTION 1: EMERGENCY HELPLINES -->
+        <div class="pw-section-header">
+            <div class="pw-section-title">
+                <span>📞</span> Emergency & Priority Helplines
+            </div>
+            <div class="pw-section-count">Toll-Free & Direct Call</div>
+        </div>
+
+        <div class="helplines-grid">
+            <a href="tel:112" class="helpline-item">
+                <div>
+                    <span class="hl-badge">24x7 Emergency</span>
+                    <span class="hl-number">112</span>
+                    <div class="hl-name">Emergency Response</div>
+                    <div class="hl-sub">Police, Ambulance, Fire</div>
+                </div>
+            </a>
+            <a href="tel:1930" class="helpline-item">
+                <div>
+                    <span class="hl-badge">Financial Fraud</span>
+                    <span class="hl-number">1930</span>
+                    <div class="hl-name">Cyber Crime Helpline</div>
+                    <div class="hl-sub">Immediate Bank Freeze</div>
+                </div>
+            </a>
+            <a href="tel:1915" class="helpline-item">
+                <div>
+                    <span class="hl-badge">Consumer Rights</span>
+                    <span class="hl-number">1915</span>
+                    <div class="hl-name">National Consumer Helpline</div>
+                    <div class="hl-sub">e-Commerce & Fraud</div>
+                </div>
+            </a>
+            <a href="tel:18003455384" class="helpline-item">
+                <div>
+                    <span class="hl-badge">Health Scheme</span>
+                    <span class="hl-number">1800-345-5384</span>
+                    <div class="hl-name">Swasthya Sathi</div>
+                    <div class="hl-sub">Card & Hospital Issues</div>
+                </div>
+            </a>
+            <a href="tel:1967" class="helpline-item">
+                <div>
+                    <span class="hl-badge">Food & Supplies</span>
+                    <span class="hl-number">1967</span>
+                    <div class="hl-name">Ration Card Helpline</div>
+                    <div class="hl-sub">PDS & Dealer Complaints</div>
+                </div>
+            </a>
+            <a href="tel:18001036000" class="helpline-item">
+                <div>
+                    <span class="hl-badge">Free Assistance</span>
+                    <span class="hl-number">1800-103-6000</span>
+                    <div class="hl-name">Bangla Sahayata Kendra</div>
+                    <div class="hl-sub">3,500+ Centres across WB</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- SECTION 2: AI CIVIC NAVIGATOR -->
+        <div class="pw-section-header">
+            <div class="pw-section-title">
+                <span>🤖</span> AI Civic Navigation Assistant
+            </div>
+            <div class="pw-section-count">1-Click Copy & Launch</div>
+        </div>
+
+        <div class="prompt-card">
+            <div style="font-family: var(--font-ui); font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--saffron); margin-bottom: 6px;">
+                Civic Navigation System Prompt (Live Preview)
+            </div>
+
+            <div class="prompt-terminal">
+                <div class="prompt-terminal-head">
+                    <span id="prompt-head-title">SYSTEM INSTRUCTIONS — WB CIVIC NAVIGATION ASSISTANT</span>
+                    <span>Ready to Copy</span>
+                </div>
+                <div class="prompt-terminal-body" id="prompt-body"></div>
+            </div>
+
+            <div class="studio-actions">
+                <button class="btn-copy-main" onclick="copyPrompt()">
+                    <span>⧉</span> <span>Copy Prompt to Clipboard</span>
+                </button>
+                <span style="font-family: var(--font-sans); font-size: 14px; color: var(--ink-faint); font-style: italic;">
+                    Paste this into any AI chat below as your first message.
+                </span>
+            </div>
+
+            <div style="font-family: var(--font-ui); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-faint); margin-bottom: 8px;">
+                Open Any AI (1-Click Auto-Copy & Launch)
+            </div>
+
+            <div class="ai-grid">
+                <div class="ai-item" onclick="launchAI('https://www.google.com/aimode')">
+                    <span class="ai-badge">LIVE WEB</span>
+                    <span class="ai-icon">🔍</span>
+                    <span class="ai-title">Google AI Mode</span>
+                    <span class="ai-desc">Best for WB Local Info</span>
+                </div>
+                <div class="ai-item" onclick="launchAI('https://grok.com/')">
+                    <span class="ai-badge">REAL-TIME</span>
+                    <span class="ai-icon">𝕏</span>
+                    <span class="ai-title">Grok (xAI)</span>
+                    <span class="ai-desc">Real-time Web Search</span>
+                </div>
+                <div class="ai-item" onclick="launchAI('https://chatgpt.com/')">
+                    <span class="ai-icon">🤖</span>
+                    <span class="ai-title">ChatGPT</span>
+                    <span class="ai-desc">OpenAI Assistant</span>
+                </div>
+                <div class="ai-item" onclick="launchAI('https://gemini.google.com/app')">
+                    <span class="ai-icon">✨</span>
+                    <span class="ai-title">Gemini</span>
+                    <span class="ai-desc">Google DeepMind</span>
+                </div>
+                <div class="ai-item" onclick="launchAI('https://claude.ai/new')">
+                    <span class="ai-icon">🐚</span>
+                    <span class="ai-title">Claude</span>
+                    <span class="ai-desc">Anthropic Analysis</span>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px; padding: 12px 16px; border-radius: 4px; background: var(--red-pale); border: 1px solid #FECACA; border-left: 3px solid var(--red); font-family: var(--font-ui); font-size: 12px; color: #991B1B; line-height: 1.5;">
+                ⚠️ <strong>Caution on AI Phone Numbers:</strong> AI chatbots may hallucinate phone numbers. Always verify contact details on official <code>.gov.in</code> websites before calling or transferring funds.
+            </div>
+        </div>
+
+        <!-- SECTION 3: VERIFIED PORTALS DIRECTORY -->
+        <div class="pw-section-header">
+            <div class="pw-section-title">
+                <span>🏛️</span> Verified Official Government Directory
+            </div>
+            <div class="pw-section-count">15 Verified Portals</div>
+        </div>
+
+        <div class="archive-search-container">
+            <div class="search-input-wrapper">
+                <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" id="dir-search-input" placeholder="Search for departments, services, or schemes (e.g., land, mutation, ration, BSK)..." oninput="filterDirectory(this.value)">
+            </div>
+        </div>
+
+        <div class="archive-filter-bar" id="dir-tabs">
+            <button class="filter-chip active" onclick="filterByTab('all')">All Portals</button>
+            <button class="filter-chip" onclick="filterByTab('grievance')">Grievance & RTI</button>
+            <button class="filter-chip" onclick="filterByTab('land')">Land & Revenue</button>
+            <button class="filter-chip" onclick="filterByTab('health')">Health & Food</button>
+            <button class="filter-chip" onclick="filterByTab('cert')">Certificates & BSK</button>
+            <button class="filter-chip" onclick="filterByTab('police')">Police & Legal</button>
+        </div>
+
+        <div class="directory-grid" id="directory-grid">
+            <!-- Rendered by JS -->
+        </div>
+
+        <!-- SECTION 4: 3-STEP ESCALATION PATHWAY -->
+        <div class="pw-section-header">
+            <div class="pw-section-title">
+                <span>📋</span> 3-Step Civic Resolution Pathway
+            </div>
+            <div class="pw-section-count">Administrative Escalation</div>
+        </div>
+
+        <div class="pathway-grid">
+            <div class="pathway-card">
+                <span class="pathway-step">Step 1 — Local Assistance</span>
+                <h3 class="pathway-title">Bangla Sahayata Kendra (BSK)</h3>
+                <p class="pathway-body">
+                    Visit your local Gram Panchayat or BDO office BSK centre. Over 3,500+ centres across West Bengal provide 100% free offline assistance for all state scheme applications.
+                </p>
+            </div>
+            <div class="pathway-card">
+                <span class="pathway-step">Step 2 — Formal Grievance</span>
+                <h3 class="pathway-title">Official Grievance Portals</h3>
+                <p class="pathway-body">
+                    If an application is stalled, submit a formal written complaint with your reference number on <strong>prdgrievance.wb.gov.in</strong> (State) or <strong>pgportal.gov.in</strong> (Central).
+                </p>
+            </div>
+            <div class="pathway-card">
+                <span class="pathway-step">Step 3 — Legal Escalation</span>
+                <h3 class="pathway-title">Right to Information (RTI)</h3>
+                <p class="pathway-body">
+                    If an official decision is delayed without written cause, file an online RTI on <strong>rtionline.wb.gov.in</strong> with a ₹10 fee to obtain official file movement records.
+                </p>
+            </div>
+        </div>
+
+        <!-- SECTION 5: FAQS -->
+        <div class="pw-section-header">
+            <div class="pw-section-title">
+                <span>❓</span> Frequently Asked Questions
+            </div>
+            <div class="pw-section-count">Civic Guidance</div>
+        </div>
+
+        <div class="acc-wrap" id="faq-wrap">
+            <!-- Rendered by JS -->
+        </div>
+
+        <!-- SECTION 6: LEGAL DISCLAIMER ACCORDION -->
+        <div class="pw-section-header">
+            <div class="pw-section-title">
+                <span>📜</span> Comprehensive Legal Terms & Waiver
+            </div>
+            <div class="pw-section-count">Terms of Usage</div>
+        </div>
+
+        <div class="acc-wrap">
+            <div class="acc-item">
+                <button class="acc-trigger" onclick="toggleAcc(this)">
+                    <span class="acc-title">Full Legal Disclaimer & Absolute Waiver of Liability (Click to Expand)</span>
+                    <span class="acc-icon">+</span>
+                </button>
+                <div class="acc-content">
+                    <div class="acc-text">
+                        <ol class="legal-list">
+                            <li><strong>No Official Status:</strong> This page is strictly an independent civic navigation guide and is not affiliated with, endorsed by, or connected to the Government of West Bengal, Government of India, or any political party.</li>
+                            <li><strong>Third-Party AI Disclaimer:</strong> The AI tools referenced (Google, OpenAI, xAI, Anthropic) are independent commercial platforms. We hold zero liability for AI hallucinations, errors, or guidance provided by external models.</li>
+                            <li><strong>URL Verification:</strong> Government URLs are subject to change without notice. Always confirm that you are on a verified <code>.gov.in</code> or <code>.nic.in</code> domain before submitting personal information.</li>
+                            <li><strong>No Data Collection:</strong> This website does not capture, store, or monetize personal citizen records or private search queries.</li>
+                            <li><strong>No Outcome Guarantee:</strong> We do not guarantee that grievances lodged through linked official portals will result in favorable or timely resolution.</li>
+                            <li><strong>Not Legal Advice:</strong> Content on this page is for informational purposes only and does not constitute formal legal counsel.</li>
+                            <li><strong>Absolute Liability Waiver:</strong> The creator(s) bear zero legal, financial, or moral liability for any outcome resulting from use of this page. Maximum aggregate liability: <strong>₹0.00</strong>.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- TOAST -->
+    <div id="toast-notice">
+        <span style="color:#22C55E;">✓</span>
+        <span id="toast-msg">Prompt copied to clipboard!</span>
+    </div>
+
+    <!-- FOOTER -->
+    <footer style="background: var(--ink); color: rgba(255,255,255,0.6); padding: 36px 20px; text-align: center; font-family: var(--font-ui); font-size: 11px; margin-top: 60px; border-top: 3px solid var(--saffron);">
+        <p style="margin-bottom: 8px; color: #ffffff; font-weight: 600;">
+            WB Accountability Tracker · Support Bridge (Civic Navigation Toolkit)
+        </p>
+        <p style="color: rgba(255,255,255,0.45); margin-bottom: 14px;">
+            100% Independent Public Project · Zero Political Affiliation · Maximum Aggregate Liability ₹0.00
+        </p>
+        <p>
+            <a href="index.html" style="color: var(--saffron-mid); text-decoration: none; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;">
+                ← Return to Dashboard
+            </a>
+        </p>
+    </footer>
+
+    <script>
+        const SYSTEM_PROMPT = `SYSTEM INSTRUCTIONS — WB CIVIC NAVIGATION ASSISTANT
+Opened by: West Bengal Promise Tracker — Support Bridge
+
+
+## WHO YOU ARE:
+
+You are a dedicated civic navigation assistant for citizens of West Bengal, India. You help users understand, navigate, and resolve issues with government services, welfare schemes, administrative procedures, and civic entitlements — identifying the exact jurisdiction, the correct official channel, required documentation, and realistic next steps for their specific situation.
+
+Think and respond like an experienced, knowledgeable, and compassionate civic ombudsman. Ask what you need to ask, search what you need to search, and give real, actionable guidance tailored to the citizen's actual situation.
+
+
+## LANGUAGE:
+
+Match the user's language naturally:
+— If the user writes in Bengali, respond in fluent, natural Bengali. Use English terms only where Bengali equivalents would sound forced (e.g., portal names, technical terms like RTI, OTP, CPGRAMS).
+— If the user writes in English, respond in clear English with Bengali terms where helpful (e.g., নামজারি, পর্চা, দায়েরি রসিদ).
+— If the user writes in a Bengali-English mix (which is very common), mirror that style naturally.
+— Keep the tone warm, respectful, and conversational — like a knowledgeable neighbour helping out, not a government circular.
+
+
+## INTERNET SEARCH:
+
+After understanding the user's problem, search the internet thoroughly before giving guidance. Government portals, administrative rules, procedures, contacts, and schemes change frequently. Do multiple searches as needed — check the relevant reference portals directly to get accurate, current details for the user. Never rely on training data alone for specific information.
+
+If you cannot browse, say so once and continue helping with what you know — but clearly flag anything that needs verification.
+
+Never give a phone number, email, or officer name you have not verified from a live source.
+
+
+## HOW TO HELP
+
+Start by understanding the full picture. Ask as many clarifying questions (only the ones actually necessary for the context) as needed upfront to get the complete context:
+— Specific Problem: What scheme, certificate, service, or administrative dispute is involved?
+— Location & Jurisdiction: District, Sub-division, Block/Panchayat (Rural) or Municipality/Corporation (Urban).
+— Status & Timeline: How long has the issue been pending?
+— Previous Attempts & Reference Numbers: What has already been tried, what offices visited, what application/grievance numbers exist?
+— Desired Outcome: What specific resolution is the user seeking?
+
+Do not artificially limit yourself to one question at a time. Gather what you need like a real guide would.
+
+Once you have enough context, search the internet to find the correct current procedure, required documents, and the right authority — state, central, or both. Use the reference portals below to get specific, accurate details. Then give the user a clear, practical path forward tailored to their situation, starting from where they actually are.
+
+If a previous attempt failed, acknowledge it, ask for any reference number or evidence they have, and move to the appropriate next step.
+
+When recommending a path forward, always prioritize official methods:
+1. Local Free Assistance: Visiting the nearest Bangla Sahayata Kendra (BSK), Gram Panchayat, or BDO/Municipality office.
+2. Formal Online/Offline Grievance: Submitting a written complaint with stamped physical acknowledgment (দায়েরি রসিদ) or filing on official grievance portals (prdgrievance.wb.gov.in / cmo.wb.gov.in / pgportal.gov.in).
+3. Statutory & Legal Escalation: Filing a Right to Information (RTI) application (rtionline.wb.gov.in / rtionline.gov.in) with a ₹10 fee to inspect file movement, appealing to higher appellate officers, or contacting statutory commissions (Consumer Forum 1915, Cyber Crime 1930, Lok Adalat/Legal Aid).
+
+Match the method to what is most effective and realistic for the user's specific situation. Do not suggest informal shortcuts.
+
+
+## CORE RULES:
+
+— On your first response only, briefly mention you are an AI and that specific details like contacts and links should be verified on official portals.
+
+— End any response with specific contacts or links with a short reminder to verify on the official portal.
+
+— Never fabricate contacts. If unverified, say so and point to the relevant portal.
+
+— Citizen Safety: Warn users never to share bank OTPs, PINs, or transfer money to unauthorized individuals/phones. Official DBT benefits never require sending money or scanning QR codes.
+
+— Stay neutral. Think about the benefit and safety of the user first.
+
+— You can refer users to the WB Promise Tracker Help Page (https://tracker.wbupdates.com/help) as a verified directory of government portals, helplines, and escalation steps. It is a free, independent civic resource.
+
+
+## REFERENCE PORTALS:
+
+STATE — TOP LEVEL
+wb.gov.in/departments — All WB departments
+wb.gov.in/ministers — Current ministers and portfolios
+wb.gov.in/secretaries — IAS officers and secretaries
+wb.gov.in/districts — All 23 districts, local body contacts
+wb.gov.in/directories — Phone and email by department
+
+GRIEVANCE AND SERVICES
+prdgrievance.wb.gov.in — WB state grievance portal
+cmo.wb.gov.in — CMO Grievance Cell
+pgportal.gov.in — CPGRAMS for central departments
+edistrict.wb.gov.in — Certificates: income, domicile, residential, birth, death
+castcertificatewb.gov.in — SC / ST / OBC Caste Certificates
+rtionline.wb.gov.in — RTI to state departments
+rtionline.gov.in — RTI to central departments
+wbpolice.gov.in — FIR and police services (Emergency: 112, Women: 181, Child: 1098)
+cybercrime.gov.in — Cyber crime and online fraud (helpline 1930)
+consumerhelpline.gov.in — Consumer complaints (helpline 1915)
+bsk.wb.gov.in — Bangla Sahayata Kendra (Free offline assistance)
+
+DEPARTMENTS AND SCHEMES
+banglarbhumi.gov.in — Land records, mutation, ROR
+wbhealth.gov.in — Health Department & public hospitals
+swasthyasathi.gov.in — Swasthya Sathi health scheme
+pmjay.gov.in — Ayushman Bharat (AB PM-JAY)
+banglarshiksha.gov.in — School education, Kanyashree, Sabuj Sathi, Taruner Swapno
+food.wb.gov.in — Ration card, NFSA, digital ration services
+wblabour.gov.in — Labour, unorganized worker schemes (BM-SSY)
+epfindia.gov.in — EPFO, PF, pension
+uidai.gov.in — Aadhaar services and update
+wbsedcl.in — WBSEDCL Electricity (helpline 19121)
+cesc.co.in — CESC Power (Kolkata & Howrah)
+
+═══════════════════════════════════════════════════════════
+BEGIN
+═══════════════════════════════════════════════════════════
+
+Greet the user warmly in the language they write in (default to Bengali if unclear), give the one-time AI disclaimer briefly, and ask them to describe their problem.`;
+
+        const PROMPTS = {
+            general: {
+                title: "🧭 General Grievance Prompt",
+                text: `I have an issue related to a West Bengal government service. Please provide step-by-step guidance on:
+1. Which exact West Bengal department, portal, or officer has official jurisdiction over this?
+2. Which official .gov.in portal should I use to submit a formal written complaint?
+3. How can I get local assistance (Bangla Sahayata Kendra / BDO / Panchayat)?
+4. What is the escalation pathway or RTI procedure if resolution is delayed?`
+            },
+            land: {
+                title: "🌾 Land Records & Mutation Prompt",
+                text: `My issue concerns Land Records / Mutation (নামজারি) / ROR (পর্চা) / Land Conversion in West Bengal. Please advise:
+1. What is the exact procedure on Banglarbhoomi (banglarbhumi.gov.in) for online mutation and tracking?
+2. How do I escalate issues with the local BL&LRO office regarding delayed hearings?
+3. What is the formal grievance mechanism via land reform authorities or prdgrievance.wb.gov.in?
+4. How to file an RTI for certified copies of land and mutation records?`
+            },
+            ration: {
+                title: "🛒 Ration & Food Supply Prompt",
+                text: `My issue is related to Ration Card / Food & Supplies (NFSA / e-Ration) in West Bengal. Please advise:
+1. Step-by-step process on food.wb.gov.in for ration card modification, category change, or e-Ration download.
+2. How to formally report dealer irregularities or ration denial to the Food Inspector and 1967 helpline.
+3. Escalation steps if block-level food supply officials do not resolve the issue.`
+            },
+            health: {
+                title: "🏥 Health & Swasthya Sathi Prompt",
+                text: `My issue involves Swasthya Sathi / Health Services in West Bengal. Please guide me:
+1. How to verify card status, family member linkage, and empaneled hospitals on swasthyasathi.gov.in.
+2. What is the immediate grievance procedure (Helpline: 1800-345-5384) if a private hospital refuses Swasthya Sathi admission?
+3. How to submit a written complaint to the Chief Medical Officer of Health (CMOH) or Health Department.`
+            },
+            cert: {
+                title: "📄 Certificates & e-District Prompt",
+                text: `My issue relates to Government Certificates (Caste / Income / Domicile / Birth & Death) on e-District West Bengal.
+1. What is the exact application and documentation requirement on edistrict.wb.gov.in?
+2. How to track verification at the BDO / SDO office and escalate stalled applications.
+3. How to utilize local Bangla Sahayata Kendras (BSK) for free offline assistance.`
+            },
+            epfo: {
+                title: "💼 EPFO & Pension Prompt",
+                text: `My problem concerns EPFO / Provident Fund / Pension / UAN. Please advise:
+1. Troubleshooting delayed PF withdrawal, claim rejection, or KYC mismatch on epfindia.gov.in.
+2. How to lodge a high-priority grievance on CPGRAMS (pgportal.gov.in) and EPFiGMS.
+3. Legal steps if the employer refuses to process or deposit PF contributions.`
+            },
+            cyber: {
+                title: "🔒 Cyber Fraud & Police Prompt",
+                text: `Urgent Issue: Online Financial Fraud / Cyber Crime / Police Complaint in West Bengal.
+1. Immediate action plan: Calling 1930 toll-free to freeze transaction and reporting on cybercrime.gov.in.
+2. What evidence (transaction ID, bank SMS, screenshot) must be submitted to the Cyber Police Station.
+3. How to file online GD / report lost property on wbpolice.gov.in.`
+            },
+            edu: {
+                title: "🎓 Education & Scholarships Prompt",
+                text: `My issue involves West Bengal Education / Scholarships (Kanyashree / SVMCM / Aikyashree / Banglar Shiksha).
+1. How to track application verification status on banglarshiksha.gov.in and respective portals.
+2. Grievance mechanism if school/college verification is delayed or scholarship disbursement is pending.
+3. Official helpline contacts for WB Higher Education and Minority/OBC scholarship cells.`
+            }
+        };
+
+        const PORTALS = [
+            {
+                name: "Banglar Bhoomi — Land Records",
+                sub: "Land & Revenue · banglarbhumi.gov.in",
+                cat: "land",
+                url: "https://banglarbhumi.gov.in",
+                helpline: "1800-345-5555",
+                desc: "Online land mutation (নামজারি), ROR (পর্চা), plot map search, and agricultural to commercial conversion."
+            },
+            {
+                name: "WB Public Grievance Portal (PRD)",
+                sub: "Grievance & RTI · prdgrievance.wb.gov.in",
+                cat: "grievance",
+                url: "https://prdgrievance.wb.gov.in/",
+                helpline: "",
+                desc: "Formal online grievance registration against Panchayat, rural development, and state government services."
+            },
+            {
+                name: "e-District West Bengal 2.0",
+                sub: "Certificates & BSK · edistrict.wb.gov.in",
+                cat: "cert",
+                url: "https://edistrict.wb.gov.in",
+                helpline: "",
+                desc: "Online application for Income, Caste (SC/ST/OBC), Domicile, and Birth & Death certificates."
+            },
+            {
+                name: "Bangla Sahayata Kendra (BSK)",
+                sub: "Certificates & BSK · bsk.wb.gov.in",
+                cat: "cert",
+                url: "https://bsk.wb.gov.in",
+                helpline: "1800-103-6000",
+                desc: "Over 3,500+ physical centres providing 100% free government scheme and certificate application help."
+            },
+            {
+                name: "Swasthya Sathi Health Scheme",
+                sub: "Health & Food · swasthyasathi.gov.in",
+                cat: "health",
+                url: "https://swasthyasathi.gov.in",
+                helpline: "1800-345-5384",
+                desc: "Smart card validity check, empaneled hospital directory, member additions, and denial complaints."
+            },
+            {
+                name: "Food & Supplies — Ration Portal",
+                sub: "Health & Food · food.wb.gov.in",
+                cat: "health",
+                url: "https://food.wb.gov.in",
+                helpline: "1967",
+                desc: "Digital Ration Card application, Aadhaar linking, e-Ration Card download, and PDS dealer grievances."
+            },
+            {
+                name: "National Cyber Crime Reporting Portal",
+                sub: "Police & Legal · cybercrime.gov.in",
+                cat: "police",
+                url: "https://cybercrime.gov.in",
+                helpline: "1930",
+                desc: "Immediate reporting of financial cyber fraud, online banking scams, and emergency transaction freeze."
+            },
+            {
+                name: "WB Police Citizen Services",
+                sub: "Police & Legal · wbpolice.gov.in",
+                cat: "police",
+                url: "https://wbpolice.gov.in",
+                helpline: "112",
+                desc: "Online General Diary (GD), lost document report, tenant verification, and citizen clearance."
+            },
+            {
+                name: "CPGRAMS — Central Grievance",
+                sub: "Grievance & RTI · pgportal.gov.in",
+                cat: "grievance",
+                url: "https://pgportal.gov.in",
+                helpline: "1800-11-4000",
+                desc: "Government of India apex portal for EPFO, Railways, Postal, Income Tax, and Central Ministries."
+            },
+            {
+                name: "RTI Online — West Bengal",
+                sub: "Grievance & RTI · rtionline.wb.gov.in",
+                cat: "grievance",
+                url: "https://rtionline.wb.gov.in",
+                helpline: "",
+                desc: "Submit Right to Information (RTI) applications and appeals directly to West Bengal state departments."
+            },
+            {
+                name: "National Consumer Helpline",
+                sub: "Police & Legal · consumerhelpline.gov.in",
+                cat: "police",
+                url: "https://consumerhelpline.gov.in",
+                helpline: "1915",
+                desc: "Consumer dispute redressal, e-commerce refund refusal, warranty issues, and banking fraud."
+            },
+            {
+                name: "EPFO — Employees Provident Fund",
+                sub: "Grievance & RTI · epfindia.gov.in",
+                cat: "grievance",
+                url: "https://www.epfindia.gov.in",
+                helpline: "1800-118-005",
+                desc: "EPFO member portal for PF claim withdrawal, UAN passbook, KYC update, and pension status."
+            },
+            {
+                name: "Banglar Shiksha Portal",
+                sub: "Certificates & BSK · banglarshiksha.gov.in",
+                cat: "cert",
+                url: "https://banglarshiksha.gov.in",
+                helpline: "1800-102-8014",
+                desc: "School education portal, Kanyashree, Sabuj Sathi, and state scholarship disbursement monitoring."
+            },
+            {
+                name: "UIDAI — Aadhaar Services",
+                sub: "Certificates & BSK · uidai.gov.in",
+                cat: "cert",
+                url: "https://uidai.gov.in",
+                helpline: "1947",
+                desc: "Official portal for online address update, PVC Aadhaar download, and biometric locking."
+            },
+            {
+                name: "WB Government Apex State Portal",
+                sub: "Grievance & RTI · wb.gov.in",
+                cat: "grievance",
+                url: "https://wb.gov.in",
+                helpline: "",
+                desc: "Complete directory of all West Bengal ministries, department secretaries, and District Magistrates."
+            }
+        ];
+
+        const FAQS = [
+            {
+                q: "Can I trust the phone numbers given by AI chatbots?",
+                a: "Never without independent verification. AI models can occasionally generate plausible-looking but incorrect contact details (hallucinations). Always cross-reference any phone number against the official .gov.in portal before calling."
+            },
+            {
+                q: "What is CPGRAMS and when should I use it?",
+                a: "CPGRAMS (pgportal.gov.in) is the Government of India central grievance portal. Use it for central departments (EPFO, Railways, Postal, UIDAI, Income Tax). For West Bengal state departments, use prdgrievance.wb.gov.in."
+            },
+            {
+                q: "What should I do in case of online cyber fraud or financial scam?",
+                a: "Call 1930 immediately. In financial cyber fraud, time is critical to freeze illicit bank transactions. Follow up immediately by lodging an incident report at cybercrime.gov.in."
+            },
+            {
+                q: "Is there any fee for services at Bangla Sahayata Kendras (BSK)?",
+                a: "No. Bangla Sahayata Kendra (BSK) is a 100% free citizen service initiative by the WB government. All online form filings and certificate applications are conducted completely free of charge at 3,500+ centers."
+            },
+            {
+                q: "Is it safe to share personal or banking details in an AI chat?",
+                a: "Never. Do not paste your Aadhaar number, bank account credentials, or OTP into any AI chat. General descriptions of the problem are sufficient for the AI to guide you to the right department."
+            }
+        ];
+
+        let activeTab = 'all';
+
+        function renderPrompt() {
+            document.getElementById('prompt-head-title').textContent = "SYSTEM INSTRUCTIONS — WB CIVIC NAVIGATION ASSISTANT";
+            document.getElementById('prompt-body').textContent = SYSTEM_PROMPT;
+        }
+
+        function copyPrompt() {
+            const text = document.getElementById('prompt-body').textContent;
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(text).then(() => showToast('✓ Prompt copied to clipboard!'));
+            } else {
+                const ta = document.createElement('textarea');
+                ta.value = text;
+                ta.style.position = 'fixed';
+                ta.style.opacity = '0';
+                document.body.appendChild(ta);
+                ta.focus(); ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                showToast('✓ Prompt copied to clipboard!');
+            }
+        }
+
+        function launchAI(url) {
+            copyPrompt();
+            window.open(url, '_blank', 'noopener,noreferrer');
+            showToast('✓ Prompt copied! Paste it into the AI chat.');
+        }
+
+        function showToast(msg) {
+            const t = document.getElementById('toast-notice');
+            document.getElementById('toast-msg').textContent = msg;
+            t.classList.add('show');
+            setTimeout(() => t.classList.remove('show'), 3200);
+        }
+
+        function filterByTab(tabKey) {
+            activeTab = tabKey;
+            document.querySelectorAll('#dir-tabs .filter-chip').forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('onclick').includes(tabKey));
+            });
+            filterDirectory();
+        }
+
+        function filterDirectory(searchQuery = '') {
+            const q = (searchQuery || document.getElementById('dir-search-input').value).toLowerCase().trim();
+            const cards = document.querySelectorAll('.dir-card');
+
+            cards.forEach(c => {
+                const cat = c.dataset.category;
+                const txt = c.dataset.search.toLowerCase();
+                const matchesTab = (activeTab === 'all' || cat === activeTab);
+                const matchesQuery = (!q || txt.includes(q));
+                c.classList.toggle('hidden', !(matchesTab && matchesQuery));
+            });
+        }
+
+        function renderDirectory() {
+            const grid = document.getElementById('directory-grid');
+            grid.innerHTML = PORTALS.map(p => `
+                <div class="dir-card" data-category="${p.cat}" data-search="${p.name} ${p.sub} ${p.desc} ${p.helpline}">
+                    <div>
+                        <div class="dir-card-head">
+                            <div>
+                                <div class="dir-title">${p.name}</div>
+                                <span class="dir-sub">${p.sub}</span>
+                            </div>
+                            <span class="verified-pill">✓ .gov.in</span>
+                        </div>
+                        <p class="dir-body" style="margin-top:10px;">${p.desc}</p>
+                    </div>
+                    <div class="dir-footer">
+                        <a href="${p.url}" target="_blank" rel="nofollow noopener" class="archive-source-link">Visit Portal ↗</a>
+                        ${p.helpline ? `<a href="tel:${p.helpline.replace(/[^0-9]/g, '')}" class="dir-call-link">📞 ${p.helpline}</a>` : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderFAQs() {
+            const wrap = document.getElementById('faq-wrap');
+            wrap.innerHTML = FAQS.map(f => `
+                <div class="acc-item">
+                    <button class="acc-trigger" onclick="toggleAcc(this)">
+                        <span class="acc-title">${f.q}</span>
+                        <span class="acc-icon">+</span>
+                    </button>
+                    <div class="acc-content">
+                        <p class="acc-text">${f.a}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function toggleAcc(btn) {
+            const item = btn.closest('.acc-item');
+            const isOpen = item.classList.toggle('open');
+            const icon = item.querySelector('.acc-icon');
+            if (icon) icon.textContent = isOpen ? '−' : '+';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderPrompt();
+            renderDirectory();
+            renderFAQs();
+        });
+    </script>
+    <script src="js/share.js" defer></script>
+
+</body>
+
+</html>

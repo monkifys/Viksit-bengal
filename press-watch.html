@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Press Watch — Viksit Bengal Dashboard</title>
+    <meta name="description"
+        content="Curated ground reports, investigative journalism, and field dispatches about West Bengal — a Press Watch archive by Viksit Bengal Dashboard.">
+    <meta name="keywords"
+        content="west bengal journalism, west bengal ground report, wb investigative journalism, west bengal news watch, viksit bengal tracker">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://tracker.wbupdates.com/press-watch.html">
+    <link rel="alternate" hreflang="en" href="https://tracker.wbupdates.com/press-watch.html">
+    <link rel="alternate" hreflang="bn" href="https://tracker.wbupdates.com/bn/press-watch.html">
+    <link rel="alternate" hreflang="x-default" href="https://tracker.wbupdates.com/press-watch.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tracker.wbupdates.com/press-watch.html">
+    <meta property="og:title" content="Press Watch — Viksit Bengal Dashboard">
+    <meta property="og:description"
+        content="Curated ground reports, investigations, and field dispatches about West Bengal — journalism that provides crucial public context.">
+    <meta property="og:image" content="https://tracker.wbupdates.com/og-preview.webp">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Press Watch — Viksit Bengal Dashboard">
+    <meta name="twitter:description"
+        content="Curated ground reports, investigations, and field dispatches about West Bengal.">
+    <meta name="twitter:image" content="https://tracker.wbupdates.com/og-preview.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Bengali:wght@400;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Bengali:wght@400;700&display=swap"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Bengali:wght@400;700&display=swap">
+    </noscript>
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="data/press-watch.json" as="fetch" crossorigin>
+
+    <style>
+        body {
+            background: var(--paper);
+        }
+
+        /* ── Nav ── */
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-ui);
+            font-size: 11px;
+            color: var(--ink-faint);
+            text-decoration: none;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .back-home:hover {
+            color: var(--saffron);
+            transform: translateX(-4px);
+        }
+
+        /* ── Page header ── */
+        .pw-header {
+            margin-bottom: 32px;
+        }
+
+        .pw-title {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 5vw, 44px);
+            font-weight: 900;
+            color: var(--ink);
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 6px;
+        }
+
+        .pw-beta {
+            display: inline-flex;
+            align-items: center;
+            vertical-align: middle;
+            background: rgba(0, 45, 116, 0.08);
+            color: var(--ink-blue);
+            border: 1px solid rgba(0, 45, 116, 0.2);
+            font-family: var(--font-ui);
+            font-size: 9px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 2px 7px;
+            border-radius: 3px;
+            margin-left: 10px;
+            position: relative;
+            top: -4px;
+        }
+
+        .pw-subtitle {
+            font-family: var(--font-sans);
+            font-size: 17px;
+            color: var(--ink-faint);
+            font-style: italic;
+            margin-bottom: 0;
+        }
+
+        /* ── Editorial Note ── */
+        .pw-editorial {
+            background: var(--surface);
+            border: 1px solid var(--rule-light);
+            border-left: 4px solid var(--ink-blue);
+            padding: 22px 26px;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .pw-editorial-label {
+            font-family: var(--font-ui);
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--ink-blue);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pw-editorial-body {
+            font-family: var(--font-sans);
+            font-size: 16px;
+            line-height: 1.65;
+            color: var(--ink-mid);
+        }
+
+        .pw-editorial-body p {
+            margin-bottom: 10px;
+        }
+
+        .pw-editorial-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        .pw-type-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 14px;
+        }
+
+        .pw-type-example {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-family: var(--font-ui);
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 4px 10px;
+            border-radius: 20px;
+            border: 1px solid var(--rule);
+            color: var(--ink-light);
+            background: var(--paper);
+        }
+
+        /* ── Section header ── */
+        .pw-section-header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            border-top: 2px solid var(--ink);
+            border-bottom: 1px solid var(--rule-light);
+            padding: 10px 0;
+            margin-bottom: 28px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .pw-section-title {
+            font-family: var(--font-display);
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--ink);
+        }
+
+        .pw-section-count {
+            font-family: var(--font-ui);
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--ink-faint);
+        }
+
+        /* ── Card grid ── */
+        .pw-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 640px) {
+            .pw-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+        }
+
+        /* ── Individual card ── */
+        .pw-card {
+            background: var(--surface);
+            border: 1px solid var(--rule-light);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .pw-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .pw-card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        /* Content type badge */
+        .pw-type-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-family: var(--font-ui);
+            font-size: 9px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            padding: 3px 9px;
+            border-radius: 20px;
+            flex-shrink: 0;
+        }
+
+        .pw-type-badge.type-video {
+            background: rgba(220, 38, 38, 0.07);
+            color: var(--red);
+            border: 1px solid rgba(220, 38, 38, 0.2);
+        }
+
+        .pw-type-badge.type-investigation {
+            background: rgba(0, 45, 116, 0.07);
+            color: var(--ink-blue);
+            border: 1px solid rgba(0, 45, 116, 0.2);
+        }
+
+        .pw-type-badge.type-report {
+            background: rgba(232, 98, 10, 0.07);
+            color: var(--saffron-dark);
+            border: 1px solid var(--saffron-mid);
+        }
+
+        .pw-type-badge.type-analysis {
+            background: rgba(22, 163, 74, 0.07);
+            color: var(--green);
+            border: 1px solid rgba(22, 163, 74, 0.2);
+        }
+
+        .pw-type-badge.type-interview {
+            background: rgba(74, 48, 32, 0.07);
+            color: var(--ink-mid);
+            border: 1px solid var(--rule);
+        }
+
+        .pw-card-date {
+            font-family: var(--font-mono);
+            font-size: 9px;
+            color: var(--ink-faint);
+            letter-spacing: 0.04em;
+            white-space: nowrap;
+        }
+
+        .pw-card-headline {
+            font-family: var(--font-display);
+            font-size: 19px;
+            font-weight: 800;
+            color: var(--ink);
+            line-height: 1.25;
+            text-decoration: none;
+            display: block;
+            transition: color 0.15s ease;
+        }
+
+        .pw-card-headline:hover {
+            color: var(--ink-blue);
+            text-decoration: none;
+        }
+
+        .pw-card-desc {
+            font-family: var(--font-sans);
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--ink-mid);
+            flex: 1;
+        }
+
+        .pw-card-note {
+            font-family: var(--font-sans);
+            font-size: 13.5px;
+            line-height: 1.55;
+            color: var(--ink-faint);
+            font-style: italic;
+            border-left: 3px solid var(--rule);
+            padding-left: 10px;
+        }
+
+        .pw-card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding-top: 12px;
+            border-top: 1px solid var(--rule-light);
+            flex-wrap: wrap;
+        }
+
+        .pw-card-source {
+            font-family: var(--font-ui);
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--ink-faint);
+        }
+
+        .pw-card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-family: var(--font-ui);
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--ink-blue);
+            text-decoration: none;
+            padding: 5px 13px;
+            border: 1px solid rgba(0, 45, 116, 0.22);
+            border-radius: 4px;
+            background: rgba(0, 45, 116, 0.03);
+            transition: all 0.15s ease;
+            white-space: nowrap;
+        }
+
+        .pw-card-link:hover {
+            background: rgba(0, 45, 116, 0.09);
+            border-color: var(--ink-blue);
+            color: #002366;
+            text-decoration: none;
+            transform: none;
+        }
+
+        /* ── Empty state ── */
+        .pw-empty {
+            text-align: center;
+            padding: 80px 24px;
+            font-family: var(--font-sans);
+            font-size: 17px;
+            color: var(--ink-faint);
+            font-style: italic;
+        }
+
+        .pw-empty-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        /* ── Loading ── */
+        .loading {
+            font-family: var(--font-sans);
+            font-size: 16.5px;
+            color: var(--ink-faint);
+            text-align: center;
+            padding: 60px 0;
+            font-style: italic;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+  <!-- MASTHEAD BAR -->
+  <header class="masthead">
+    <div class="masthead-bar">
+      <span><span class="live-tag">CIVIC DATA</span> &nbsp; Viksit Bengal Dashboard — বিকশিত বাংলা ড্যাশবোর্ড</span>
+      <div class="masthead-date-lang">
+        <span id="today-date">29 October 2026</span>
+        <a href="bn/press-watch.html" class="lang-toggle" aria-label="বাংলায় পড়ুন" title="Read in Bengali">বাংলা</a>
+      </div>
+    </div>
+    <div class="masthead-main">
+      <div class="masthead-logo">
+        <img src="wb-map.webp" class="wb-map-icon" alt="West Bengal Map Logo" width="90" height="140">
+      </div>
+      <div class="masthead-text">
+        <h1>Viksit Bengal<br><span>Dashboard</span></h1>
+        <p class="masthead-sub">Tracking Bengal's journey from commitments to outcomes.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- UNIFIED CIVIC NAVIGATION -->
+  <nav class="civic-nav">
+    <div class="civic-nav-inner">
+      <div class="civic-nav-links">
+        <a href="index.html" class="civic-nav-item">🏠 Home</a>
+        <a href="economy.html" class="civic-nav-item">📈 Economy</a>
+        <a href="society.html" class="civic-nav-item">👥 Society</a>
+        <a href="index.html#promises" class="civic-nav-item">📋 Promises</a>
+        <a href="districts.html" class="civic-nav-item">🗺️ Districts</a>
+        <a href="projects.html" class="civic-nav-item">🏗️ Projects</a>
+        <a href="latest.html" class="civic-nav-item active">📰 Updates</a>
+        <a href="methodology.html" class="civic-nav-item">⚖️ Methodology</a>
+      </div>
+      <a href="submit.html" class="civic-nav-btn-submit">✏ Submit Evidence</a>
+    </div>
+  </nav>
+
+  <div class="archive-container">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin:16px 0 24px;">
+      <a href="latest.html" class="archive-source-link">← All Public Records & Updates</a>
+      <a href="initiatives.html" class="archive-source-link">Special Initiatives →</a>
+    </div>
+
+        <header class="pw-header">
+            <h1 class="pw-title">
+                Press Watch
+                <span class="pw-beta">Beta</span>
+            </h1>
+            <p class="pw-subtitle">Curated ground reports, investigations & field dispatches from West Bengal.</p>
+        </header>
+
+        <!-- Editorial Note -->
+        <section class="pw-editorial" aria-label="Editorial note">
+            <div class="pw-editorial-label">
+                📋 About This Section
+            </div>
+            <div class="pw-editorial-body">
+                <p>
+                    The WB Accountability Tracker focuses on government promises and administrative actions. But some of the most important journalism about West Bengal — ground reports, investigative pieces, video dispatches from the field — has no place in a promise tracker, and yet deserves to be read.
+                </p>
+                <p>
+                    Press Watch is a curated editorial layer: a small selection of journalistic pieces we think deserve wider attention. These are not government updates. They are not evidence for or against any promise. They are simply journalism worth reading or watching.
+                </p>
+                <p>
+                    <strong>What qualifies:</strong> Ground reports, video investigations, long-form journalism, and data-driven analyses about West Bengal from credible publications and independent journalists. We add items sparingly — only when we believe a piece offers genuine insight into the ground reality.
+                </p>
+                <div class="pw-type-pills">
+                    <span class="pw-type-example">🎬 Video</span>
+                    <span class="pw-type-example">🔍 Investigation</span>
+                    <span class="pw-type-example">📰 Report</span>
+                    <span class="pw-type-example">📊 Analysis</span>
+                    <span class="pw-type-example">🎙️ Interview</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Archive -->
+        <div class="pw-section-header">
+            <span class="pw-section-title">All Featured Pieces</span>
+            <span class="pw-section-count" id="pw-count"></span>
+        </div>
+
+        <div class="pw-grid" id="pw-grid">
+            <div class="loading">Loading archive...</div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-bottom"
+                style="border-top: none; padding-top: 0; justify-content: center; margin-top: 0;">
+                <span class="last-updated" style="color: rgba(255, 255, 255, 0.45); font-family: var(--font-ui);">WB
+                    ACCOUNTABILITY TRACKER &copy; 2026-2031</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.LANG = document.documentElement.lang || 'en';
+
+        const TYPE_META = {
+            'video':         { label_en: 'Video',         label_bn: 'ভিডিও',         icon: '🎬', cls: 'type-video' },
+            'investigation': { label_en: 'Investigation', label_bn: 'অনুসন্ধান',      icon: '🔍', cls: 'type-investigation' },
+            'report':        { label_en: 'Report',        label_bn: 'রিপোর্ট',        icon: '📰', cls: 'type-report' },
+            'analysis':      { label_en: 'Analysis',      label_bn: 'বিশ্লেষণ',       icon: '📊', cls: 'type-analysis' },
+            'interview':     { label_en: 'Interview',     label_bn: 'সাক্ষাৎকার',     icon: '🎙️', cls: 'type-interview' },
+        };
+
+        function escapeHtml(v) {
+            return String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+        }
+
+        function parseDate(s) {
+            const m = s.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+            if (m) return new Date(+m[1], +m[2]-1, +m[3]);
+            return new Date(s);
+        }
+
+        function formatDate(s) {
+            const d = parseDate(s);
+            if (window.LANG === 'bn') {
+                return d.toLocaleDateString('bn-IN', { day: 'numeric', month: 'long', year: 'numeric' });
+            }
+            return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+        }
+
+        function getText(obj, field) {
+            const langVal = obj[`${field}_${window.LANG}`];
+            if (langVal && langVal.trim()) return langVal;
+            const enVal = obj[`${field}_en`];
+            if (enVal && enVal.trim()) return enVal;
+            return obj[field] || '';
+        }
+
+        function buildCard(item) {
+            const t = TYPE_META[item.type] || TYPE_META['report'];
+            const typeLabel = window.LANG === 'bn' ? t.label_bn : t.label_en;
+            const headline = escapeHtml(getText(item, 'headline'));
+            const desc = escapeHtml(getText(item, 'description'));
+            const note = getText(item, 'note') ? `<p class="pw-card-note">${escapeHtml(getText(item, 'note'))}</p>` : '';
+            const source = escapeHtml(item.source || '');
+            const isVideo = item.type === 'video';
+            const linkLabel = window.LANG === 'bn' 
+                ? (isVideo ? 'দেখুন ↗' : 'পড়ুন ↗')
+                : (isVideo ? 'Watch ↗' : 'Read ↗');
+            const dateStr = formatDate(item.date);
+
+            return `
+            <article class="pw-card">
+                <div class="pw-card-top">
+                    <span class="pw-type-badge ${t.cls}">${t.icon} ${escapeHtml(typeLabel)}</span>
+                    <span class="pw-card-date">${escapeHtml(dateStr)}</span>
+                </div>
+                <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer" class="pw-card-headline">${headline}</a>
+                ${desc ? `<p class="pw-card-desc">${desc}</p>` : ''}
+                ${note}
+                <div class="pw-card-footer">
+                    <span class="pw-card-source">${source}</span>
+                    <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer" class="pw-card-link">${escapeHtml(linkLabel)}</a>
+                </div>
+            </article>
+            `;
+        }
+
+        async function init() {
+            const db = window.DATA_BASE || 'data/';
+            const grid = document.getElementById('pw-grid');
+            const countEl = document.getElementById('pw-count');
+
+            try {
+                const res = await fetch(db + 'press-watch.json');
+                if (!res.ok) throw new Error('fetch failed');
+                const items = await res.json();
+
+                // Sort newest first
+                items.sort((a, b) => b.date.localeCompare(a.date));
+
+                if (!items.length) {
+                    const emptyMsg = window.LANG === 'bn'
+                        ? 'এখনও কোনো পিস কিউরেট করা হয়নি। শীঘ্রই আসছে।'
+                        : 'No pieces curated yet. Check back soon.';
+                    grid.innerHTML = `<div class="pw-empty" style="grid-column: 1/-1;"><span class="pw-empty-icon">📭</span>${escapeHtml(emptyMsg)}</div>`;
+                    if (countEl) countEl.textContent = '';
+                    return;
+                }
+
+                const countLabel = window.LANG === 'bn'
+                    ? `${items.length}টি পিস`
+                    : `${items.length} piece${items.length === 1 ? '' : 's'}`;
+                if (countEl) countEl.textContent = countLabel;
+
+                grid.innerHTML = items.map(buildCard).join('');
+            } catch (e) {
+                const errMsg = window.LANG === 'bn' ? 'লোড করতে ব্যর্থ হয়েছে।' : 'Failed to load.';
+                grid.innerHTML = `<div class="pw-empty" style="grid-column: 1/-1;"><span class="pw-empty-icon">⚠️</span>${escapeHtml(errMsg)}</div>`;
+            }
+        }
+
+        init();
+    </script>
+
+</body>
+
+</html>

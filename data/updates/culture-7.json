@@ -1,0 +1,40 @@
+{
+  "updates": [
+    {
+      "date": "2026-08-07",
+      "title_en": "Tagore's Historic Kalimpong Retreat 'Gouripur House' Set to Open After Extensive Restoration",
+      "title_bn": "কালিম্পঙে রবীন্দ্রনাথের ঐতিহাসিক স্মৃতিবিজড়িত 'গৌরীপুর হাউস' সংস্কার শেষে জনসাধারণের জন্য শীঘ্রই উন্মুক্ত হচ্ছে",
+      "note_en": "The West Bengal Information and Cultural Affairs Department and Heritage Commission announced that Gouripur House in Kalimpong—the historic retreat where Rabindranath Tagore stayed between 1938 and 1940 and broadcast his poem 'Janmodin' live on All India Radio on his 78th birthday—will open soon following a ₹5 crore two-phase heritage restoration. The restored estate will feature a dedicated Tagore museum, archive, and research centre to preserve and propagate the Nobel laureate's literary legacy.",
+      "note_bn": "তথ্য ও সংস্কৃতি বিভাগ এবং স্টেট হেরিটেজ কমিশনের ৫ কোটি টাকা ব্যয়ে দুই ধাপের সংস্কার কাজ শেষে কালিম্পংয়ের ঐতিহাসিক 'গৌরীপুর হাউস' শীঘ্রই দর্শনার্থীদের জন্য চালু করা হচ্ছে। ১৯৩৮ থেকে ১৯৪০ সালের মধ্যে রবীন্দ্রনাথ ঠাকুর এই ঐতিহাসিক ভবনে বসবাস করেছিলেন এবং এখান থেকেই তাঁর ৭৮তম জন্মদিনে 'জন্মদিন' কবিতাটি অল ইন্ডিয়া রেডিওতে সরাসরি সম্প্রচার করেছিলেন। সংরক্ষিত এই ঐতিহ্যবাহী আবাসে বিশ্বকবির স্মৃতি ও কাজকে বাঁচিয়ে রাখতে একটি বিশেষ টেগোর মিউজিয়াম ও গবেষণা কেন্দ্র স্থাপন করা হচ্ছে।",
+      "sources": [
+        {
+          "url": "https://www.telegraphindia.com/west-bengal/new-destination-tagores-favourite-kalimpong-retreat-gouripur-house-to-open-soon-prnt/cid/2173956",
+          "name": "The Telegraph · August 07, 2026"
+        }
+      ],
+      "counterEvidence": [
+        {
+          "label_en": "Pre-Existing Heritage Project (2018/2022)",
+          "label_bn": "পূর্বের অনুমোদনপ্রাপ্ত হেরিটেজ প্রকল্প (২০১৮/২০২২)",
+          "text_en": "Although news reports in August 2026 highlight the upcoming opening of Gouripur House in Kalimpong as a Tagore museum and research center, official records confirm that the property was officially declared a heritage site by the West Bengal Heritage Commission back in 2018. Civil and electrical conservation tenders (estimated ₹2.8 to ₹5 crore) were floated by the West Bengal PWD in early 2022, and media reports in August 2025 noted it was scheduled to open within the year. As this restoration was launched under the previous administration prior to the 2026 manifesto, it is tracked as a pre-existing state project rather than a new post-2026 policy achievement.",
+          "text_bn": "যদিও ২০২৬ সালের আগস্টের সংবাদের প্রতিবেদনে কালিম্পংয়ের 'গৌরীপুর হাউস'-কে টেগোর মিউজিয়াম ও গবেষণা কেন্দ্র হিসেবে চালু করার বিষয় উঠে এসেছে, সরকারি তথ্য অনুযায়ী পশ্চিমবঙ্গ হেরিটেজ কমিশন ২০১৮ সালেই ভবনটিকে ঐতিহ্যবাহী সম্পত্তি হিসেবে ঘোষণা করে। পূর্ত দপ্তর (PWD) কর্তৃক ২.৮ থেকে ৫ কোটি টাকার সংরক্ষণের টেন্ডার ২০২২ সালের শুরুতেই আহ্বান করা হয়েছিল এবং ২০২৫ সালের আগস্টেও এটি চালু হওয়ার বিষয়ে সংবাদ প্রকাশিত হয়েছিল। ফলে, এটি পূর্বে অনুমোদিত ও বাস্তবায়নাধীন প্রকল্প, নতুন নির্বাচনী ইশতেহারের আওতায় গৃহীত নীতি বাস্তবায়ন নয়।",
+          "sources": [
+            {
+              "url": "https://www.etvbharat.com/english/state/west-bengal/rabindranath-tagores-gouripur-house-in-kalimpong-set-for-a-facelift/na20230720122209771771612",
+              "name": "ETV Bharat · July 20, 2023"
+            },
+            {
+              "url": "https://www.indiantenders.in/tenderdetail/conservation-and-restoration-gouripur-house-kalimpong-civil-and-electrical-works-combined-915d3d3/",
+              "name": "IndianTenders.in · WB PWD Tender · Early 2022"
+            },
+            {
+              "url": "https://www.indiatoday.in/india-today-insight/story/next-year-stay-at-bengal-hill-home-where-rabindranath-tagore-did-radio-recital-2766479-2025-08-05",
+              "name": "India Today · August 05, 2025"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "counterEvidence": []
+}

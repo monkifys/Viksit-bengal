@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>অর্থনীতি ও ১ ট্রিলিয়ন ডলার লক্ষ্যমাত্রা ক্যালকুলেটর — বিকশিত বাংলা ড্যাশবোর্ড</title>
+  <meta name="description" content="পশ্চিমবঙ্গের অর্থনৈতিক সূচক, জিএসডিপি বৃদ্ধি, মাথাপিছু আয় ও ১ ট্রিলিয়ন ডলার অর্থনৈতিক লক্ষ্যমাত্রার ইন্টারঅ্যাকটিভ ক্যালকুলেটর।">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Crimson+Pro:wght@400;600;700&family=Outfit:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Noto+Sans+Bengali:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body { font-family: 'Noto Sans Bengali', var(--font-sans); }
+  </style>
+</head>
+<body>
+
+  <!-- MASTHEAD BAR -->
+  <header class="masthead">
+    <div class="masthead-bar">
+      <span><span class="live-tag">নাগরিক তথ্য</span> &nbsp; বিকশিত বাংলা ড্যাশবোর্ড — Viksit Bengal Dashboard</span>
+      <div class="masthead-date-lang">
+        <span id="today-date">২৯ অক্টোবর ২০২৬</span>
+        <a href="../economy.html" class="lang-toggle" aria-label="Read in English" title="ইংরেজি ভাষায় পড়ুন">English</a>
+      </div>
+    </div>
+    <div class="masthead-main">
+      <div class="masthead-logo">
+        <img src="../wb-map.webp" class="wb-map-icon" alt="পশ্চিমবঙ্গের মানচিত্র" width="90" height="140">
+      </div>
+      <div class="masthead-text">
+        <h1>বিকশিত বাংলা<br><span>ড্যাশবোর্ড</span></h1>
+        <p class="masthead-sub">প্রতিশ্রুতি থেকে ফলাফলে পৌঁছানোর পথে বাংলার যাত্রা নিরীক্ষণ।</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- UNIFIED CIVIC NAVIGATION -->
+  <nav class="civic-nav">
+    <div class="civic-nav-inner">
+      <div class="civic-nav-links">
+        <a href="index.html" class="civic-nav-item">🏠 নীড়পাতা</a>
+        <a href="economy.html" class="civic-nav-item active">📈 অর্থনীতি</a>
+        <a href="society.html" class="civic-nav-item">👥 সমাজ</a>
+        <a href="index.html#promises" class="civic-nav-item">📋 প্রতিশ্রুতি</a>
+        <a href="districts.html" class="civic-nav-item">🗺️ জেলা পরিক্রমা</a>
+        <a href="projects.html" class="civic-nav-item">🏗️ প্রকল্পসমূহ</a>
+        <a href="latest.html" class="civic-nav-item">📰 সাম্প্রতিক তথ্য</a>
+        <a href="methodology.html" class="civic-nav-item">⚖️ পদ্ধতি ও মানদণ্ড</a>
+      </div>
+      <a href="submit.html" class="civic-nav-btn-submit">✏ তথ্য জমা দিন</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header-band">
+    <div class="page-header-inner">
+      <h1 class="page-header-title">পশ্চিমবঙ্গের অর্থনৈতিক ড্যাশবোর্ড</h1>
+      <p class="page-header-subtitle">
+        সরকারি ম্যাক্রো-অর্থনৈতিক নির্দেশক, রাজস্ব ব্যয় ও ২০৩৩ সালের মধ্যে ১ ট্রিলিয়ন মার্কিন ডলার রাজ্য অর্থনীতির লক্ষ্যমাত্রার মডেলিং।
+      </p>
+    </div>
+  </section>
+
+  <!-- $1 TRILLION ECONOMIC TARGET CALCULATOR -->
+  <main class="main-content">
+    <section class="calc-container" id="calculator">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:16px;">
+        <div>
+          <span class="indicator-category-tag">ম্যাক্রো সিমুলেশন ইঞ্জিন</span>
+          <h2 class="calc-title" style="margin-top:8px;">১ ট্রিলিয়ন ডলার অর্থনীতি লক্ষ্যমাত্রা ক্যালকুলেটর (২০৩৩)</h2>
+          <p class="calc-subtitle">
+            বর্তমান জিএসডিপি ভিত্তি থেকে ২০৩৩ সালের মধ্যে ১,০০০ বিলিয়ন ডলারে পৌঁছানোর জন্য প্রয়োজনীয় বার্ষিক চক্রবৃদ্ধি বৃদ্ধির হার (CAGR)।
+          </p>
+        </div>
+        <div style="text-align:right;">
+          <span class="conf-badge conf-grade-a">সরকারি ভিত্তি: এমওএসপিআই ২০২৩-২৪</span>
+        </div>
+      </div>
+
+      <!-- INPUT CONTROLS -->
+      <div class="calc-inputs-grid">
+        <div class="calc-field">
+          <label for="calc-baseline">ভিত্তি জিএসডিপি (বিলিয়ন মার্কিন ডলার)</label>
+          <input type="number" id="calc-baseline" class="calc-input" value="207" min="50" max="500" step="1">
+          <small style="color:var(--ink-faint); font-size:11px;">আনুমানিক ₹১৭.১৯ লাখ কোটি (৮৩.৫ টাকা/$ হারে)</small>
+        </div>
+        <div class="calc-field">
+          <label for="calc-target">লক্ষ্যমাত্রা জিএসডিপি (বিলিয়ন ডলার)</label>
+          <input type="number" id="calc-target" class="calc-input" value="1000" min="500" max="2500" step="50">
+          <small style="color:var(--ink-faint); font-size:11px;">১ ট্রিলিয়ন ডলার = প্রায় ₹৮৩.৫০ লাখ কোটি</small>
+        </div>
+        <div class="calc-field">
+          <label for="calc-start-yr">ভিত্তি বছর</label>
+          <input type="number" id="calc-start-yr" class="calc-input" value="2024" min="2020" max="2026">
+        </div>
+        <div class="calc-field">
+          <label for="calc-target-yr">লক্ষ্যমাত্রা বছর</label>
+          <input type="number" id="calc-target-yr" class="calc-input" value="2033" min="2028" max="2040">
+        </div>
+      </div>
+
+      <!-- SCENARIOS GRID -->
+      <h3 style="font-family:var(--font-display); font-size:20px; font-weight:800; margin-bottom:14px;">বিভিন্ন প্রবৃদ্ধি পরিস্থিতির তুলনা</h3>
+      <div class="calc-scenarios-grid" id="scenarios-container">
+        <!-- Rendered by calculator.js -->
+      </div>
+
+      <!-- METHODOLOGY EXPLANATION -->
+      <div class="calc-methodology-note">
+        <strong>গাণিতিক সূত্র ও অর্থনৈতিক অনুমান:</strong><br>
+        প্রয়োজনীয় প্রবৃদ্ধির হার (CAGR) = <code>(লক্ষ্যমাত্রা / ভিত্তি) ^ (১ / বছরের সংখ্যা) - ১</code>।<br>
+        • ভিত্তিটি ২০২৩-২৪ সালের জন্য কেন্দ্রীয় পরিসংখ্যান ও কর্মসূচি বাস্তবায়ন মন্ত্রকের (MOSPI) ₹১৭.১৯ লাখ কোটি (~২০৭ বিলিয়ন ডলার) পূর্বাভাসের ওপর প্রতিষ্ঠিত।<br>
+        • রূপান্তর হিসেবে প্রতি ডলারে ৮৩.৫ টাকা এবং নামমাত্র মূল্যের প্রবৃদ্ধি ধরা হয়েছে।<br>
+        • <em>স্মরণীয়:</em> ১ ট্রিলিয়ন ডলারের লক্ষ্যমাত্রাটি কোনো সংবিধিবদ্ধ সরকারি আদেশ নয়, বরং রাজ্যের সার্বিক উন্নয়নের একটি নাগরিক রূপরেখা।
+      </div>
+    </section>
+
+    <!-- VERIFIED ECONOMIC INDICATORS GRID -->
+    <section style="max-width:1300px; margin:40px auto 0; padding:0 16px;">
+      <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:16px;">
+        <h2 style="font-family:var(--font-display); font-size:26px; font-weight:900; color:var(--ink);">
+          📊 যাচাইকৃত অর্থনৈতিক নির্দেশকসমূহ
+        </h2>
+        <span style="font-size:14px; color:var(--ink-light);">উৎস: ভারতীয় রিজার্ভ ব্যাংক ও এমওএসপিআই</span>
+      </div>
+
+      <div class="indicators-grid" id="indicators-list">
+        <div style="text-align:center; padding:40px; color:var(--ink-light); grid-column:1/-1;">
+          ডাটাবেস থেকে তথ্য লোড হচ্ছে...
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" style="margin-top:60px;">
+    <div class="footer-inner">
+      <div class="footer-disclaimer">
+        <strong>বিকশিত বাংলা ড্যাশবোর্ড — Viksit Bengal Dashboard</strong><br>
+        পশ্চিমবঙ্গের জনস্বার্থ প্রতিশ্রুতি, অর্থনৈতিক নির্দেশক ও পরিকাঠামো উন্নয়ন প্রকল্প নিরীক্ষণের স্বাধীন প্রমাণভিত্তিক ডিজিটাল প্ল্যাটফর্ম।
+      </div>
+      <div class="footer-bottom">
+        <a href="../economy.html" style="color:var(--saffron);">English</a> | <a href="economy.html" style="color:var(--saffron);">বাংলা</a> | <a href="methodology.html" style="color:var(--ink-light);">পদ্ধতি ও মানদণ্ড</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/calculator.js"></script>
+  <script>
+    function updateCalculatorUI() {
+      const baseline = parseFloat(document.getElementById('calc-baseline').value) || 207;
+      const target = parseFloat(document.getElementById('calc-target').value) || 1000;
+      const startYr = parseInt(document.getElementById('calc-start-yr').value, 10) || 2024;
+      const targetYr = parseInt(document.getElementById('calc-target-yr').value, 10) || 2033;
+
+      const model = calculateScenarios(baseline, target, startYr, targetYr);
+      const container = document.getElementById('scenarios-container');
+
+      container.innerHTML = `
+        <div class="scenario-card conservative">
+          <div class="scenario-name">১. রক্ষণশীল প্রবৃদ্ধি</div>
+          <div class="scenario-cagr">${model.scenarios.conservative.cagr}% <span style="font-size:14px; color:var(--ink-light); font-weight:normal;">বার্ষিক চক্রবৃদ্ধি</span></div>
+          <div class="scenario-result-val">২০৩৩ সালে প্রত্যাশিত: $${model.scenarios.conservative.projected2033Usd} বিলিয়ন</div>
+          <div style="font-size:12px; color:var(--ink-faint); margin-bottom:8px;">আনুমানিক ₹${model.scenarios.conservative.projected2033InrLakhCr} লাখ কোটি</div>
+          <p class="scenario-note">ঐতিহাসিক গড় প্রবৃদ্ধির ধারা অব্যাহত থাকার অনুমান।</p>
+        </div>
+
+        <div class="scenario-card base">
+          <div class="scenario-name">২. ত্বরান্বিত শিল্পায়ন ভিত্তি</div>
+          <div class="scenario-cagr">${model.scenarios.base.cagr}% <span style="font-size:14px; color:var(--ink-light); font-weight:normal;">বার্ষিক চক্রবৃদ্ধি</span></div>
+          <div class="scenario-result-val">২০৩৩ সালে প্রত্যাশিত: $${model.scenarios.base.projected2033Usd} বিলিয়ন</div>
+          <div style="font-size:12px; color:var(--ink-faint); margin-bottom:8px;">আনুমানিক ₹${model.scenarios.base.projected2033InrLakhCr} লাখ কোটি</div>
+          <p class="scenario-note">তাজপুর বন্দর ও মালবাহী করিডোরের পূর্ণাঙ্গ রূপায়ণে পরিকাঠামোগত প্রবৃদ্ধি।</p>
+        </div>
+
+        <div class="scenario-card ambitious">
+          <div class="scenario-name">৩. কাঙ্ক্ষিত ১ ট্রিলিয়ন লক্ষ্যমাত্রা</div>
+          <div class="scenario-cagr" style="color:var(--green);">${model.scenarios.ambitious.cagr}% <span style="font-size:14px; color:var(--ink-light); font-weight:normal;">বার্ষিক চক্রবৃদ্ধি</span></div>
+          <div class="scenario-result-val">২০৩৩ সালে প্রত্যাশিত: $${model.scenarios.ambitious.projected2033Usd} বিলিয়ন</div>
+          <div style="font-size:12px; color:var(--ink-faint); margin-bottom:8px;">আনুমানিক ₹${model.scenarios.ambitious.projected2033InrLakhCr} লাখ কোটি</div>
+          <p class="scenario-note">২০৩৩ সালের মধ্যে ১ ট্রিলিয়ন ডলারে পৌঁছাতে এই গতিতে এগোতে হবে।</p>
+        </div>
+      `;
+    }
+
+    ['calc-baseline', 'calc-target', 'calc-start-yr', 'calc-target-yr'].forEach(id => {
+      document.getElementById(id).addEventListener('input', updateCalculatorUI);
+    });
+    updateCalculatorUI();
+
+    function renderSparklineSVG(observations, unit) {
+      if (!observations || observations.length < 2) return '';
+      const sorted = [...observations].sort((a,b) => a.period_year - b.period_year);
+      const vals = sorted.map(o => o.value);
+      const min = Math.min(...vals);
+      const max = Math.max(...vals);
+      const range = (max - min) || 1;
+      const w = 320;
+      const h = 60;
+      const padX = 16;
+      const padY = 12;
+      const innerW = w - padX * 2;
+      const innerH = h - padY * 2;
+
+      const points = sorted.map((o, i) => {
+        const x = padX + (i / (sorted.length - 1)) * innerW;
+        const y = h - padY - ((o.value - min) / range) * innerH;
+        return { x: Number(x.toFixed(1)), y: Number(y.toFixed(1)), val: o.value, yr: o.period_year };
+      });
+
+      const polylinePoints = points.map(p => `${p.x},${p.y}`).join(' ');
+      const areaPoints = `${points[0].x},${h} ` + polylinePoints + ` ${points[points.length-1].x},${h}`;
+
+      const circles = points.map(p => `
+        <circle cx="${p.x}" cy="${p.y}" r="3.5" fill="var(--saffron)" stroke="#fff" stroke-width="1.5">
+          <title>${p.yr}: ${p.val.toLocaleString('bn-IN')} ${unit || ''}</title>
+        </circle>
+        <text x="${p.x}" y="${h - 2}" font-size="8" font-family="var(--font-mono)" fill="var(--ink-faint)" text-anchor="middle">${p.yr}</text>
+      `).join('');
+
+      return `
+        <div class="indicator-chart-wrap" style="margin:12px 0 10px; background:rgba(0,0,0,0.02); border:1px solid var(--rule-light); border-radius:6px; padding:8px 10px;">
+          <div style="display:flex; justify-content:space-between; font-size:10px; font-family:var(--font-mono); color:var(--ink-faint); margin-bottom:4px;">
+            <span>📈 অগ্রগতি ধারা (${sorted[0].period_year}–${sorted[sorted.length-1].period_year})</span>
+            <span>সর্বনিম্ন: ${min.toLocaleString('bn-IN')} | সর্বোচ্চ: ${max.toLocaleString('bn-IN')} ${unit || ''}</span>
+          </div>
+          <svg viewBox="0 0 ${w} ${h}" class="indicator-chart" style="width:100%; height:60px; overflow:visible;" aria-label="অগ্রগতি চিত্র">
+            <polygon points="${areaPoints}" fill="rgba(184, 77, 8, 0.12)"/>
+            <polyline fill="none" stroke="var(--saffron)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="${polylinePoints}"/>
+            ${circles}
+          </svg>
+        </div>
+      `;
+    }
+
+    fetch('/api/indicators?pillar=economy')
+      .then(res => res.json())
+      .then(indicators => {
+        const list = document.getElementById('indicators-list');
+        if (!indicators || indicators.length === 0) {
+          list.innerHTML = '<p style="text-align:center; padding:30px;">কোনো নির্দেশক পাওয়া যায়নি।</p>';
+          return;
+        }
+
+        list.innerHTML = indicators.map(ind => {
+          const latest = ind.latestObservation;
+          const obsRows = (ind.observations || []).slice(-4).map(o => `
+            <tr>
+              <td><strong>${o.period_year}</strong></td>
+              <td style="text-align:right;">${o.value.toLocaleString('bn-IN')} ${ind.unit}</td>
+              <td style="text-align:right;"><span class="conf-badge conf-grade-${(o.confidence_grade || 'a').toLowerCase()}">গ্রেড ${o.confidence_grade || 'A'}</span></td>
+            </tr>
+          `).join('');
+
+          return `
+            <div class="indicator-card">
+              <div>
+                <div class="indicator-meta-top">
+                  <span class="indicator-category-tag">${ind.category}</span>
+                  <span class="conf-badge conf-grade-a">যাচাইকৃত</span>
+                </div>
+                <h3 class="indicator-name">${ind.name_bn || ind.name_en}</h3>
+                <div class="indicator-figure-wrap">
+                  <span class="indicator-value">${latest ? latest.value.toLocaleString('bn-IN') : '—'}</span>
+                  <span class="indicator-unit">${ind.unit}</span>
+                  ${latest ? `<span class="indicator-period">(${latest.period_year})</span>` : ''}
+                </div>
+                <p style="font-size:13px; color:var(--ink-light); line-height:1.4;">${ind.description_bn || ind.description_en || ''}</p>
+                ${renderSparklineSVG(ind.observations, ind.unit)}
+                <div class="indicator-history-mini">
+                  <div style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px;">ঐতিহাসিক তথ্যপঞ্জি</div>
+                  <table class="history-mini-table">
+                    ${obsRows || '<tr><td>তথ্য অনুপলব্ধ</td></tr>'}
+                  </table>
+                </div>
+              </div>
+              <div class="indicator-source">
+                উৎস: ${ind.source_url ? `<a href="${ind.source_url}" target="_blank" rel="noopener">${ind.source_name} ↗</a>` : ind.source_name}
+              </div>
+            </div>
+          `;
+        }).join('');
+      })
+      .catch(err => {
+        console.error('Failed to load indicators:', err);
+      });
+  </script>
+</body>
+</html>

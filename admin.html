@@ -1,0 +1,2236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Command Center — WB Accountability Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --saffron: #E8620A;
+      --saffron-dark: #B84A00;
+      --saffron-pale: #FFF3E8;
+      --saffron-glow: rgba(232, 98, 10, 0.25);
+      --green: #1A6B2A;
+      --green-pale: #E8F5EC;
+      --amber: #D4860A;
+      --amber-pale: #FFF8E6;
+      --red: #C0392B;
+      --red-pale: #FFF0F0;
+      --ink: #1C1008;
+      --ink-mid: #4A3020;
+      --ink-light: #7E6555;
+      --paper: #F7F3EE;
+      --card-bg: #FFFFFF;
+      --border: #E5D9CE;
+      --shadow: 0 4px 20px rgba(28, 16, 8, 0.07);
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    /* Masthead */
+    .admin-header {
+      background: var(--ink);
+      color: #fff;
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid var(--saffron);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-wrap img {
+      width: 38px;
+      height: auto;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    }
+
+    .brand-title h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+    }
+
+    .brand-title h1 span {
+      color: var(--saffron);
+    }
+
+    .brand-subtitle {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .btn-site {
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.2s;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .btn-site:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    .btn-logout {
+      background: transparent;
+      color: #ff9d9d;
+      border: 1px solid rgba(255, 100, 100, 0.3);
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .btn-logout:hover {
+      background: var(--red);
+      color: #fff;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 32px 24px 60px;
+    }
+
+    /* Metric Cards */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .metric-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .metric-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--border);
+    }
+
+    .metric-card.accent-saffron::before { background: var(--saffron); }
+    .metric-card.accent-green::before { background: var(--green); }
+    .metric-card.accent-amber::before { background: var(--amber); }
+    .metric-card.accent-red::before { background: var(--red); }
+    .metric-card.accent-blue::before { background: #2980b9; }
+
+    .metric-val {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .metric-lbl {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ink-light);
+    }
+
+    /* Navigation Tabs */
+    .tabs-bar {
+      display: flex;
+      gap: 8px;
+      border-bottom: 2px solid var(--border);
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+      padding: 12px 24px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink-light);
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tab-btn:hover {
+      color: var(--ink);
+    }
+
+    .tab-btn.active {
+      color: var(--saffron-dark);
+      border-bottom-color: var(--saffron);
+    }
+
+    .tab-badge {
+      background: var(--saffron);
+      color: #fff;
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    /* Toolbars & Action Bars */
+    .action-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .search-input {
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 14px;
+      width: 320px;
+      max-width: 100%;
+      background: #fff;
+      outline: none;
+    }
+
+    .search-input:focus {
+      border-color: var(--saffron);
+      box-shadow: 0 0 0 3px var(--saffron-glow);
+    }
+
+    .btn-primary {
+      background: var(--saffron);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: var(--saffron-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: var(--ink);
+      border: 1px solid var(--border);
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover {
+      background: #f1eae2;
+    }
+
+    /* Scraped Queue Cards */
+    .queue-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .candidate-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: start;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .candidate-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(28, 16, 8, 0.1);
+    }
+
+    .cand-meta {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .cand-source {
+      background: var(--saffron-pale);
+      color: var(--saffron-dark);
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .cand-date {
+      font-size: 12px;
+      color: var(--ink-light);
+    }
+
+    .cand-confidence {
+      background: #E8F5EC;
+      color: var(--green);
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .cand-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+
+    .cand-title a {
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .cand-title a:hover {
+      color: var(--saffron);
+      text-decoration: underline;
+    }
+
+    .cand-snippet {
+      font-size: 14px;
+      color: var(--ink-mid);
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    .cand-match {
+      background: #faf6f0;
+      border-left: 3px solid var(--saffron);
+      padding: 10px 14px;
+      border-radius: 0 6px 6px 0;
+      font-size: 13px;
+    }
+
+    .cand-match-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .cand-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 140px;
+    }
+
+    .btn-approve {
+      background: var(--green);
+      color: #fff;
+      border: none;
+      padding: 9px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-approve:hover {
+      background: #145520;
+    }
+
+    .btn-reject {
+      background: transparent;
+      color: var(--red);
+      border: 1px solid var(--red-pale);
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-reject:hover {
+      background: var(--red-pale);
+    }
+
+    /* Table View for Promises and Updates */
+    .data-table-wrap {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    .data-table th {
+      background: #fcf9f5;
+      padding: 14px 16px;
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      border-bottom: 2px solid var(--border);
+    }
+
+    .data-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+
+    .data-table tr:hover {
+      background: #faf6f0;
+    }
+
+    /* Badges */
+    .status-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .status-done, .status-delivered { background: var(--green-pale); color: var(--green); }
+    .status-inprogress, .status-under_implementation { background: var(--amber-pale); color: var(--amber); }
+    .status-partially_delivered { background: #e8f4fd; color: #0066cc; }
+    .status-funded { background: #eafaf1; color: #27ae60; }
+    .status-legally_initiated { background: #f4ecf7; color: #8e44ad; }
+    .status-announced { background: #fef9e7; color: #b7950b; }
+    .status-not_started, .status-pending { background: #efebe4; color: var(--ink-light); }
+    .status-delayed { background: #fbeee6; color: #d35400; }
+    .status-reversed, .status-evaded { background: var(--red-pale); color: var(--red); }
+    .status-disputed { background: #fdedec; color: #c0392b; }
+    .status-not_verifiable { background: #eaecee; color: #5d6d7e; }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(28, 16, 8, 0.6);
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+      padding: 20px;
+    }
+
+    .modal-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card {
+      background: #fff;
+      width: 700px;
+      max-width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      border-radius: 14px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+      padding: 32px;
+      position: relative;
+    }
+
+    .modal-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 900;
+      margin-bottom: 20px;
+      color: var(--ink);
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink-mid);
+      margin-bottom: 6px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: inherit;
+      outline: none;
+      background: #fff;
+    }
+
+    .form-control:focus {
+      border-color: var(--saffron);
+      box-shadow: 0 0 0 3px var(--saffron-glow);
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .modal-footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-top: 24px;
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+    }
+
+    /* Login Screen */
+    .login-box {
+      max-width: 420px;
+      margin: 80px auto;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 36px 32px;
+      box-shadow: 0 10px 30px rgba(28, 16, 8, 0.1);
+      text-align: center;
+    }
+
+    .login-logo {
+      width: 60px;
+      height: auto;
+      margin-bottom: 16px;
+    }
+
+    .login-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .login-subtitle {
+      font-size: 14px;
+      color: var(--ink-light);
+      margin-bottom: 24px;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--ink);
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+      border-left: 4px solid var(--saffron);
+      transform: translateY(100px);
+      transition: transform 0.3s ease;
+      z-index: 1000;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .candidate-card {
+        grid-template-columns: 1fr;
+      }
+      .cand-actions {
+        flex-direction: row;
+      }
+      .admin-header {
+        padding: 12px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ADMIN HEADER -->
+  <header class="admin-header">
+    <div class="brand-wrap">
+      <img src="wb-map.webp" alt="WB Logo">
+      <div class="brand-title">
+        <h1>Viksit Bengal <span>Admin Console</span></h1>
+        <div class="brand-subtitle">Civic Data Verification, Evidence Review &amp; Analytics</div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <div id="user-role-badge" style="display:none; font-family:'Space Mono', monospace; font-size:11px; background:rgba(255,255,255,0.15); padding:4px 10px; border-radius:4px; text-transform:uppercase;"></div>
+      <a href="/" target="_blank" class="btn-site">View Public Dashboard ↗</a>
+      <button class="btn-logout" id="logout-btn" onclick="logout()" style="display:none">Sign Out</button>
+    </div>
+  </header>
+
+  <!-- LOGIN CONTAINER -->
+  <div id="login-section" class="login-box">
+    <img src="wb-map.webp" alt="WB Logo" class="login-logo">
+    <h2 class="login-title">Command Center Access</h2>
+    <p class="login-subtitle">Sign in with authorized researcher, reviewer, or administrator credentials</p>
+    <form id="login-form" onsubmit="handleLogin(event)">
+      <div class="form-group" style="text-align: left;">
+        <label for="admin-user">Username</label>
+        <input type="text" id="admin-user" class="form-control" placeholder="admin, reviewer1, or researcher1" value="admin" required autofocus>
+      </div>
+      <div class="form-group" style="text-align: left;">
+        <label for="admin-pass">Password</label>
+        <input type="password" id="admin-pass" class="form-control" placeholder="Default: admin123" required>
+      </div>
+      <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 12px;">Unlock Dashboard →</button>
+      <div id="login-err" style="color: var(--red); font-size: 13px; margin-top: 12px; display: none;"></div>
+      <div style="font-size:11px; color:var(--ink-light); margin-top:16px; border-top:1px dashed var(--border); padding-top:10px;">
+        Default RBAC Accounts: <code>admin / admin123</code> · <code>reviewer1 / reviewer123</code> · <code>researcher1 / researcher123</code>
+      </div>
+    </form>
+  </div>
+
+  <!-- DASHBOARD WRAPPER -->
+  <main id="dashboard-section" class="container" style="display:none;">
+
+    <!-- TOP METRICS -->
+    <section class="metrics-grid">
+      <div class="metric-card accent-saffron">
+        <div class="metric-val" id="m-total">—</div>
+        <div class="metric-lbl">Total Commitments</div>
+      </div>
+      <div class="metric-card accent-green">
+        <div class="metric-val" id="m-done" style="color: var(--green);">—</div>
+        <div class="metric-lbl">Delivered</div>
+      </div>
+      <div class="metric-card accent-amber">
+        <div class="metric-val" id="m-inprogress" style="color: var(--amber);">—</div>
+        <div class="metric-lbl">Under Implementation</div>
+      </div>
+      <div class="metric-card accent-blue">
+        <div class="metric-val" id="m-evidence" style="color: #2980b9;">0</div>
+        <div class="metric-lbl">Citizen Evidence Queue</div>
+      </div>
+      <div class="metric-card accent-red">
+        <div class="metric-val" id="m-queue" style="color: var(--red);">—</div>
+        <div class="metric-lbl">AI News Candidates</div>
+      </div>
+    </section>
+
+    <!-- TABS -->
+    <nav class="tabs-bar">
+      <button class="tab-btn active" onclick="switchTab('queue')">
+        📥 Influx Review Queue <span class="tab-badge" id="queue-badge">0</span>
+      </button>
+      <button class="tab-btn" onclick="switchTab('evidence')">
+        👥 Evidence Submissions <span class="tab-badge" id="evidence-badge" style="background:#2980b9;">0</span>
+      </button>
+      <button class="tab-btn" onclick="switchTab('promises')">
+        📋 Promises Ledger
+      </button>
+      <button class="tab-btn" onclick="switchTab('indicators')">
+        📊 Indicators Manager
+      </button>
+      <button class="tab-btn" onclick="switchTab('projects')">
+        🏗️ Projects Registry
+      </button>
+      <button class="tab-btn" onclick="switchTab('updates')">
+        📰 Published Updates
+      </button>
+      <button class="tab-btn" onclick="switchTab('csv')">
+        📁 CSV Data Tools
+      </button>
+      <button class="tab-btn" onclick="switchTab('logs')">
+        📜 Audit Logs &amp; History
+      </button>
+      <button class="tab-btn" onclick="switchTab('bot')">
+        🤖 AI Scraper Bot
+      </button>
+      <button class="tab-btn" onclick="switchTab('settings')">
+        ⚙️ Settings &amp; Metadata
+      </button>
+    </nav>
+
+    <!-- TAB 1: AI SCRAPED INFLUX QUEUE -->
+    <section id="tab-queue" class="tab-content">
+      <div class="action-bar">
+        <div>
+          <h2 style="font-size: 20px; font-weight: 700;">Incoming Candidate Updates from AI Scraper</h2>
+          <p style="font-size: 13px; color: var(--ink-light); margin-top: 2px;">
+            The AI agent monitored verified news sources and matched these articles to specific promises. Review and approve to publish live on the tracker.
+          </p>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <button class="btn-primary" onclick="triggerScraperNow()">⚡ Run AI Scraper Now</button>
+        </div>
+      </div>
+
+      <div class="queue-list" id="queue-container">
+        <div style="padding: 40px; text-align: center; color: var(--ink-light);">Loading queued candidates...</div>
+      </div>
+    </section>
+
+    <!-- TAB: CITIZEN EVIDENCE SUBMISSIONS -->
+    <section id="tab-evidence" class="tab-content" style="display:none;">
+      <div class="action-bar">
+        <div>
+          <h2 style="font-size: 20px; font-weight: 700;">Public Citizen Evidence Review Queue</h2>
+          <p style="font-size: 13px; color: var(--ink-light); margin-top: 2px;">
+            Evidence submitted by citizens and researchers. Review primary documentation, assign confidence grades, and approve to publish updates live on the tracker.
+          </p>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <select id="evidence-filter-status" class="search-input" style="width:160px;" onchange="loadEvidenceSubmissions()">
+            <option value="pending">Pending Review</option>
+            <option value="approved">Approved</option>
+            <option value="rejected">Rejected</option>
+            <option value="all">All Submissions</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Target</th>
+              <th>Title &amp; Source URL</th>
+              <th>Submitter</th>
+              <th>Explanation</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="evidence-tbody">
+            <tr><td colspan="7" style="text-align:center; padding: 30px;">Loading evidence review queue...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- TAB 2: PROMISES LEDGER -->
+    <section id="tab-promises" class="tab-content" style="display:none;">
+      <div class="action-bar">
+        <input type="text" id="promise-filter-input" class="search-input" placeholder="🔍 Search promises by text or ID..." oninput="filterPromisesTable()">
+        <button class="btn-primary" onclick="openAddPromiseModal()">+ Add New Promise</button>
+      </div>
+
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Category</th>
+              <th>Promise Commitment (EN / BN)</th>
+              <th>Status</th>
+              <th>Updates</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="promises-tbody">
+            <tr><td colspan="6" style="text-align:center; padding: 30px;">Loading promises database...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- TAB 3: PUBLISHED UPDATES -->
+    <section id="tab-updates" class="tab-content" style="display:none;">
+      <div class="action-bar">
+        <input type="text" id="updates-filter-input" class="search-input" placeholder="🔍 Search published updates..." oninput="filterUpdatesTable()">
+        <button class="btn-primary" onclick="openAddUpdateModal()">+ Add Manual Update</button>
+      </div>
+
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Promise ID</th>
+              <th>Headline</th>
+              <th>Source</th>
+              <th>Category</th>
+            </tr>
+          </thead>
+          <tbody id="updates-tbody">
+            <tr><td colspan="5" style="text-align:center; padding: 30px;">Loading timeline updates...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- TAB: INDICATORS MANAGER -->
+    <section id="tab-indicators" class="tab-content" style="display:none;">
+      <div class="action-bar">
+        <div>
+          <h2 style="font-size: 20px; font-weight: 700;">Economic &amp; Social Development Indicators</h2>
+          <p style="font-size: 13px; color: var(--ink-light); margin-top: 2px;">
+            Official time-series metrics from RBI, MOSPI, and Census. Record new observations and adjust targets.
+          </p>
+        </div>
+        <button class="btn-primary" onclick="openAddObsModal()">+ Record New Observation</button>
+      </div>
+
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Code</th>
+              <th>Pillar</th>
+              <th>Indicator Name</th>
+              <th>Latest Value</th>
+              <th>Target</th>
+              <th>Source</th>
+              <th>History</th>
+            </tr>
+          </thead>
+          <tbody id="indicators-tbody">
+            <tr><td colspan="7" style="text-align:center; padding: 30px;">Loading indicators...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- TAB: PROJECTS REGISTRY -->
+    <section id="tab-projects" class="tab-content" style="display:none;">
+      <div class="action-bar">
+        <div>
+          <h2 style="font-size: 20px; font-weight: 700;">Major Infrastructure Projects Registry</h2>
+          <p style="font-size: 13px; color: var(--ink-light); margin-top: 2px;">
+            Statewide infrastructure undertakings, funding sanctions, civil stages, and milestone tracking.
+          </p>
+        </div>
+        <button class="btn-primary" onclick="openAddProjectModal()">+ Add New Project</button>
+      </div>
+
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Sector</th>
+              <th>Project Name</th>
+              <th>District</th>
+              <th>Cost (₹ Cr)</th>
+              <th>Stage</th>
+              <th>Target Date</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="projects-tbody">
+            <tr><td colspan="7" style="text-align:center; padding: 30px;">Loading infrastructure projects...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- TAB: CSV DATA TOOLS -->
+    <section id="tab-csv" class="tab-content" style="display:none;">
+      <div style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 28px; box-shadow: var(--shadow);">
+        <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 12px;">📁 CSV Data Import &amp; Export Center</h2>
+        <p style="font-size: 15px; color: var(--ink-mid); margin-bottom: 24px; line-height: 1.6;">
+          Export database snapshots for offline verification or import bulk batches of commitments and projects with automated schema validation and row-level error reporting.
+        </p>
+
+        <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 14px;">1-Click CSV Exports</h3>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 36px;">
+          <a href="/api/export/csv?type=promises" class="btn-primary" style="text-decoration:none;" download>📥 Export Promises CSV</a>
+          <a href="/api/export/csv?type=indicators" class="btn-primary" style="text-decoration:none; background:#2980B9;" download>📥 Export Indicators CSV</a>
+          <a href="/api/export/csv?type=projects" class="btn-primary" style="text-decoration:none; background:#27AE60;" download>📥 Export Projects CSV</a>
+          <a href="/api/export/csv?type=districts" class="btn-primary" style="text-decoration:none; background:#8E44AD;" download>📥 Export Districts CSV</a>
+        </div>
+
+        <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 12px;">Bulk CSV Import &amp; Ingestion</h3>
+        <form id="csv-import-form" onsubmit="handleCsvImport(event)">
+          <div style="display: grid; grid-template-columns: 200px 1fr; gap: 16px; margin-bottom: 16px;">
+            <div class="form-group">
+              <label>Import Target</label>
+              <select id="csv-import-type" class="form-control">
+                <option value="promises">Promises Ledger</option>
+                <option value="projects">Infrastructure Projects</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Select CSV File</label>
+              <input type="file" id="csv-file-input" class="form-control" accept=".csv">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Or Paste Raw CSV Data</label>
+            <textarea id="csv-raw-input" class="form-control" rows="5" placeholder="id,category,number,status,text_en..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary" id="btn-csv-import">⚡ Process &amp; Ingest CSV</button>
+        </form>
+
+        <div id="csv-import-result" style="display:none; margin-top:20px; padding:16px; border-radius:8px;"></div>
+      </div>
+    </section>
+
+    <!-- TAB: AUDIT LOGS & STATUS HISTORY -->
+    <section id="tab-logs" class="tab-content" style="display:none;">
+      <div class="action-bar">
+        <div>
+          <h2 style="font-size: 20px; font-weight: 700;">Immutable Audit Logs &amp; Status Transitions</h2>
+          <p style="font-size: 13px; color: var(--ink-light); margin-top: 2px;">
+            Full administrative trail of user logins, status modifications, evidence review decisions, and dataset updates.
+          </p>
+        </div>
+        <button class="btn-secondary" onclick="loadAuditLogs()">🔄 Refresh Logs</button>
+      </div>
+
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Timestamp</th>
+              <th>User</th>
+              <th>Action</th>
+              <th>Target</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody id="logs-tbody">
+            <tr><td colspan="5" style="text-align:center; padding: 30px;">Loading audit trail...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- TAB 4: AI SCRAPER BOT CONTROL -->
+    <section id="tab-bot" class="tab-content" style="display:none;">
+      <div style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 28px; box-shadow: var(--shadow);">
+        <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 12px;">🤖 Autonomous AI News Monitoring Engine</h2>
+        <p style="font-size: 15px; color: var(--ink-mid); margin-bottom: 24px; line-height: 1.6;">
+          The AI scraper bot continuously tracks real-time RSS news feeds from Google News, PIB, ANI, PTI, The Hindu, Business Standard, The Telegraph, and Anandabazar Patrika.
+          It cross-references new political announcements against the 110+ promises in your database, generates bilingual summaries, and queues them for your review.
+        </p>
+
+        <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 30px;">
+          <button class="btn-primary" id="btn-bot-trigger" onclick="triggerScraperNow()" style="padding: 12px 24px; font-size: 15px;">
+            🚀 Trigger Live News Scrape Now
+          </button>
+          <span id="bot-status-text" style="font-size: 14px; color: var(--ink-light);">Status: Idle & Ready</span>
+        </div>
+
+        <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 12px;">Monitored Topics & Search Feeds</h3>
+        <ul style="list-style: inside square; font-size: 14px; color: var(--ink-mid); line-height: 2;">
+          <li>West Bengal cabinet decision & policy orders</li>
+          <li>Suvendu Adhikari governance announcements & schemes</li>
+          <li>West Bengal DA arrears government employees</li>
+          <li>India-Bangladesh border fencing & demographic measures</li>
+          <li>Ayushman Bharat health card implementation</li>
+          <li>Women ₹3,000 allowance and free bus travel</li>
+          <li>Industrial investment, IT hubs, and Haldia petrochemical expansion</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TAB 5: SITE SETTINGS & METADATA (NO HARDCODING) -->
+    <section id="tab-settings" class="tab-content" style="display:none;">
+      <div style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 32px; box-shadow: var(--shadow);">
+        <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 6px;">⚙️ Site Settings & Dynamic Metadata</h2>
+        <p style="font-size: 14px; color: var(--ink-light); margin-bottom: 24px;">
+          All data here is stored directly in SQLite (<code>database.sqlite</code>). Changing any value here immediately updates the live public tracker without touching code or redeploying.
+        </p>
+
+        <form id="settings-form" onsubmit="submitSettingsForm(event)">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="form-group">
+              <label>Chief Minister Name (English)</label>
+              <input type="text" id="set-cm-en" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label>Chief Minister Name (Bengali)</label>
+              <input type="text" id="set-cm-bn" class="form-control" required>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="form-group">
+              <label>Oath Ceremony Date (YYYY-MM-DD)</label>
+              <input type="date" id="set-oath-date" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label>Term End Date (YYYY-MM-DD)</label>
+              <input type="date" id="set-term-end" class="form-control" required>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="form-group">
+              <label>Oath Ceremony Venue (English)</label>
+              <input type="text" id="set-oath-text-en" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Oath Ceremony Venue (Bengali)</label>
+              <input type="text" id="set-oath-text-bn" class="form-control">
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="form-group">
+              <label>Term Ends Display Text (English)</label>
+              <input type="text" id="set-term-text-en" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Term Ends Display Text (Bengali)</label>
+              <input type="text" id="set-term-text-bn" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Website Subtitle (English)</label>
+            <textarea id="set-sub-en" class="form-control" rows="2"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Website Subtitle (Bengali)</label>
+            <textarea id="set-sub-bn" class="form-control" rows="2"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Site Disclaimer (English)</label>
+            <textarea id="set-disc-en" class="form-control" rows="2"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Site Disclaimer (Bengali)</label>
+            <textarea id="set-disc-bn" class="form-control" rows="2"></textarea>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="form-group">
+              <label>Contact Email Address</label>
+              <input type="email" id="set-email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label>Submit An Update Form URL</label>
+              <input type="url" id="set-submit-url" class="form-control">
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="form-group">
+              <label>Official Manifesto PDF (English)</label>
+              <input type="url" id="set-manifesto-en" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Official Manifesto PDF (Bengali)</label>
+              <input type="url" id="set-manifesto-bn" class="form-control">
+            </div>
+          </div>
+
+          <div style="margin-top: 24px;">
+            <button type="submit" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">💾 Save All Settings to SQLite Database</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- TAB 6: FIREBASE CLOUD DATABASE -->
+    <section id="tab-firebase" class="tab-content" style="display:none;">
+      <div style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 32px; box-shadow: var(--shadow);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+          <div>
+            <h2 style="font-size: 22px; font-weight: 700;">🔥 Google Firebase Cloud Database</h2>
+            <p style="font-size: 14px; color: var(--ink-light); margin-top: 2px;">
+              Manage your Firebase Firestore synchronization for real-time cloud data storage.
+            </p>
+          </div>
+          <div id="firebase-status-pill" style="padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 700; background: #fff3cd; color: #856404;">
+            Checking Firebase status...
+          </div>
+        </div>
+
+        <div style="background: #faf6f0; border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin-bottom: 28px;">
+          <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;">🚀 Quick Sync Action</h3>
+          <p style="font-size: 14px; color: var(--ink-mid); margin-bottom: 16px;">
+            Synchronize all 140 promises, updates, detailed setback dossiers, and metadata into Firebase Cloud Firestore in one go.
+          </p>
+          <button class="btn-primary" onclick="triggerFirebaseSync()" style="padding: 10px 20px;">
+            🔥 Push All Data to Firebase Firestore Now
+          </button>
+        </div>
+
+        <div style="border-top: 1px solid var(--border); padding-top: 24px;">
+          <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;">🔑 Link Firebase Credentials</h3>
+          <p style="font-size: 14px; color: var(--ink-mid); margin-bottom: 14px;">
+            To connect to your own Firebase project: Go to <strong>Firebase Console &gt; Project Settings &gt; Service Accounts</strong>, click <strong>Generate New Private Key</strong>, and paste the JSON contents below:
+          </p>
+          <form onsubmit="submitFirebaseConfig(event)">
+            <div class="form-group">
+              <label>serviceAccountKey.json Content</label>
+              <textarea id="firebase-json-input" class="form-control" rows="6" placeholder='{ "type": "service_account", "project_id": "...", ... }' required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Save Firebase Credentials</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL: APPROVE CANDIDATE -->
+  <div class="modal-overlay" id="approve-modal">
+    <div class="modal-card">
+      <h3 class="modal-title">Approve & Publish Update</h3>
+      <form id="approve-form" onsubmit="submitApproveForm(event)">
+        <input type="hidden" id="appr-cand-id">
+        <div class="form-group">
+          <label>Target Promise ID</label>
+          <select id="appr-promise-id" class="form-control" required></select>
+        </div>
+        <div class="form-group">
+          <label>Update Status of Promise To</label>
+          <select id="appr-status" class="form-control">
+            <option value="under_implementation">Under Implementation ◑ (বাস্তবায়নাধীন)</option>
+            <option value="delivered">Delivered ✓ (সম্পূর্ণ সম্পন্ন)</option>
+            <option value="partially_delivered">Partially Delivered ◐ (আংশিক সম্পন্ন)</option>
+            <option value="funded">Funded 💰 (অর্থ বরাদ্দপ্রাপ্ত)</option>
+            <option value="legally_initiated">Legally Initiated ⚖ (আইনগতভাবে শুরু)</option>
+            <option value="announced">Announced 📢 (ঘোষিত)</option>
+            <option value="not_started">Not Started ○ (শুরু হয়নি)</option>
+            <option value="delayed">Delayed ⏳ (বিলম্বিত)</option>
+            <option value="reversed">Reversed ⃠ (স্থগিত বা বাতিল)</option>
+            <option value="disputed">Disputed ⚠ (বিতর্কিত)</option>
+            <option value="not_verifiable">Not Verifiable ❓ (যাচাইযোগ্য নয়)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Headline (English)</label>
+          <input type="text" id="appr-title-en" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label>Headline (Bengali)</label>
+          <input type="text" id="appr-title-bn" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Verification Details / Note (English)</label>
+          <textarea id="appr-note-en" class="form-control" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+          <label>Verification Details / Note (Bengali)</label>
+          <textarea id="appr-note-bn" class="form-control" rows="3"></textarea>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label>Source Publication</label>
+            <input type="text" id="appr-source-name" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Date</label>
+            <input type="date" id="appr-date" class="form-control" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Source Link URL</label>
+          <input type="url" id="appr-source-url" class="form-control">
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary" onclick="closeModal('approve-modal')">Cancel</button>
+          <button type="submit" class="btn-primary">✓ Publish Live to Tracker</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: ADD / EDIT PROMISE -->
+  <div class="modal-overlay" id="promise-modal">
+    <div class="modal-card">
+      <h3 class="modal-title" id="pm-modal-title">Edit Commitment</h3>
+      <form id="promise-form" onsubmit="submitPromiseForm(event)">
+        <div class="form-group">
+          <label>Promise ID (Unique Identifier)</label>
+          <input type="text" id="pm-id" class="form-control" required placeholder="e.g. economy-5">
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label>Category</label>
+            <input type="text" id="pm-category" class="form-control" required placeholder="e.g. economy, health, education">
+          </div>
+          <div class="form-group">
+            <label>Status</label>
+            <select id="pm-status" class="form-control">
+              <option value="not_started">Not Started ○ (শুরু হয়নি)</option>
+              <option value="announced">Announced 📢 (ঘোষিত)</option>
+              <option value="legally_initiated">Legally Initiated ⚖ (আইনগতভাবে শুরু)</option>
+              <option value="funded">Funded 💰 (অর্থ বরাদ্দপ্রাপ্ত)</option>
+              <option value="under_implementation">Under Implementation ◑ (বাস্তবায়নাধীন)</option>
+              <option value="partially_delivered">Partially Delivered ◐ (আংশিক সম্পন্ন)</option>
+              <option value="delivered">Delivered ✓ (সম্পূর্ণ সম্পন্ন)</option>
+              <option value="delayed">Delayed ⏳ (বিলম্বিত)</option>
+              <option value="reversed">Reversed ⃠ (স্থগিত বা বাতিল)</option>
+              <option value="disputed">Disputed ⚠ (বিতর্কিত)</option>
+              <option value="not_verifiable">Not Verifiable ❓ (যাচাইযোগ্য নয়)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Promise Text (English)</label>
+          <textarea id="pm-text-en" class="form-control" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+          <label>Promise Text (Bengali)</label>
+          <textarea id="pm-text-bn" class="form-control" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Keywords (comma-separated for AI matching & search)</label>
+          <input type="text" id="pm-keywords" class="form-control" placeholder="haldia, refinery, oil, petrochem">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary" onclick="closeModal('promise-modal')">Cancel</button>
+          <button type="submit" class="btn-primary">Save Commitment</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: REVIEW CITIZEN EVIDENCE -->
+  <div class="modal-overlay" id="evidence-modal">
+    <div class="modal-card">
+      <h3 class="modal-title">Review Citizen Evidence Submission</h3>
+      <form id="evidence-review-form" onsubmit="submitReviewEvidenceForm(event)">
+        <input type="hidden" id="ev-sub-id">
+        <div class="form-group">
+          <label>Evidence Title</label>
+          <input type="text" id="ev-title" class="form-control" readonly style="background:#fcf9f5;">
+        </div>
+        <div class="form-group">
+          <label>Source Documentation URL</label>
+          <div style="display:flex; gap:10px;">
+            <input type="url" id="ev-source-url" class="form-control" readonly style="background:#fcf9f5;">
+            <a href="#" id="ev-source-link" target="_blank" rel="noopener" class="btn-secondary" style="white-space:nowrap; text-decoration:none; display:flex; align-items:center;">Open URL ↗</a>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Citizen Explanation &amp; Context</label>
+          <textarea id="ev-explanation" class="form-control" rows="3" readonly style="background:#fcf9f5;"></textarea>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+          <div class="form-group">
+            <label>Review Decision</label>
+            <select id="ev-status" class="form-control" required>
+              <option value="approved">Approved ✓ (Verified Primary / Secondary Evidence)</option>
+              <option value="rejected">Rejected ✗ (Insufficient / Non-Verifiable / Off-Topic)</option>
+              <option value="pending">Pending Further Inquiries ○</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Evidence Confidence Grade</label>
+            <select id="ev-grade" class="form-control">
+              <option value="A">Grade A — Official Gazette / Budget / Govt Order</option>
+              <option value="B" selected>Grade B — Credible Institutional / Reputable Press</option>
+              <option value="C">Grade C — Public Claim / Stakeholder Statement</option>
+              <option value="D">Grade D — Unverified Preliminary Material</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Researcher Review Notes &amp; Verification Rationale</label>
+          <textarea id="ev-notes" class="form-control" rows="2" placeholder="Record verification source, cross-references, or rejection reason..."></textarea>
+        </div>
+        <div class="form-group" style="background:#faf6f0; padding:12px 16px; border-radius:8px; border:1px solid var(--border);">
+          <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-weight:600; margin:0;">
+            <input type="checkbox" id="ev-publish" style="width:18px; height:18px;">
+            <span>Publish live as a verified timeline update on the public dashboard</span>
+          </label>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary" onclick="closeModal('evidence-modal')">Cancel</button>
+          <button type="submit" class="btn-primary">Save Review Decision</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: ADD INDICATOR OBSERVATION -->
+  <div class="modal-overlay" id="obs-modal">
+    <div class="modal-card">
+      <h3 class="modal-title">Record Time-Series Observation</h3>
+      <form id="obs-form" onsubmit="submitAddObsForm(event)">
+        <div class="form-group">
+          <label>Target Indicator</label>
+          <select id="obs-indicator-id" class="form-control" required></select>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+          <div class="form-group">
+            <label>Observation Period / Year</label>
+            <input type="text" id="obs-period" class="form-control" placeholder="e.g. 2024-25, 2024" required>
+          </div>
+          <div class="form-group">
+            <label>Numerical Value</label>
+            <input type="number" step="any" id="obs-value" class="form-control" required placeholder="e.g. 17.2, 7.85">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Observation Notes / Methodology Details</label>
+          <input type="text" id="obs-notes" class="form-control" placeholder="e.g. Advanced Estimates, MOSPI Press Release">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary" onclick="closeModal('obs-modal')">Cancel</button>
+          <button type="submit" class="btn-primary">Record Observation</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: ADD / EDIT PROJECT -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-card">
+      <h3 class="modal-title" id="proj-modal-title">Add Infrastructure Project</h3>
+      <form id="project-form" onsubmit="submitAddProjectForm(event)">
+        <input type="hidden" id="proj-id">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+          <div class="form-group">
+            <label>Sector</label>
+            <select id="proj-sector" class="form-control" required>
+              <option value="Transport">Transport &amp; Urban Transit</option>
+              <option value="Maritime">Maritime &amp; Ports</option>
+              <option value="Mining & Power">Mining &amp; Power</option>
+              <option value="Railways">Freight Corridors &amp; Railways</option>
+              <option value="Highways">Highways &amp; Expressways</option>
+              <option value="Industry">Industrial Parks &amp; IT Hubs</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Project Stage</label>
+            <select id="proj-stage" class="form-control" required>
+              <option value="under_construction">Under Construction</option>
+              <option value="funded">Funded &amp; Sanctioned</option>
+              <option value="tendered">Tendered / DPR Prepared</option>
+              <option value="completed">Completed / Operational</option>
+              <option value="delayed">Delayed / Objections</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Project Name (English)</label>
+          <input type="text" id="proj-name-en" class="form-control" required placeholder="e.g. Kolkata Metro Green Line">
+        </div>
+        <div class="form-group">
+          <label>Project Name (Bengali)</label>
+          <input type="text" id="proj-name-bn" class="form-control" placeholder="e.g. কলকাতা মেট্রো গ্রিন লাইন">
+        </div>
+        <div class="form-group">
+          <label>Description &amp; Scope (English)</label>
+          <textarea id="proj-desc-en" class="form-control" rows="2" required></textarea>
+        </div>
+        <div class="form-group">
+          <label>Description &amp; Scope (Bengali)</label>
+          <textarea id="proj-desc-bn" class="form-control" rows="2"></textarea>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px;">
+          <div class="form-group">
+            <label>District</label>
+            <input type="text" id="proj-district" class="form-control" placeholder="e.g. Kolkata, Purba Medinipur">
+          </div>
+          <div class="form-group">
+            <label>Implementing Authority</label>
+            <input type="text" id="proj-authority" class="form-control" placeholder="e.g. KMRCL, WBIDC, DFCCIL">
+          </div>
+          <div class="form-group">
+            <label>Estimated Cost (₹ Crore)</label>
+            <input type="number" step="any" id="proj-cost" class="form-control" placeholder="e.g. 8575">
+          </div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+          <div class="form-group">
+            <label>Target Completion Date</label>
+            <input type="text" id="proj-target-date" class="form-control" placeholder="e.g. 2026-12, 2027">
+          </div>
+          <div class="form-group">
+            <label>Evidence Reference URL</label>
+            <input type="url" id="proj-evidence-url" class="form-control" placeholder="https://...">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary" onclick="closeModal('project-modal')">Cancel</button>
+          <button type="submit" class="btn-primary">Save Infrastructure Project</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast">Action completed successfully</div>
+
+  <!-- SCRIPTS -->
+  <script>
+    let AUTH_TOKEN = localStorage.getItem('wb_admin_token') || '';
+    let ALL_PROMISES = [];
+    let ALL_UPDATES = [];
+    let ALL_QUEUE = [];
+
+    async function apiRequest(endpoint, method = 'GET', data = null) {
+      const headers = { 'Content-Type': 'application/json' };
+      if (AUTH_TOKEN) headers['Authorization'] = `Bearer ${AUTH_TOKEN}`;
+      const opts = { method, headers };
+      if (data) opts.body = JSON.stringify(data);
+      const res = await fetch('/api/' + endpoint, opts);
+      if (res.status === 401 && endpoint !== 'login') {
+        logout();
+        throw new Error('Session expired');
+      }
+      return await res.json();
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3500);
+    }
+
+    // Auth handling
+    let CURRENT_USER = null;
+
+    async function initAuth() {
+      if (AUTH_TOKEN) {
+        try {
+          const res = await apiRequest('session');
+          if (res.authenticated) {
+            CURRENT_USER = res.session;
+            showDashboard();
+            return;
+          }
+        } catch (e) {}
+      }
+      showLogin();
+    }
+
+    function showLogin() {
+      document.getElementById('login-section').style.display = 'block';
+      document.getElementById('dashboard-section').style.display = 'none';
+      document.getElementById('logout-btn').style.display = 'none';
+      const badge = document.getElementById('user-role-badge');
+      if (badge) badge.style.display = 'none';
+    }
+
+    function showDashboard() {
+      document.getElementById('login-section').style.display = 'none';
+      document.getElementById('dashboard-section').style.display = 'block';
+      document.getElementById('logout-btn').style.display = 'inline-block';
+      
+      const badge = document.getElementById('user-role-badge');
+      if (badge && CURRENT_USER) {
+        badge.style.display = 'inline-block';
+        badge.textContent = `${CURRENT_USER.username} (${CURRENT_USER.role})`;
+      }
+
+      loadMetrics();
+      loadQueue();
+      loadEvidenceSubmissions();
+      loadPromises();
+      loadIndicators();
+      loadProjects();
+      loadUpdates();
+      loadAuditLogs();
+      loadSettings();
+      loadFirebaseStatus();
+    }
+
+    async function handleLogin(e) {
+      e.preventDefault();
+      const user = document.getElementById('admin-user').value.trim();
+      const pass = document.getElementById('admin-pass').value;
+      const err = document.getElementById('login-err');
+      err.style.display = 'none';
+      try {
+        const res = await apiRequest('login', 'POST', { username: user, password: pass });
+        if (res.success && res.token) {
+          AUTH_TOKEN = res.token;
+          CURRENT_USER = res.session;
+          localStorage.setItem('wb_admin_token', AUTH_TOKEN);
+          showDashboard();
+        } else {
+          err.textContent = res.error || 'Invalid credentials';
+          err.style.display = 'block';
+        }
+      } catch (errExp) {
+        err.textContent = 'Server connection error';
+        err.style.display = 'block';
+      }
+    }
+
+    function logout() {
+      AUTH_TOKEN = '';
+      CURRENT_USER = null;
+      localStorage.removeItem('wb_admin_token');
+      showLogin();
+    }
+
+    // Tabs
+    function switchTab(name) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(content => content.style.display = 'none');
+      const targetBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick')?.includes(name));
+      if (targetBtn) targetBtn.classList.add('active');
+      const targetSec = document.getElementById('tab-' + name);
+      if (targetSec) targetSec.style.display = 'block';
+    }
+
+    // Load Metrics
+    async function loadMetrics() {
+      try {
+        const stats = await apiRequest('stats');
+        document.getElementById('m-total').textContent = stats.total || 0;
+        document.getElementById('m-done').textContent = stats.done || 0;
+        document.getElementById('m-inprogress').textContent = stats.inprogress || 0;
+        document.getElementById('m-evidence').textContent = stats.evidenceCount || 0;
+        document.getElementById('evidence-badge').textContent = stats.evidenceCount || 0;
+        document.getElementById('m-queue').textContent = stats.queueCount || 0;
+        document.getElementById('queue-badge').textContent = stats.queueCount || 0;
+      } catch (e) {}
+    }
+
+    // Load Queue
+    async function loadQueue() {
+      const container = document.getElementById('queue-container');
+      try {
+        ALL_QUEUE = await apiRequest('scraped-queue');
+        document.getElementById('queue-badge').textContent = ALL_QUEUE.length;
+        document.getElementById('m-queue').textContent = ALL_QUEUE.length;
+
+        if (ALL_QUEUE.length === 0) {
+          container.innerHTML = `
+            <div style="background:#fff; border:1px solid var(--border); border-radius:12px; padding:40px; text-align:center;">
+              <h3 style="font-size:18px; margin-bottom:6px;">✨ Review Queue is Clear!</h3>
+              <p style="color:var(--ink-light); font-size:14px;">No unreviewed articles currently pending. Click "Run AI Scraper Now" to fetch fresh dispatches.</p>
+            </div>`;
+          return;
+        }
+
+        container.innerHTML = ALL_QUEUE.map(item => `
+          <div class="candidate-card" id="card-${item.id}">
+            <div>
+              <div class="cand-meta">
+                <span class="cand-source">${item.sourceName}</span>
+                <span class="cand-date">📅 ${item.pubDate}</span>
+                <span class="cand-confidence">AI Confidence: ${item.confidenceScore}%</span>
+                <span class="status-badge status-${item.suggestedStatus}">Suggested: ${item.suggestedStatus}</span>
+              </div>
+              <h3 class="cand-title"><a href="${item.sourceUrl}" target="_blank" rel="noopener">${item.newsTitle} ↗</a></h3>
+              <p class="cand-snippet">${item.newsSnippet}</p>
+              <div class="cand-match">
+                <span class="cand-match-label">Matched Manifesto Commitment:</span>
+                <strong>[${item.matchedPromiseId}]</strong> ${item.matchedPromiseText}
+              </div>
+            </div>
+            <div class="cand-actions">
+              <button class="btn-approve" onclick="openApproveModal('${item.id}')">✓ Review & Publish</button>
+              <button class="btn-reject" onclick="rejectCandidate('${item.id}')">✕ Dismiss</button>
+            </div>
+          </div>
+        `).join('');
+      } catch (e) {
+        container.innerHTML = `<div style="color:var(--red); padding:20px;">Failed to load candidate queue.</div>`;
+      }
+    }
+
+    // Approve / Reject
+    function openApproveModal(id) {
+      const item = ALL_QUEUE.find(q => q.id === id);
+      if (!item) return;
+
+      document.getElementById('appr-cand-id').value = item.id;
+      document.getElementById('appr-title-en').value = item.proposedTitleEn;
+      document.getElementById('appr-title-bn').value = item.proposedTitleBn || '';
+      document.getElementById('appr-note-en').value = item.proposedNoteEn;
+      document.getElementById('appr-note-bn').value = item.proposedNoteBn || '';
+      document.getElementById('appr-source-name').value = item.sourceName;
+      document.getElementById('appr-date').value = item.pubDate;
+      document.getElementById('appr-source-url').value = item.sourceUrl;
+      const legacyMap = { 'pending': 'not_started', 'inprogress': 'under_implementation', 'done': 'delivered', 'evaded': 'not_verifiable' };
+      document.getElementById('appr-status').value = legacyMap[item.suggestedStatus] || item.suggestedStatus || 'under_implementation';
+
+      // Populate promise selector
+      const pSel = document.getElementById('appr-promise-id');
+      pSel.innerHTML = ALL_PROMISES.map(p => `
+        <option value="${p.id}" ${p.id === item.matchedPromiseId ? 'selected' : ''}>
+          [${p.id}] ${p.text_en.substring(0, 80)}...
+        </option>
+      `).join('');
+
+      document.getElementById('approve-modal').classList.add('open');
+    }
+
+    async function submitApproveForm(e) {
+      e.preventDefault();
+      const candId = document.getElementById('appr-cand-id').value;
+      const promiseId = document.getElementById('appr-promise-id').value;
+      const selectedPromise = ALL_PROMISES.find(p => p.id === promiseId);
+
+      const payload = {
+        candidateId: candId,
+        promiseId: promiseId,
+        category: selectedPromise ? selectedPromise.category : 'general',
+        status: document.getElementById('appr-status').value,
+        title_en: document.getElementById('appr-title-en').value,
+        title_bn: document.getElementById('appr-title-bn').value,
+        note_en: document.getElementById('appr-note-en').value,
+        note_bn: document.getElementById('appr-note-bn').value,
+        sourceName: document.getElementById('appr-source-name').value,
+        date: document.getElementById('appr-date').value,
+        sourceUrl: document.getElementById('appr-source-url').value
+      };
+
+      try {
+        await apiRequest('scraped-queue/approve', 'POST', payload);
+        closeModal('approve-modal');
+        showToast('✓ Update published live to the tracker!');
+        loadQueue();
+        loadMetrics();
+        loadUpdates();
+        loadPromises();
+      } catch (err) {
+        alert('Error approving update: ' + err.message);
+      }
+    }
+
+    async function rejectCandidate(id) {
+      if (!confirm('Dismiss this candidate update?')) return;
+      try {
+        await apiRequest('scraped-queue/reject', 'POST', { candidateId: id });
+        showToast('Candidate dismissed');
+        loadQueue();
+      } catch (err) {
+        alert('Error dismissing candidate: ' + err.message);
+      }
+    }
+
+    // Trigger Scraper
+    async function triggerScraperNow() {
+      const statusText = document.getElementById('bot-status-text');
+      if (statusText) statusText.textContent = 'Status: Scraping feeds in background... ⏳';
+      showToast('🤖 AI Scraper started! Gathering news...');
+
+      try {
+        await apiRequest('trigger-scraper', 'POST');
+        setTimeout(() => {
+          loadQueue();
+          loadMetrics();
+          if (statusText) statusText.textContent = 'Status: Scrape completed. Queue updated! ✓';
+        }, 5000);
+      } catch (err) {
+        alert('Could not start scraper: ' + err.message);
+      }
+    }
+
+    // Promises Table
+    async function loadPromises() {
+      ALL_PROMISES = await apiRequest('promises');
+      renderPromisesTable(ALL_PROMISES);
+    }
+
+    function renderPromisesTable(list) {
+      const tbody = document.getElementById('promises-tbody');
+      tbody.innerHTML = list.map(p => `
+        <tr>
+          <td><strong>${p.id}</strong></td>
+          <td><span style="font-size:12px; background:#f0ece6; padding:3px 6px; border-radius:4px;">${p.category || '—'}</span></td>
+          <td>
+            <div style="font-weight:600; margin-bottom:4px;">${p.text_en}</div>
+            <div style="font-size:12px; color:var(--ink-light);">${p.text_bn || ''}</div>
+          </td>
+          <td><span class="status-badge status-${p.status || 'pending'}">${p.status || 'pending'}</span></td>
+          <td>${p.updateCount || 0}</td>
+          <td>
+            <button class="btn-secondary" style="padding:6px 12px; font-size:12px;" onclick="editPromise('${p.id}')">Edit</button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    function filterPromisesTable() {
+      const q = document.getElementById('promise-filter-input').value.toLowerCase();
+      const filtered = ALL_PROMISES.filter(p => 
+        p.id.toLowerCase().includes(q) ||
+        p.text_en.toLowerCase().includes(q) ||
+        (p.category && p.category.toLowerCase().includes(q))
+      );
+      renderPromisesTable(filtered);
+    }
+
+    function openAddPromiseModal() {
+      document.getElementById('pm-modal-title').textContent = 'Add New Commitment';
+      document.getElementById('pm-id').value = '';
+      document.getElementById('pm-id').removeAttribute('readonly');
+      document.getElementById('pm-category').value = '';
+      document.getElementById('pm-status').value = 'not_started';
+      document.getElementById('pm-text-en').value = '';
+      document.getElementById('pm-text-bn').value = '';
+      document.getElementById('pm-keywords').value = '';
+      document.getElementById('promise-modal').classList.add('open');
+    }
+
+    function editPromise(id) {
+      const p = ALL_PROMISES.find(item => item.id === id);
+      if (!p) return;
+      document.getElementById('pm-modal-title').textContent = 'Edit Commitment [' + p.id + ']';
+      document.getElementById('pm-id').value = p.id;
+      document.getElementById('pm-id').setAttribute('readonly', 'true');
+      document.getElementById('pm-category').value = p.category || '';
+      const legacyMap = { 'pending': 'not_started', 'inprogress': 'under_implementation', 'done': 'delivered', 'evaded': 'not_verifiable' };
+      document.getElementById('pm-status').value = legacyMap[p.status] || p.status || 'not_started';
+      document.getElementById('pm-text-en').value = p.text_en;
+      document.getElementById('pm-text-bn').value = p.text_bn || '';
+      document.getElementById('pm-keywords').value = (p.keywords || []).join(', ');
+      document.getElementById('promise-modal').classList.add('open');
+    }
+
+    async function submitPromiseForm(e) {
+      e.preventDefault();
+      const id = document.getElementById('pm-id').value.trim();
+      const payload = {
+        id,
+        category: document.getElementById('pm-category').value.trim(),
+        status: document.getElementById('pm-status').value,
+        text_en: document.getElementById('pm-text-en').value.trim(),
+        text_bn: document.getElementById('pm-text-bn').value.trim(),
+        keywords: document.getElementById('pm-keywords').value.split(',').map(s => s.trim().toLowerCase()).filter(Boolean)
+      };
+
+      try {
+        await apiRequest('promises', 'POST', payload);
+        closeModal('promise-modal');
+        showToast('✓ Promise saved successfully');
+        loadPromises();
+        loadMetrics();
+      } catch (err) {
+        alert('Error saving promise: ' + err.message);
+      }
+    }
+
+    // Updates Table
+    async function loadUpdates() {
+      ALL_UPDATES = await apiRequest('updates');
+      renderUpdatesTable(ALL_UPDATES.slice(0, 100));
+    }
+
+    function renderUpdatesTable(list) {
+      const tbody = document.getElementById('updates-tbody');
+      tbody.innerHTML = list.map(u => `
+        <tr>
+          <td style="white-space:nowrap; font-family:'Space Mono'; font-size:12px;">${u.date}</td>
+          <td><strong>${u.promiseId}</strong></td>
+          <td>${u.title_en}</td>
+          <td><span style="font-size:12px; color:var(--ink-light);">${(u.sources && u.sources[0]) ? u.sources[0].name : '—'}</span></td>
+          <td><span style="font-size:12px; background:#f0ece6; padding:3px 6px; border-radius:4px;">${u.category}</span></td>
+        </tr>
+      `).join('');
+    }
+
+    function filterUpdatesTable() {
+      const q = document.getElementById('updates-filter-input').value.toLowerCase();
+      const filtered = ALL_UPDATES.filter(u =>
+        u.promiseId.toLowerCase().includes(q) ||
+        u.title_en.toLowerCase().includes(q) ||
+        (u.category && u.category.toLowerCase().includes(q))
+      );
+      renderUpdatesTable(filtered.slice(0, 100));
+    }
+
+    // Settings (Database Configuration)
+    async function loadSettings() {
+      try {
+        const s = await apiRequest('settings');
+        document.getElementById('set-cm-en').value = s.chief_minister || '';
+        document.getElementById('set-cm-bn').value = s.chief_minister_bn || '';
+        document.getElementById('set-oath-date').value = s.oath_date || '';
+        document.getElementById('set-term-end').value = s.term_end_date || '';
+        document.getElementById('set-oath-text-en').value = s.oath_ceremony_text || '';
+        document.getElementById('set-oath-text-bn').value = s.oath_ceremony_text_bn || '';
+        document.getElementById('set-term-text-en').value = s.term_ends_text || '';
+        document.getElementById('set-term-text-bn').value = s.term_ends_text_bn || '';
+        document.getElementById('set-sub-en').value = s.site_subtitle_en || '';
+        document.getElementById('set-sub-bn').value = s.site_subtitle_bn || '';
+        document.getElementById('set-disc-en').value = s.disclaimer_en || '';
+        document.getElementById('set-disc-bn').value = s.disclaimer_bn || '';
+        document.getElementById('set-email').value = s.contact_email || '';
+        document.getElementById('set-submit-url').value = s.submit_form_url || '';
+        document.getElementById('set-manifesto-en').value = s.manifesto_en_url || '';
+        document.getElementById('set-manifesto-bn').value = s.manifesto_bn_url || '';
+      } catch (err) {
+        console.error('Error loading settings:', err);
+      }
+    }
+
+    async function submitSettingsForm(e) {
+      e.preventDefault();
+      const payload = {
+        chief_minister: document.getElementById('set-cm-en').value.trim(),
+        chief_minister_bn: document.getElementById('set-cm-bn').value.trim(),
+        oath_date: document.getElementById('set-oath-date').value.trim(),
+        term_end_date: document.getElementById('set-term-end').value.trim(),
+        oath_ceremony_text: document.getElementById('set-oath-text-en').value.trim(),
+        oath_ceremony_text_bn: document.getElementById('set-oath-text-bn').value.trim(),
+        term_ends_text: document.getElementById('set-term-text-en').value.trim(),
+        term_ends_text_bn: document.getElementById('set-term-text-bn').value.trim(),
+        site_subtitle_en: document.getElementById('set-sub-en').value.trim(),
+        site_subtitle_bn: document.getElementById('set-sub-bn').value.trim(),
+        disclaimer_en: document.getElementById('set-disc-en').value.trim(),
+        disclaimer_bn: document.getElementById('set-disc-bn').value.trim(),
+        contact_email: document.getElementById('set-email').value.trim(),
+        submit_form_url: document.getElementById('set-submit-url').value.trim(),
+        manifesto_en_url: document.getElementById('set-manifesto-en').value.trim(),
+        manifesto_bn_url: document.getElementById('set-manifesto-bn').value.trim()
+      };
+
+      try {
+        await apiRequest('settings', 'POST', payload);
+        showToast('✓ Settings successfully saved into SQLite database!');
+      } catch (err) {
+        alert('Error saving settings: ' + err.message);
+      }
+    }
+
+    // Firebase Cloud Database Integration
+    async function loadFirebaseStatus() {
+      const pill = document.getElementById('firebase-status-pill');
+      if (!pill) return;
+      try {
+        const res = await apiRequest('firebase/status');
+        if (res.connected) {
+          pill.style.background = '#d4edda';
+          pill.style.color = '#155724';
+          pill.textContent = '🟢 Connected to Firebase Firestore';
+        } else if (res.hasServiceAccount) {
+          pill.style.background = '#cce5ff';
+          pill.style.color = '#004085';
+          pill.textContent = '🔵 Key Present (Pending App Restart)';
+        } else {
+          pill.style.background = '#fff3cd';
+          pill.style.color = '#856404';
+          pill.textContent = '🟡 Standalone Mode (Link Service Account Key Below)';
+        }
+      } catch (e) {
+        pill.textContent = 'Firebase Status: Offline';
+      }
+    }
+
+    async function triggerFirebaseSync() {
+      showToast('🔥 Starting Firebase Firestore sync...');
+      try {
+        const res = await apiRequest('firebase/sync', 'POST');
+        showToast(res.message || 'Firebase synchronization queued!');
+      } catch (err) {
+        alert('Firebase sync: ' + err.message);
+      }
+    }
+
+    async function submitFirebaseConfig(e) {
+      e.preventDefault();
+      const json = document.getElementById('firebase-json-input').value.trim();
+      try {
+        const res = await apiRequest('firebase/config', 'POST', { serviceAccountJson: json });
+        showToast('✓ ' + res.message);
+        loadFirebaseStatus();
+      } catch (err) {
+        alert('Error saving Firebase config: ' + err.message);
+      }
+    }
+
+    // CITIZEN EVIDENCE SUBMISSIONS
+    let ALL_EVIDENCE = [];
+    async function loadEvidenceSubmissions() {
+      const filter = document.getElementById('evidence-filter-status')?.value || 'all';
+      const endpoint = filter === 'all' ? 'evidence/submissions' : `evidence/submissions?status=${filter}`;
+      try {
+        ALL_EVIDENCE = await apiRequest(endpoint);
+        const tbody = document.getElementById('evidence-tbody');
+        if (!tbody) return;
+        if (!ALL_EVIDENCE.length) {
+          tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding:30px; color:var(--ink-light);">No submissions found matching criteria.</td></tr>';
+          return;
+        }
+        tbody.innerHTML = ALL_EVIDENCE.map(ev => `
+          <tr>
+            <td style="white-space:nowrap; font-family:'Space Mono'; font-size:12px;">${ev.event_date || ev.created_at?.split('T')[0]}</td>
+            <td><span style="font-size:12px; font-weight:700;">${ev.target_id || 'General'}</span></td>
+            <td>
+              <div style="font-weight:600; margin-bottom:4px;">${ev.title}</div>
+              <a href="${ev.source_url}" target="_blank" rel="noopener" style="font-size:12px; color:var(--saffron);">Source Link ↗</a>
+            </td>
+            <td>
+              <div style="font-size:13px;">${ev.submitter_name || 'Anonymous Citizen'}</div>
+              <div style="font-size:11px; color:var(--ink-light);">${ev.submitter_email || ''}</div>
+            </td>
+            <td style="font-size:13px; max-width:240px;">${ev.explanation}</td>
+            <td>
+              <span class="status-badge" style="background:${ev.status === 'approved' ? '#d4edda' : ev.status === 'rejected' ? '#f8d7da' : '#fff3cd'}; color:${ev.status === 'approved' ? '#155724' : ev.status === 'rejected' ? '#721c24' : '#856404'};">
+                ${ev.status.toUpperCase()} (${ev.confidence_grade})
+              </span>
+            </td>
+            <td>
+              <button class="btn-primary" style="padding:6px 12px; font-size:12px;" onclick="openReviewEvidenceModal('${ev.id}')">Review</button>
+            </td>
+          </tr>
+        `).join('');
+      } catch (err) {
+        console.error('Failed to load evidence submissions:', err);
+      }
+    }
+
+    function openReviewEvidenceModal(id) {
+      const ev = ALL_EVIDENCE.find(item => item.id === id);
+      if (!ev) return;
+      document.getElementById('ev-sub-id').value = ev.id;
+      document.getElementById('ev-title').value = ev.title;
+      document.getElementById('ev-source-url').value = ev.source_url;
+      document.getElementById('ev-source-link').href = ev.source_url;
+      document.getElementById('ev-explanation').value = ev.explanation;
+      document.getElementById('ev-status').value = ev.status || 'approved';
+      document.getElementById('ev-grade').value = ev.confidence_grade || 'B';
+      document.getElementById('ev-notes').value = ev.reviewer_notes || '';
+      document.getElementById('ev-publish').checked = false;
+      document.getElementById('evidence-modal').classList.add('open');
+    }
+
+    async function submitReviewEvidenceForm(e) {
+      e.preventDefault();
+      const submissionId = document.getElementById('ev-sub-id').value;
+      const status = document.getElementById('ev-status').value;
+      const reviewerNotes = document.getElementById('ev-notes').value.trim();
+      const publishAsUpdate = document.getElementById('ev-publish').checked;
+
+      try {
+        await apiRequest('evidence/review', 'POST', {
+          submissionId,
+          status,
+          reviewerNotes,
+          publishAsUpdate
+        });
+        closeModal('evidence-modal');
+        showToast('✓ Evidence review decision recorded!');
+        loadEvidenceSubmissions();
+        loadMetrics();
+        if (publishAsUpdate) {
+          loadUpdates();
+          loadPromises();
+        }
+      } catch (err) {
+        alert('Review error: ' + err.message);
+      }
+    }
+
+    // INDICATORS & OBSERVATIONS
+    let ALL_INDICATORS = [];
+    async function loadIndicators() {
+      try {
+        ALL_INDICATORS = await apiRequest('indicators');
+        const tbody = document.getElementById('indicators-tbody');
+        if (!tbody) return;
+        tbody.innerHTML = ALL_INDICATORS.map(ind => `
+          <tr>
+            <td><strong>${ind.id}</strong></td>
+            <td><span style="font-size:12px; background:#f0ece6; padding:3px 6px; border-radius:4px; text-transform:uppercase;">${ind.pillar}</span></td>
+            <td>
+              <div style="font-weight:600;">${ind.name_en}</div>
+              <div style="font-size:12px; color:var(--ink-light);">${ind.name_bn || ''}</div>
+            </td>
+            <td><strong>${ind.latest_value != null ? ind.latest_value : '—'} ${ind.unit || ''}</strong></td>
+            <td>${ind.target_value != null ? ind.target_value + ' ' + (ind.unit || '') : '—'}</td>
+            <td style="font-size:12px; color:var(--ink-mid);">${ind.source_agency || '—'}</td>
+            <td><span style="font-size:12px; font-weight:700;">${ind.observations ? ind.observations.length : 0} obs</span></td>
+          </tr>
+        `).join('');
+
+        // Populate modal select
+        const obsSel = document.getElementById('obs-indicator-id');
+        if (obsSel) {
+          obsSel.innerHTML = ALL_INDICATORS.map(ind => `
+            <option value="${ind.id}">[${ind.id}] ${ind.name_en} (${ind.unit})</option>
+          `).join('');
+        }
+      } catch (err) {
+        console.error('Failed to load indicators:', err);
+      }
+    }
+
+    function openAddObsModal() {
+      document.getElementById('obs-period').value = '';
+      document.getElementById('obs-value').value = '';
+      document.getElementById('obs-notes').value = '';
+      document.getElementById('obs-modal').classList.add('open');
+    }
+
+    async function submitAddObsForm(e) {
+      e.preventDefault();
+      const indicator_id = document.getElementById('obs-indicator-id').value;
+      const period = document.getElementById('obs-period').value.trim();
+      const value = parseFloat(document.getElementById('obs-value').value);
+      const notes = document.getElementById('obs-notes').value.trim();
+
+      try {
+        await apiRequest('indicators/observations', 'POST', {
+          indicator_id,
+          period,
+          value,
+          notes
+        });
+        closeModal('obs-modal');
+        showToast('✓ Indicator observation saved!');
+        loadIndicators();
+      } catch (err) {
+        alert('Error saving observation: ' + err.message);
+      }
+    }
+
+    // PROJECTS REGISTRY
+    let ALL_PROJECTS = [];
+    async function loadProjects() {
+      try {
+        ALL_PROJECTS = await apiRequest('projects');
+        const tbody = document.getElementById('projects-tbody');
+        if (!tbody) return;
+        tbody.innerHTML = ALL_PROJECTS.map(proj => `
+          <tr>
+            <td><span style="font-size:12px; background:#f0ece6; padding:3px 6px; border-radius:4px;">${proj.sector}</span></td>
+            <td>
+              <div style="font-weight:600;">${proj.name_en}</div>
+              <div style="font-size:12px; color:var(--ink-light);">${proj.authority || ''}</div>
+            </td>
+            <td>${proj.district || 'Statewide'}</td>
+            <td><strong>₹${Number(proj.cost_cr || 0).toLocaleString('en-IN')} Cr</strong></td>
+            <td><span class="status-badge" style="background:#eaf2f8; color:#2980b9;">${proj.stage.replace('_', ' ').toUpperCase()}</span></td>
+            <td>${proj.target_completion || '—'}</td>
+            <td>
+              <button class="btn-secondary" style="padding:5px 10px; font-size:12px;" onclick="editProject('${proj.id}')">Edit</button>
+              <button class="btn-secondary" style="padding:5px 10px; font-size:12px; color:var(--red); border-color:var(--red-pale);" onclick="deleteProject('${proj.id}')">✕</button>
+            </td>
+          </tr>
+        `).join('');
+      } catch (err) {
+        console.error('Failed to load projects:', err);
+      }
+    }
+
+    function openAddProjectModal() {
+      document.getElementById('proj-modal-title').textContent = 'Add Infrastructure Project';
+      document.getElementById('proj-id').value = '';
+      document.getElementById('proj-sector').value = 'Transport';
+      document.getElementById('proj-stage').value = 'under_construction';
+      document.getElementById('proj-name-en').value = '';
+      document.getElementById('proj-name-bn').value = '';
+      document.getElementById('proj-desc-en').value = '';
+      document.getElementById('proj-desc-bn').value = '';
+      document.getElementById('proj-district').value = '';
+      document.getElementById('proj-authority').value = '';
+      document.getElementById('proj-cost').value = '';
+      document.getElementById('proj-target-date').value = '';
+      document.getElementById('proj-evidence-url').value = '';
+      document.getElementById('project-modal').classList.add('open');
+    }
+
+    function editProject(id) {
+      const proj = ALL_PROJECTS.find(p => p.id === id);
+      if (!proj) return;
+      document.getElementById('proj-modal-title').textContent = 'Edit Project [' + proj.id + ']';
+      document.getElementById('proj-id').value = proj.id;
+      document.getElementById('proj-sector').value = proj.sector;
+      document.getElementById('proj-stage').value = proj.stage;
+      document.getElementById('proj-name-en').value = proj.name_en;
+      document.getElementById('proj-name-bn').value = proj.name_bn || '';
+      document.getElementById('proj-desc-en').value = proj.description_en || '';
+      document.getElementById('proj-desc-bn').value = proj.description_bn || '';
+      document.getElementById('proj-district').value = proj.district || '';
+      document.getElementById('proj-authority').value = proj.authority || '';
+      document.getElementById('proj-cost').value = proj.cost_cr || '';
+      document.getElementById('proj-target-date').value = proj.target_completion || '';
+      document.getElementById('proj-evidence-url').value = proj.evidence_url || '';
+      document.getElementById('project-modal').classList.add('open');
+    }
+
+    async function submitAddProjectForm(e) {
+      e.preventDefault();
+      const id = document.getElementById('proj-id').value.trim() || undefined;
+      const payload = {
+        id,
+        sector: document.getElementById('proj-sector').value,
+        stage: document.getElementById('proj-stage').value,
+        name_en: document.getElementById('proj-name-en').value.trim(),
+        name_bn: document.getElementById('proj-name-bn').value.trim(),
+        description_en: document.getElementById('proj-desc-en').value.trim(),
+        description_bn: document.getElementById('proj-desc-bn').value.trim(),
+        district: document.getElementById('proj-district').value.trim(),
+        authority: document.getElementById('proj-authority').value.trim(),
+        cost_cr: parseFloat(document.getElementById('proj-cost').value) || 0,
+        target_completion: document.getElementById('proj-target-date').value.trim(),
+        evidence_url: document.getElementById('proj-evidence-url').value.trim()
+      };
+
+      try {
+        await apiRequest('projects', 'POST', payload);
+        closeModal('project-modal');
+        showToast('✓ Project saved to registry!');
+        loadProjects();
+      } catch (err) {
+        alert('Error saving project: ' + err.message);
+      }
+    }
+
+    async function deleteProject(id) {
+      if (!confirm('Are you sure you want to remove this project?')) return;
+      try {
+        await apiRequest(`projects/${id}`, 'DELETE');
+        showToast('Project removed');
+        loadProjects();
+      } catch (err) {
+        alert('Error deleting project: ' + err.message);
+      }
+    }
+
+    // AUDIT LOGS
+    async function loadAuditLogs() {
+      try {
+        const logs = await apiRequest('audit-logs?limit=50');
+        const tbody = document.getElementById('logs-tbody');
+        if (!tbody) return;
+        tbody.innerHTML = logs.map(log => `
+          <tr>
+            <td style="white-space:nowrap; font-family:'Space Mono'; font-size:12px;">${log.timestamp}</td>
+            <td><strong>${log.user_id}</strong></td>
+            <td><span style="font-family:'Space Mono'; font-size:11px; background:#f0ece6; padding:3px 6px; border-radius:4px;">${log.action}</span></td>
+            <td>${log.entity_type ? log.entity_type + (log.entity_id ? ' (' + log.entity_id + ')' : '') : '—'}</td>
+            <td style="font-size:12px; color:var(--ink-mid);">${log.details ? JSON.stringify(log.details) : '—'}</td>
+          </tr>
+        `).join('');
+      } catch (err) {
+        console.error('Failed to load audit logs:', err);
+      }
+    }
+
+    // CSV IMPORT
+    async function handleCsvImport(e) {
+      e.preventDefault();
+      const type = document.getElementById('csv-import-type').value;
+      const fileInput = document.getElementById('csv-file-input');
+      const rawText = document.getElementById('csv-raw-input').value.trim();
+      const resultBox = document.getElementById('csv-import-result');
+
+      let csvData = rawText;
+      if (fileInput.files.length > 0) {
+        csvData = await fileInput.files[0].text();
+      }
+
+      if (!csvData) {
+        alert('Please choose a CSV file or paste raw CSV text.');
+        return;
+      }
+
+      resultBox.style.display = 'block';
+      resultBox.style.background = '#eaf2f8';
+      resultBox.style.color = '#2980b9';
+      resultBox.textContent = 'Processing and validating CSV batch...';
+
+      try {
+        const res = await apiRequest(`import/csv?type=${type}`, 'POST', { raw: csvData });
+        if (res.success) {
+          resultBox.style.background = '#d4edda';
+          resultBox.style.color = '#155724';
+          resultBox.innerHTML = `<strong>✓ Import Complete:</strong> ${res.imported} records processed successfully. (${res.errors.length} skipped errors)`;
+          showToast('✓ CSV Imported: ' + res.imported + ' rows processed');
+          if (type === 'promises') loadPromises();
+          if (type === 'projects') loadProjects();
+        } else {
+          resultBox.style.background = '#f8d7da';
+          resultBox.style.color = '#721c24';
+          resultBox.textContent = 'Import failed: ' + (res.error || 'Validation error');
+        }
+      } catch (err) {
+        resultBox.style.background = '#f8d7da';
+        resultBox.style.color = '#721c24';
+        resultBox.textContent = 'Server error during CSV import: ' + err.message;
+      }
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('open');
+    }
+
+    // Init on boot
+    initAuth();
+  </script>
+</body>
+</html>

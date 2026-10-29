@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infrastructure & Development Projects Registry — Viksit Bengal Dashboard</title>
+  <meta name="description" content="Independent registry of major infrastructure, transport, energy, and port development projects across West Bengal.">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Crimson+Pro:wght@400;600;700&family=Outfit:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Noto+Sans+Bengali:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .project-filters-bar {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1300px;
+      margin: 24px auto 0;
+      padding: 0 16px;
+    }
+    .filter-pills-wrap {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .filter-pill {
+      background: var(--paper-warm);
+      border: 1px solid var(--rule);
+      padding: 6px 14px;
+      border-radius: 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink-mid);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-pill:hover, .filter-pill.active {
+      background: var(--saffron);
+      color: #fff;
+      border-color: var(--saffron);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MASTHEAD BAR -->
+  <header class="masthead">
+    <div class="masthead-bar">
+      <span><span class="live-tag">CIVIC DATA</span> &nbsp; Viksit Bengal Dashboard — বিকশিত বাংলা ড্যাশবোর্ড</span>
+      <div class="masthead-date-lang">
+        <span id="today-date">29 October 2026</span>
+        <a href="bn/projects.html" class="lang-toggle" aria-label="বাংলায় পড়ুন" title="Read in Bengali">বাংলা</a>
+      </div>
+    </div>
+    <div class="masthead-main">
+      <div class="masthead-logo">
+        <img src="wb-map.webp" class="wb-map-icon" alt="West Bengal Map Logo" width="90" height="140">
+      </div>
+      <div class="masthead-text">
+        <h1>Viksit Bengal<br><span>Dashboard</span></h1>
+        <p class="masthead-sub">Tracking Bengal's journey from commitments to outcomes.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- UNIFIED CIVIC NAVIGATION -->
+  <nav class="civic-nav">
+    <div class="civic-nav-inner">
+      <div class="civic-nav-links">
+        <a href="index.html" class="civic-nav-item">🏠 Home</a>
+        <a href="economy.html" class="civic-nav-item">📈 Economy</a>
+        <a href="society.html" class="civic-nav-item">👥 Society</a>
+        <a href="index.html#promises" class="civic-nav-item">📋 Promises</a>
+        <a href="districts.html" class="civic-nav-item">🗺️ Districts</a>
+        <a href="projects.html" class="civic-nav-item active">🏗️ Projects</a>
+        <a href="latest.html" class="civic-nav-item">📰 Updates</a>
+        <a href="methodology.html" class="civic-nav-item">⚖️ Methodology</a>
+      </div>
+      <a href="submit.html" class="civic-nav-btn-submit">✏ Submit Evidence</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header-band">
+    <div class="page-header-inner">
+      <h1 class="page-header-title">Major Development Projects Registry</h1>
+      <p class="page-header-subtitle">
+        Independent tracking of transformative infrastructure, expressways, deep sea ports, metro corridors, and industrial energy complexes across West Bengal.
+      </p>
+    </div>
+  </section>
+
+  <!-- FILTERS BAR -->
+  <div class="project-filters-bar">
+    <div class="filter-pills-wrap" id="sector-filters">
+      <button class="filter-pill active" onclick="setSector('all')">All Sectors</button>
+      <button class="filter-pill" onclick="setSector('metro')">🚇 Metro Rail</button>
+      <button class="filter-pill" onclick="setSector('port')">⚓ Maritime &amp; Ports</button>
+      <button class="filter-pill" onclick="setSector('transport')">🛣️ Expressways &amp; Rail</button>
+      <button class="filter-pill" onclick="setSector('energy')">⚡ Energy &amp; Mining</button>
+    </div>
+    <div style="font-size:13px; color:var(--ink-light);" id="project-count-lbl">
+      Showing all projects
+    </div>
+  </div>
+
+  <!-- PROJECTS GRID -->
+  <main class="main-content">
+    <div class="projects-grid" id="projects-container">
+      <div style="text-align:center; padding:40px; color:var(--ink-light); grid-column:1/-1;">
+        Loading infrastructure registry...
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" style="margin-top:60px;">
+    <div class="footer-inner">
+      <div class="footer-disclaimer">
+        <strong>Viksit Bengal Dashboard — বিকশিত বাংলা ড্যাশবোর্ড</strong><br>
+        Projects tracked through gazette clearances, public sector undertakings (RVNL, KMRC, WBPDCL, DFCCIL), and verified tenders. Project announcement does not equate to fulfillment.
+      </div>
+      <div class="footer-bottom">
+        <a href="projects.html" style="color:var(--saffron);">English</a> | <a href="bn/projects.html" style="color:var(--saffron);">বাংলা</a> | <a href="methodology.html" style="color:var(--ink-light);">Methodology &amp; Standards</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let allProjects = [];
+    let currentSector = 'all';
+
+    fetch('/api/projects')
+      .then(r => r.json())
+      .then(data => {
+        allProjects = data;
+        renderProjects();
+      })
+      .catch(err => {
+        console.error(err);
+        document.getElementById('projects-container').innerHTML = '<p style="color:var(--red); text-align:center;">Failed to load projects registry.</p>';
+      });
+
+    function setSector(sec) {
+      currentSector = sec;
+      document.querySelectorAll('#sector-filters .filter-pill').forEach(p => p.classList.remove('active'));
+      event.target.classList.add('active');
+      renderProjects();
+    }
+
+    function renderProjects() {
+      const filtered = allProjects.filter(p => currentSector === 'all' || p.sector === currentSector);
+      const container = document.getElementById('projects-container');
+      document.getElementById('project-count-lbl').textContent = `Showing ${filtered.length} projects`;
+
+      if (filtered.length === 0) {
+        container.innerHTML = '<p style="text-align:center; grid-column:1/-1; padding:30px;">No projects found in this sector.</p>';
+        return;
+      }
+
+      container.innerHTML = filtered.map(p => {
+        const milestonesHtml = (p.milestones || []).map(m => `
+          <div class="milestone-item">
+            <span class="milestone-dot milestone-${m.status}"></span>
+            <span style="flex-grow:1;">${m.title_en}</span>
+            <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink-faint);">${m.target_date || ''}</span>
+          </div>
+        `).join('');
+
+        const stageFormatted = (p.stage || '').replace('_', ' ');
+
+        return `
+          <div class="project-card">
+            <div>
+              <div class="project-head">
+                <div>
+                  <span class="indicator-category-tag" style="margin-bottom:6px; display:inline-block;">${p.sector}</span>
+                  <h3 class="project-name">${p.name_en}</h3>
+                </div>
+                <span class="project-stage-badge stage-${p.stage}">${stageFormatted}</span>
+              </div>
+              <div class="project-cost">
+                ₹${p.cost_cr ? p.cost_cr.toLocaleString() + ' Cr' : 'Cost Undisclosed'}
+              </div>
+              <div class="project-authority">
+                <strong>Agency:</strong> ${p.authority || 'State Agency'} · <strong>District:</strong> ${p.district_name_en || 'Statewide'}
+              </div>
+              <p style="font-size:14px; color:var(--ink-mid); line-height:1.5;">${p.description_en || ''}</p>
+              
+              <div class="project-milestones-list">
+                <div style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; font-weight:700;">Project Milestones</div>
+                ${milestonesHtml || '<div style="color:var(--ink-faint); font-size:12px;">Milestones pending detailed scheduling.</div>'}
+              </div>
+            </div>
+
+            <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--rule-light); padding-top:12px; margin-top:8px;">
+              <span style="font-size:12px; color:var(--ink-light);">
+                Target: <strong>${p.target_date || 'TBD'}</strong>
+              </span>
+              ${p.source_url ? `<a href="${p.source_url}" target="_blank" rel="noopener" style="font-size:12px; font-weight:700; color:var(--saffron-dark);">Official Source ↗</a>` : ''}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+  </script>
+</body>
+</html>

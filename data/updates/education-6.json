@@ -1,0 +1,38 @@
+{
+  "updates": [
+    {
+      "type": "setback",
+      "note_en": "On June 27, 2026, Higher and Technical Education Minister Jagannath Chattopadhyay announced that the state government will hand over 51 state-run Industrial Training Institute (ITI) colleges to private commercial organizations. While the minister framed it as a modernisation-through-privatisation model to boost technical education, handing over government institutions to private players rather than upgrading them directly is seen as a setback to the promise of raising the standards of government institutions.",
+      "note_bn": "২৭ জুন, ২০২৬ তারিখে উচ্চ ও কারিগরি শিক্ষামন্ত্রী জগন্নাথ চট্টোপাধ্যায় ঘোষণা করেন যে রাজ্য সরকার ৫১টি সরকারি ইন্ডাস্ট্রিয়াল ট্রেনিং ইনস্টিটিউট (ITI) কলেজকে বেসরকারি বাণিজ্যিক সংস্থার হাতে তুলে দেবে। মন্ত্রী এটিকে কারিগরি শিক্ষার প্রসারে বেসরকারিকরণের মাধ্যমে আধুনিকীকরণ হিসেবে বর্ণনা করলেও, সরকারি প্রতিষ্ঠানগুলির পরিকাঠামো সরাসরি উন্নত না করে বেসরকারি হাতে তুলে দেওয়া, সরকারি প্রতিষ্ঠানের মানোন্নয়নের প্রতিশ্রুতির ক্ষেত্রে একটি ধাক্কা হিসেবে দেখা হচ্ছে।",
+      "sources": [
+        {
+          "url": "https://newsarenaindia.com/states/wb-to-hand-over-51-iti-colleges-to-private-players/80954",
+          "name": "News Arena India · June 27, 2026"
+        },
+        {
+          "url": "https://www.newkerala.com/news/a/modernisation-through-privatisation-model-51-iti-colleges-west-bengal-now-129.htm",
+          "name": "New Kerala · IANS · June 27, 2026"
+        }
+      ],
+      "additionalNotes": [
+        {
+          "label_en": "National Policy Pattern",
+          "label_bn": "জাতীয় নীতিগত প্যাটার্ন",
+          "text_en": "While framed as a setback to purely government-run institutions, handing over ITIs to private players aligns with the BJP's national governance model. Similar public-private partnership (PPP) models for modernising ITIs have been implemented by BJP governments in Gujarat (upgrading 225 ITIs with Tata Group in 2020) and Maharashtra (a 2025 policy to transform ITIs into global standard training centres).",
+          "text_bn": "সরকারি প্রতিষ্ঠানের মানোন্নয়নের প্রতিশ্রুতির ক্ষেত্রে এটি একটি ধাক্কা হিসেবে দেখা হলেও, আইটিআই (ITI) গুলিকে বেসরকারি হাতে তুলে দেওয়া বিজেপির জাতীয় মডেলের সাথে সামঞ্জস্যপূর্ণ। গুজরাট (২০২০ সালে টাটা গ্রুপের সাথে ২২৫টি আইটিআই আপগ্রেডেশন) এবং মহারাষ্ট্রে (২০২৫ সালে আইটিআই-কে বিশ্বমানের করার নীতি) সরকারগুলি আইটিআই আধুনিকীকরণের জন্য একই ধরনের সরকারি-বেসরকারি অংশীদারিত্ব (PPP) মডেল বাস্তবায়ন করেছে।",
+          "sources": [
+            {
+              "url": "https://theprint.in/india/maharashtra-unveils-policy-to-transform-itis-into-global-standard-training-centres/2624664/",
+              "name": "ThePrint · PTI · May 13, 2025"
+            },
+            {
+              "url": "https://www.skillreporter.com/regional/gujarat/tatas-group-to-upgrade-225-iti-industrial-training-institutes-in-gujarat/",
+              "name": "Skill Reporter · Dec 26, 2020"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "counterEvidence": []
+}

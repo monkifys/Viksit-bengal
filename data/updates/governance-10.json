@@ -1,0 +1,32 @@
+{
+  "updates": [
+    {
+      "type": "setback",
+      "date": "2026-09-05",
+      "title_en": "Christian Congregations Halt House Prayers Following Mob Attacks Across Districts; Government Points to Forced Conversions",
+      "title_bn": "একাধিক জেলায় হামলার পর খ্রিস্টানদের গৃহপ্রার্থনা বন্ধ; ধর্মান্তরণের পাল্টা দাবি সরকারের",
+      "sources": [
+        {
+          "url": "https://indianexpress.com/article/cities/kolkata/bengal-christian-groups-stop-house-prayers-after-attacks-government-points-to-forced-conversions-10863835/",
+          "name": "The Indian Express · September 05, 2026"
+        }
+      ],
+      "note_en": "Christian groups across Howrah, Purba Bardhaman, and South 24 Parganas suspended home prayer meetings and religious gatherings following repeated mob disruptions and vandalism citing \"forced conversions,\" including an attack on a 60-member congregation in Uluberia. While police registered FIRs, state authorities emphasized scrutiny over conversions.\n\n**Why this is a setback**: Mob intimidation compelling minority worshippers to abandon peaceful private prayers directly undermines the commitment to guarantee unrestricted freedom of religious practice and ensure safe worship for all faiths.",
+      "note_bn": "হাওড়া, পূর্ব বর্ধমান ও দক্ষিণ ২৪ পরগনায় 'জোরপূর্বক ধর্মান্তরণ'-এর অভিযোগ তুলে একদল লোকের হামলা ও ভাঙচুরের পর (যার মধ্যে উলুবেড়িয়ায় ৬০ জনের প্রার্থনাসভায় হামলা অন্তর্ভুক্ত) খ্রিস্টান সম্প্রদায় গৃহপ্রার্থনা ও জমায়েত স্থগিত করতে বাধ্য হয়েছে। পুলিশ এফআইআর করলেও প্রশাসনের তরফে ধর্মান্তরণের ওপর নজরদারির কথা বলা হয়।\n\n**কেন এটি একটি প্রতিবন্ধকতা (Setback)**: হামলার আশঙ্কায় সংখ্যালঘুদের গৃহপ্রার্থনা বন্ধ হতে বাধ্য হওয়া স্বাধীন ও ভয়মুক্ত ধর্মাচরণের অধিকার নিশ্চিত করার অঙ্গীকারকে স্পষ্টভাবে ব্যাহত করে।"
+    }
+  ],
+  "counterEvidence": [
+    {
+      "sources": [
+        {
+          "url": "https://www.constitutionofindia.net/articles/article-25-freedom-of-conscience-and-free-profession-practice-and-propagation-of-religion/",
+          "name": "Constitution of India · Article 25"
+        }
+      ],
+      "label_en": "Debatable",
+      "label_bn": "বিতর্কিত",
+      "text_en": "Article 25 of the Constitution of India already guarantees this as a fundamental right. It is debatable whether a new state-level law is required, or if this promise refers to maintaining a system to ensure Article 25 is actively implemented and protected on the ground. ↗ Constitution of India · Article 25",
+      "text_bn": "ভারতের সংবিধানের ধারা ২৫ ইতিমধ্যেই এটিকে একটি মৌলিক অধিকার হিসাবে গ্যারান্টি দেয়। তাই এই উদ্দেশ্যে নতুন কোনো রাজ্যস্তরের আইনের প্রয়োজন রয়েছে কিনা, নাকি এই প্রতিশ্রুতি দ্বারা মাঠ স্তরে ধারা ২৫-এর সক্রিয় বাস্তবায়ন ও সুরক্ষাকবচ বজায় রাখার একটি ব্যবস্থাকে বোঝানো হয়েছে, তা বিতর্কিত।"
+    }
+  ]
+}

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>২৩ জেলা পরিক্রমা ও উন্নয়ন সমীক্ষা — বিকশিত বাংলা ড্যাশবোর্ড</title>
+  <meta name="description" content="পশ্চিমবঙ্গের ২৩টি জেলার প্রশাসনিক বিভাগ, জনসংখ্যা, সাক্ষরতা, অর্থনৈতিক অবদান ও পরিকাঠামো প্রকল্পের বিশদ বিবরণ।">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Crimson+Pro:wght@400;600;700&family=Outfit:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Noto+Sans+Bengali:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body { font-family: 'Noto Sans Bengali', var(--font-sans); }
+    .division-filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; justify-content: center; }
+    .div-btn { background: var(--paper-warm); border: 1px solid var(--rule); padding: 8px 16px; border-radius: 20px; font-family: inherit; font-size: 13px; font-weight: 600; color: var(--ink-mid); cursor: pointer; transition: all 0.2s; }
+    .div-btn:hover, .div-btn.active { background: var(--saffron); color: #fff; border-color: var(--saffron); }
+    .district-detail-modal { display: none; position: fixed; inset: 0; background: rgba(26,18,8,0.7); backdrop-filter: blur(4px); z-index: 999; align-items: center; justify-content: center; padding: 16px; }
+    .district-detail-modal.open { display: flex; }
+    .modal-box { background: #fff; border-radius: var(--radius-lg); max-width: 650px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 32px; box-shadow: var(--shadow-xl); position: relative; }
+    .modal-close-btn { position: absolute; top: 18px; right: 18px; background: var(--paper-warm); border: none; font-size: 18px; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; }
+    .map-district-path { cursor: pointer; transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1); }
+    .map-district-path:hover, .map-district-path.active { filter: brightness(1.18) drop-shadow(0 4px 10px rgba(0,0,0,0.3)); stroke: #1a1208 !important; stroke-width: 2.5 !important; }
+    .map-district-text { font-family: 'Noto Sans Bengali', var(--font-ui); font-size: 9.5px; font-weight: 700; fill: #1a1208; pointer-events: none; text-anchor: middle; user-select: none; }
+    @media (max-width: 860px) { .map-grid-layout { grid-template-columns: 1fr !important; } }
+  </style>
+</head>
+<body>
+
+  <!-- MASTHEAD BAR -->
+  <header class="masthead">
+    <div class="masthead-bar">
+      <span><span class="live-tag">নাগরিক তথ্য</span> &nbsp; বিকশিত বাংলা ড্যাশবোর্ড — Viksit Bengal Dashboard</span>
+      <div class="masthead-date-lang">
+        <span id="today-date">২৯ অক্টোবর ২০২৬</span>
+        <a href="../districts.html" class="lang-toggle" aria-label="Read in English" title="ইংরেজি ভাষায় পড়ুন">English</a>
+      </div>
+    </div>
+    <div class="masthead-main">
+      <div class="masthead-logo">
+        <img src="../wb-map.webp" class="wb-map-icon" alt="পশ্চিমবঙ্গের মানচিত্র" width="90" height="140">
+      </div>
+      <div class="masthead-text">
+        <h1>বিকশিত বাংলা<br><span>ড্যাশবোর্ড</span></h1>
+        <p class="masthead-sub">প্রতিশ্রুতি থেকে ফলাফলে পৌঁছানোর পথে বাংলার যাত্রা নিরীক্ষণ।</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- UNIFIED CIVIC NAVIGATION -->
+  <nav class="civic-nav">
+    <div class="civic-nav-inner">
+      <div class="civic-nav-links">
+        <a href="index.html" class="civic-nav-item">🏠 নীড়পাতা</a>
+        <a href="economy.html" class="civic-nav-item">📈 অর্থনীতি</a>
+        <a href="society.html" class="civic-nav-item">👥 সমাজ</a>
+        <a href="index.html#promises" class="civic-nav-item">📋 প্রতিশ্রুতি</a>
+        <a href="districts.html" class="civic-nav-item active">🗺️ জেলা পরিক্রমা</a>
+        <a href="projects.html" class="civic-nav-item">🏗️ প্রকল্পসমূহ</a>
+        <a href="latest.html" class="civic-nav-item">📰 সাম্প্রতিক তথ্য</a>
+        <a href="methodology.html" class="civic-nav-item">⚖️ পদ্ধতি ও মানদণ্ড</a>
+      </div>
+      <a href="submit.html" class="civic-nav-btn-submit">✏ তথ্য জমা দিন</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header-band">
+    <div class="page-header-inner">
+      <h1 class="page-header-title">২৩ জেলার অগ্রগতি ও উন্নয়ন পরিক্রমা</h1>
+      <p class="page-header-subtitle">
+        পশ্চিমবঙ্গের প্রতিটি জেলার প্রশাসনিক বিভাগ, জনমিতি, সাক্ষরতার হার, অর্থনৈতিক স্থান এবং স্থানীয় পরিকাঠামো প্রকল্পের বিশদ খতিয়ান।
+      </p>
+    </div>
+  </section>
+
+  <!-- DISTRICT EXPLORER -->
+  <main class="main-content">
+    <section style="max-width:1300px; margin:32px auto; padding:0 16px;">
+
+      <!-- INTERACTIVE 23 DISTRICTS SVG MAP -->
+      <section class="district-map-section" style="background:var(--surface); border:1px solid var(--rule-light); border-radius:var(--radius-lg); padding:28px 24px; margin-bottom:32px; box-shadow:var(--shadow-sm);">
+        <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:12px; margin-bottom:20px;">
+          <div>
+            <h2 style="font-family:var(--font-display); font-size:22px; font-weight:800; color:var(--ink); margin:0 0 4px;">
+              🗺️ পশ্চিমবঙ্গের ২৩ জেলার ইন্টারেক্টিভ মানচিত্র
+            </h2>
+            <p style="font-size:13.5px; color:var(--ink-light); margin:0;">
+              মানচিত্রে যেকোনো জেলার উপর ক্লিক করে উন্নয়ন সূচক ও স্থানীয় প্রকল্পের সম্পূর্ণ বিবরণ দেখুন।
+            </p>
+          </div>
+          <div class="map-legend" style="display:flex; gap:12px; font-size:11px; font-family:inherit; font-weight:600; flex-wrap:wrap;">
+            <span style="display:inline-flex; align-items:center; gap:5px;"><span style="width:12px; height:12px; border-radius:3px; background:#10b981;"></span> জলপাইগুড়ি</span>
+            <span style="display:inline-flex; align-items:center; gap:5px;"><span style="width:12px; height:12px; border-radius:3px; background:#06b6d4;"></span> মালদা</span>
+            <span style="display:inline-flex; align-items:center; gap:5px;"><span style="width:12px; height:12px; border-radius:3px; background:#6366f1;"></span> বর্ধমান</span>
+            <span style="display:inline-flex; align-items:center; gap:5px;"><span style="width:12px; height:12px; border-radius:3px; background:#e8620a;"></span> প্রেসিডেন্সি</span>
+            <span style="display:inline-flex; align-items:center; gap:5px;"><span style="width:12px; height:12px; border-radius:3px; background:#d97706;"></span> মেদিনীপুর</span>
+          </div>
+        </div>
+
+        <div class="map-grid-layout" style="display:grid; grid-template-columns: minmax(320px, 460px) 1fr; gap:28px; align-items:center;">
+          <!-- SVG Vector Canvas -->
+          <div style="position:relative; width:100%; max-width:460px; margin:0 auto; background:var(--paper-warm); border:1px solid var(--rule-light); border-radius:var(--radius-md); padding:16px;">
+            <svg id="wb-district-svg" viewBox="0 0 460 560" style="width:100%; height:auto; overflow:visible;" aria-label="পশ্চিমবঙ্গের জেলা মানচিত্র">
+              <!-- JALPAIGURI DIVISION (#10b981) -->
+              <path id="district-darjeeling" class="map-district-path" data-id="darjeeling" d="M120,20 L185,15 L190,55 L135,65 Z" fill="#a7f3d0" stroke="#059669" stroke-width="1.5" onclick="selectDistrictFromMap('darjeeling')"/>
+              <text x="155" y="42" class="map-district-text">দার্জিলিং</text>
+
+              <path id="district-kalimpong" class="map-district-path" data-id="kalimpong" d="M190,15 L250,10 L255,50 L195,55 Z" fill="#6ee7b7" stroke="#059669" stroke-width="1.5" onclick="selectDistrictFromMap('kalimpong')"/>
+              <text x="222" y="38" class="map-district-text">কালিম্পং</text>
+
+              <path id="district-jalpaiguri" class="map-district-path" data-id="jalpaiguri" d="M140,65 L245,55 L250,95 L165,105 Z" fill="#34d399" stroke="#059669" stroke-width="1.5" onclick="selectDistrictFromMap('jalpaiguri')"/>
+              <text x="195" y="85" class="map-district-text">জলপাইগুড়ি</text>
+
+              <path id="district-alipurduar" class="map-district-path" data-id="alipurduar" d="M250,55 L345,50 L350,90 L255,95 Z" fill="#a7f3d0" stroke="#059669" stroke-width="1.5" onclick="selectDistrictFromMap('alipurduar')"/>
+              <text x="300" y="75" class="map-district-text">আলিপুরদুয়ার</text>
+
+              <path id="district-cooch-behar" class="map-district-path" data-id="cooch-behar" d="M255,95 L360,90 L355,130 L260,130 Z" fill="#6ee7b7" stroke="#059669" stroke-width="1.5" onclick="selectDistrictFromMap('cooch-behar')"/>
+              <text x="308" y="115" class="map-district-text">কোচবিহার</text>
+
+              <!-- MALDA DIVISION (#06b6d4) -->
+              <path id="district-uttar-dinajpur" class="map-district-path" data-id="uttar-dinajpur" d="M150,110 L220,105 L235,165 L175,175 Z" fill="#bae6fd" stroke="#0284c7" stroke-width="1.5" onclick="selectDistrictFromMap('uttar-dinajpur')"/>
+              <text x="192" y="145" class="map-district-text">উত্তর দিনাজপুর</text>
+
+              <path id="district-dakshin-dinajpur" class="map-district-path" data-id="dakshin-dinajpur" d="M225,160 L295,155 L290,205 L220,200 Z" fill="#7dd3fc" stroke="#0284c7" stroke-width="1.5" onclick="selectDistrictFromMap('dakshin-dinajpur')"/>
+              <text x="258" y="185" class="map-district-text">দক্ষিণ দিনাজপুর</text>
+
+              <path id="district-malda" class="map-district-path" data-id="malda" d="M145,185 L220,180 L225,245 L155,250 Z" fill="#38bdf8" stroke="#0284c7" stroke-width="1.5" onclick="selectDistrictFromMap('malda')"/>
+              <text x="185" y="218" class="map-district-text">মালদা</text>
+
+              <path id="district-murshidabad" class="map-district-path" data-id="murshidabad" d="M165,250 L250,240 L265,305 L175,310 Z" fill="#7dd3fc" stroke="#0284c7" stroke-width="1.5" onclick="selectDistrictFromMap('murshidabad')"/>
+              <text x="215" y="280" class="map-district-text">মুর্শিদাবাদ</text>
+
+              <!-- BURDWAN DIVISION (#6366f1) -->
+              <path id="district-birbhum" class="map-district-path" data-id="birbhum" d="M100,285 L165,275 L180,335 L115,345 Z" fill="#c7d2fe" stroke="#4f46e5" stroke-width="1.5" onclick="selectDistrictFromMap('birbhum')"/>
+              <text x="140" y="315" class="map-district-text">বীরভূম</text>
+
+              <path id="district-paschim-bardhaman" class="map-district-path" data-id="paschim-bardhaman" d="M80,345 L155,340 L160,385 L90,390 Z" fill="#a5b4fc" stroke="#4f46e5" stroke-width="1.5" onclick="selectDistrictFromMap('paschim-bardhaman')"/>
+              <text x="122" y="370" class="map-district-text">প. বর্ধমান</text>
+
+              <path id="district-purba-bardhaman" class="map-district-path" data-id="purba-bardhaman" d="M160,335 L245,330 L235,395 L160,390 Z" fill="#818cf8" stroke="#4f46e5" stroke-width="1.5" onclick="selectDistrictFromMap('purba-bardhaman')"/>
+              <text x="198" y="365" class="map-district-text">পূর্ব বর্ধমান</text>
+
+              <path id="district-hooghly" class="map-district-path" data-id="hooghly" d="M185,395 L250,390 L245,435 L180,435 Z" fill="#c7d2fe" stroke="#4f46e5" stroke-width="1.5" onclick="selectDistrictFromMap('hooghly')"/>
+              <text x="215" y="418" class="map-district-text">হুগলি</text>
+
+              <!-- MEDINIPUR DIVISION (#d97706) -->
+              <path id="district-purulia" class="map-district-path" data-id="purulia" d="M25,330 L95,335 L85,410 L20,400 Z" fill="#fde68a" stroke="#d97706" stroke-width="1.5" onclick="selectDistrictFromMap('purulia')"/>
+              <text x="55" y="375" class="map-district-text">পুরুলিয়া</text>
+
+              <path id="district-bankura" class="map-district-path" data-id="bankura" d="M85,395 L170,390 L160,450 L80,450 Z" fill="#fcd34d" stroke="#d97706" stroke-width="1.5" onclick="selectDistrictFromMap('bankura')"/>
+              <text x="125" y="425" class="map-district-text">বাঁকুড়া</text>
+
+              <path id="district-jhargram" class="map-district-path" data-id="jhargram" d="M35,445 L105,445 L100,505 L30,495 Z" fill="#fbbf24" stroke="#d97706" stroke-width="1.5" onclick="selectDistrictFromMap('jhargram')"/>
+              <text x="68" y="480" class="map-district-text">ঝাড়গ্রাম</text>
+
+              <path id="district-paschim-medinipur" class="map-district-path" data-id="paschim-medinipur" d="M105,445 L180,440 L175,510 L105,510 Z" fill="#fcd34d" stroke="#d97706" stroke-width="1.5" onclick="selectDistrictFromMap('paschim-medinipur')"/>
+              <text x="142" y="480" class="map-district-text">প. মেদিনীপুর</text>
+
+              <path id="district-purba-medinipur" class="map-district-path" data-id="purba-medinipur" d="M175,480 L240,475 L235,545 L170,540 Z" fill="#fde68a" stroke="#d97706" stroke-width="1.5" onclick="selectDistrictFromMap('purba-medinipur')"/>
+              <text x="205" y="515" class="map-district-text">পূর্ব মেদিনীপুর</text>
+
+              <!-- PRESIDENCY DIVISION (#e8620a) -->
+              <path id="district-nadia" class="map-district-path" data-id="nadia" d="M235,310 L295,305 L290,375 L235,370 Z" fill="#fed7aa" stroke="#c2410c" stroke-width="1.5" onclick="selectDistrictFromMap('nadia')"/>
+              <text x="265" y="345" class="map-district-text">নদিয়া</text>
+
+              <path id="district-north-24-parganas" class="map-district-path" data-id="north-24-parganas" d="M255,385 L340,380 L335,465 L260,460 Z" fill="#fdba74" stroke="#c2410c" stroke-width="1.5" onclick="selectDistrictFromMap('north-24-parganas')"/>
+              <text x="295" y="425" class="map-district-text">উত্তর ২৪ পরগনা</text>
+
+              <path id="district-howrah" class="map-district-path" data-id="howrah" d="M180,440 L235,435 L230,475 L175,475 Z" fill="#fb923c" stroke="#c2410c" stroke-width="1.5" onclick="selectDistrictFromMap('howrah')"/>
+              <text x="205" y="460" class="map-district-text">হাওড়া</text>
+
+              <path id="district-kolkata" class="map-district-path active" data-id="kolkata" d="M235,445 L265,445 L265,475 L235,475 Z" fill="#ea580c" stroke="#1a1208" stroke-width="2.5" onclick="selectDistrictFromMap('kolkata')"/>
+              <text x="250" y="463" class="map-district-text" fill="#fff" style="font-weight:900;">কলকাতা</text>
+
+              <path id="district-south-24-parganas" class="map-district-path" data-id="south-24-parganas" d="M235,480 L335,470 L320,555 L225,550 Z" fill="#fed7aa" stroke="#c2410c" stroke-width="1.5" onclick="selectDistrictFromMap('south-24-parganas')"/>
+              <text x="275" y="520" class="map-district-text">দক্ষিণ ২৪ পরগনা</text>
+            </svg>
+          </div>
+
+          <!-- Active District Interactive Preview -->
+          <div id="district-preview-panel" style="background:var(--paper); border:1px solid var(--rule); border-radius:var(--radius-md); padding:24px;">
+            <div style="font-family:inherit; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-faint); margin-bottom:6px;">নির্বাচিত জেলার তথ্য</div>
+            <h3 id="prev-name" style="font-family:var(--font-display); font-size:24px; font-weight:800; color:var(--ink); margin:0 0 4px;">কলকাতা</h3>
+            <div id="prev-en" style="font-size:14px; color:var(--saffron-dark); font-weight:600; margin-bottom:16px;">Kolkata</div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:20px;">
+              <div style="background:#fff; border:1px solid var(--rule-light); padding:10px; border-radius:6px;">
+                <div style="font-size:11px; color:var(--ink-faint);">বিভাগ</div>
+                <strong id="prev-div" style="font-size:13px; color:var(--ink);">প্রেসিডেন্সি</strong>
+              </div>
+              <div style="background:#fff; border:1px solid var(--rule-light); padding:10px; border-radius:6px;">
+                <div style="font-size:11px; color:var(--ink-faint);">জিএসডিপি স্থান</div>
+                <strong id="prev-rank" style="font-size:13px; color:var(--saffron-dark);">রাজ্যে ১ম স্থান</strong>
+              </div>
+              <div style="background:#fff; border:1px solid var(--rule-light); padding:10px; border-radius:6px;">
+                <div style="font-size:11px; color:var(--ink-faint);">জনসংখ্যা</div>
+                <strong id="prev-pop" style="font-size:13px; color:var(--ink);">৪৪,৯৬,৬৯৪</strong>
+              </div>
+              <div style="background:#fff; border:1px solid var(--rule-light); padding:10px; border-radius:6px;">
+                <div style="font-size:11px; color:var(--ink-faint);">সাক্ষরতার হার</div>
+                <strong id="prev-lit" style="font-size:13px; color:var(--green);">৮৬.৩%</strong>
+              </div>
+            </div>
+            <button id="prev-btn" class="civic-nav-btn-submit" style="width:100%; justify-content:center; padding:10px 18px;" onclick="openDistrictModal('kolkata')">
+              সম্পূর্ণ জেলা প্রোফাইল ও প্রকল্প দেখুন →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTROLS & DIVISION FILTER -->
+      <div class="division-filters">
+        <button class="div-btn active" onclick="filterDivision('all')">সকল জেলা (২৩)</button>
+        <button class="div-btn" onclick="filterDivision('Presidency')">প্রেসিডেন্সি বিভাগ</button>
+        <button class="div-btn" onclick="filterDivision('Burdwan')">বর্ধমান বিভাগ</button>
+        <button class="div-btn" onclick="filterDivision('Medinipur')">মেদিনীপুর বিভাগ</button>
+        <button class="div-btn" onclick="filterDivision('Malda')">মালদা বিভাগ</button>
+        <button class="div-btn" onclick="filterDivision('Jalpaiguri')">জলপাইগুড়ি বিভাগ</button>
+      </div>
+
+      <!-- SEARCH BAR -->
+      <div style="max-width:480px; margin:0 auto 28px;">
+        <input type="text" id="district-search" class="form-control-input" placeholder="🔍 জেলার নাম বা সদর শহর দিয়ে খুঁজুন..." oninput="searchDistricts()">
+      </div>
+
+      <!-- DISTRICTS CARDS GRID -->
+      <div class="districts-grid" id="districts-container">
+        <div style="text-align:center; padding:40px; color:var(--ink-light); grid-column:1/-1;">
+          ২৩টি জেলার তথ্য লোড হচ্ছে...
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- DISTRICT MODAL -->
+  <div class="district-detail-modal" id="district-modal" onclick="closeModalOnBg(event)">
+    <div class="modal-box">
+      <button class="modal-close-btn" onclick="closeModal()">✕</button>
+      <div id="modal-content">
+        তথ্য লোড হচ্ছে...
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" style="margin-top:60px;">
+    <div class="footer-inner">
+      <div class="footer-disclaimer">
+        <strong>বিকশিত বাংলা ড্যাশবোর্ড — Viksit Bengal Dashboard</strong><br>
+        পশ্চিমবঙ্গের জেলাসমূহের সীমানা ও পরিসংখ্যান ভারতের আদমশুমারি এবং জেলা পরিসংখ্যান পুস্তিকা থেকে সংগৃহীত।
+      </div>
+      <div class="footer-bottom">
+        <a href="../districts.html" style="color:var(--saffron);">English</a> | <a href="districts.html" style="color:var(--saffron);">বাংলা</a> | <a href="methodology.html" style="color:var(--ink-light);">পদ্ধতি ও মানদণ্ড</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let allDistricts = [];
+    let currentDivision = 'all';
+
+    fetch('/api/districts')
+      .then(r => r.json())
+      .then(data => {
+        allDistricts = data;
+        renderDistricts();
+      })
+      .catch(err => {
+        console.error(err);
+      });
+
+    function renderDistricts() {
+      const q = (document.getElementById('district-search').value || '').toLowerCase().trim();
+      const filtered = allDistricts.filter(d => {
+        const matchesDiv = currentDivision === 'all' || d.division === currentDivision;
+        const matchesQuery = !q || d.name_en.toLowerCase().includes(q) || d.name_bn.includes(q) || (d.hq && d.hq.toLowerCase().includes(q));
+        return matchesDiv && matchesQuery;
+      });
+
+      const container = document.getElementById('districts-container');
+      if (filtered.length === 0) {
+        container.innerHTML = '<p style="text-align:center; grid-column:1/-1; padding:30px; color:var(--ink-light);">কোনো জেলা পাওয়া যায়নি।</p>';
+        return;
+      }
+
+      container.innerHTML = filtered.map(d => `
+        <div class="district-card" id="card-${d.id}" onclick="openDistrictModal('${d.id}')">
+          <div>
+            <div class="district-card-head">
+              <div>
+                <h3 class="district-name">${d.name_bn}</h3>
+                <div class="district-name-bn" style="font-size:14px; color:var(--ink-light);">${d.name_en}</div>
+              </div>
+              <span class="district-rank-badge">জিএসডিপি স্থান #${d.gsdp_rank ? d.gsdp_rank.toLocaleString('bn-IN') : '—'}</span>
+            </div>
+            <div class="district-stats-list">
+              <div class="district-stat-row">
+                <span>সদর দপ্তর:</span>
+                <strong>${d.hq || '—'}</strong>
+              </div>
+              <div class="district-stat-row">
+                <span>বিভাগ:</span>
+                <strong>${d.division || '—'}</strong>
+              </div>
+              <div class="district-stat-row">
+                <span>জনসংখ্যা:</span>
+                <strong>${d.population ? d.population.toLocaleString('bn-IN') : '—'}</strong>
+              </div>
+              <div class="district-stat-row">
+                <span>সাক্ষরতার হার:</span>
+                <strong style="color:var(--green);">${d.literacy_rate ? d.literacy_rate.toLocaleString('bn-IN') + '%' : '—'}</strong>
+              </div>
+              <div class="district-stat-row">
+                <span>আয়তন:</span>
+                <strong>${d.area_sqkm ? d.area_sqkm.toLocaleString('bn-IN') + ' বর্গ কিমি' : '—'}</strong>
+              </div>
+            </div>
+          </div>
+          <div style="font-family:inherit; font-size:12px; font-weight:700; color:var(--saffron-dark); text-align:right;">
+            বিস্তারিত ও প্রকল্পসমূহ দেখুন →
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function selectDistrictFromMap(id) {
+      document.querySelectorAll('.map-district-path').forEach(p => p.classList.remove('active'));
+      const path = document.getElementById(`district-${id}`);
+      if (path) path.classList.add('active');
+
+      const district = allDistricts.find(d => d.id === id);
+      if (district) {
+        document.getElementById('prev-name').innerText = district.name_bn || district.name_en;
+        document.getElementById('prev-en').innerText = district.name_en || '';
+        document.getElementById('prev-div').innerText = district.division || '—';
+        document.getElementById('prev-rank').innerText = district.gsdp_rank ? `রাজ্যে #${district.gsdp_rank.toLocaleString('bn-IN')} স্থান` : '—';
+        document.getElementById('prev-pop').innerText = district.population ? district.population.toLocaleString('bn-IN') : '—';
+        document.getElementById('prev-lit').innerText = district.literacy_rate ? district.literacy_rate.toLocaleString('bn-IN') + '%' : '—';
+        document.getElementById('prev-btn').setAttribute('onclick', `openDistrictModal('${district.id}')`);
+      }
+
+      // Scroll to card and highlight
+      const card = document.getElementById(`card-${id}`);
+      if (card) {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        card.style.outline = '3px solid var(--saffron)';
+        card.style.boxShadow = 'var(--shadow-lg)';
+        setTimeout(() => {
+          card.style.outline = '';
+          card.style.boxShadow = '';
+        }, 2200);
+      }
+    }
+
+    function filterDivision(div) {
+      currentDivision = div;
+      document.querySelectorAll('.div-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+      renderDistricts();
+    }
+
+    function searchDistricts() {
+      renderDistricts();
+    }
+
+    function openDistrictModal(id) {
+      const modal = document.getElementById('district-modal');
+      const content = document.getElementById('modal-content');
+      modal.classList.add('open');
+      content.innerHTML = '<div style="text-align:center; padding:30px;">জেলার বিবরণ লোড হচ্ছে...</div>';
+
+      fetch('/api/districts/' + id)
+        .then(r => r.json())
+        .then(d => {
+          const projsHtml = (d.projects || []).length > 0 ? d.projects.map(p => `
+            <div style="background:var(--paper); border:1px solid var(--rule-light); padding:10px 14px; border-radius:6px; margin-bottom:8px;">
+              <strong style="color:var(--ink);">${p.name_bn || p.name_en}</strong>
+              <div style="font-size:12px; color:var(--saffron-dark); font-weight:bold; margin-top:2px;">
+                ব্যয়: ₹${p.cost_cr ? p.cost_cr.toLocaleString('bn-IN') + ' কোটি' : 'তথ্য নেই'} · পর্যায়: ${p.stage}
+              </div>
+            </div>
+          `).join('') : '<p style="font-size:13px; color:var(--ink-faint);">এই জেলায় বর্তমানে কোনো বৃহৎ প্রকল্প সরাসরি ট্যাগ করা নেই।</p>';
+
+          content.innerHTML = `
+            <h2 style="font-family:var(--font-display); font-size:26px; font-weight:900; color:var(--ink);">${d.name_bn} (${d.name_en})</h2>
+            <p style="font-size:13px; color:var(--ink-light); margin-bottom:16px;">${d.division} বিভাগ · প্রশাসনিক সদর: ${d.hq}</p>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:20px; background:var(--paper-warm); padding:14px; border-radius:8px;">
+              <div><span style="font-size:11px; color:var(--ink-faint); text-transform:uppercase;">জনসংখ্যা</span><br><strong>${d.population ? d.population.toLocaleString('bn-IN') : 'তথ্য নেই'}</strong></div>
+              <div><span style="font-size:11px; color:var(--ink-faint); text-transform:uppercase;">সাক্ষরতার হার</span><br><strong style="color:var(--green);">${d.literacy_rate ? d.literacy_rate.toLocaleString('bn-IN') + '%' : 'তথ্য নেই'}</strong></div>
+              <div><span style="font-size:11px; color:var(--ink-faint); text-transform:uppercase;">আয়তন</span><br><strong>${d.area_sqkm ? d.area_sqkm.toLocaleString('bn-IN') + ' বর্গ কিমি' : 'তথ্য নেই'}</strong></div>
+              <div><span style="font-size:11px; color:var(--ink-faint); text-transform:uppercase;">অর্থনৈতিক অবস্থান</span><br><strong>রাজ্যে স্থান #${d.gsdp_rank ? d.gsdp_rank.toLocaleString('bn-IN') : 'তথ্য নেই'}</strong></div>
+            </div>
+
+            <h3 style="font-family:var(--font-display); font-size:18px; font-weight:800; margin-bottom:10px; color:var(--ink);">🏗️ এই জেলার প্রধান পরিকাঠামো প্রকল্প</h3>
+            ${projsHtml}
+          `;
+        })
+        .catch(err => {
+          content.innerHTML = '<p style="color:var(--red);">তথ্য লোড করার সময় সমস্যা হয়েছে।</p>';
+        });
+    }
+
+    function closeModal() {
+      document.getElementById('district-modal').classList.remove('open');
+    }
+
+    function closeModalOnBg(e) {
+      if (e.target.id === 'district-modal') closeModal();
+    }
+  </script>
+</body>
+</html>
