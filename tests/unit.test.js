@@ -188,3 +188,44 @@ test('Rate Limiter - In-Memory Sliding-Window Mechanics & Anti-Bypass', () => {
   assert.equal(limiter.hits.has(ip2), false, 'Expired IP entries must be purged by cleanup');
   assert.equal(limiter.hits.has(ip1), true, 'Active IP entries must remain in cache');
 });
+
+test('Stats & Promise Metrics - Canonical Status Mapping & Remaining Fulfillment Calculation', () => {
+  const LEGACY_STATUS_MAP = {
+    done: 'delivered',
+    inprogress: 'under_implementation',
+    pending: 'not_started',
+    evaded: 'not_verifiable'
+  };
+  function normalize(s) {
+    if (!s) return 'not_started';
+    return LEGACY_STATUS_MAP[s] || s;
+  }
+
+  // Simulate database promises with diverse statuses
+  const testPromises = [
+    { id: 'p1', status: 'delivered' },
+    { id: 'p2', status: 'done' }, // legacy format
+    { id: 'p3', status: 'under_implementation' },
+    { id: 'p4', status: 'partially_delivered' },
+    { id: 'p5', status: 'not_started' },
+    { id: 'p6', status: 'pending' }, // legacy format
+    { id: 'p7', status: 'reversed' }
+  ];
+
+  const counts = { done: 0, inprogress: 0, evaded: 0, pending: 0 };
+  testPromises.forEach((p) => {
+    const norm = normalize(p.status);
+    if (norm === 'delivered') counts.done += 1;
+    else if (norm === 'under_implementation' || norm === 'legally_initiated' || norm === 'funded' || norm === 'partially_delivered') counts.inprogress += 1;
+    else if (norm === 'reversed' || norm === 'delayed' || norm === 'disputed' || norm === 'not_verifiable') counts.evaded += 1;
+    else counts.pending += 1;
+  });
+
+  assert.equal(counts.done, 2, 'Fulfilled count must correctly account for both delivered and done');
+  assert.equal(counts.inprogress, 2, 'In-progress count must account for under_implementation and partially_delivered');
+  assert.equal(counts.pending, 2, 'Pending/remained count must account for not_started and pending');
+  assert.equal(counts.evaded, 1, 'Evaded count must account for reversed');
+
+  const completionPct = ((counts.done / testPromises.length) * 100).toFixed(1);
+  assert.equal(completionPct, '28.6', 'Completion percentage calculation must be accurate');
+});

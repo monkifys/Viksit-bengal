@@ -1302,7 +1302,8 @@ a:hover {
   padding: 3px 8px;
 }
 
-.promise-item.done {
+.promise-item.done,
+.promise-item.delivered {
   border-left: 3px solid var(--green);
   padding-left: 10px;
   margin-left: -13px;
@@ -1315,26 +1316,31 @@ a:hover {
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
 }
 
-.promise-item.done .promise-num {
+.promise-item.done .promise-num,
+.promise-item.delivered .promise-num {
   color: var(--green);
   font-weight: 700;
 }
 
 /* FULFILLED CARD THEME OVERRIDES */
-.promise-item.done .promise-meta {
+.promise-item.done .promise-meta,
+.promise-item.delivered .promise-meta {
   background: #F0F9F2;
   border-color: #BFE7CD;
   color: var(--green);
 }
 
 .promise-item.done .promise-meta:hover,
-.promise-item.done .promise-meta:focus {
+.promise-item.done .promise-meta:focus,
+.promise-item.delivered .promise-meta:hover,
+.promise-item.delivered .promise-meta:focus {
   background: #E1F5E5;
   border-color: var(--green);
   color: var(--green);
 }
 
-.promise-item.done .promise-details {
+.promise-item.done .promise-details,
+.promise-item.delivered .promise-details {
   background: #FFFFFF;
   border-left: 3px solid var(--green);
   border-top: 1px solid #BBF7D0;
@@ -1343,49 +1349,75 @@ a:hover {
   box-shadow: 0 2px 8px rgba(22, 163, 74, 0.05);
 }
 
-.promise-item.done .update-block {
+.promise-item.done .update-block,
+.promise-item.delivered .update-block {
   border-bottom-color: #E2ECE5;
 }
 
-.promise-item.done .update-badge {
+.promise-item.done .update-badge,
+.promise-item.delivered .update-badge {
   background: var(--green);
 }
 
 
-.promise-item.inprogress {
+.promise-item.inprogress,
+.promise-item.under_implementation,
+.promise-item.partially_delivered,
+.promise-item.legally_initiated,
+.promise-item.funded {
   border-left: 3px solid var(--amber);
   padding-left: 10px;
   margin-left: -13px;
   background: var(--amber-pale);
 }
 
-.promise-item.inprogress .promise-num {
+.promise-item.inprogress .promise-num,
+.promise-item.under_implementation .promise-num,
+.promise-item.partially_delivered .promise-num,
+.promise-item.legally_initiated .promise-num,
+.promise-item.funded .promise-num {
   color: var(--amber);
   font-weight: 700;
 }
 
-.promise-item.pending {
+.promise-item.pending,
+.promise-item.not_started,
+.promise-item.announced {
   opacity: 0.82;
 }
 
-.promise-item.pending .promise-num {
+.promise-item.pending .promise-num,
+.promise-item.not_started .promise-num,
+.promise-item.announced .promise-num {
   opacity: 0.5;
 }
 
-.promise-item.evaded {
+.promise-item.evaded,
+.promise-item.reversed,
+.promise-item.delayed,
+.promise-item.disputed,
+.promise-item.not_verifiable {
   border-left: 3px solid var(--red);
   padding-left: 10px;
   margin-left: -13px;
   background: rgba(220, 38, 38, 0.02);
 }
 
-.promise-item.evaded .promise-text {
+.promise-item.evaded .promise-text,
+.promise-item.reversed .promise-text,
+.promise-item.delayed .promise-text,
+.promise-item.disputed .promise-text,
+.promise-item.not_verifiable .promise-text {
   text-decoration: line-through;
   color: var(--red);
   opacity: 0.6;
 }
 
-.promise-item.evaded .promise-num {
+.promise-item.evaded .promise-num,
+.promise-item.reversed .promise-num,
+.promise-item.delayed .promise-num,
+.promise-item.disputed .promise-num,
+.promise-item.not_verifiable .promise-num {
   color: var(--red);
 }
 

@@ -361,24 +361,27 @@ function highlightText(text, highlight) {
   return `${escapeHtml(full.slice(0, idx))}<span class="highlight">${escapeHtml(full.slice(idx, idx + highlight.length))}</span>${escapeHtml(full.slice(idx + highlight.length))}`;
 }
 
+function promiseMatchesFilter(p, filter) {
+  if (!filter || filter === 'all') return true;
+  const norm = normalizePromiseStatus(p.status);
+  if (filter === 'done' || filter === 'delivered') {
+    return norm === 'delivered';
+  }
+  if (filter === 'inprogress' || filter === 'under_implementation') {
+    return norm === 'under_implementation' || norm === 'legally_initiated' || norm === 'funded' || norm === 'partially_delivered';
+  }
+  if (filter === 'pending' || filter === 'not_started') {
+    return norm === 'not_started' || norm === 'announced';
+  }
+  if (filter === 'evaded' || filter === 'reversed') {
+    return norm === 'reversed' || norm === 'delayed' || norm === 'disputed' || norm === 'not_verifiable';
+  }
+  return norm === filter || p.status === filter;
+}
+
 function filterPromises(promises) {
   if (!window.currentFilter || window.currentFilter === 'all') return promises;
-  return promises.filter((p) => {
-    const norm = normalizePromiseStatus(p.status);
-    if (window.currentFilter === 'done' || window.currentFilter === 'delivered') {
-      return norm === 'delivered';
-    }
-    if (window.currentFilter === 'inprogress' || window.currentFilter === 'under_implementation') {
-      return norm === 'under_implementation' || norm === 'legally_initiated' || norm === 'funded' || norm === 'partially_delivered';
-    }
-    if (window.currentFilter === 'pending' || window.currentFilter === 'not_started') {
-      return norm === 'not_started' || norm === 'announced';
-    }
-    if (window.currentFilter === 'evaded' || window.currentFilter === 'reversed') {
-      return norm === 'reversed' || norm === 'delayed' || norm === 'disputed' || norm === 'not_verifiable';
-    }
-    return norm === window.currentFilter || p.status === window.currentFilter;
-  });
+  return promises.filter((p) => promiseMatchesFilter(p, window.currentFilter));
 }
 
 function rerenderMain() {
@@ -402,7 +405,7 @@ function renderNav(categories) {
   const visibleCategories = window.currentFilter === 'all'
     ? categories
     : categories.filter(c =>
-        window.siteData.promises.some(p => p.category === c.id && p.status === window.currentFilter)
+        window.siteData.promises.some(p => p.category === c.id && promiseMatchesFilter(p, window.currentFilter))
       );
 
   // Hide the entire nav if fewer than 2 sections are visible under the active filter
@@ -429,7 +432,7 @@ function renderMobileNav(categories) {
   const visibleCategories = window.currentFilter === 'all'
     ? categories
     : categories.filter(c =>
-        window.siteData.promises.some(p => p.category === c.id && p.status === window.currentFilter)
+        window.siteData.promises.some(p => p.category === c.id && promiseMatchesFilter(p, window.currentFilter))
       );
 
   // Hide the entire nav if fewer than 2 sections are visible under the active filter
@@ -494,25 +497,46 @@ function renderStats() {
   const allPromises = window.siteData.promises;
   const total = allPromises.length;
   const counts = { done: 0, inprogress: 0, evaded: 0, pending: 0 };
-  allPromises.forEach((p) => { counts[p.status] += 1; });
+  allPromises.forEach((p) => {
+    const norm = normalizePromiseStatus(p.status);
+    if (norm === 'delivered') {
+      counts.done += 1;
+    } else if (norm === 'under_implementation' || norm === 'legally_initiated' || norm === 'funded' || norm === 'partially_delivered') {
+      counts.inprogress += 1;
+    } else if (norm === 'reversed' || norm === 'delayed' || norm === 'disputed' || norm === 'not_verifiable') {
+      counts.evaded += 1;
+    } else {
+      counts.pending += 1;
+    }
+  });
 
-  document.getElementById('stat-total').textContent = formatNumber(total);
-  document.getElementById('stat-done').textContent = formatNumber(counts.done);
-  document.getElementById('stat-inprogress').textContent = formatNumber(counts.inprogress);
-  document.getElementById('stat-evaded').textContent = formatNumber(counts.evaded);
-  document.getElementById('stat-pending').textContent = formatNumber(counts.pending);
+  const statTotalEl = document.getElementById('stat-total');
+  const statDoneEl = document.getElementById('stat-done');
+  const statInprogEl = document.getElementById('stat-inprogress');
+  const statEvadedEl = document.getElementById('stat-evaded');
+  const statPendingEl = document.getElementById('stat-pending');
+
+  if (statTotalEl) statTotalEl.textContent = formatNumber(total);
+  if (statDoneEl) statDoneEl.textContent = formatNumber(counts.done);
+  if (statInprogEl) statInprogEl.textContent = formatNumber(counts.inprogress);
+  if (statEvadedEl) statEvadedEl.textContent = formatNumber(counts.evaded);
+  if (statPendingEl) statPendingEl.textContent = formatNumber(counts.pending);
 
   // Completion rate (always based on all promises)
-  const pct = total > 0 ? Math.round((counts.done / total) * 100) : 0;
+  const pct = total > 0 ? ((counts.done / total) * 100).toFixed(1) : '0';
+  const pctDisplay = pct.endsWith('.0') ? parseInt(pct, 10) : pct;
   const pctEl = document.getElementById('stat-pct');
-  if (pctEl) pctEl.textContent = formatNumber(pct) + '%';
+  if (pctEl) pctEl.textContent = formatNumber(pctDisplay) + '%';
 
   const donePct = total ? (counts.done / total) * 100 : 0;
   const inProgPct = total ? (counts.inprogress / total) * 100 : 0;
   const evadedPct = total ? (counts.evaded / total) * 100 : 0;
-  document.getElementById('bar-done').style.width = `${donePct}%`;
-  document.getElementById('bar-inprog').style.width = `${inProgPct}%`;
-  document.getElementById('bar-evaded').style.width = `${evadedPct}%`;
+  const barDoneEl = document.getElementById('bar-done');
+  const barInprogEl = document.getElementById('bar-inprog');
+  const barEvadedEl = document.getElementById('bar-evaded');
+  if (barDoneEl) barDoneEl.style.width = `${donePct}%`;
+  if (barInprogEl) barInprogEl.style.width = `${inProgPct}%`;
+  if (barEvadedEl) barEvadedEl.style.width = `${evadedPct}%`;
 
   // Compute setbacks and disputes dynamically
   let totalSetbacks = 0;
@@ -525,7 +549,8 @@ function renderStats() {
       totalSetbacks += sb;
       promisesWithSetbacks += 1;
     }
-    if (p.status === 'done' && p.resolution === 'Disputed') {
+    const norm = normalizePromiseStatus(p.status);
+    if ((norm === 'delivered' || p.status === 'done') && p.resolution === 'Disputed') {
       disputedDonePromises += 1;
     }
   });
@@ -733,10 +758,19 @@ function renderKeyPromises() {
   const sortedKeys = Object.keys(groups).map(Number).sort((a, b) => a - b);
 
   const getGroupStatus = (group) => {
-    if (group.every(p => p.status === 'done')) return 'done';
-    if (group.some(p => p.status === 'inprogress' || p.status === 'done')) return 'inprogress';
-    if (group.every(p => p.status === 'evaded')) return 'evaded';
-    if (group.some(p => p.status === 'evaded')) return 'inprogress';
+    const isDone = (p) => normalizePromiseStatus(p.status) === 'delivered';
+    const isInProg = (p) => {
+      const n = normalizePromiseStatus(p.status);
+      return n === 'under_implementation' || n === 'legally_initiated' || n === 'funded' || n === 'partially_delivered';
+    };
+    const isEvaded = (p) => {
+      const n = normalizePromiseStatus(p.status);
+      return n === 'reversed' || n === 'delayed' || n === 'disputed' || n === 'not_verifiable';
+    };
+    if (group.every(isDone)) return 'done';
+    if (group.some(p => isInProg(p) || isDone(p))) return 'inprogress';
+    if (group.every(isEvaded)) return 'evaded';
+    if (group.some(isEvaded)) return 'inprogress';
     return 'pending';
   };
 
@@ -814,20 +848,34 @@ function renderCategories() {
     const catPromises = filteredPromises.filter((p) => p.category === cat.id);
     if (!catPromises.length) return;
 
-    const completed = catPromises.filter(p => p.status === 'done').length;
-    const active = catPromises.filter(p => p.status === 'inprogress').length;
+    const completed = catPromises.filter(p => {
+      const norm = normalizePromiseStatus(p.status);
+      return norm === 'delivered';
+    }).length;
+
+    const active = catPromises.filter(p => {
+      const norm = normalizePromiseStatus(p.status);
+      return norm === 'under_implementation' || norm === 'legally_initiated' || norm === 'funded' || norm === 'partially_delivered';
+    }).length;
+
+    const pending = catPromises.filter(p => {
+      const norm = normalizePromiseStatus(p.status);
+      return norm === 'not_started' || norm === 'announced';
+    }).length;
 
     const parts = [];
     if (window.LANG === 'bn') {
       if (window.currentFilter === 'all') {
-        if (completed > 0) parts.push(`${formatNumber(completed)}টি পূর্ণ হয়েছে`);
+        if (completed > 0) parts.push(`${formatNumber(completed)}টি পূরণ হয়েছে`);
         if (active > 0) parts.push(`${formatNumber(active)}টি চলছে`);
+        if (pending > 0) parts.push(`${formatNumber(pending)}টি বাকি`);
       }
       parts.push(`${formatNumber(catPromises.length)}টি প্রতিশ্রুতি`);
     } else {
       if (window.currentFilter === 'all') {
-        if (completed > 0) parts.push(`${completed} completed`);
-        if (active > 0) parts.push(`${active} active`);
+        if (completed > 0) parts.push(`${completed} fulfilled`);
+        if (active > 0) parts.push(`${active} in progress`);
+        if (pending > 0) parts.push(`${pending} remaining`);
       }
       parts.push(`${catPromises.length} ${catPromises.length === 1 ? 'promise' : 'promises'}`);
     }
@@ -846,13 +894,15 @@ function renderCategories() {
           <span class="cat-toggle">▾</span>
         </div>
         <ul class="promise-list">
-          ${catPromises.map((p) => `
-            <li class="promise-item ${escapeHtml(p.status)}" id="item-${escapeHtml(p.id)}">
+          ${catPromises.map((p) => {
+            const norm = normalizePromiseStatus(p.status);
+            return `
+            <li class="promise-item ${escapeHtml(p.status)} ${escapeHtml(norm)}" id="item-${escapeHtml(p.id)}">
               <span class="promise-num">${escapeHtml(p.number)}</span>
               <div class="promise-content">
                 <div class="promise-header">
                   <button class="promise-text ${(p.updateCount > 0 || p.counterCount > 0 || (p.noteCount || 0) > 0) ? 'has-details' : ''}" type="button" ${(p.updateCount > 0 || p.counterCount > 0 || (p.noteCount || 0) > 0) ? `onclick="togglePromiseDetails('${escapeHtml(p.id)}')"` : ''}>${highlightText(getText(p, 'text', window.LANG), getText(p, 'highlight', window.LANG))}</button>
-                  <span class="note-tag note-${escapeHtml(p.status)}">${formatStatus(p.status)}</span>
+                  <span class="note-tag note-${escapeHtml(p.status)} note-${escapeHtml(norm)}">${formatStatus(p.status)}</span>
                 </div>
                 <div class="search-match-reason" id="search-reason-${escapeHtml(p.id)}" style="display:none"></div>
                 ${getText(p, 'info', window.LANG) ? `
@@ -860,7 +910,7 @@ function renderCategories() {
                     ℹ️ ${formatInfoText(getText(p, 'info', window.LANG))}
                   </div>
                 ` : ''}
-                ${(p.status === 'done' && getText(p, 'resolutionNote', window.LANG) && p.resolution === 'Done (On Paper)') ? `
+                ${((norm === 'delivered' || p.status === 'done') && getText(p, 'resolutionNote', window.LANG) && p.resolution === 'Done (On Paper)') ? `
                   <div class="resolution-note-done-on-paper">
                     ${window.LANG === 'bn' 
                       ? '📄 <strong>বর্তমানে কাগজে-কলমে সম্পূর্ণ।</strong> আরও জানতে সম্পূর্ণ বিবরণ পাতাটি দেখুন।' 
@@ -874,7 +924,7 @@ function renderCategories() {
                       : '⚠️ <strong>Disputed.</strong> Check Full Details page to know more.'}
                   </div>
                 ` : ''}
-                ${(p.status === 'partially_delivered' || (getText(p, 'resolutionNote', window.LANG) && p.resolution === 'Partial')) ? `
+                ${(norm === 'partially_delivered' || p.status === 'partially_delivered' || (getText(p, 'resolutionNote', window.LANG) && p.resolution === 'Partial')) ? `
                   <div class="resolution-note-partial">
                     ${p.id === 'health-1' ? (
                       window.LANG === 'bn'
@@ -890,8 +940,8 @@ function renderCategories() {
                 ${(getText(p, 'resolutionNote', window.LANG) && p.resolution === 'Deadline Missed') ? `
                   <div class="resolution-note-deadline-missed">
                     ${window.LANG === 'bn' 
-                      ? '\u23f3 <strong>\u09b8\u09ae\u09df\u09b8\u09c0\u09ae\u09be \u0985\u09a4\u09bf\u0995\u09cd\u09b0\u09ae \u09b9\u09df\u09c7\u099b\u09c7\u0964</strong> \u0986\u09b0\u0993 \u099c\u09be\u09a8\u09a4\u09c7 \u09b8\u09ae\u09cd\u09aa\u09c2\u09b0\u09cd\u09a3 \u09ac\u09bf\u09ac\u09b0\u09a3 \u09aa\u09be\u09a4\u09be\u099f\u09bf \u09a6\u09c7\u0996\u09c1\u09a8\u0964' 
-                      : '\u23f3 <strong>Deadline Missed.</strong> Check Full Details page to know more.'}
+                      ? '⌛ <strong>সময়সীমা অতিক্রম হয়েছে।</strong> আরও জানতে সম্পূর্ণ বিবরণ পাতাটি দেখুন।' 
+                      : '⌛ <strong>Deadline Missed.</strong> Check Full Details page to know more.'}
                   </div>
                 ` : ''}
                 <div class="promise-actions">
@@ -913,7 +963,7 @@ function renderCategories() {
                       })()}
                     </button>
                   ` : ''}
-                  ${(p.status === 'done' || p.status === 'evaded') ? `
+                  ${(norm === 'delivered' || p.status === 'done' || norm === 'reversed' || p.status === 'evaded' || norm === 'partially_delivered' || p.status === 'partially_delivered') ? `
                     <a href="details/${escapeHtml(p.id)}.html" class="btn-full-details" onclick="event.stopPropagation();">
                       ${window.LANG === 'bn' ? 'সম্পূর্ণ বিবরণ' : 'Full Details'}
                     </a>
@@ -922,7 +972,7 @@ function renderCategories() {
                 <div class="promise-details" id="details-${escapeHtml(p.id)}"><div class="loading">${window.LANG === 'bn' ? 'বিশদ বিবরণ লোড হচ্ছে...' : 'Loading details...'}</div></div>
               </div>
             </li>
-          `).join('')}
+          `}).join('')}
         </ul>
       </section>
     `;
